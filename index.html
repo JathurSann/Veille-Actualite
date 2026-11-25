@@ -435,6 +435,21 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   .chev { transition: transform .2s; }
   .bar > i { transition: width .5s ease; }
 }
+
+/* Confort mobile : pas de défilement latéral, pas de zoom automatique dans les champs, zones tactiles confortables */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; touch-action: manipulation; overscroll-behavior-x: none; }
+html, body { overflow-x: clip; max-width: 100%; }
+#app, #auth { overflow-x: clip; }
+.fld input { font-size: 16px; }
+.qhead .linkbtn { min-height: 44px; padding: 0 6px; }
+.deckctl { margin: 12px 0 8px; }
+@media (max-width: 700px) {
+  .search input { font-size: 16px; }
+  .seg button { height: 40px; }
+  .count { display: none; }
+  .deckwrap { height: calc(100vh - 350px); height: calc(100dvh - 350px); min-height: 400px; }
+  .in { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+}
 </style>
 </head>
 <body>
