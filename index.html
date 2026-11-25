@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Veille hebdomadaire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout : barre de titre, panneau d'accueil gris chaud arrondi avec progression, rubriques, outils de filtre, puis liste de fiches et colonne latérale (échéances, aide). Une colonne sur téléphone.
+   Design system : orange #EE7203 et dégradé des boutons, titres Montserrat noir en ardoise, panneaux #F7F4F3 à grand rayon, pastilles à 50px, coches orange. */
+:root {
+  --brand: #EE7203;
+  --grad: linear-gradient(90deg, #FA5904 0%, #F4B44D 100%);
+  --bg: #ffffff;
+  --panel: #F7F4F3;
+  --surface: #ffffff;
+  --ink: #243037;
+  --on-ink: #ffffff;
+  --text: #2A2A2A;
+  --muted: #5F696E;
+  --line: #E8E4E2;
+  --ring: #DBDBDB;
+  --accent: #EE7203;
+  --accent-text: #A34A00;
+  --accent-soft: #FFEEDD;
+  --btn-ink: #1F1A17;
+  --focus: #EE7203;
+  --ok-bg: #E8F7EF; --ok-fg: #0F6B45; --ok-ring: #B5E4CC;
+  --off-fg: #7D868A; --off-ring: #DBDBDB;
+  --shadow: 0 1px 2px rgba(36,48,55,.05), 0 4px 16px rgba(36,48,55,.04);
+  --shadow-hover: 0 2px 4px rgba(36,48,55,.07), 0 12px 28px rgba(36,48,55,.08);
+  --r-politique-bg: #fef2f2; --r-politique-fg: #b91c1c; --r-politique-dot: #ef4444;
+  --r-international-bg: #eff6ff; --r-international-fg: #1d4ed8; --r-international-dot: #3b82f6;
+  --r-economie-bg: #ecfdf5; --r-economie-fg: #047857; --r-economie-dot: #10b981;
+  --r-societe-bg: #faf5ff; --r-societe-fg: #7e22ce; --r-societe-dot: #a855f7;
+  --r-sciences-bg: #ecfeff; --r-sciences-fg: #0e7490; --r-sciences-dot: #06b6d4;
+  --r-culture-bg: #fdf2f8; --r-culture-fg: #be185d; --r-culture-dot: #ec4899;
+  --r-sport-bg: #f5f5f4; --r-sport-fg: #292524; --r-sport-dot: #78716c;
+  --r-medias-bg: #fefce8; --r-medias-fg: #a16207; --r-medias-dot: #eab308;
+  --r-environnement-bg: #f7fee7; --r-environnement-fg: #4d7c0f; --r-environnement-dot: #84cc16;
+  --font: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14110F; --panel: #1F1A17; --surface: #1A1613; --ink: #F7F4F3; --on-ink: #1F1A17; --text: #E4DEDA; --muted: #A79F99;
+    --line: #2D2723; --ring: #3C3430; --accent: #F4833A; --accent-text: #FFB27F; --accent-soft: #3A2113; --focus: #F4A261;
+    --ok-bg: #0C2A1E; --ok-fg: #6EE7B7; --ok-ring: #14573F; --off-fg: #8A817B; --off-ring: #3C3430;
+    --shadow: none; --shadow-hover: none;
+    --r-politique-bg: #3b0d0d; --r-politique-fg: #fca5a5;
+    --r-international-bg: #0f2347; --r-international-fg: #93c5fd;
+    --r-economie-bg: #052e22; --r-economie-fg: #6ee7b7;
+    --r-societe-bg: #2e1065; --r-societe-fg: #d8b4fe;
+    --r-sciences-bg: #083344; --r-sciences-fg: #67e8f9;
+    --r-culture-bg: #500724; --r-culture-fg: #f9a8d4;
+    --r-sport-bg: #292524; --r-sport-fg: #e7e5e4;
+    --r-medias-bg: #422006; --r-medias-fg: #fde047;
+    --r-environnement-bg: #1a2e05; --r-environnement-fg: #bef264;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14110F; --panel: #1F1A17; --surface: #1A1613; --ink: #F7F4F3; --on-ink: #1F1A17; --text: #E4DEDA; --muted: #A79F99;
+  --line: #2D2723; --ring: #3C3430; --accent: #F4833A; --accent-text: #FFB27F; --accent-soft: #3A2113; --focus: #F4A261;
+  --ok-bg: #0C2A1E; --ok-fg: #6EE7B7; --ok-ring: #14573F; --off-fg: #8A817B; --off-ring: #3C3430;
+  --shadow: none; --shadow-hover: none;
+  --r-politique-bg: #3b0d0d; --r-politique-fg: #fca5a5;
+  --r-international-bg: #0f2347; --r-international-fg: #93c5fd;
+  --r-economie-bg: #052e22; --r-economie-fg: #6ee7b7;
+  --r-societe-bg: #2e1065; --r-societe-fg: #d8b4fe;
+  --r-sciences-bg: #083344; --r-sciences-fg: #67e8f9;
+  --r-culture-bg: #500724; --r-culture-fg: #f9a8d4;
+  --r-sport-bg: #292524; --r-sport-fg: #e7e5e4;
+  --r-medias-bg: #422006; --r-medias-fg: #fde047;
+  --r-environnement-bg: #1a2e05; --r-environnement-fg: #bef264;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.6 var(--font); -webkit-font-smoothing: antialiased;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.in {
+  max-width: 1152px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent-text); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 8px; }
+button { font-family: var(--font); }
+
+/* Barre de titre */
+.topbar .in { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 18px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; letter-spacing: -.01em; color: var(--ink); }
+.mark { width: 30px; height: 30px; border-radius: 10px; background: var(--grad); display: grid; place-items: center; flex: none; }
+.stamp { font-size: 12.5px; font-weight: 600; color: var(--muted); background: var(--panel); padding: 6px 14px; border-radius: 50px; }
+
+/* Panneau d'accueil */
+.hero {
+  background: var(--panel); border-radius: 28px; padding: clamp(24px, 4vw, 48px);
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: center;
+}
+h1 { font-weight: 900; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; letter-spacing: -.015em; color: var(--ink); margin: 0 0 14px; text-wrap: balance; }
+.lede { font-size: 16px; line-height: 1.65; color: var(--muted); margin: 0 0 20px; max-width: 56ch; }
+.checks { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 10px; font-size: 14.5px; }
+.checks b { font-weight: 700; color: var(--ink); }
+.checks li, .retenir li { position: relative; padding-left: 28px; }
+.checks li::before, .retenir li::before {
+  content: ""; position: absolute; left: 0; top: .22em; width: 17px; height: 17px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23EE7203' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 26px; border: 0; border-radius: 50px;
+  background: var(--grad); color: var(--btn-ink); font: 700 14px var(--font); cursor: pointer;
+}
+.btn:hover { filter: brightness(1.06); }
+.prog { background: var(--surface); border-radius: 20px; padding: 24px; display: grid; gap: 14px; box-shadow: var(--shadow); }
+.prog .lab { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.prog .big { font-weight: 900; font-size: 42px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.prog .big small { font-size: 18px; font-weight: 700; color: var(--muted); margin-left: 4px; }
+.bar { height: 10px; border-radius: 50px; background: var(--line); overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; background: var(--grad); border-radius: 50px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; border-top: 1px solid var(--line); padding-top: 14px; }
+.stats b { display: block; font-size: 20px; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.2; }
+.stats span { font-size: 12px; color: var(--muted); line-height: 1.3; display: block; }
+.prog .save { margin: 0; font-size: 12px; color: var(--muted); }
+
+/* Rubriques et outils */
+.sticky { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 12px; margin-top: 20px; border-bottom: 1px solid var(--line); }
+.rubs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px; }
+.rubs::-webkit-scrollbar { display: none; }
+.pill {
+  flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: 50px;
+  border: 1px solid var(--ring); background: var(--surface); color: var(--text); font: 600 13.5px var(--font); cursor: pointer; white-space: nowrap;
+}
+.pill:hover { border-color: var(--ink); color: var(--ink); }
+.pill[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.pill .n { font-size: 12px; font-variant-numeric: tabular-nums; opacity: .65; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+[data-r="politique"] .dot { background: var(--r-politique-dot); }
+[data-r="international"] .dot { background: var(--r-international-dot); }
+[data-r="economie"] .dot { background: var(--r-economie-dot); }
+[data-r="societe"] .dot { background: var(--r-societe-dot); }
+[data-r="sciences"] .dot { background: var(--r-sciences-dot); }
+[data-r="culture"] .dot { background: var(--r-culture-dot); }
+[data-r="sport"] .dot { background: var(--r-sport-dot); }
+[data-r="medias"] .dot { background: var(--r-medias-dot); }
+[data-r="environnement"] .dot { background: var(--r-environnement-dot); }
+
+.tools { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; padding-block: 16px 4px; }
+.search { position: relative; flex: 1 1 240px; max-width: 380px; }
+.search svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search input {
+  width: 100%; height: 44px; border-radius: 50px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink);
+  font: 500 14px var(--font); padding: 0 16px 0 44px;
+}
+.search input::placeholder { color: var(--muted); }
+.ctl { display: flex; align-items: center; gap: 10px; min-width: 0; max-width: 100%; }
+.ctl .lbl { font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.seg { display: inline-flex; gap: 2px; background: var(--panel); border-radius: 50px; padding: 4px; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.seg::-webkit-scrollbar { display: none; }
+.seg button { border: 0; background: transparent; color: var(--muted); font: 600 13px var(--font); height: 36px; padding: 0 14px; border-radius: 50px; cursor: pointer; white-space: nowrap; }
+.seg button:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--ring), 0 1px 3px rgba(36,48,55,.08); }
+
+/* Liste et colonne latérale */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: start; padding-block: 16px 64px; }
+main { min-width: 0; }
+.count { margin: 0 0 16px; font-size: 13px; font-weight: 600; color: var(--muted); min-height: 20px; }
+.day { margin-bottom: 36px; display: grid; gap: 12px; }
+.day > h2 { font-weight: 800; font-size: 18px; letter-spacing: -.005em; color: var(--ink); margin: 0 0 4px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.day > h2 small { font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.older { font-size: 14px; color: var(--muted); margin: 0 0 20px; }
+.older button { font: inherit; font-weight: 700; background: none; border: 0; padding: 0; color: var(--accent-text); text-decoration: underline; cursor: pointer; }
+
+.rail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: grid; gap: 16px; min-width: 0; }
+.card { background: var(--panel); border-radius: 20px; padding: 20px; display: grid; gap: 12px; }
+.card h2 { font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.agenda { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.agenda li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; font-size: 13.5px; line-height: 1.4; align-items: start; }
+.agenda .d, .ech .d { font-size: 12px; font-weight: 700; background: var(--surface); color: var(--accent-text); padding: 3px 8px; border-radius: 50px; text-align: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.55; }
+.legend { display: grid; gap: 8px; font-size: 13.5px; }
+.legend div { display: flex; align-items: center; gap: 10px; }
+.lim summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--accent-text); }
+.lim p { margin-top: 8px; }
+
+/* Fiches */
+details.fiche { background: var(--surface); border: 1px solid var(--ring); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+details.fiche:hover { box-shadow: var(--shadow-hover); }
+details.fiche[open] { border-color: var(--accent); box-shadow: var(--shadow-hover); }
+details.fiche.done { background: var(--panel); }
+details.fiche > summary { list-style: none; cursor: pointer; display: grid; gap: 10px; padding: 20px 22px; border-radius: 16px; }
+details.fiche > summary::-webkit-details-marker { display: none; }
+details.fiche > summary:hover h3.titre { color: var(--accent-text); }
+.tag { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.rub { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 50px; background: var(--panel); color: var(--text); }
+[data-r="politique"] .rub { background: var(--r-politique-bg); color: var(--r-politique-fg); }
+[data-r="international"] .rub { background: var(--r-international-bg); color: var(--r-international-fg); }
+[data-r="economie"] .rub { background: var(--r-economie-bg); color: var(--r-economie-fg); }
+[data-r="societe"] .rub { background: var(--r-societe-bg); color: var(--r-societe-fg); }
+[data-r="sciences"] .rub { background: var(--r-sciences-bg); color: var(--r-sciences-fg); }
+[data-r="culture"] .rub { background: var(--r-culture-bg); color: var(--r-culture-fg); }
+[data-r="sport"] .rub { background: var(--r-sport-bg); color: var(--r-sport-fg); }
+[data-r="medias"] .rub { background: var(--r-medias-bg); color: var(--r-medias-fg); }
+[data-r="environnement"] .rub { background: var(--r-environnement-bg); color: var(--r-environnement-fg); }
+.st { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 11px; border-radius: 50px; border: 1px solid var(--ring); color: var(--muted); }
+.st.ok { background: var(--ok-bg); border-color: var(--ok-ring); color: var(--ok-fg); }
+.donebadge { display: none; }
+details.fiche.done .donebadge { display: inline-flex; }
+.tag .date { margin-left: auto; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+h3.titre { font-weight: 800; font-size: clamp(17px, 2.4vw, 19px); line-height: 1.35; letter-spacing: -.005em; margin: 0; color: var(--ink); text-wrap: balance; }
+.resume { margin: 0; color: var(--muted); font-size: 14.5px; max-width: 70ch; }
+.sumfoot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; margin-top: 2px; }
+.meter { display: flex; align-items: center; gap: 6px; }
+.meter span { font-size: 11.5px; font-weight: 700; min-width: 30px; height: 26px; padding: 0 8px; display: grid; place-items: center; border-radius: 50px; color: var(--off-fg); border: 1px solid var(--off-ring); }
+.meter span.on { background: var(--accent-soft); color: var(--accent-text); border-color: transparent; }
+.meter .mc { font-style: normal; font-weight: 600; font-size: 12.5px; color: var(--muted); margin-left: 6px; background: none; border: 0; min-width: 0; height: auto; padding: 0; display: inline; }
+.more { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--accent-text); }
+.more .lab::after { content: "Voir la fiche"; }
+details.fiche[open] .more .lab::after { content: "Masquer la fiche"; }
+.chev { width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+details.fiche[open] .chev { transform: rotate(-135deg) translate(-1px, -1px); }
+
+.body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; padding: 4px 22px 22px; }
+.block { min-width: 0; }
+.block.wide { grid-column: 1 / -1; }
+.block h4 { font-weight: 800; font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.block.key { grid-column: 1 / -1; background: var(--panel); border-radius: 16px; padding: 18px 20px; }
+.block.key h4 { color: var(--accent-text); }
+.block p { margin: 0; }
+.retenir { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; color: var(--ink); font-weight: 500; }
+details.fiche.done .block.key { background: var(--surface); }
+.people { display: flex; flex-wrap: wrap; gap: 6px; }
+.people span { font-size: 13px; font-weight: 600; background: var(--panel); color: var(--text); padding: 4px 12px; border-radius: 50px; }
+.ech { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
+.ech li { display: flex; gap: 10px; align-items: baseline; }
+.ech .d { background: var(--accent-soft); }
+.src { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
+.src li { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.src .t { font-size: 11px; font-weight: 700; color: var(--text); background: var(--panel); padding: 2px 10px; border-radius: 50px; flex: none; min-width: 66px; text-align: center; }
+.src a { overflow-wrap: anywhere; }
+.srcmore { margin-top: 10px; }
+.srcmore summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--accent-text); padding: 6px 0; }
+.srcmore .src { margin-top: 6px; }
+.foot { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 18px; }
+.cov { font-size: 13.5px; color: var(--muted); }
+.cov b { font-weight: 700; color: var(--ink); }
+.rev { display: inline-flex; gap: 10px; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--ring); border-radius: 50px; background: var(--surface); font-size: 14px; font-weight: 700; color: var(--ink); cursor: pointer; }
+.rev input { width: 18px; height: 18px; margin: 0; accent-color: var(--ok-fg); }
+.rev:has(input:checked) { background: var(--ok-bg); border-color: var(--ok-ring); color: var(--ok-fg); }
+
+.state { border: 1px dashed var(--ring); border-radius: 20px; padding: 40px 24px; background: var(--panel); text-align: center; }
+.state h2 { font-weight: 800; font-size: 18px; color: var(--ink); margin: 0 0 6px; }
+.state p { margin: 0 auto 16px; color: var(--muted); max-width: 56ch; }
+.state p:last-child { margin-bottom: 0; }
+.note-foot { padding-block: 0 40px; font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .rail { position: static; }
+}
+@media (min-width: 861px) {
+  .sticky { position: static; border-bottom: 0; padding-bottom: 0; }
+  .rubs { flex-wrap: wrap; overflow: visible; }
+}
+@media (max-width: 700px) {
+  .body { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  details.fiche > summary { padding: 16px; }
+  .body { padding: 4px 16px 18px; }
+  .block.key { padding: 16px; }
+  .hero { border-radius: 22px; }
+  .prog { padding: 20px; }
+  .ctl { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .pill, .seg button, details.fiche, h3.titre, .btn, .rev { transition: background .15s, color .15s, border-color .15s, box-shadow .2s, filter .15s; }
+  .chev { transition: transform .2s; }
+  .bar > i { transition: width .5s ease; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 4h11M2.5 8h11M2.5 12h6.5"/></svg></span>
+      Veille d'actualité
+    </div>
+    <div class="stamp" id="stamp">Mise à jour : en attente des fiches</div>
+  </div>
+</header>
+
+<div class="in">
+  <section class="hero" aria-labelledby="titre-page">
+    <div>
+      <h1 id="titre-page">Veille hebdomadaire</h1>
+      <p class="lede">Les sujets traités à la fois par la presse écrite, la télévision et la radio, en fiches de révision pour le QCM d'actualité. La page se met à jour chaque matin.</p>
+      <ul class="checks">
+        <li><b>Une fiche par sujet</b> : l'essentiel, le contexte, les noms à connaître.</li>
+        <li><b>P, T, R</b> : la presse, la télévision ou la radio a traité le sujet.</li>
+        <li><b>Fiche révisée</b> : coche-la pour suivre ta progression.</li>
+      </ul>
+      <button class="btn" id="cta" type="button">Réviser les fiches restantes</button>
+    </div>
+    <div class="prog" aria-label="Progression de révision">
+      <span class="lab">Progression</span>
+      <div class="big"><span id="p-num">–</span><small id="p-tot"></small></div>
+      <div class="bar" role="progressbar" aria-label="Fiches révisées" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="p-bar"><i id="p-fill"></i></div>
+      <div class="stats">
+        <div><b id="s-total">–</b><span>fiches sur 2 semaines</span></div>
+        <div><b id="s-cr">–</b><span>recoupées P, T, R</span></div>
+        <div><b id="s-todo">–</b><span>à réviser</span></div>
+      </div>
+      <p class="save">Ta progression reste enregistrée sur cet appareil.</p>
+    </div>
+  </section>
+
+  <div class="sticky">
+    <nav aria-label="Rubriques"><div class="rubs" id="f-rub"></div></nav>
+  </div>
+
+  <div class="tools">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Rechercher un sujet, un nom, une source" aria-label="Rechercher dans les fiches" autocomplete="off">
+    </div>
+    <div class="ctl" role="group" aria-label="Affichage"><span class="lbl">Affichage</span><div class="seg" id="f-sort"></div></div>
+    <div id="f-done"></div>
+  </div>
+
+  <div class="layout">
+    <main id="liste">
+      <p class="count" id="count" role="status"></p>
+      <div id="main">
+        <div class="state"><h2>Chargement des fiches</h2><p>Les sujets de la semaine arrivent.</p></div>
+      </div>
+    </main>
+
+    <aside class="rail" aria-label="Repères">
+      <section class="card">
+        <h2>À venir</h2>
+        <ul class="agenda" id="agenda"><li><span></span><span class="hint">Aucune échéance pour l'instant.</span></li></ul>
+      </section>
+      <section class="card">
+        <h2>Lire une fiche</h2>
+        <div class="legend">
+          <div class="meter"><span class="on">P</span> Presse écrite</div>
+          <div class="meter"><span class="on">T</span> Télévision</div>
+          <div class="meter"><span class="on">R</span> Radio</div>
+        </div>
+        <p class="hint">Une lettre colorée indique qu'une source de cette famille est rattachée à la fiche. « Recoupé » veut dire que les trois familles traitent le sujet.</p>
+        <details class="lim">
+          <summary>Sources et limites</summary>
+          <p class="hint">Les grands quotidiens (Le Monde, Libération, Ouest-France…) sont bloqués pour la mise à jour automatique. Leurs titres viennent du flux public d'ActuSUP, donc la case P reste à confirmer sur les articles eux-mêmes.</p>
+        </details>
+      </section>
+    </aside>
+  </div>
+
+  <p class="note-foot">Outil de révision personnel, non affilié à l'école.</p>
+</div>
+
+<script>
+(function () {
+  var RUBS = [
+    { id: "politique", label: "Politique" },
+    { id: "economie", label: "Économie" },
+    { id: "societe", label: "Société" },
+    { id: "international", label: "International" },
+    { id: "sciences", label: "Sciences & tech" },
+    { id: "culture", label: "Culture" },
+    { id: "sport", label: "Sport" },
+    { id: "medias", label: "Médias & communication" },
+    { id: "environnement", label: "Environnement" }
+  ];
+  function lim() { return ((new Date().getDay() + 6) % 7) + 7; }
+  var TYPES = { agence: "Agence", presse: "Presse", tv: "TV", radio: "Radio", web: "Web", institution: "Institution" };
+  var ICON_OK = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg>';
+
+  var docs = [];
+  var state = { rub: "all", per: 7, sort: "jour", q: "", hideDone: false, ready: false, error: null };
+  var openIds = {};
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem("veille-revise") || "{}") || {}; } catch (e) { done = {}; }
+
+  var dFull = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  var dDay = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+  var dShort = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "short" });
+
+  function $(id) { return document.getElementById(id); }
+  function parse(s) { var p = String(s || "").split("-"); return new Date(+p[0], (+p[1] || 1) - 1, +p[2] || 1); }
+  function iso(d) { var m = d.getMonth() + 1, x = d.getDate(); return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (x < 10 ? "0" : "") + x; }
+  function today() { return iso(new Date()); }
+  function daysAgo(s) { var a = parse(today()), b = parse(s); return Math.round((a - b) / 86400000); }
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function arr(v) { return Array.isArray(v) ? v : []; }
+  function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  function safeUrl(u) { return typeof u === "string" && /^https:\/\//i.test(u) ? u : null; }
+  function rubLabel(id) { for (var i = 0; i < RUBS.length; i++) if (RUBS[i].id === id) return RUBS[i].label; return id; }
+  function norm(s) { return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
+  function hay(f) {
+    if (!f._h) f._h = norm([f.titre, f.resume, f.contexte, arr(f.retenir).join(" "), arr(f.acteurs).join(" "), arr(f.sources).map(function (s) { return s && s.nom; }).join(" ")].join(" "));
+    return f._h;
+  }
+
+  function coverage(f) {
+    var c = { presse: false, tv: false, radio: false };
+    arr(f.sources).forEach(function (s) { if (s && c.hasOwnProperty(s.type)) c[s.type] = true; });
+    return c;
+  }
+  function mediaCount(f) {
+    var seen = {};
+    arr(f.sources).forEach(function (x) { if (!x || !x.nom) return; var m = String(x.nom).split(/\s[:(]|\s–\s/)[0].trim().toLowerCase(); if (m) seen[m] = 1; });
+    return Object.keys(seen).length;
+  }
+  function famCount(f) { var c = coverage(f); return (c.presse ? 1 : 0) + (c.tv ? 1 : 0) + (c.radio ? 1 : 0); }
+  function score(f) { return (f.croise === true ? 1000 : 0) + famCount(f) * 100 + mediaCount(f); }
+
+  function matches(f, withPeriod) {
+    if (state.rub !== "all" && f.rubrique !== state.rub) return false;
+    if (state.hideDone && done[f.id]) return false;
+    if (state.q) { var parts = norm(state.q).split(/\s+/).filter(Boolean); var h = hay(f); for (var i = 0; i < parts.length; i++) if (h.indexOf(parts[i]) < 0) return false; }
+    if (withPeriod && state.per > 0 && daysAgo(f.date) > lim()) return false;
+    return true;
+  }
+  function visible() { var t = state.sort === "couv" ? topIds() : null; return docs.filter(function (f) { return matches(f, true) && (!t || t[f.id]); }); }
+
+  function renderChips() {
+    var r = $("f-rub"); r.textContent = "";
+    var tt = state.sort === "couv" ? topIds() : null;
+    function counts(id) { return docs.filter(function (f) { return (id === "all" || f.rubrique === id) && (!tt || tt[f.id]); }).length; }
+    [{ id: "all", label: "Tout voir" }].concat(RUBS).forEach(function (x) {
+      var b = el("button", "pill"); b.type = "button"; b.setAttribute("aria-pressed", String(state.rub === x.id));
+      b.setAttribute("data-r", x.id);
+      if (x.id !== "all") b.appendChild(el("span", "dot"));
+      b.appendChild(el("span", null, x.label)); b.appendChild(el("span", "n", String(counts(x.id))));
+      b.addEventListener("click", function () { state.rub = x.id; render(); });
+      r.appendChild(b);
+    });
+    var so = $("f-sort"); so.textContent = "";
+    [{ id: "jour", label: "Par jour" }, { id: "couv", label: "Les 20 plus couverts" }].forEach(function (x) {
+      var b = el("button", null, x.label); b.type = "button"; b.setAttribute("aria-pressed", String(state.sort === x.id));
+      b.addEventListener("click", function () { state.sort = x.id; render(); });
+      so.appendChild(b);
+    });
+    var dn = $("f-done"); dn.textContent = "";
+    var t = el("button", "pill"); t.type = "button"; t.setAttribute("aria-pressed", String(state.hideDone));
+    t.appendChild(el("span", null, "Masquer les fiches révisées"));
+    t.addEventListener("click", function () { state.hideDone = !state.hideDone; render(); });
+    dn.appendChild(t);
+  }
+
+  function renderHero() {
+    var total = docs.length, rev = docs.filter(function (f) { return done[f.id]; }).length;
+    var cr = docs.filter(function (f) { return f.croise === true; }).length;
+    var pct = total ? Math.round(rev / total * 100) : 0;
+    $("p-num").textContent = state.ready ? String(rev) : "–";
+    $("p-tot").textContent = state.ready ? "/ " + total + " fiches révisées" : "";
+    $("p-fill").style.width = pct + "%";
+    $("p-bar").setAttribute("aria-valuenow", String(pct));
+    $("s-total").textContent = state.ready ? String(total) : "–";
+    $("s-cr").textContent = state.ready ? String(cr) : "–";
+    $("s-todo").textContent = state.ready ? String(total - rev) : "–";
+  }
+
+  function renderAgenda() {
+    var ul = $("agenda"); ul.textContent = "";
+    var t = today(), seen = {}, list = [];
+    docs.forEach(function (f) {
+      arr(f.echeances).forEach(function (e) {
+        if (!e || !e.date || e.date < t) return;
+        var k = e.date + "|" + e.label; if (seen[k]) return; seen[k] = 1; list.push(e);
+      });
+    });
+    list.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+    if (!list.length) { var li0 = el("li"); li0.appendChild(el("span")); li0.appendChild(el("span", "hint", "Aucune échéance pour l'instant.")); ul.appendChild(li0); return; }
+    list.slice(0, 8).forEach(function (e) {
+      var li = el("li"); li.appendChild(el("span", "d", dShort.format(parse(e.date)))); li.appendChild(el("span", null, e.label)); ul.appendChild(li);
+    });
+  }
+
+  function clean(t) { return String(t || "").replace(/\s+/g, " ").trim(); }
+  function short(t, max) {
+    var ss = clean(t).match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [], out = "";
+    for (var i = 0; i < ss.length; i++) {
+      var s = ss[i].trim();
+      if (!s || /^\(?mise à jour/i.test(s)) continue;
+      if (out && (out + " " + s).length > max) break;
+      out = out ? out + " " + s : s;
+    }
+    if (out.length > max + 40) out = out.slice(0, max).replace(/\s+\S*$/, "") + "…";
+    return out;
+  }
+  function mediaKey(x) { return String(x.nom || "").split(/\s[:(]|\s–\s/)[0].trim().toLowerCase(); }
+  function pickSources(f, n) {
+    var seen = {}, uniq = [], out = [];
+    arr(f.sources).forEach(function (x) { if (!x || !x.nom) return; var k = mediaKey(x); if (!k || seen[k]) return; seen[k] = 1; uniq.push(x); });
+    ["presse", "tv", "radio"].forEach(function (t) { for (var i = 0; i < uniq.length; i++) { if (uniq[i].type === t) { out.push(uniq[i]); break; } } });
+    uniq.forEach(function (x) { if (out.length < n && out.indexOf(x) < 0) out.push(x); });
+    var shown = out.slice(0, n);
+    return { list: shown, total: uniq.length, rest: uniq.filter(function (x) { return shown.indexOf(x) < 0; }) };
+  }
+
+  function srcLi(x) {
+    var li = el("li"); li.appendChild(el("span", "t", TYPES[x.type] || "Web"));
+    var u = safeUrl(x.url);
+    if (u) { var a = el("a", null, x.nom || u); a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer"; li.appendChild(a); }
+    else li.appendChild(el("span", null, x.nom || ""));
+    return li;
+  }
+  function topIds() {
+    var m = {};
+    docs.slice().sort(function (a, b) { return score(b) - score(a) || (a.date < b.date ? 1 : -1); }).slice(0, 20).forEach(function (f) { m[f.id] = 1; });
+    return m;
+  }
+
+  function block(title) { var b = el("div", "block"); b.appendChild(el("h4", null, title)); return b; }
+
+  function fiche(f, showDate) {
+    var d = document.createElement("details"); d.className = "fiche" + (done[f.id] ? " done" : "");
+    if (openIds[f.id]) d.open = true;
+    d.addEventListener("toggle", function () { if (d.open) openIds[f.id] = 1; else delete openIds[f.id]; });
+    d.setAttribute("data-r", f.rubrique);
+
+    var s = document.createElement("summary");
+    var tag = el("div", "tag");
+    var rub = el("span", "rub"); rub.appendChild(el("span", "dot")); rub.appendChild(el("span", null, rubLabel(f.rubrique))); tag.appendChild(rub);
+    var st = el("span", f.croise === true ? "st ok" : "st");
+    if (f.croise === true) { st.insertAdjacentHTML("beforeend", ICON_OK); st.appendChild(el("span", null, "Recoupé")); } else { st.appendChild(el("span", null, "À recouper")); }
+    tag.appendChild(st);
+    var db = el("span", "st ok donebadge"); db.insertAdjacentHTML("beforeend", ICON_OK); db.appendChild(el("span", null, "Révisée")); tag.appendChild(db);
+    if (showDate && f.date) tag.appendChild(el("span", "date", dShort.format(parse(f.date))));
+    s.appendChild(tag);
+    s.appendChild(el("h3", "titre", f.titre || "Sans titre"));
+    var teaser = short(f.resume, 160) || short(arr(f.retenir)[0], 160);
+    if (teaser) s.appendChild(el("p", "resume", teaser));
+
+    var cov = coverage(f);
+    var foot0 = el("div", "sumfoot");
+    var m = el("div", "meter"); m.setAttribute("role", "img");
+    var parts = []; [["presse", "P", "presse"], ["tv", "T", "télévision"], ["radio", "R", "radio"]].forEach(function (x) {
+      var sp = el("span", cov[x[0]] ? "on" : "", x[1]); sp.title = x[2] + (cov[x[0]] ? " : source rattachée" : " : pas de source"); if (cov[x[0]]) parts.push(x[2]); m.appendChild(sp);
+    });
+    m.setAttribute("aria-label", parts.length ? "Sources rattachées : " + parts.join(", ") : "Aucune source de presse, télévision ou radio rattachée");
+    var mc = mediaCount(f);
+    m.appendChild(el("em", "mc", mc + (mc > 1 ? " médias" : " média")));
+    foot0.appendChild(m);
+    var more = el("span", "more"); more.appendChild(el("span", "lab")); more.appendChild(el("span", "chev")); foot0.appendChild(more);
+    s.appendChild(foot0);
+    d.appendChild(s);
+
+    var body = el("div", "body");
+    var ret = arr(f.retenir).slice(0, 5);
+    if (ret.length) { var b1 = block("À retenir"); b1.className += " key"; var ul = el("ul", "retenir"); ret.forEach(function (x) { ul.appendChild(el("li", null, x)); }); b1.appendChild(ul); body.appendChild(b1); }
+    var ctx = short(f.contexte, 280);
+    if (ctx) { var b2 = block("Contexte"); b2.appendChild(el("p", null, ctx)); body.appendChild(b2); }
+    var ac = arr(f.acteurs).slice(0, 8);
+    if (ac.length) { var b3 = block("Acteurs et noms"); var pp = el("div", "people"); ac.forEach(function (x) { pp.appendChild(el("span", null, x)); }); b3.appendChild(pp); body.appendChild(b3); }
+    var ecSeen = {}, ec = arr(f.echeances).filter(function (e) { if (!e) return false; var k = (e.date || "") + "|" + (e.label || ""); if (ecSeen[k]) return false; ecSeen[k] = 1; return true; }).slice(0, 4);
+    if (ec.length) { var b4 = block("Prochaines dates"); var eu = el("ul", "ech"); ec.forEach(function (e) { var li = el("li"); li.appendChild(el("span", "d", e.date ? dShort.format(parse(e.date)) : "")); li.appendChild(document.createTextNode(e.label || "")); eu.appendChild(li); }); b4.appendChild(eu); body.appendChild(b4); }
+    var pk = pickSources(f, 5), so = pk.list;
+    if (so.length) {
+      var b5 = block("Sources"); b5.className += " wide"; var su = el("ul", "src");
+      so.forEach(function (x) { su.appendChild(srcLi(x)); });
+      b5.appendChild(su);
+      if (pk.rest.length) {
+        var dt = document.createElement("details"); dt.className = "srcmore";
+        dt.appendChild(el("summary", null, "Voir " + (pk.rest.length > 1 ? "les " + pk.rest.length + " autres sources" : "1 autre source")));
+        var ru = el("ul", "src"); pk.rest.forEach(function (x) { ru.appendChild(srcLi(x)); }); dt.appendChild(ru); b5.appendChild(dt);
+      }
+      body.appendChild(b5);
+    }
+
+    var foot = el("div", "block wide foot");
+    var c = el("div", "cov");
+    var missing = []; if (!cov.presse) missing.push("presse"); if (!cov.tv) missing.push("télévision"); if (!cov.radio) missing.push("radio");
+    if (f.croise === true) { c.appendChild(el("b", null, "Recoupé presse, télé et radio.")); }
+    else { c.appendChild(el("b", null, "À recouper")); c.appendChild(document.createTextNode(missing.length ? " : pas encore de source " + missing.join(", ") + "." : " : toutes les familles de médias sont rattachées, croisement à confirmer.")); }
+    foot.appendChild(c);
+    var lab = el("label", "rev"); var cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = !!done[f.id];
+    cb.addEventListener("change", function () {
+      if (cb.checked) done[f.id] = 1; else delete done[f.id];
+      try { localStorage.setItem("veille-revise", JSON.stringify(done)); } catch (e) {}
+      d.classList.toggle("done", cb.checked);
+      renderHero(); renderCount(visible());
+    });
+    lab.appendChild(cb); lab.appendChild(el("span", null, "Fiche révisée")); foot.appendChild(lab);
+    body.appendChild(foot);
+    d.appendChild(body);
+    return d;
+  }
+
+  function renderCount(list) {
+    var n = list.length, r = list.filter(function (f) { return done[f.id]; }).length;
+    $("count").textContent = state.ready && docs.length ? n + (n > 1 ? " fiches" : " fiche") + (r ? " · " + r + (r > 1 ? " révisées" : " révisée") : "") : "";
+  }
+
+  function resetFilters() { state.q = ""; $("q").value = ""; state.rub = "all"; state.hideDone = false; render(); }
+
+  function emptyState(title, text, withReset) {
+    var n = el("div", "state"); n.appendChild(el("h2", null, title)); n.appendChild(el("p", null, text));
+    if (withReset) { var b = el("button", "btn", "Réinitialiser les filtres"); b.type = "button"; b.addEventListener("click", resetFilters); var p = el("p"); p.appendChild(b); n.appendChild(p); }
+    return n;
+  }
+
+  function renderMain() {
+    var main = $("main"); main.textContent = "";
+    if (state.error) { main.appendChild(emptyState("Les fiches ne sont pas disponibles", state.error, false)); renderCount([]); return; }
+    if (!state.ready) { main.appendChild(emptyState("Chargement des fiches", "Les sujets de la semaine arrivent.", false)); renderCount([]); return; }
+    if (!docs.length) { main.appendChild(emptyState("Aucune fiche pour le moment", "Les fiches apparaissent après la prochaine mise à jour du matin.", false)); renderCount([]); return; }
+    var list = visible();
+    renderCount(list);
+    if (!list.length) {
+      if (state.hideDone && !state.q && state.rub === "all" && docs.some(function (f) { return done[f.id]; })) main.appendChild(emptyState("Tout est révisé", "Il ne reste aucune fiche à réviser sur cette période. Désactive « Masquer les fiches révisées » pour les relire.", false));
+      else main.appendChild(emptyState("Rien dans cette sélection", "Change de rubrique, élargis la période ou modifie ta recherche.", true));
+      return;
+    }
+    if (state.sort === "couv") {
+      var top = list.slice().sort(function (a, b) { return score(b) - score(a) || (a.date < b.date ? 1 : -1); }).slice(0, 20);
+      var secT = el("section", "day"); secT.appendChild(el("h2", null, "Les 20 sujets les plus couverts"));
+      secT.appendChild(el("p", "older", "Classement par croisement presse, télé et radio, puis par nombre de médias rattachés."));
+      top.forEach(function (f) { secT.appendChild(fiche(f, true)); });
+      main.appendChild(secT); return;
+    }
+    list.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : (a.titre || "").localeCompare(b.titre || "", "fr"); });
+    var groups = {}, order = [];
+    list.forEach(function (f) { if (!groups[f.date]) { groups[f.date] = []; order.push(f.date); } groups[f.date].push(f); });
+    order.forEach(function (dt) {
+      var sec = el("section", "day"); var h = el("h2", null, cap(dDay.format(parse(dt))));
+      h.appendChild(el("small", null, groups[dt].length + (groups[dt].length > 1 ? " fiches" : " fiche")));
+      sec.appendChild(h);
+      groups[dt].forEach(function (f) { sec.appendChild(fiche(f, false)); });
+      main.appendChild(sec);
+    });
+  }
+
+  function renderStamp() {
+    var st = $("stamp"); var latest = "";
+    docs.forEach(function (f) { if (f.ajoute && f.ajoute > latest) latest = f.ajoute; });
+    st.textContent = latest ? "Mise à jour : " + dFull.format(parse(latest)) : "Mise à jour : en attente des fiches";
+  }
+
+  function render() { renderChips(); renderHero(); renderAgenda(); renderMain(); renderStamp(); }
+
+  $("q").addEventListener("input", function (e) { state.q = e.target.value; renderMain(); });
+  $("cta").addEventListener("click", function () {
+    state.hideDone = true; render();
+    try { $("liste").scrollIntoView({ block: "start" }); } catch (e) {}
+  });
+
+  render();
+
+  /* Source des fiches : base de l'artefact Claude si la page y tourne, sinon data/fiches.json (GitHub Pages). */
+  function loadJson() {
+    fetch("data/fiches.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (list) {
+      list = Array.isArray(list) ? list : arr(list && list.fiches);
+      docs = list.filter(function (f) { return f && f.titre && f.date && daysAgo(f.date) <= lim(); });
+      state.ready = true; state.error = null; render();
+    }).catch(function () {
+      state.ready = true; state.error = "Impossible de charger data/fiches.json. Recharge la page dans un instant."; render();
+    });
+  }
+
+  var unsub = null, pruned = false;
+  function start() {
+    if (!window.claude || !window.claude.use) { loadJson(); return; }
+    window.claude.use("db").then(function (db) {
+      if (!db) { loadJson(); return; }
+      if (unsub) unsub();
+      unsub = db.collection("fiches").onSnapshot(function (snap) {
+        var all = snap.docs.map(function (x) { var o = x.data() || {}; var c = {}; for (var k in o) c[k] = o[k]; c.id = x.id; return c; }).filter(function (f) { return f.titre && f.date; });
+        docs = all.filter(function (f) { return daysAgo(f.date) <= lim(); });
+        var olds = all.filter(function (f) { return daysAgo(f.date) > lim(); });
+        if (olds.length && !pruned) {
+          pruned = true;
+          olds.forEach(function (f) { try { var r = db.collection("fiches").doc(f.id).delete(); if (r && r.catch) r.catch(function () {}); } catch (e) {} });
+        }
+        state.ready = true; state.error = null; render();
+      }, function (err) {
+        state.ready = true; state.error = "Lecture impossible pour le moment (" + (err && err.code ? err.code : "erreur") + "). Recharge la page dans un instant."; render();
+      });
+    }, function () { loadJson(); });
+  }
+  start();
+})();
+</script>
+</body>
+</html>
