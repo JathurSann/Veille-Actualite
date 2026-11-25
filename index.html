@@ -334,6 +334,8 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 .corr .r { font-size: 13.5px; }
 .corr .r b { font-weight: 700; }
 .corr .ex { font-size: 13px; color: var(--muted); }
+#quiz-body h3 { font-size: 16px; font-weight: 800; margin: 18px 0 6px; color: var(--ink); }
+#quiz-body h3:first-child { margin-top: 0; }
 .rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .rank li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 13.5px; padding: 8px 10px; border-radius: 12px; background: var(--surface); }
 .rank li.me { background: var(--accent-soft); font-weight: 700; color: var(--ink); }
@@ -503,7 +505,7 @@ html, body { overflow-x: clip; max-width: 100%; }
       </ul>
       <div class="actions">
         <button class="btn" id="cta" type="button">Réviser les fiches restantes</button>
-        <button class="btn ghost" id="cta-test" type="button">Passer le test</button>
+        <button class="btn ghost" id="cta-test" type="button">Test et entraînement</button>
         <button class="btn ghost" id="cta-rank" type="button">Classement</button>
       </div>
     </div>
@@ -544,7 +546,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     <aside class="rail" aria-label="Repères">
       <section class="card">
         <h2>Classement du jour</h2>
-        <p class="hint">1 bonne réponse = 1 point. Un classement par format (5, 10 ou 20 questions), remis à zéro chaque jour. À égalité de points, celui qui a fini le premier passe devant.</p>
+        <p class="hint">Le test du jour (20 questions, les mêmes pour tout le monde) est classé. 1 bonne réponse = 1 point. À égalité de points, celui qui a fini le premier passe devant. Remis à zéro chaque jour.</p>
         <button class="btn ghost" id="rank-btn" type="button">Voir le classement</button>
       </section>
       <section class="card">
@@ -578,9 +580,8 @@ html, body { overflow-x: clip; max-width: 100%; }
 <dialog class="quiz" id="rankdlg" aria-labelledby="rank-titre">
   <div class="qhead"><h2 id="rank-titre">Classement du jour</h2><button type="button" class="linkbtn" id="rank-close">Fermer</button></div>
   <div class="qbody">
-    <div class="ctl"><span class="lbl">Questions</span><div class="seg" id="rank-tabs"></div></div>
     <ol class="rank" id="rank"></ol>
-    <p class="hint">1 bonne réponse = 1 point. Le meilleur test de chaque personne compte. À égalité de points, celui qui a fini son test en premier passe devant. Le tag « Refait » indique que la personne a passé ce format plusieurs fois aujourd'hui. Le classement repart de zéro chaque jour.</p>
+    <p class="hint">Test du jour : 20 questions, les mêmes pour tout le monde. 1 bonne réponse = 1 point. Le premier essai de chaque personne compte. À égalité de points, celui qui a fini en premier passe devant. Le tag « Refait » indique que la personne a refait le test aujourd'hui, donc qu'elle connaissait déjà les questions. Le classement repart de zéro chaque jour. L'entraînement (5 ou 10 questions) n'est pas classé.</p>
   </div>
 </dialog>
 
@@ -1239,43 +1240,38 @@ html, body { overflow-x: clip; max-width: 100%; }
     try { return new Date(ts).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", second: "2-digit", timeZone: "Europe/Paris" }); } catch (e) { return ""; }
   }
   function rankMsg(ol, text) { ol.textContent = ""; var li = el("li"); li.appendChild(el("span")); li.appendChild(el("span", "hint", text)); ol.appendChild(li); }
-  var rankFmt = 10;
-  function openRank(fmt) {
-    rankFmt = fmt || 10;
+  function openRank() {
     try { if ($("quiz").open) $("quiz").close(); } catch (e) {}
-    renderRankTabs(); loadRank();
+    loadRank();
     var d = $("rankdlg"); if (!d.open) d.showModal();
   }
-  function renderRankTabs() {
-    var seg = $("rank-tabs"); seg.textContent = "";
-    [5, 10, 20].forEach(function (n) {
-      var b = el("button", null, String(n)); b.type = "button"; b.setAttribute("aria-pressed", String(rankFmt === n));
-      b.addEventListener("click", function () { rankFmt = n; renderRankTabs(); loadRank(); });
-      seg.appendChild(b);
+  function showRank(ol, rows) {
+    if (!rows.length) { rankMsg(ol, "Personne n'a encore passé le test du jour. Sois le premier."); return; }
+    ol.textContent = "";
+    rows.forEach(function (x) {
+      var li = el("li", x.moi ? "me" : null);
+      li.appendChild(el("span", "n", String(x.rang)));
+      var p = el("span", "p"); p.appendChild(el("span", "nm", x.pseudo + (x.moi ? " (toi)" : "")));
+      var essais = x.nb_essais || 1;
+      if (essais > 1) { var rd = el("span", "redo", "Refait ×" + essais); rd.title = "A passé le test du jour " + essais + " fois aujourd'hui"; p.appendChild(rd); }
+      li.appendChild(p);
+      var pts = x.points != null ? x.points : x.score;
+      var sc = el("span", "s", pts + (pts > 1 ? " pts" : " pt"));
+      sc.appendChild(el("small", null, x.termine_a ? "fini à " + fmtHour(x.termine_a) : fmtDur(x.duree_sec)));
+      li.appendChild(sc); ol.appendChild(li);
     });
   }
   function loadRank() {
-    var ol = $("rank"), fmt = rankFmt;
+    var ol = $("rank");
     rankMsg(ol, "Chargement…");
-    sb.rpc("classement", { p_format: fmt }).then(function (r) {
-      if (fmt !== rankFmt) return;  /* réponse d'un onglet précédent */
-      if (r.error) { rankMsg(ol, "Classement indisponible pour le moment."); return; }
-      var rows = r.data || [];
-      if (!rows.length) { rankMsg(ol, "Personne n'a encore passé de test de " + fmt + " questions aujourd'hui. Sois le premier."); return; }
-      ol.textContent = "";
-      rows.forEach(function (x) {
-        var li = el("li", x.moi ? "me" : null);
-        li.appendChild(el("span", "n", String(x.rang)));
-        var p = el("span", "p"); p.appendChild(el("span", "nm", x.pseudo + (x.moi ? " (toi)" : "")));
-        var essais = x.nb_essais || 1;
-        if (essais > 1) { var rd = el("span", "redo", "Refait ×" + essais); rd.title = "A passé ce test " + essais + " fois aujourd'hui"; p.appendChild(rd); }
-        li.appendChild(p);
-        var pts = x.points != null ? x.points : x.score;
-        var sc = el("span", "s", pts + (pts > 1 ? " pts" : " pt"));
-        sc.appendChild(el("small", null, x.termine_a ? "fini à " + fmtHour(x.termine_a) : fmtDur(x.duree_sec)));
-        li.appendChild(sc); ol.appendChild(li);
-      });
-    }, function () { if (fmt === rankFmt) rankMsg(ol, "Classement indisponible pour le moment."); });
+    /* Nouvelle base : classement du test du jour. Ancienne base : repli sur le format 20. */
+    sb.rpc("classement").then(function (r) {
+      if (!r.error) { showRank(ol, r.data || []); return; }
+      sb.rpc("classement", { p_format: 20 }).then(function (r2) {
+        if (r2.error) { rankMsg(ol, "Classement indisponible pour le moment."); return; }
+        showRank(ol, r2.data || []);
+      }, function () { rankMsg(ol, "Classement indisponible pour le moment."); });
+    }, function () { rankMsg(ol, "Classement indisponible pour le moment."); });
   }
 
   /* ---------- Test ---------- */
@@ -1285,24 +1281,31 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function quizIntro(err) {
     var b = qbody();
-    b.appendChild(el("p", null, "Un test, c'est jusqu'à 20 questions, une par sujet, tirées des 20 sujets les plus couverts de la quinzaine. Tu peux le passer quand tu veux, que tu aies lu les fiches ou non."));
-    b.appendChild(el("p", "hint", "1 bonne réponse = 1 point. Ton meilleur test de la journée compte pour le classement, et chaque format (5, 10 ou 20 questions) a le sien. À égalité de points, celui qui a fini le premier passe devant. Tu peux refaire le test autant de fois que tu veux : tu auras alors le tag « Refait »."));
+    if (err) { var m = el("p", "msg err", err); m.setAttribute("role", "alert"); b.appendChild(m); }
+    b.appendChild(el("h3", null, "Test du jour"));
+    b.appendChild(el("p", null, "20 questions, les mêmes pour tout le monde, une par sujet parmi les plus couverts de la quinzaine. C'est le seul test classé."));
+    b.appendChild(el("p", "hint", "1 bonne réponse = 1 point. Ton premier essai du jour compte pour le classement. Si tu le refais, tu connais déjà les questions : tu auras le tag « Refait »."));
+    var go = el("button", "btn", "Lancer le test du jour"); go.type = "button";
+    go.addEventListener("click", function () { go.disabled = true; startQuiz(20); });
+    b.appendChild(go);
+    b.appendChild(el("h3", null, "Entraînement"));
+    b.appendChild(el("p", "hint", "Des questions tirées au hasard, autant de fois que tu veux. Pas de classement."));
     var c = el("div", "ctl"); c.appendChild(el("span", "lbl", "Questions"));
     var seg = el("div", "seg");
-    [5, 10, 20].forEach(function (n) {
+    [5, 10].forEach(function (n) {
       var x = el("button", null, String(n)); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.n === n));
       x.addEventListener("click", function () { quiz.n = n; quizIntro(); });
       seg.appendChild(x);
     });
     c.appendChild(seg); b.appendChild(c);
-    if (err) { var m = el("p", "msg err", err); m.setAttribute("role", "alert"); b.appendChild(m); }
-    var go = el("button", "btn", "Commencer"); go.type = "button";
-    go.addEventListener("click", function () { go.disabled = true; startQuiz(); });
-    b.appendChild(go);
+    var tr = el("button", "btn ghost", "Commencer l'entraînement"); tr.type = "button";
+    tr.addEventListener("click", function () { tr.disabled = true; startQuiz(quiz.n); });
+    b.appendChild(tr);
   }
 
-  function startQuiz() {
-    sb.rpc("demarrer_test", { p_nombre: quiz.n }).then(function (r) {
+  function startQuiz(n) {
+    quiz.mode = n;
+    sb.rpc("demarrer_test", { p_nombre: n }).then(function (r) {
       if (r.error) {
         var m = String(r.error.message || "");
         quizIntro(m.indexOf("Aucune question") >= 0 ? "Pas encore de questions disponibles. Elles arrivent avec la mise à jour du matin."
@@ -1366,16 +1369,16 @@ html, body { overflow-x: clip; max-width: 100%; }
     });
     b.appendChild(list);
     var nav = el("div", "qnav");
-    var again = el("button", "btn", "Refaire un test"); again.type = "button"; again.addEventListener("click", function () { quizIntro(); }); nav.appendChild(again);
-    var rk = el("button", "btn ghost", "Voir le classement"); rk.type = "button"; rk.addEventListener("click", function () { openRank(quiz.n); }); nav.appendChild(rk);
+    var again = el("button", "btn", "Retour aux tests"); again.type = "button"; again.addEventListener("click", function () { quizIntro(); }); nav.appendChild(again);
+    if (quiz.mode === 20) { var rk = el("button", "btn ghost", "Voir le classement"); rk.type = "button"; rk.addEventListener("click", function () { openRank(); }); nav.appendChild(rk); }
     var cl = el("button", "linkbtn", "Fermer"); cl.type = "button"; cl.addEventListener("click", function () { $("quiz").close(); }); nav.appendChild(cl);
     b.appendChild(nav);
     b.scrollTop = 0;
   }
 
   $("cta-test").addEventListener("click", openQuiz);
-  $("cta-rank").addEventListener("click", function () { openRank(quiz.n); });
-  $("rank-btn").addEventListener("click", function () { openRank(quiz.n); });
+  $("cta-rank").addEventListener("click", function () { openRank(); });
+  $("rank-btn").addEventListener("click", function () { openRank(); });
   $("rank-close").addEventListener("click", function () { $("rankdlg").close(); });
   $("quiz-close").addEventListener("click", function () { $("quiz").close(); });
   $("logout").addEventListener("click", function () { closeMenu(); sb.auth.signOut(); });
