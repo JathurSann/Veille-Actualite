@@ -35,4 +35,10 @@ Champ optionnel `questions[]` : `{enonce, choix[2 à 5], bonne (index du bon cho
 
 ## Test et classement
 
-Le test comporte 5, 10 ou 20 questions au choix, une par sujet. On peut le lancer à tout moment. Le classement du jour retient le meilleur test de chaque personne (ratio de bonnes réponses, puis nombre de bonnes réponses, puis temps).
+Le test comporte 5, 10 ou 20 questions au choix, une par sujet. On peut le lancer à tout moment.
+
+Classement du jour, un par format : 1 bonne réponse = 1 point. Le meilleur test de chaque personne compte. À égalité de points, celui qui a terminé son test en premier passe devant. Une personne qui a refait le format dans la journée reçoit le tag « Refait ×N ». La fonction SQL est dans `supabase/2026-11-25-classement-points.sql` (à lancer une fois dans Supabase > SQL Editor ; la page reste compatible avec l'ancienne version tant que ce n'est pas fait).
+
+## Apparence
+
+Mode clair ou sombre : automatique par défaut (réglage de l'appareil), modifiable avec le bouton soleil/lune ou dans le menu du compte. Le choix est gardé dans le navigateur.
