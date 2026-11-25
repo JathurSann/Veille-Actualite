@@ -316,6 +316,62 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 .rank .s { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ink); }
 .rank .s small { font-weight: 600; color: var(--muted); }
 
+/* Cartes de fiches : à tirer avec le doigt (mobile) ou à la souris / au clavier (mode révision sur ordinateur) */
+.deckbar { display: grid; gap: 6px; margin: 0 0 12px; }
+.deckbar .cn { font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.deckbar .bar { height: 6px; }
+.deckbar small { font-size: 12px; font-weight: 600; color: var(--muted); }
+.deckwrap { position: relative; height: calc(100vh - 290px); height: calc(100dvh - 290px); min-height: 440px; touch-action: pan-y; }
+.deckwrap.drag { user-select: none; -webkit-user-select: none; cursor: grabbing; }
+.sc {
+  --g: #5b3a1f; position: absolute; inset: 0; overflow: hidden; display: flex; flex-direction: column; touch-action: pan-y;
+  border-radius: 24px; padding: 18px 18px 16px; color: #fff; will-change: transform; transform-origin: 50% 100%;
+  background: linear-gradient(165deg, var(--g) 0%, #1b1411 80%); box-shadow: 0 12px 32px rgba(20,17,15,.28);
+}
+.sc[data-r="politique"] { --g: #B42318; } .sc[data-r="international"] { --g: #1D4ED8; } .sc[data-r="economie"] { --g: #047857; }
+.sc[data-r="societe"] { --g: #7E22CE; } .sc[data-r="sciences"] { --g: #0E7490; } .sc[data-r="culture"] { --g: #BE185D; }
+.sc[data-r="sport"] { --g: #57534E; } .sc[data-r="medias"] { --g: #92400E; } .sc[data-r="environnement"] { --g: #4D7C0F; }
+.sc .tag .date { color: rgba(255,255,255,.78); }
+.sc .st { color: #fff; border-color: rgba(255,255,255,.4); }
+.sc .st.ok { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); color: #fff; }
+.sc.done .donebadge { display: inline-flex; }
+.sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(22px, 6.3vw, 27px); line-height: 1.15; letter-spacing: -.01em; margin: 14px 0 10px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: none; }
+.sc .tag, .sc .stat { flex: none; }
+.sc .stat { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); }
+.sc .stat b { font-size: 30px; font-weight: 900; line-height: 1; color: #FFC46B; font-variant-numeric: tabular-nums; }
+.sc .stat .meter { margin-left: auto; }
+.sc .meter span { color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.3); }
+.sc .meter span.on { background: #fff; color: #1b1411; border-color: transparent; }
+.sc .tabs { flex: none; display: flex; gap: 6px; margin: 14px 0 12px; }
+.sc .tab { flex: 1 1 0; min-width: 0; height: 36px; padding: 0 4px; border-radius: 50px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: rgba(255,255,255,.82); font: 700 12.5px var(--font); cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sc .tab[aria-selected="true"] { background: #fff; color: #1b1411; border-color: transparent; }
+.sc .zone { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
+.sc .panel { display: grid; gap: 18px; align-content: start; }
+.sc .resume { color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.55; max-width: none; margin: 0; }
+.sc .block.key { padding: 14px 16px; }
+.sc .block h4 { color: rgba(255,255,255,.7); }
+.sc .block.key { background: rgba(255,255,255,.13); padding: 16px 18px; }
+.sc .block.key h4 { color: #FFC46B; }
+.sc .retenir, .sc .block p, .sc .ech li, .sc .src li { color: #fff; }
+.sc .people span { background: rgba(255,255,255,.15); color: #fff; }
+.sc .ech .d { background: rgba(255,255,255,.16); color: #FFD7B0; }
+.sc .src .t { background: rgba(255,255,255,.16); color: #fff; }
+.sc a, .sc .srcmore summary { color: #FFD7B0; }
+.deckctl { display: flex; align-items: center; justify-content: center; gap: 22px; margin: 16px 0 4px; }
+.deckbtn { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 700 28px/1 var(--font); cursor: pointer; display: grid; place-items: center; padding: 0 0 4px; box-shadow: var(--shadow); }
+.deckbtn.ok { width: 68px; height: 68px; font-size: 30px; padding: 0; border: 0; background: var(--grad); color: var(--btn-ink); }
+.deckbtn.ok[aria-pressed="true"] { background: var(--ok-fg); color: #fff; }
+.deckbtn[disabled] { opacity: .3; cursor: default; }
+.deckcol { max-width: 560px; margin-inline: auto; }
+.sc { cursor: grab; }
+.deckwrap.drag .sc { cursor: grabbing; }
+#f-done { display: flex; flex-wrap: wrap; gap: 8px; }
+.kbd { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 6px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); }
+@media (min-width: 701px) {
+  .deckwrap { height: min(640px, calc(100vh - 330px)); height: min(640px, calc(100dvh - 330px)); min-height: 460px; }
+}
+@media (max-width: 700px) { .desk-only { display: none !important; } }
+
 @media (max-width: 860px) {
   .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
@@ -327,52 +383,6 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 }
 @media (max-width: 700px) {
   .body { grid-template-columns: minmax(0, 1fr); }
-  /* Cartes de fiches à tirer avec le doigt */
-  .deckbar { display: grid; gap: 6px; margin: 0 0 12px; }
-  .deckbar .cn { font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
-  .deckbar .bar { height: 6px; }
-  .deckbar small { font-size: 12px; font-weight: 600; color: var(--muted); }
-  .deckwrap { position: relative; height: calc(100vh - 290px); height: calc(100dvh - 290px); min-height: 440px; touch-action: pan-y; }
-  .deckwrap.drag { user-select: none; -webkit-user-select: none; cursor: grabbing; }
-  .sc {
-    --g: #5b3a1f; position: absolute; inset: 0; overflow: hidden; display: flex; flex-direction: column; touch-action: pan-y;
-    border-radius: 24px; padding: 18px 18px 16px; color: #fff; will-change: transform; transform-origin: 50% 100%;
-    background: linear-gradient(165deg, var(--g) 0%, #1b1411 80%); box-shadow: 0 12px 32px rgba(20,17,15,.28);
-  }
-  .sc[data-r="politique"] { --g: #B42318; } .sc[data-r="international"] { --g: #1D4ED8; } .sc[data-r="economie"] { --g: #047857; }
-  .sc[data-r="societe"] { --g: #7E22CE; } .sc[data-r="sciences"] { --g: #0E7490; } .sc[data-r="culture"] { --g: #BE185D; }
-  .sc[data-r="sport"] { --g: #57534E; } .sc[data-r="medias"] { --g: #92400E; } .sc[data-r="environnement"] { --g: #4D7C0F; }
-  .sc .tag .date { color: rgba(255,255,255,.78); }
-  .sc .st { color: #fff; border-color: rgba(255,255,255,.4); }
-  .sc .st.ok { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); color: #fff; }
-  .sc.done .donebadge { display: inline-flex; }
-  .sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(22px, 6.3vw, 27px); line-height: 1.15; letter-spacing: -.01em; margin: 14px 0 10px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: none; }
-  .sc .tag, .sc .stat { flex: none; }
-  .sc .stat { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); }
-  .sc .stat b { font-size: 30px; font-weight: 900; line-height: 1; color: #FFC46B; font-variant-numeric: tabular-nums; }
-  .sc .stat .meter { margin-left: auto; }
-  .sc .meter span { color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.3); }
-  .sc .meter span.on { background: #fff; color: #1b1411; border-color: transparent; }
-  .sc .tabs { flex: none; display: flex; gap: 6px; margin: 14px 0 12px; }
-  .sc .tab { flex: 1 1 0; min-width: 0; height: 36px; padding: 0 4px; border-radius: 50px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: rgba(255,255,255,.82); font: 700 12.5px var(--font); cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .sc .tab[aria-selected="true"] { background: #fff; color: #1b1411; border-color: transparent; }
-  .sc .zone { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
-  .sc .panel { display: grid; gap: 18px; align-content: start; }
-  .sc .resume { color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.55; max-width: none; margin: 0; }
-  .sc .block.key { padding: 14px 16px; }
-  .sc .block h4 { color: rgba(255,255,255,.7); }
-  .sc .block.key { background: rgba(255,255,255,.13); padding: 16px 18px; }
-  .sc .block.key h4 { color: #FFC46B; }
-  .sc .retenir, .sc .block p, .sc .ech li, .sc .src li { color: #fff; }
-  .sc .people span { background: rgba(255,255,255,.15); color: #fff; }
-  .sc .ech .d { background: rgba(255,255,255,.16); color: #FFD7B0; }
-  .sc .src .t { background: rgba(255,255,255,.16); color: #fff; }
-  .sc a, .sc .srcmore summary { color: #FFD7B0; }
-  .deckctl { display: flex; align-items: center; justify-content: center; gap: 22px; margin: 16px 0 4px; }
-  .deckbtn { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 700 28px/1 var(--font); cursor: pointer; display: grid; place-items: center; padding: 0 0 4px; box-shadow: var(--shadow); }
-  .deckbtn.ok { width: 68px; height: 68px; font-size: 30px; padding: 0; border: 0; background: var(--grad); color: var(--btn-ink); }
-  .deckbtn.ok[aria-pressed="true"] { background: var(--ok-fg); color: #fff; }
-  .deckbtn[disabled] { opacity: .3; cursor: default; }
 }
 @media (max-width: 520px) {
   details.fiche > summary { padding: 16px; }
@@ -526,7 +536,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   var ICON_OK = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"/></svg>';
 
   var docs = [];
-  var state = { rub: "all", per: 7, sort: "jour", q: "", hideDone: false, ready: false, error: null };
+  var state = { rub: "all", per: 7, sort: "jour", q: "", hideDone: false, revMode: false, ready: false, error: null };
   var openIds = {};
   var done = {};
   var legacy = {};  /* ancien suivi gardé dans le navigateur, repris à la première connexion */
@@ -602,6 +612,11 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     t.appendChild(el("span", null, "Masquer les fiches révisées"));
     t.addEventListener("click", function () { state.hideDone = !state.hideDone; render(); });
     dn.appendChild(t);
+    var rv = el("button", "pill desk-only"); rv.type = "button"; rv.setAttribute("aria-pressed", String(state.revMode));
+    rv.appendChild(el("span", null, "Mode révision"));
+    rv.title = "Une fiche à la fois, au clavier : flèches pour naviguer, R pour marquer comme révisée";
+    rv.addEventListener("click", function () { state.revMode = !state.revMode; render(); });
+    dn.appendChild(rv);
   }
 
   function renderHero() {
@@ -834,7 +849,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 
     var bar = el("div", "deckbar");
     var cn = el("span", "cn"); var prog = el("div", "bar"); var fill = document.createElement("i"); prog.appendChild(fill);
-    var hint = el("small", null, "Tire la carte vers la gauche pour la suivante");
+    var hint = el("small", null, isMobile() ? "Tire la carte vers la gauche pour la suivante" : "Tire la carte ou utilise ← → pour changer de fiche · R : marquer comme révisée");
     bar.appendChild(cn); bar.appendChild(prog); bar.appendChild(hint);
 
     var wrap = el("div", "deckwrap"); wrap.tabIndex = 0; wrap.setAttribute("role", "region"); wrap.setAttribute("aria-label", "Fiches : tire la carte à gauche ou à droite pour changer de fiche");
@@ -843,7 +858,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     function rb(label, cls, txt) { var b = el("button", "deckbtn " + cls, txt); b.type = "button"; b.setAttribute("aria-label", label); return b; }
     var bp = rb("Fiche précédente", "", "‹"), bk = rb("Marquer la fiche comme révisée", "ok", "✓"), bn = rb("Fiche suivante", "", "›");
     ctl.appendChild(bp); ctl.appendChild(bk); ctl.appendChild(bn);
-    main.appendChild(bar); main.appendChild(wrap); main.appendChild(ctl);
+    var col = el("div", "deckcol"); col.appendChild(bar); col.appendChild(wrap); col.appendChild(ctl); main.appendChild(col);
 
     var cards = { prev: null, cur: null, next: null }, busy = false, suppress = false;
     function mk(i) { var c = swipeCard(ord[i]); if (done[ord[i].id]) c.classList.add("done"); return c; }
@@ -856,7 +871,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     function upd() {
       cn.textContent = (deckIdx + 1) + " / " + n;
       fill.style.width = Math.round((deckIdx + 1) / n * 100) + "%";
-      hint.hidden = deckIdx > 0 || n < 2;
+      hint.hidden = isMobile() && (deckIdx > 0 || n < 2);
       bp.disabled = deckIdx <= 0; bn.disabled = deckIdx >= n - 1;
       var on = !!done[ord[deckIdx].id]; bk.setAttribute("aria-pressed", String(on)); bk.title = on ? "Révisée : toucher pour annuler" : "Marquer comme révisée";
     }
@@ -886,7 +901,14 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
       setRevise(f, turnOn, function (v) { if (cards.cur) cards.cur.classList.toggle("done", v); upd(); });
       if (turnOn && cards.next) setTimeout(goNext, 260);  /* révisée : on passe à la suivante */
     });
-    wrap.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") { e.preventDefault(); goNext(); } else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); } });
+    deckKey = function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey || document.querySelector("dialog[open]")) return;
+      var t = e.target; if (t && t.closest && t.closest("input, textarea, select")) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
+      else if (e.key === "r" || e.key === "R") { e.preventDefault(); bk.click(); }
+    };
+    document.addEventListener("keydown", deckKey);
 
     /* Glisser à la main : la carte suit le doigt, s'incline, puis part ou revient */
     var g = null;
@@ -944,8 +966,10 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     layout();
   }
 
+  var deckKey = null;
   function renderMain() {
     var main = $("main"); main.textContent = "";
+    if (deckKey) { document.removeEventListener("keydown", deckKey); deckKey = null; }
     if (state.error) { main.appendChild(emptyState("Les fiches ne sont pas disponibles", state.error, false)); renderCount([]); return; }
     if (!state.ready) { main.appendChild(emptyState("Chargement des fiches", "Les sujets de la semaine arrivent.", false)); renderCount([]); return; }
     if (!docs.length) { main.appendChild(emptyState("Aucune fiche pour le moment", "Les fiches apparaissent après la prochaine mise à jour du matin.", false)); renderCount([]); return; }
@@ -956,7 +980,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
       else main.appendChild(emptyState("Rien dans cette sélection", "Change de rubrique, élargis la période ou modifie ta recherche.", true));
       return;
     }
-    if (isMobile()) {
+    if (isMobile() || state.revMode) {
       var ord = state.sort === "couv" ? list.slice().sort(byCouv).slice(0, 20)
         : list.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : (a.titre || "").localeCompare(b.titre || "", "fr"); });
       renderDeck(main, ord); return;
