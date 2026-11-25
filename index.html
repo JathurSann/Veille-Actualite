@@ -310,6 +310,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 .rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .rank li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 13.5px; padding: 8px 10px; border-radius: 12px; background: var(--surface); }
 .rank li.me { background: var(--accent-soft); font-weight: 700; color: var(--ink); }
+dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 .rank .n { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
 .rank .p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rank .s { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ink); }
@@ -375,6 +376,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
       <div class="actions">
         <button class="btn" id="cta" type="button">Réviser les fiches restantes</button>
         <button class="btn ghost" id="cta-test" type="button">Passer le test</button>
+        <button class="btn ghost" id="cta-rank" type="button">Classement</button>
       </div>
     </div>
     <div class="prog" aria-label="Progression de révision">
@@ -414,8 +416,8 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
     <aside class="rail" aria-label="Repères">
       <section class="card">
         <h2>Classement du jour</h2>
-        <ol class="rank" id="rank"><li><span></span><span class="hint">Chargement…</span></li></ol>
-        <p class="hint">Meilleur test de chaque personne aujourd'hui. Le classement repart de zéro chaque jour.</p>
+        <p class="hint">Un classement séparé pour chaque format de test : 5, 10 ou 20 questions. Il repart de zéro chaque jour.</p>
+        <button class="btn ghost" id="rank-btn" type="button">Voir le classement</button>
       </section>
       <section class="card">
         <h2>À venir</h2>
@@ -443,6 +445,15 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 <dialog class="quiz" id="quiz" aria-labelledby="quiz-titre">
   <div class="qhead"><h2 id="quiz-titre">Test d'actualité</h2><button type="button" class="linkbtn" id="quiz-close">Fermer</button></div>
   <div class="qbody" id="quiz-body"></div>
+</dialog>
+
+<dialog class="quiz" id="rankdlg" aria-labelledby="rank-titre">
+  <div class="qhead"><h2 id="rank-titre">Classement du jour</h2><button type="button" class="linkbtn" id="rank-close">Fermer</button></div>
+  <div class="qbody">
+    <div class="ctl"><span class="lbl">Test de</span><div class="seg" id="rank-tabs"></div></div>
+    <ol class="rank" id="rank"></ol>
+    <p class="hint">Meilleur test de chaque personne aujourd'hui, pour ce nombre de questions. Le classement repart de zéro chaque jour.</p>
+  </div>
 </dialog>
 
 <script src="vendor/supabase.js"></script>
@@ -841,7 +852,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 
   function leave() {
     docs = []; done = {}; state.ready = false;
-    try { if ($("quiz").open) $("quiz").close(); } catch (e) {}
+    try { if ($("quiz").open) $("quiz").close(); if ($("rankdlg").open) $("rankdlg").close(); } catch (e) {}
     renderAuth("login");
   }
 
@@ -859,7 +870,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
       if (f.error) throw f.error;
       docs = (f.data || []).filter(function (x) { return x && x.titre && x.date && daysAgo(x.date) <= lim(); });
       done = {}; ((r && r.data) || []).forEach(function (x) { done[x.fiche_id] = 1; });
-      state.ready = true; state.error = null; render(); loadRank(); migrate();
+      state.ready = true; state.error = null; render(); migrate();
     }).catch(function () {
       state.ready = true; state.error = "Lecture impossible pour le moment. Recharge la page dans un instant."; render();
     });
@@ -880,23 +891,38 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
   /* ---------- Classement ---------- */
   function fmtDur(s) { s = Math.max(0, s | 0); var r = s % 60; return s < 60 ? s + " s" : Math.floor(s / 60) + " min " + (r < 10 ? "0" : "") + r; }
   function rankMsg(ol, text) { ol.textContent = ""; var li = el("li"); li.appendChild(el("span")); li.appendChild(el("span", "hint", text)); ol.appendChild(li); }
+  var rankFmt = 10;
+  function openRank(fmt) {
+    rankFmt = fmt || 10;
+    try { if ($("quiz").open) $("quiz").close(); } catch (e) {}
+    renderRankTabs(); loadRank();
+    var d = $("rankdlg"); if (!d.open) d.showModal();
+  }
+  function renderRankTabs() {
+    var seg = $("rank-tabs"); seg.textContent = "";
+    [5, 10, 20].forEach(function (n) {
+      var b = el("button", null, n + " questions"); b.type = "button"; b.setAttribute("aria-pressed", String(rankFmt === n));
+      b.addEventListener("click", function () { rankFmt = n; renderRankTabs(); loadRank(); });
+      seg.appendChild(b);
+    });
+  }
   function loadRank() {
-    var ol = $("rank");
-    sb.rpc("classement").then(function (r) {
+    var ol = $("rank"), fmt = rankFmt;
+    rankMsg(ol, "Chargement…");
+    sb.rpc("classement", { p_format: fmt }).then(function (r) {
+      if (fmt !== rankFmt) return;  /* réponse d'un onglet précédent */
       if (r.error) { rankMsg(ol, "Classement indisponible pour le moment."); return; }
       var rows = r.data || [];
-      if (!rows.length) { rankMsg(ol, "Personne n'a encore passé de test aujourd'hui. Sois le premier."); return; }
+      if (!rows.length) { rankMsg(ol, "Personne n'a encore passé de test de " + fmt + " questions aujourd'hui. Sois le premier."); return; }
       ol.textContent = "";
-      var top = rows.slice(0, 10), me = rows.filter(function (x) { return x.moi; })[0];
-      if (me && top.indexOf(me) < 0) top.push(me);
-      top.forEach(function (x) {
+      rows.forEach(function (x) {
         var li = el("li", x.moi ? "me" : null);
         li.appendChild(el("span", "n", String(x.rang)));
-        li.appendChild(el("span", "p", x.pseudo));
-        var s = el("span", "s", x.score + "/" + x.total); s.appendChild(el("small", null, " · " + fmtDur(x.duree_sec)));
-        li.appendChild(s); ol.appendChild(li);
+        li.appendChild(el("span", "p", x.pseudo + (x.moi ? " (toi)" : "")));
+        var sc = el("span", "s", x.score + "/" + x.total); sc.appendChild(el("small", null, " · " + fmtDur(x.duree_sec)));
+        li.appendChild(sc); ol.appendChild(li);
       });
-    }, function () { rankMsg(ol, "Classement indisponible pour le moment."); });
+    }, function () { if (fmt === rankFmt) rankMsg(ol, "Classement indisponible pour le moment."); });
   }
 
   /* ---------- Test ---------- */
@@ -907,7 +933,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
   function quizIntro(err) {
     var b = qbody();
     b.appendChild(el("p", null, "Un test, c'est jusqu'à 20 questions, une par sujet, tirées des 20 sujets les plus couverts de la quinzaine. Tu peux le passer quand tu veux, que tu aies lu les fiches ou non."));
-    b.appendChild(el("p", "hint", "Ton meilleur score de la journée compte pour le classement. Tu peux refaire le test autant de fois que tu veux."));
+    b.appendChild(el("p", "hint", "Ton meilleur score de la journée compte pour le classement, et chaque format (5, 10 ou 20 questions) a son propre classement. Tu peux refaire le test autant de fois que tu veux."));
     var c = el("div", "ctl"); c.appendChild(el("span", "lbl", "Questions"));
     var seg = el("div", "seg");
     [5, 10, 20].forEach(function (n) {
@@ -967,7 +993,7 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
     btn.disabled = true;
     sb.rpc("soumettre_test", { p_test: quiz.test, p_reponses: quiz.ans }).then(function (r) {
       if (r.error) { btn.disabled = false; var m = el("p", "msg err", "Impossible d'envoyer le test. Réessaie."); m.setAttribute("role", "alert"); $("quiz-body").appendChild(m); return; }
-      quizResult(r.data); loadRank();
+      quizResult(r.data);
     }, function () { btn.disabled = false; });
   }
 
@@ -988,12 +1014,16 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
     b.appendChild(list);
     var nav = el("div", "qnav");
     var again = el("button", "btn", "Refaire un test"); again.type = "button"; again.addEventListener("click", function () { quizIntro(); }); nav.appendChild(again);
-    var cl = el("button", "btn ghost", "Fermer"); cl.type = "button"; cl.addEventListener("click", function () { $("quiz").close(); }); nav.appendChild(cl);
+    var rk = el("button", "btn ghost", "Voir le classement"); rk.type = "button"; rk.addEventListener("click", function () { openRank(quiz.n); }); nav.appendChild(rk);
+    var cl = el("button", "linkbtn", "Fermer"); cl.type = "button"; cl.addEventListener("click", function () { $("quiz").close(); }); nav.appendChild(cl);
     b.appendChild(nav);
     b.scrollTop = 0;
   }
 
   $("cta-test").addEventListener("click", openQuiz);
+  $("cta-rank").addEventListener("click", function () { openRank(quiz.n); });
+  $("rank-btn").addEventListener("click", function () { openRank(quiz.n); });
+  $("rank-close").addEventListener("click", function () { $("rankdlg").close(); });
   $("quiz-close").addEventListener("click", function () { $("quiz").close(); });
   $("logout").addEventListener("click", function () { sb.auth.signOut(); });
 })();
