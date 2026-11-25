@@ -327,7 +327,21 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 }
 @media (max-width: 700px) {
   .body { grid-template-columns: minmax(0, 1fr); }
+  /* Carrousel de fiches : on glisse de droite à gauche */
+  .deckbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; }
+  .deckbar .ct { flex: 1; min-width: 0; text-align: center; font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; display: grid; gap: 2px; }
+  .deckbar .ct small { font-weight: 600; font-size: 12px; color: var(--muted); }
+  .deckbtn { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 700 24px/1 var(--font); cursor: pointer; display: grid; place-items: center; padding: 0 0 3px; }
+  .deckbtn[disabled] { opacity: .3; cursor: default; }
+  .deck { display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    height: calc(100vh - 210px); height: calc(100dvh - 210px); min-height: 420px; }
+  .deck::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: center; scroll-snap-stop: always; overflow-y: auto; overscroll-behavior-y: contain; border-radius: 16px; }
+  .deck details.fiche { min-height: 100%; }
+  .deck details.fiche > summary { pointer-events: none; cursor: default; }
+  .deck .more { display: none; }
 }
+@media (min-width: 701px) { .deckbar { display: none; } }
 @media (max-width: 520px) {
   details.fiche > summary { padding: 16px; }
   .body { padding: 4px 16px 18px; }
@@ -712,6 +726,51 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     return n;
   }
 
+  /* Mobile : une fiche à la fois, on glisse de droite à gauche */
+  var mq = window.matchMedia ? window.matchMedia("(max-width: 700px)") : { matches: false };
+  function isMobile() { return !!mq.matches; }
+  if (mq.addEventListener) mq.addEventListener("change", function () { renderMain(); });
+  else if (mq.addListener) mq.addListener(function () { renderMain(); });
+  var deckIdx = 0, deckSig = "";
+
+  function renderDeck(main, ord) {
+    var sig = ord.map(function (f) { return f.id; }).join("|");
+    if (sig !== deckSig) { deckSig = sig; deckIdx = 0; }
+    if (deckIdx >= ord.length) deckIdx = ord.length - 1;
+    var GAP = 12;
+
+    var bar = el("div", "deckbar");
+    var prev = el("button", "deckbtn", "‹"); prev.type = "button"; prev.setAttribute("aria-label", "Fiche précédente");
+    var next = el("button", "deckbtn", "›"); next.type = "button"; next.setAttribute("aria-label", "Fiche suivante");
+    var ct = el("div", "ct"); var cn = el("span"); var hint = el("small", null, "Glisse vers la gauche pour la suite");
+    ct.appendChild(cn); ct.appendChild(hint);
+    bar.appendChild(prev); bar.appendChild(ct); bar.appendChild(next);
+
+    var deck = el("div", "deck"); deck.tabIndex = 0; deck.setAttribute("role", "region"); deck.setAttribute("aria-label", "Fiches : glisse horizontalement pour changer de fiche");
+    ord.forEach(function (f) {
+      var sl = el("div", "slide"); var d = fiche(f, true); d.open = true;
+      d.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("summary")) e.preventDefault(); });
+      sl.appendChild(d); deck.appendChild(sl);
+    });
+    main.appendChild(bar); main.appendChild(deck);
+
+    function upd() {
+      cn.textContent = (deckIdx + 1) + " / " + ord.length;
+      prev.disabled = deckIdx <= 0; next.disabled = deckIdx >= ord.length - 1;
+      hint.hidden = deckIdx > 0 || ord.length < 2;
+    }
+    function go(i) { i = Math.max(0, Math.min(ord.length - 1, i)); deck.scrollTo({ left: i * (deck.clientWidth + GAP), behavior: "smooth" }); }
+    prev.addEventListener("click", function () { go(deckIdx - 1); });
+    next.addEventListener("click", function () { go(deckIdx + 1); });
+    var t;
+    deck.addEventListener("scroll", function () {
+      clearTimeout(t);
+      t = setTimeout(function () { var i = Math.round(deck.scrollLeft / (deck.clientWidth + GAP)); if (i !== deckIdx) { deckIdx = Math.max(0, Math.min(ord.length - 1, i)); upd(); } }, 60);
+    });
+    upd();
+    deck.scrollLeft = deckIdx * (deck.clientWidth + GAP);
+  }
+
   function renderMain() {
     var main = $("main"); main.textContent = "";
     if (state.error) { main.appendChild(emptyState("Les fiches ne sont pas disponibles", state.error, false)); renderCount([]); return; }
@@ -723,6 +782,11 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
       if (state.hideDone && !state.q && state.rub === "all" && docs.some(function (f) { return done[f.id]; })) main.appendChild(emptyState("Tout est révisé", "Il ne reste aucune fiche à réviser sur cette période. Désactive « Masquer les fiches révisées » pour les relire.", false));
       else main.appendChild(emptyState("Rien dans cette sélection", "Change de rubrique, élargis la période ou modifie ta recherche.", true));
       return;
+    }
+    if (isMobile()) {
+      var ord = state.sort === "couv" ? list.slice().sort(byCouv).slice(0, 20)
+        : list.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : (a.titre || "").localeCompare(b.titre || "", "fr"); });
+      renderDeck(main, ord); return;
     }
     if (state.sort === "couv") {
       var top = list.slice().sort(byCouv).slice(0, 20);
