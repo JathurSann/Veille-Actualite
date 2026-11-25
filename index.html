@@ -978,7 +978,8 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function renderDeck(main, ord) {
     var n = ord.length, sig = ord.map(function (f) { return f.id; }).join("|");
-    if (sig !== deckSig) { deckSig = sig; deckIdx = 0; }
+    if (sig !== deckSig) { deckSig = sig; deckIdx = state.keepIdx != null ? state.keepIdx : 0; }
+    state.keepIdx = null;
     if (state.jumpTodo) { state.jumpTodo = false; var k0 = 0; while (k0 < n && done[ord[k0].id]) k0++; deckIdx = k0 < n ? k0 : 0; }
     if (deckIdx >= n) deckIdx = n - 1;
 
@@ -1034,9 +1035,20 @@ html, body { overflow-x: clip; max-width: 100%; }
       setTimeout(function () { deckIdx--; busy = false; layout(); }, 300);
     }
     bp.addEventListener("click", goPrev); bn.addEventListener("click", goNext);
+    var removing = false;
     bk.addEventListener("click", function () {
+      if (removing || busy) return;
       var f = ord[deckIdx], turnOn = !done[f.id];
       setRevise(f, turnOn, function (v) { if (cards.cur) cards.cur.classList.toggle("done", v); upd(); });
+      if (turnOn && state.hideDone) {
+        /* « Masquer les fiches révisées » : la fiche sort du paquet, le total diminue (153 → 152) */
+        removing = true; var at = deckIdx;
+        setTrans(true);
+        if (cards.cur) { cards.cur.style.transform = "translateX(" + (-wrap.clientWidth * 1.2) + "px) rotate(-10deg)"; cards.cur.style.opacity = "0"; }
+        if (cards.next) cards.next.style.transform = "scale(1) translateY(0)";
+        setTimeout(function () { state.keepIdx = at; renderMain(); }, 240);
+        return;
+      }
       if (turnOn && cards.next) setTimeout(goNext, 260);  /* révisée : on passe à la suivante */
     });
     deckKey = function (e) {
