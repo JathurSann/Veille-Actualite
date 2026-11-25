@@ -1,0 +1,154 @@
+[
+  {
+    "id": "exemple-1",
+    "titre": "[EXEMPLE] Sujet politique de test",
+    "rubrique": "politique",
+    "date": "2026-11-24",
+    "ajoute": "2026-11-25",
+    "croise": true,
+    "resume": "Fiche d'exemple pour tester la page. Elle sera supprimée à la première vraie synchronisation.",
+    "retenir": [
+      "Point 1",
+      "Point 2",
+      "Point 3"
+    ],
+    "contexte": "Contexte d'exemple.",
+    "acteurs": [
+      "Acteur A",
+      "Acteur B"
+    ],
+    "echeances": [
+      {
+        "date": "2026-11-30",
+        "label": "Échéance d'exemple"
+      }
+    ],
+    "sources": [
+      {
+        "nom": "Le Monde",
+        "type": "presse",
+        "url": "https://example.org/le-monde"
+      },
+      {
+        "nom": "RTL",
+        "type": "radio",
+        "url": "https://example.org/rtl"
+      },
+      {
+        "nom": "TF1 info",
+        "type": "tv",
+        "url": "https://example.org/tf1-info"
+      }
+    ],
+    "questions": [
+      {
+        "enonce": "Question d'exemple 1 : quelle est la bonne réponse ?",
+        "choix": [
+          "Réponse A",
+          "Réponse B",
+          "Réponse C",
+          "Réponse D"
+        ],
+        "bonne": 1,
+        "explication": "Explication d'exemple."
+      }
+    ]
+  },
+  {
+    "id": "exemple-2",
+    "titre": "[EXEMPLE] Sujet économie de test",
+    "rubrique": "economie",
+    "date": "2026-11-22",
+    "ajoute": "2026-11-25",
+    "croise": false,
+    "resume": "Deuxième fiche d'exemple.",
+    "retenir": [
+      "Point A",
+      "Point B",
+      "Point C"
+    ],
+    "contexte": "Contexte.",
+    "acteurs": [
+      "Acteur C"
+    ],
+    "echeances": [],
+    "sources": [
+      {
+        "nom": "Les Échos",
+        "type": "presse",
+        "url": "https://example.org/les-échos"
+      },
+      {
+        "nom": "Public Sénat",
+        "type": "tv",
+        "url": "https://example.org/public-sénat"
+      }
+    ],
+    "questions": [
+      {
+        "enonce": "Question d'exemple 2 : laquelle est vraie ?",
+        "choix": [
+          "Vrai",
+          "Faux",
+          "Peut-être"
+        ],
+        "bonne": 0,
+        "explication": "Explication d'exemple 2."
+      }
+    ]
+  },
+  {
+    "id": "exemple-3",
+    "titre": "[EXEMPLE] Sujet société de test",
+    "rubrique": "societe",
+    "date": "2026-11-19",
+    "ajoute": "2026-11-25",
+    "croise": true,
+    "resume": "Troisième fiche d'exemple.",
+    "retenir": [
+      "Point X",
+      "Point Y",
+      "Point Z"
+    ],
+    "contexte": "Contexte.",
+    "acteurs": [
+      "Acteur D"
+    ],
+    "echeances": [],
+    "sources": [
+      {
+        "nom": "Libération",
+        "type": "presse",
+        "url": "https://example.org/libération"
+      },
+      {
+        "nom": "France Inter",
+        "type": "radio",
+        "url": "https://example.org/france-inter"
+      },
+      {
+        "nom": "France 2",
+        "type": "tv",
+        "url": "https://example.org/france-2"
+      },
+      {
+        "nom": "RFI",
+        "type": "radio",
+        "url": "https://example.org/rfi"
+      }
+    ],
+    "questions": [
+      {
+        "enonce": "Question d'exemple 3 : choisis la bonne.",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "bonne": 2,
+        "explication": "Explication d'exemple 3."
+      }
+    ]
+  }
+]

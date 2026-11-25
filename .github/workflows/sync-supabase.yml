@@ -1,0 +1,34 @@
+name: Synchroniser les fiches vers Supabase
+
+on:
+  push:
+    branches: [main]
+    paths: ["data/fiches.json"]
+  workflow_dispatch:
+    inputs:
+      fichier:
+        description: "Fichier JSON à envoyer (par défaut data/fiches.json)"
+        required: false
+        default: "data/fiches.json"
+
+concurrency:
+  group: sync-supabase
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Envoyer les fiches
+        env:
+          SUPABASE_URL: https://jpbmxcctcncyatpvvspp.supabase.co
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FICHIER: ${{ github.event.inputs.fichier || 'data/fiches.json' }}
+        run: python3 collecteur/sync_supabase.py "$FICHIER"

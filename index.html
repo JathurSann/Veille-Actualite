@@ -259,6 +259,62 @@ details.fiche.done .block.key { background: var(--surface); }
 .state p:last-child { margin-bottom: 0; }
 .note-foot { padding-block: 0 40px; font-size: 12.5px; color: var(--muted); }
 
+/* Compte, test et classement */
+[hidden] { display: none !important; }
+.who { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.who .pseudo { font-size: 12.5px; font-weight: 700; color: var(--ink); background: var(--panel); padding: 6px 14px; border-radius: 50px; }
+.linkbtn { font: 600 12.5px var(--font); color: var(--accent-text); background: none; border: 0; padding: 6px 4px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn.ghost { background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn[disabled] { opacity: .55; cursor: default; filter: none; }
+
+.authwrap { display: grid; place-items: start center; padding-block: 24px 64px; }
+.authcard { width: 100%; max-width: 460px; background: var(--panel); border-radius: 28px; padding: clamp(24px, 4vw, 40px); display: grid; gap: 16px; }
+.authcard h2 { font-weight: 900; font-size: 26px; letter-spacing: -.01em; color: var(--ink); margin: 0; }
+.authcard form { display: grid; gap: 14px; }
+.fld { display: grid; gap: 6px; }
+.fld span { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.fld input { height: 46px; border-radius: 14px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 500 15px var(--font); padding: 0 14px; width: 100%; }
+.fld small { font-size: 12px; color: var(--muted); }
+.msg { margin: 0; font-size: 13.5px; font-weight: 600; min-height: 20px; }
+.msg.err { color: #b91c1c; }
+.msg.ok { color: var(--ok-fg); }
+.authlinks { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+
+dialog.quiz { border: 0; border-radius: 24px; padding: 0; width: min(680px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); background: var(--bg); color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
+.qhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+.qhead h2 { margin: 0; font-weight: 800; font-size: 16px; color: var(--ink); }
+.qbody { padding: 24px; display: grid; gap: 18px; overflow-y: auto; max-height: calc(100dvh - 110px); }
+.qbody p { margin: 0; }
+.qprog { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.qprog .bar { flex: 1; }
+.qenonce { font-weight: 800; font-size: 19px; line-height: 1.4; color: var(--ink); text-wrap: balance; }
+.choices { display: grid; gap: 10px; }
+.choice { display: flex; gap: 12px; align-items: flex-start; text-align: left; width: 100%; padding: 14px 16px; border-radius: 16px; border: 1.5px solid var(--ring); background: var(--surface); color: var(--text); font: 600 14.5px/1.45 var(--font); cursor: pointer; }
+.choice:hover { border-color: var(--ink); }
+.choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.choice .l { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 800; background: var(--panel); color: var(--ink); }
+.choice[aria-pressed="true"] .l { background: var(--accent); color: #fff; }
+.qnav { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.big-score { font-weight: 900; font-size: 56px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.big-score small { font-size: 22px; color: var(--muted); font-weight: 700; margin-left: 6px; }
+.corr { display: grid; gap: 12px; }
+.corr .it { border: 1px solid var(--ring); border-radius: 16px; padding: 16px 18px; display: grid; gap: 8px; background: var(--surface); }
+.corr .it.good { border-color: var(--ok-ring); background: var(--ok-bg); }
+.corr .it.bad { border-color: #f3b4b4; }
+.corr .q { font-weight: 800; font-size: 14.5px; color: var(--ink); }
+.corr .r { font-size: 13.5px; }
+.corr .r b { font-weight: 700; }
+.corr .ex { font-size: 13px; color: var(--muted); }
+.rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rank li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 13.5px; padding: 8px 10px; border-radius: 12px; background: var(--surface); }
+.rank li.me { background: var(--accent-soft); font-weight: 700; color: var(--ink); }
+.rank .n { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rank .p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank .s { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ink); }
+.rank .s small { font-weight: 600; color: var(--muted); }
+
 @media (max-width: 860px) {
   .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
@@ -295,11 +351,18 @@ details.fiche.done .block.key { background: var(--surface); }
       <span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 4h11M2.5 8h11M2.5 12h6.5"/></svg></span>
       Veille d'actualité
     </div>
-    <div class="stamp" id="stamp">Mise à jour : en attente des fiches</div>
+    <div class="who">
+      <div class="stamp" id="stamp">Mise à jour : en attente des fiches</div>
+      <span id="who" class="who" hidden><span class="pseudo" id="who-name"></span><button type="button" class="linkbtn" id="logout">Se déconnecter</button></span>
+    </div>
   </div>
 </header>
 
-<div class="in">
+<div class="in" id="auth" hidden>
+  <div class="authwrap"><section class="authcard" id="auth-box" aria-live="polite"></section></div>
+</div>
+
+<div class="in" id="app" hidden>
   <section class="hero" aria-labelledby="titre-page">
     <div>
       <h1 id="titre-page">Veille hebdomadaire</h1>
@@ -309,7 +372,10 @@ details.fiche.done .block.key { background: var(--surface); }
         <li><b>P, T, R</b> : la presse, la télévision ou la radio a traité le sujet.</li>
         <li><b>Fiche révisée</b> : coche-la pour suivre ta progression.</li>
       </ul>
-      <button class="btn" id="cta" type="button">Réviser les fiches restantes</button>
+      <div class="actions">
+        <button class="btn" id="cta" type="button">Réviser les fiches restantes</button>
+        <button class="btn ghost" id="cta-test" type="button">Passer le test</button>
+      </div>
     </div>
     <div class="prog" aria-label="Progression de révision">
       <span class="lab">Progression</span>
@@ -320,7 +386,7 @@ details.fiche.done .block.key { background: var(--surface); }
         <div><b id="s-cr">–</b><span>recoupées P, T, R</span></div>
         <div><b id="s-todo">–</b><span>à réviser</span></div>
       </div>
-      <p class="save">Ta progression reste enregistrée sur cet appareil.</p>
+      <p class="save">Ta progression est enregistrée sur ton compte, sur tous tes appareils.</p>
     </div>
   </section>
 
@@ -347,6 +413,11 @@ details.fiche.done .block.key { background: var(--surface); }
 
     <aside class="rail" aria-label="Repères">
       <section class="card">
+        <h2>Classement du jour</h2>
+        <ol class="rank" id="rank"><li><span></span><span class="hint">Chargement…</span></li></ol>
+        <p class="hint">Meilleur test de chaque personne aujourd'hui. Le classement repart de zéro chaque jour.</p>
+      </section>
+      <section class="card">
         <h2>À venir</h2>
         <ul class="agenda" id="agenda"><li><span></span><span class="hint">Aucune échéance pour l'instant.</span></li></ul>
       </section>
@@ -369,8 +440,19 @@ details.fiche.done .block.key { background: var(--surface); }
   <p class="note-foot">Outil de révision personnel, non affilié à l'école.</p>
 </div>
 
+<dialog class="quiz" id="quiz" aria-labelledby="quiz-titre">
+  <div class="qhead"><h2 id="quiz-titre">Test d'actualité</h2><button type="button" class="linkbtn" id="quiz-close">Fermer</button></div>
+  <div class="qbody" id="quiz-body"></div>
+</dialog>
+
+<script src="vendor/supabase.js"></script>
 <script>
 (function () {
+  /* Clés publiques : l'URL et la clé « publishable » sont faites pour être dans le navigateur. La sécurité vient des règles d'accès (RLS) de la base. */
+  var SUPABASE_URL = "https://jpbmxcctcncyatpvvspp.supabase.co";
+  var SUPABASE_KEY = "sb_publishable_XnmiS5K2Zxvq-bnp-cVTyQ_humZzXOV";
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+
   var RUBS = [
     { id: "politique", label: "Politique" },
     { id: "economie", label: "Économie" },
@@ -390,7 +472,8 @@ details.fiche.done .block.key { background: var(--surface); }
   var state = { rub: "all", per: 7, sort: "jour", q: "", hideDone: false, ready: false, error: null };
   var openIds = {};
   var done = {};
-  try { done = JSON.parse(localStorage.getItem("veille-revise") || "{}") || {}; } catch (e) { done = {}; }
+  var legacy = {};  /* ancien suivi gardé dans le navigateur, repris à la première connexion */
+  try { legacy = JSON.parse(localStorage.getItem("veille-revise") || "{}") || {}; } catch (e) { legacy = {}; }
 
   var dFull = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   var dDay = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" });
@@ -424,6 +507,11 @@ details.fiche.done .block.key { background: var(--surface); }
   }
   function famCount(f) { var c = coverage(f); return (c.presse ? 1 : 0) + (c.tv ? 1 : 0) + (c.radio ? 1 : 0); }
   function score(f) { return (f.croise === true ? 1000 : 0) + famCount(f) * 100 + mediaCount(f); }
+  /* Les 20 plus couverts : on suit le rang calculé côté base (le même que pour le test), sinon le score local. */
+  function byCouv(a, b) {
+    if (a.rang != null && b.rang != null) return a.rang - b.rang;
+    return score(b) - score(a) || (a.date < b.date ? 1 : -1);
+  }
 
   function matches(f, withPeriod) {
     if (state.rub !== "all" && f.rubrique !== state.rub) return false;
@@ -519,7 +607,7 @@ details.fiche.done .block.key { background: var(--surface); }
   }
   function topIds() {
     var m = {};
-    docs.slice().sort(function (a, b) { return score(b) - score(a) || (a.date < b.date ? 1 : -1); }).slice(0, 20).forEach(function (f) { m[f.id] = 1; });
+    docs.slice().sort(byCouv).slice(0, 20).forEach(function (f) { m[f.id] = 1; });
     return m;
   }
 
@@ -588,10 +676,11 @@ details.fiche.done .block.key { background: var(--surface); }
     foot.appendChild(c);
     var lab = el("label", "rev"); var cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = !!done[f.id];
     cb.addEventListener("change", function () {
-      if (cb.checked) done[f.id] = 1; else delete done[f.id];
-      try { localStorage.setItem("veille-revise", JSON.stringify(done)); } catch (e) {}
-      d.classList.toggle("done", cb.checked);
-      renderHero(); renderCount(visible());
+      var on = cb.checked;
+      function apply(v) { if (v) done[f.id] = 1; else delete done[f.id]; d.classList.toggle("done", v); cb.checked = v; renderHero(); renderCount(visible()); }
+      apply(on);
+      var q = on ? sb.from("revisions").upsert({ fiche_id: f.id }, { onConflict: "user_id,fiche_id", ignoreDuplicates: true }) : sb.from("revisions").delete().eq("fiche_id", f.id);
+      q.then(function (r) { if (r && r.error) apply(!on); }, function () { apply(!on); });
     });
     lab.appendChild(cb); lab.appendChild(el("span", null, "Fiche révisée")); foot.appendChild(lab);
     body.appendChild(foot);
@@ -625,7 +714,7 @@ details.fiche.done .block.key { background: var(--surface); }
       return;
     }
     if (state.sort === "couv") {
-      var top = list.slice().sort(function (a, b) { return score(b) - score(a) || (a.date < b.date ? 1 : -1); }).slice(0, 20);
+      var top = list.slice().sort(byCouv).slice(0, 20);
       var secT = el("section", "day"); secT.appendChild(el("h2", null, "Les 20 sujets les plus couverts"));
       secT.appendChild(el("p", "older", "Classement par croisement presse, télé et radio, puis par nombre de médias rattachés."));
       top.forEach(function (f) { secT.appendChild(fiche(f, true)); });
@@ -659,38 +748,253 @@ details.fiche.done .block.key { background: var(--surface); }
 
   render();
 
-  /* Source des fiches : base de l'artefact Claude si la page y tourne, sinon data/fiches.json (GitHub Pages). */
-  function loadJson() {
-    fetch("data/fiches.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (list) {
-      list = Array.isArray(list) ? list : arr(list && list.fiches);
-      docs = list.filter(function (f) { return f && f.titre && f.date && daysAgo(f.date) <= lim(); });
-      state.ready = true; state.error = null; render();
+  /* ---------- Compte ---------- */
+  var user = null, recovering = false;
+
+  function fld(id, label, type, ph, ac, hint) {
+    var w = el("label", "fld"); w.appendChild(el("span", null, label));
+    var i = document.createElement("input"); i.id = id; i.type = type; i.required = true; i.placeholder = ph || ""; i.setAttribute("autocomplete", ac || "off");
+    w.appendChild(i); if (hint) w.appendChild(el("small", null, hint)); return w;
+  }
+  function msg(text, ok) { var m = $("a-msg"); if (!m) return; m.className = "msg " + (ok ? "ok" : "err"); m.textContent = text || ""; }
+  function val(id) { return $(id).value.trim(); }
+  function frErr(e) {
+    var m = String((e && e.message) || "").toLowerCase();
+    if (m.indexOf("invalid login") >= 0) return "Email ou mot de passe incorrect.";
+    if (m.indexOf("already registered") >= 0 || m.indexOf("already been registered") >= 0) return "Un compte existe déjà avec cet email.";
+    if (m.indexOf("rate limit") >= 0 || m.indexOf("too many") >= 0) return "Trop de tentatives. Réessaie dans quelques minutes.";
+    if (m.indexOf("password") >= 0) return "Mot de passe refusé : 10 caractères minimum.";
+    if (m.indexOf("failed to fetch") >= 0 || m.indexOf("network") >= 0) return "Connexion impossible. Vérifie ton réseau.";
+    return "Une erreur est survenue. Réessaie.";
+  }
+
+  function renderAuth(mode) {
+    $("app").hidden = true; $("auth").hidden = false; $("who").hidden = true;
+    var box = $("auth-box"); box.textContent = "";
+    var T = { login: "Connexion", signup: "Créer un compte", forgot: "Mot de passe oublié", recovery: "Nouveau mot de passe" };
+    box.appendChild(el("h2", null, T[mode]));
+    if (mode === "login") box.appendChild(el("p", "hint", "Connecte-toi pour retrouver tes fiches, ta progression et le classement."));
+    if (mode === "signup") box.appendChild(el("p", "hint", "Il te faut le code d'accès donné par Jathursan."));
+    if (mode === "forgot") box.appendChild(el("p", "hint", "Entre ton email : tu recevras un lien pour choisir un nouveau mot de passe."));
+
+    var form = document.createElement("form");
+    if (mode !== "recovery") form.appendChild(fld("a-email", "Email", "email", "prenom@exemple.fr", "email"));
+    if (mode === "signup") {
+      form.appendChild(fld("a-pseudo", "Pseudo", "text", "ex : lea.m", "nickname", "Affiché dans le classement. 3 à 20 caractères : lettres, chiffres, _ . -"));
+      form.appendChild(fld("a-code", "Code d'accès", "text", "", "off"));
+    }
+    if (mode !== "forgot") form.appendChild(fld("a-pass", mode === "recovery" ? "Nouveau mot de passe" : "Mot de passe", "password", "", mode === "login" ? "current-password" : "new-password", mode === "login" ? "" : "10 caractères minimum."));
+    var mm = el("p", "msg"); mm.id = "a-msg"; mm.setAttribute("role", "alert"); form.appendChild(mm);
+    var go = el("button", "btn", mode === "login" ? "Se connecter" : mode === "signup" ? "Créer mon compte" : mode === "forgot" ? "Envoyer le lien" : "Enregistrer");
+    go.type = "submit"; form.appendChild(go);
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault(); msg(""); go.disabled = true;
+      function fin() { go.disabled = false; }
+      function fail(e) { msg(frErr(e)); fin(); }
+      if (mode === "login") {
+        sb.auth.signInWithPassword({ email: val("a-email"), password: $("a-pass").value }).then(function (r) { if (r.error) msg(frErr(r.error)); fin(); }, fail);
+      } else if (mode === "signup") {
+        var pw = $("a-pass").value;
+        if (pw.length < 10) { msg("Mot de passe : 10 caractères minimum."); fin(); return; }
+        sb.rpc("verifier_inscription", { p_pseudo: val("a-pseudo"), p_code: val("a-code") }).then(function (r) {
+          if (r.error) { fail(r.error); return; }
+          if (r.data) { msg(r.data); fin(); return; }
+          return sb.auth.signUp({ email: val("a-email"), password: pw, options: { data: { pseudo: val("a-pseudo"), code: val("a-code") } } }).then(function (r2) {
+            if (r2.error) msg(frErr(r2.error));
+            else if (!r2.data.session) msg("Compte créé. Vérifie ta boîte mail pour confirmer, puis connecte-toi.", true);
+            fin();
+          });
+        }).catch(fail);
+      } else if (mode === "forgot") {
+        sb.auth.resetPasswordForEmail(val("a-email"), { redirectTo: location.origin + location.pathname }).then(function (r) {
+          if (r.error) msg(frErr(r.error)); else msg("Si un compte existe avec cet email, un lien vient d'être envoyé.", true);
+          fin();
+        }, fail);
+      } else {
+        var np = $("a-pass").value;
+        if (np.length < 10) { msg("Mot de passe : 10 caractères minimum."); fin(); return; }
+        sb.auth.updateUser({ password: np }).then(function (r) {
+          if (r.error) { msg(frErr(r.error)); fin(); return; }
+          recovering = false; fin(); enter();
+        }, fail);
+      }
+    });
+    box.appendChild(form);
+
+    var links = el("div", "authlinks");
+    function lk(text, m2) { var b = el("button", "linkbtn", text); b.type = "button"; b.addEventListener("click", function () { renderAuth(m2); }); links.appendChild(b); }
+    if (mode === "login") { lk("Créer un compte", "signup"); lk("Mot de passe oublié", "forgot"); }
+    else if (mode !== "recovery") { lk("J'ai déjà un compte", "login"); }
+    box.appendChild(links);
+  }
+
+  sb.auth.onAuthStateChange(function (ev, session) {
+    /* Pas d'appel Supabase directement ici : on diffère pour éviter un blocage de la bibliothèque. */
+    var u = session && session.user;
+    if (ev === "PASSWORD_RECOVERY") { recovering = true; user = u; setTimeout(function () { renderAuth("recovery"); }, 0); return; }
+    if (recovering) return;
+    if (u) { if (!user || user.id !== u.id) { user = u; setTimeout(enter, 0); } }
+    else { user = null; setTimeout(leave, 0); }
+  });
+
+  function leave() {
+    docs = []; done = {}; state.ready = false;
+    try { if ($("quiz").open) $("quiz").close(); } catch (e) {}
+    renderAuth("login");
+  }
+
+  function enter() {
+    $("auth").hidden = true; $("app").hidden = false; $("who").hidden = false;
+    state.ready = false; state.error = null; render();
+    var since = iso(new Date(Date.now() - 20 * 86400000));
+    Promise.all([
+      sb.from("profiles").select("pseudo").eq("id", user.id).maybeSingle(),
+      sb.from("fiches").select("*").gte("date", since),
+      sb.from("revisions").select("fiche_id")
+    ]).then(function (res) {
+      var p = res[0], f = res[1], r = res[2];
+      $("who-name").textContent = (p.data && p.data.pseudo) || "Mon compte";
+      if (f.error) throw f.error;
+      docs = (f.data || []).filter(function (x) { return x && x.titre && x.date && daysAgo(x.date) <= lim(); });
+      done = {}; ((r && r.data) || []).forEach(function (x) { done[x.fiche_id] = 1; });
+      state.ready = true; state.error = null; render(); loadRank(); migrate();
     }).catch(function () {
-      state.ready = true; state.error = "Impossible de charger data/fiches.json. Recharge la page dans un instant."; render();
+      state.ready = true; state.error = "Lecture impossible pour le moment. Recharge la page dans un instant."; render();
     });
   }
 
-  var unsub = null, pruned = false;
-  function start() {
-    if (!window.claude || !window.claude.use) { loadJson(); return; }
-    window.claude.use("db").then(function (db) {
-      if (!db) { loadJson(); return; }
-      if (unsub) unsub();
-      unsub = db.collection("fiches").onSnapshot(function (snap) {
-        var all = snap.docs.map(function (x) { var o = x.data() || {}; var c = {}; for (var k in o) c[k] = o[k]; c.id = x.id; return c; }).filter(function (f) { return f.titre && f.date; });
-        docs = all.filter(function (f) { return daysAgo(f.date) <= lim(); });
-        var olds = all.filter(function (f) { return daysAgo(f.date) > lim(); });
-        if (olds.length && !pruned) {
-          pruned = true;
-          olds.forEach(function (f) { try { var r = db.collection("fiches").doc(f.id).delete(); if (r && r.catch) r.catch(function () {}); } catch (e) {} });
-        }
-        state.ready = true; state.error = null; render();
-      }, function (err) {
-        state.ready = true; state.error = "Lecture impossible pour le moment (" + (err && err.code ? err.code : "erreur") + "). Recharge la page dans un instant."; render();
-      });
-    }, function () { loadJson(); });
+  /* Reprise de l'ancien suivi gardé dans le navigateur (une seule fois). */
+  function migrate() {
+    var ids = Object.keys(legacy).filter(function (id) { return !done[id] && docs.some(function (f) { return f.id === id; }); });
+    if (!ids.length) return;
+    sb.from("revisions").upsert(ids.map(function (id) { return { fiche_id: id }; }), { onConflict: "user_id,fiche_id", ignoreDuplicates: true }).then(function (r) {
+      if (r.error) return;
+      ids.forEach(function (id) { done[id] = 1; });
+      legacy = {}; try { localStorage.removeItem("veille-revise"); } catch (e) {}
+      render();
+    });
   }
-  start();
+
+  /* ---------- Classement ---------- */
+  function fmtDur(s) { s = Math.max(0, s | 0); var r = s % 60; return s < 60 ? s + " s" : Math.floor(s / 60) + " min " + (r < 10 ? "0" : "") + r; }
+  function rankMsg(ol, text) { ol.textContent = ""; var li = el("li"); li.appendChild(el("span")); li.appendChild(el("span", "hint", text)); ol.appendChild(li); }
+  function loadRank() {
+    var ol = $("rank");
+    sb.rpc("classement").then(function (r) {
+      if (r.error) { rankMsg(ol, "Classement indisponible pour le moment."); return; }
+      var rows = r.data || [];
+      if (!rows.length) { rankMsg(ol, "Personne n'a encore passé de test aujourd'hui. Sois le premier."); return; }
+      ol.textContent = "";
+      var top = rows.slice(0, 10), me = rows.filter(function (x) { return x.moi; })[0];
+      if (me && top.indexOf(me) < 0) top.push(me);
+      top.forEach(function (x) {
+        var li = el("li", x.moi ? "me" : null);
+        li.appendChild(el("span", "n", String(x.rang)));
+        li.appendChild(el("span", "p", x.pseudo));
+        var s = el("span", "s", x.score + "/" + x.total); s.appendChild(el("small", null, " · " + fmtDur(x.duree_sec)));
+        li.appendChild(s); ol.appendChild(li);
+      });
+    }, function () { rankMsg(ol, "Classement indisponible pour le moment."); });
+  }
+
+  /* ---------- Test ---------- */
+  var quiz = { n: 10, test: null, qs: [], i: 0, ans: {} };
+  function qbody() { var b = $("quiz-body"); b.textContent = ""; return b; }
+  function openQuiz() { quiz.test = null; quizIntro(); var d = $("quiz"); if (!d.open) d.showModal(); }
+
+  function quizIntro(err) {
+    var b = qbody();
+    b.appendChild(el("p", null, "Un test, c'est jusqu'à 20 questions, une par sujet, tirées des 20 sujets les plus couverts de la quinzaine. Tu peux le passer quand tu veux, que tu aies lu les fiches ou non."));
+    b.appendChild(el("p", "hint", "Ton meilleur score de la journée compte pour le classement. Tu peux refaire le test autant de fois que tu veux."));
+    var c = el("div", "ctl"); c.appendChild(el("span", "lbl", "Questions"));
+    var seg = el("div", "seg");
+    [5, 10, 20].forEach(function (n) {
+      var x = el("button", null, String(n)); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.n === n));
+      x.addEventListener("click", function () { quiz.n = n; quizIntro(); });
+      seg.appendChild(x);
+    });
+    c.appendChild(seg); b.appendChild(c);
+    if (err) { var m = el("p", "msg err", err); m.setAttribute("role", "alert"); b.appendChild(m); }
+    var go = el("button", "btn", "Commencer"); go.type = "button";
+    go.addEventListener("click", function () { go.disabled = true; startQuiz(); });
+    b.appendChild(go);
+  }
+
+  function startQuiz() {
+    sb.rpc("demarrer_test", { p_nombre: quiz.n }).then(function (r) {
+      if (r.error) {
+        var m = String(r.error.message || "");
+        quizIntro(m.indexOf("Aucune question") >= 0 ? "Pas encore de questions disponibles. Elles arrivent avec la mise à jour du matin."
+          : m.indexOf("Trop de tests") >= 0 ? "Tu as atteint la limite de tests pour aujourd'hui."
+          : "Impossible de lancer le test. Réessaie.");
+        return;
+      }
+      quiz.test = r.data.test_id; quiz.qs = arr(r.data.questions); quiz.i = 0; quiz.ans = {};
+      quizQuestion();
+    }, function () { quizIntro("Connexion impossible. Réessaie."); });
+  }
+
+  function quizQuestion() {
+    var q = quiz.qs[quiz.i], n = quiz.qs.length, b = qbody();
+    var pr = el("div", "qprog"); pr.appendChild(el("span", null, "Question " + (quiz.i + 1) + " / " + n));
+    var bar = el("div", "bar"); var fill = document.createElement("i"); fill.style.width = Math.round(quiz.i / n * 100) + "%"; bar.appendChild(fill); pr.appendChild(bar);
+    b.appendChild(pr);
+    b.appendChild(el("p", "qenonce", q.enonce));
+    var cs = el("div", "choices"), btns = [];
+    arr(q.choix).forEach(function (t, k) {
+      var x = el("button", "choice"); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.ans[q.id] === k));
+      x.appendChild(el("span", "l", "ABCDE".charAt(k))); x.appendChild(el("span", null, t));
+      x.addEventListener("click", function () { quiz.ans[q.id] = k; btns.forEach(function (y, j) { y.setAttribute("aria-pressed", String(j === k)); }); });
+      btns.push(x); cs.appendChild(x);
+    });
+    b.appendChild(cs);
+    var nav = el("div", "qnav");
+    if (quiz.i > 0) { var pv = el("button", "btn ghost", "Précédent"); pv.type = "button"; pv.addEventListener("click", function () { quiz.i--; quizQuestion(); }); nav.appendChild(pv); } else nav.appendChild(el("span"));
+    if (quiz.i < n - 1) { var nx = el("button", "btn", "Suivant"); nx.type = "button"; nx.addEventListener("click", function () { quiz.i++; quizQuestion(); }); nav.appendChild(nx); }
+    else {
+      var fn = el("button", "btn", "Terminer le test"); fn.type = "button"; fn.addEventListener("click", function () { finishQuiz(fn); }); nav.appendChild(fn);
+    }
+    b.appendChild(nav);
+    if (quiz.i === n - 1) {
+      var left = quiz.qs.filter(function (x) { return quiz.ans[x.id] == null; }).length;
+      if (left) b.appendChild(el("p", "hint", left + (left > 1 ? " questions sans réponse" : " question sans réponse") + " : elles compteront comme fausses."));
+    }
+  }
+
+  function finishQuiz(btn) {
+    btn.disabled = true;
+    sb.rpc("soumettre_test", { p_test: quiz.test, p_reponses: quiz.ans }).then(function (r) {
+      if (r.error) { btn.disabled = false; var m = el("p", "msg err", "Impossible d'envoyer le test. Réessaie."); m.setAttribute("role", "alert"); $("quiz-body").appendChild(m); return; }
+      quizResult(r.data); loadRank();
+    }, function () { btn.disabled = false; });
+  }
+
+  function quizResult(d) {
+    var b = qbody(), sc = d.score || 0, tot = d.total || 0, ratio = tot ? sc / tot : 0;
+    var big = el("p", "big-score", String(sc)); big.appendChild(el("small", null, "/ " + tot)); b.appendChild(big);
+    b.appendChild(el("p", null, ratio >= 0.8 ? "Très bien, tu maîtrises l'actualité de la quinzaine." : ratio >= 0.5 ? "Pas mal. Relis les fiches des questions ratées ci-dessous." : "Reprends les fiches, puis refais un test."));
+    var list = el("div", "corr");
+    arr(d.detail).forEach(function (x) {
+      var ok = x.reponse === x.bonne, ch = arr(x.choix);
+      var it = el("div", "it " + (ok ? "good" : "bad"));
+      it.appendChild(el("p", "q", x.enonce));
+      var a = el("p", "r"); a.appendChild(el("b", null, "Ta réponse : ")); a.appendChild(document.createTextNode(x.reponse == null ? "pas de réponse" : (ch[x.reponse] || ""))); it.appendChild(a);
+      if (!ok) { var g = el("p", "r"); g.appendChild(el("b", null, "Bonne réponse : ")); g.appendChild(document.createTextNode(ch[x.bonne] || "")); it.appendChild(g); }
+      if (x.explication) it.appendChild(el("p", "ex", x.explication));
+      list.appendChild(it);
+    });
+    b.appendChild(list);
+    var nav = el("div", "qnav");
+    var again = el("button", "btn", "Refaire un test"); again.type = "button"; again.addEventListener("click", function () { quizIntro(); }); nav.appendChild(again);
+    var cl = el("button", "btn ghost", "Fermer"); cl.type = "button"; cl.addEventListener("click", function () { $("quiz").close(); }); nav.appendChild(cl);
+    b.appendChild(nav);
+    b.scrollTop = 0;
+  }
+
+  $("cta-test").addEventListener("click", openQuiz);
+  $("quiz-close").addEventListener("click", function () { $("quiz").close(); });
+  $("logout").addEventListener("click", function () { sb.auth.signOut(); });
 })();
 </script>
 </body>
