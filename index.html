@@ -376,7 +376,7 @@ body.full { overflow: hidden; }
 .sc .tag .date { color: rgba(255,255,255,.78); }
 .sc .st { color: #fff; border-color: rgba(255,255,255,.4); }
 .sc .st.ok { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); color: #fff; }
-.sc.done .donebadge { display: inline-flex; }
+.sc.done .donebadge { display: inline-flex; cursor: pointer; font-family: inherit; }
 .sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(22px, 6.3vw, 27px); line-height: 1.15; letter-spacing: -.01em; margin: 14px 0 10px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: none; }
 .sc .tag, .sc .stat { flex: none; }
 .sc .stat { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); }
@@ -932,7 +932,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     var st = el("span", f.croise === true ? "st ok" : "st");
     if (f.croise === true) { st.insertAdjacentHTML("beforeend", ICON_OK); st.appendChild(el("span", null, "Recoupé")); } else { st.appendChild(el("span", null, "À recouper")); }
     tag.appendChild(st);
-    var db = el("span", "st ok donebadge"); db.insertAdjacentHTML("beforeend", ICON_OK); db.appendChild(el("span", null, "Révisée")); tag.appendChild(db);
+    var db = el("button", "st ok donebadge"); db.type = "button"; db.title = "Retirer la coche de cette fiche"; db.insertAdjacentHTML("beforeend", ICON_OK); db.appendChild(el("span", null, "Révisée · annuler")); tag.appendChild(db);
     if (f.date) tag.appendChild(el("span", "date", dShort.format(parse(f.date))));
     c.appendChild(tag);
     c.appendChild(el("h3", "titre", f.titre || "Sans titre"));
@@ -1012,7 +1012,7 @@ html, body { overflow-x: clip; max-width: 100%; }
       fill.style.width = Math.round((deckIdx + 1) / n * 100) + "%";
       hint.hidden = isMobile() && (deckIdx > 0 || n < 2);
       bp.disabled = deckIdx <= 0; bn.disabled = deckIdx >= n - 1;
-      var on = !!done[ord[deckIdx].id]; bk.setAttribute("aria-pressed", String(on)); bk.title = on ? "Révisée : toucher pour annuler" : "Marquer comme révisée";
+      var on = !!done[ord[deckIdx].id]; bk.setAttribute("aria-pressed", String(on)); bk.title = on ? "Déjà révisée : fiche suivante" : "Marquer comme révisée et passer à la suivante";
     }
     function layout() {
       wrap.textContent = "";
@@ -1035,10 +1035,14 @@ html, body { overflow-x: clip; max-width: 100%; }
       setTimeout(function () { deckIdx--; busy = false; layout(); }, 300);
     }
     bp.addEventListener("click", goPrev); bn.addEventListener("click", goNext);
-    var removing = false;
+    var removing = false, pendingNext = false;
+    /* Un tap sur ✓ valide la fiche et passe à la suivante. Sur une fiche déjà révisée, ✓ passe simplement à la suivante
+       (la coche ne se retire que par « Révisée · annuler » sur la carte). Les taps rapprochés sont ignorés pendant le changement de carte. */
     bk.addEventListener("click", function () {
-      if (removing || busy) return;
-      var f = ord[deckIdx], turnOn = !done[f.id];
+      if (removing || busy || pendingNext) return;
+      var f = ord[deckIdx];
+      if (done[f.id]) { goNext(); return; }
+      var turnOn = true;
       setRevise(f, turnOn, function (v) { if (cards.cur) cards.cur.classList.toggle("done", v); upd(); });
       if (turnOn && state.hideDone) {
         /* « Masquer les fiches révisées » : la fiche sort du paquet, le total diminue (153 → 152) */
@@ -1049,7 +1053,13 @@ html, body { overflow-x: clip; max-width: 100%; }
         setTimeout(function () { state.keepIdx = at; renderMain(); }, 240);
         return;
       }
-      if (turnOn && cards.next) setTimeout(goNext, 260);  /* révisée : on passe à la suivante */
+      if (turnOn && cards.next) { pendingNext = true; setTimeout(function () { pendingNext = false; goNext(); }, 200); }  /* révisée : on passe à la suivante */
+    });
+    wrap.addEventListener("click", function (e) {
+      var t = e.target && e.target.closest ? e.target.closest(".donebadge") : null;
+      if (!t || busy || removing || pendingNext || t.closest(".sc") !== cards.cur) return;
+      var f = ord[deckIdx]; if (!done[f.id]) return;
+      setRevise(f, false, function (v) { if (cards.cur) cards.cur.classList.toggle("done", v); upd(); });
     });
     deckKey = function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey || document.querySelector("dialog[open]")) return;
