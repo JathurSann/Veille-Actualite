@@ -765,7 +765,8 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
     if (m.indexOf("rate limit") >= 0 || m.indexOf("too many") >= 0) return "Trop de tentatives. Réessaie dans quelques minutes.";
     if (m.indexOf("password") >= 0) return "Mot de passe refusé : 10 caractères minimum.";
     if (m.indexOf("failed to fetch") >= 0 || m.indexOf("network") >= 0) return "Connexion impossible. Vérifie ton réseau.";
-    return "Une erreur est survenue. Réessaie.";
+    try { console.error("Erreur Supabase :", e); } catch (x) {}
+    return "Une erreur est survenue (" + String((e && (e.message || e.code)) || "inconnue").slice(0, 160) + "). Réessaie.";
   }
 
   function renderAuth(mode) {
