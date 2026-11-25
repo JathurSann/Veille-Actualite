@@ -1324,25 +1324,24 @@ html, body { overflow-x: clip; max-width: 100%; }
     var bar = el("div", "bar"); var fill = document.createElement("i"); fill.style.width = Math.round(quiz.i / n * 100) + "%"; bar.appendChild(fill); pr.appendChild(bar);
     b.appendChild(pr);
     b.appendChild(el("p", "qenonce", q.enonce));
-    var cs = el("div", "choices"), btns = [];
+    var cs = el("div", "choices"), btns = [], go = null, tip = null;
+    function sync() { var ok = quiz.ans[q.id] != null; if (go) go.disabled = !ok; if (tip) tip.hidden = ok; }
     arr(q.choix).forEach(function (t, k) {
       var x = el("button", "choice"); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.ans[q.id] === k));
       x.appendChild(el("span", "l", "ABCDE".charAt(k))); x.appendChild(el("span", null, t));
-      x.addEventListener("click", function () { quiz.ans[q.id] = k; btns.forEach(function (y, j) { y.setAttribute("aria-pressed", String(j === k)); }); });
+      x.addEventListener("click", function () { quiz.ans[q.id] = k; btns.forEach(function (y, j) { y.setAttribute("aria-pressed", String(j === k)); }); sync(); });
       btns.push(x); cs.appendChild(x);
     });
     b.appendChild(cs);
     var nav = el("div", "qnav");
     if (quiz.i > 0) { var pv = el("button", "btn ghost", "Précédent"); pv.type = "button"; pv.addEventListener("click", function () { quiz.i--; quizQuestion(); }); nav.appendChild(pv); } else nav.appendChild(el("span"));
-    if (quiz.i < n - 1) { var nx = el("button", "btn", "Suivant"); nx.type = "button"; nx.addEventListener("click", function () { quiz.i++; quizQuestion(); }); nav.appendChild(nx); }
+    if (quiz.i < n - 1) { var nx = el("button", "btn", "Suivant"); nx.type = "button"; nx.addEventListener("click", function () { if (quiz.ans[q.id] == null) return; quiz.i++; quizQuestion(); }); nav.appendChild(nx); go = nx; }
     else {
-      var fn = el("button", "btn", "Terminer le test"); fn.type = "button"; fn.addEventListener("click", function () { finishQuiz(fn); }); nav.appendChild(fn);
+      var fn = el("button", "btn", "Terminer le test"); fn.type = "button"; fn.addEventListener("click", function () { if (quiz.ans[q.id] == null) return; finishQuiz(fn); }); nav.appendChild(fn); go = fn;
     }
     b.appendChild(nav);
-    if (quiz.i === n - 1) {
-      var left = quiz.qs.filter(function (x) { return quiz.ans[x.id] == null; }).length;
-      if (left) b.appendChild(el("p", "hint", left + (left > 1 ? " questions sans réponse" : " question sans réponse") + " : elles compteront comme fausses."));
-    }
+    tip = el("p", "hint", "Choisis une réponse pour continuer."); b.appendChild(tip);
+    sync();
   }
 
   function finishQuiz(btn) {
