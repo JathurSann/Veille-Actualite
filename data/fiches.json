@@ -55,19 +55,7 @@
   "croise": false,
   "date": "2026-11-25",
   "echeances": [],
-  "questions": [
-   {
-    "bonne": 2,
-    "choix": [
-     "Eurostat",
-     "OCDE",
-     "ACEA",
-     "FIA"
-    ],
-    "enonce": "Quelle association publie ces chiffres sur les immatriculations en Europe ?",
-    "explication": "Les chiffres viennent de l'ACEA, association des constructeurs européens."
-   }
-  ],
+  "questions": [],
   "resume": "Selon l'ACEA, les ventes de voitures électriques ont augmenté de 50 % en Europe depuis janvier ; les véhicules électrifiés pèsent près de 70 % des ventes.",
   "retenir": [
    "Source : ACEA, association des constructeurs européens",
@@ -102,26 +90,15 @@
   ],
   "questions": [
    {
-    "bonne": 2,
-    "choix": [
-     "56 mm",
-     "106 mm",
-     "156 mm",
-     "256 mm"
-    ],
-    "enonce": "Combien de millimètres de pluie autour du golfe de Saint-Tropez ?",
-    "explication": "Il est tombé 156 mm selon Europe 1."
-   },
-   {
-    "bonne": 0,
+    "enonce": "Quels départements ont été placés en vigilance orange pluie-inondation le 25 novembre 2026 ?",
     "choix": [
      "Var et Alpes-Maritimes",
      "Gard et Hérault",
-     "Pas-de-Calais et Somme",
-     "Corse et Aude"
+     "Bouches-du-Rhône et Vaucluse",
+     "Aude et Pyrénées-Orientales"
     ],
-    "enonce": "Quels départements sont en vigilance orange pluie-inondation ?",
-    "explication": "Le Var et les Alpes-Maritimes, en PACA."
+    "bonne": 0,
+    "explication": "Le Var et les Alpes-Maritimes sont en vigilance orange après un nouvel épisode méditerranéen."
    }
   ],
   "resume": "Un épisode méditerranéen frappe la région PACA le 25 novembre : le Var et les Alpes-Maritimes sont en vigilance orange, avec 156 mm autour du golfe de Saint-Tropez.",
@@ -269,14 +246,14 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 0,
+    "bonne": 2,
     "choix": [
-     "40 ans",
-     "10 ans",
-     "20 ans",
-     "Perpétuité"
+     "5 ans de prison",
+     "10 ans de prison",
+     "40 ans de prison",
+     "20 ans de prison"
     ],
-    "enonce": "Combien d'années de prison Thomas Markle encourt-il selon TF1 Info ?",
+    "enonce": "Thomas Markle, inculpé le 24 novembre 2026 en Californie pour détention d'images pédocriminelles, quelle peine maximale encourt-il selon TF1 Info ?",
     "explication": "TF1 Info indique qu'il encourt jusqu'à 40 ans de prison."
    },
    {
@@ -287,7 +264,7 @@
      "Texas",
      "New York"
     ],
-    "enonce": "Dans quel État américain Thomas Markle a-t-il été inculpé ?",
+    "enonce": "Dans quel État américain Thomas Markle, père de Meghan Markle, a-t-il été formellement inculpé le 24 novembre 2026 ?",
     "explication": "Il a été formellement inculpé en Californie ; il est détenu en Floride."
    }
   ],
@@ -438,19 +415,7 @@
   "croise": false,
   "date": "2026-11-25",
   "echeances": [],
-  "questions": [
-   {
-    "bonne": 2,
-    "choix": [
-     "Sibérie",
-     "Crimée",
-     "Région de Moscou",
-     "Kaliningrad"
-    ],
-    "enonce": "Où le satellite russe pouvant emporter une arme nucléaire serait-il entreposé ?",
-    "explication": "Selon Le Monde, il est déjà construit et entreposé dans la région de Moscou."
-   }
-  ],
+  "questions": [],
   "resume": "Selon Le Monde, un satellite russe pouvant emporter une arme nucléaire serait déjà construit, et pourrait partir d'ici deux mois.",
   "retenir": [
    "Délai évoqué : d'ici deux mois",
@@ -620,7 +585,7 @@
      "Un sur quatre",
      "Neuf sur dix"
     ],
-    "enonce": "Selon l'étude Cevipof pour l'AMF, quelle part des maires refuserait de parrainer un candidat ?",
+    "enonce": "Selon l'étude Cevipof pour l'AMF présentée au Congrès des maires de novembre 2026, quelle part des maires refuserait de parrainer un candidat à la présidentielle ?",
     "explication": "Près d'un maire sur deux refuserait de parrainer un candidat."
    }
   ],
@@ -683,17 +648,6 @@
     ],
     "enonce": "Quelle part des pharmaciennes dit avoir subi des violences sexistes et sexuelles ?",
     "explication": "Environ 30 %, soit trois sur dix, selon l'enquête pour l'Ordre."
-   },
-   {
-    "bonne": 0,
-    "choix": [
-     "L'Ordre national des pharmaciens",
-     "Le ministère de la Santé",
-     "La Haute Autorité de santé",
-     "La Fondation des femmes"
-    ],
-    "enonce": "Quel organisme a commandé l'enquête ?",
-    "explication": "L'enquête a été menée pour l'Ordre auprès de plus de 4 000 professionnels."
    }
   ],
   "resume": "Une enquête menée pour l'Ordre national des pharmaciens révèle que 30 % des pharmaciennes déclarent avoir subi des violences sexistes et sexuelles.",
@@ -837,7 +791,7 @@
      "Ariana Grande",
      "Billie Eilish"
     ],
-    "enonce": "Quelle chanteuse rejoint Robert De Niro et Ben Stiller dans le 4e film de la saga ?",
+    "enonce": "Quelle chanteuse rejoint Robert De Niro et Ben Stiller au casting du 4e film de la saga « Mon beau-père, ma belle-fille et moi » ?",
     "explication": "20 Minutes : le trio De Niro, Stiller, Ariana Grande."
    }
   ],
@@ -883,7 +837,7 @@
      "Philippines",
      "Venezuela"
     ],
-    "enonce": "Quel pays représente la gagnante de Miss Univers 2026 ?",
+    "enonce": "Quel pays représente Jennifer Barreto, couronnée Miss Univers 2026 dans la nuit du 24 au 25 novembre ?",
     "explication": "Jennifer Barreto, Portoricaine, a été couronnée à domicile."
    },
    {
@@ -894,7 +848,7 @@
      "Eve Gilles",
      "Diane Leyre"
     ],
-    "enonce": "Quel est le nom de la candidate française, aux portes du Top 5 ?",
+    "enonce": "Quelle Française a terminé aux portes du Top 5 de Miss Univers 2026 ?",
     "explication": "TF1 Info cite Garance Authié."
    }
   ],
@@ -939,7 +893,7 @@
      "Mantes-la-Jolie",
      "Trappes"
     ],
-    "enonce": "Dans quelle commune des Yvelines deux enfants ont-ils été retrouvés enfermés dans une cave ?",
+    "enonce": "Dans quelle commune des Yvelines deux enfants de 2 et 4 ans ont-ils été découverts enfermés dans une cave en novembre 2026 ?",
     "explication": "La découverte a eu lieu à Meulan-en-Yvelines, lundi."
    }
   ],
@@ -995,7 +949,7 @@
      "Wallis",
      "Kerguelen"
     ],
-    "enonce": "Près de quelle île française le pétrolier a-t-il été repéré ?",
+    "enonce": "Près de quelle île française la Marine a-t-elle saisi 3,3 tonnes de méthamphétamine sur un pétrolier en novembre 2026 ?",
     "explication": "Europe 1 et TF1 Info citent Clipperton, dans le Pacifique."
    }
   ],
@@ -1039,14 +993,14 @@
   ],
   "questions": [
    {
-    "bonne": 3,
+    "bonne": 2,
     "choix": [
-     "300 pour, 200 contre",
-     "148 pour, 95 contre",
-     "400 pour, 80 contre",
-     "362 voix pour, 118 contre"
+     "312 voix pour, 168 contre",
+     "289 voix pour, 191 contre",
+     "362 voix pour, 118 contre",
+     "401 voix pour, 79 contre"
     ],
-    "enonce": "Quel est le résultat du vote de la loi logement à l'Assemblée ?",
+    "enonce": "Quel a été le résultat du vote d'adoption en première lecture du projet de loi logement à l'Assemblée nationale, le 24 novembre 2026 ?",
     "explication": "Adoption en première lecture le 24 novembre : 362 voix contre 118."
    }
   ],
@@ -1255,7 +1209,7 @@
      "74",
      "50"
     ],
-    "enonce": "Combien de coups de fouet la chanteuse Parastoo Ahmadi a-t-elle reçus ?",
+    "enonce": "Combien de coups de fouet l'Iran a-t-il infligés à la chanteuse Parastoo Ahmadi, selon les informations du 24 novembre 2026 ?",
     "explication": "74 coups de fouet infligés le 23 novembre 2026."
    }
   ],
@@ -1374,26 +1328,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 3,
+    "enonce": "Dans quel contexte la grève surprise d'Eurostar du 25 novembre 2026 intervient-elle, selon BFMTV ?",
     "choix": [
-     "Deux",
-     "Dix",
-     "Vingt",
-     "Cinq"
+     "Des négociations salariales en cours",
+     "Un projet de privatisation de la compagnie",
+     "La réforme des retraites",
+     "La fermeture d'une ligne"
     ],
-    "enonce": "Combien de trains du matin ont été annulés selon TF1 Info lors de la grève surprise d'Eurostar ?",
-    "explication": "TF1 Info indique cinq trains annulés ce matin-là."
-   },
-   {
     "bonne": 0,
-    "choix": [
-     "Paris et Bruxelles",
-     "Londres et Amsterdam",
-     "Lille et Londres",
-     "Paris et Lyon"
-    ],
-    "enonce": "Entre quelles villes la grève d'Eurostar a-t-elle été lancée le 25 novembre ?",
-    "explication": "Les agents ont cessé le travail à Paris et à Bruxelles."
+    "explication": "La grève survient en pleines négociations salariales."
    }
   ],
   "resume": "Les agents d'Eurostar ont cessé le travail mercredi 25 novembre à Paris et à Bruxelles, en pleines négociations salariales. Plusieurs trains sont annulés.",
@@ -1738,7 +1681,7 @@
      "Sept",
      "Dix"
     ],
-    "enonce": "Combien de thèmes de compromis le courrier de Lecornu contient-il ?",
+    "enonce": "Dans son courrier du 25 novembre 2026 sur le budget 2027, combien de priorités Sébastien Lecornu cite-t-il ?",
     "explication": "Courrier du 23 novembre avec cinq thèmes dont pouvoir d'achat, lycées, agriculture."
    }
   ],
@@ -1835,19 +1778,7 @@
   "croise": false,
   "date": "2026-11-25",
   "echeances": [],
-  "questions": [
-   {
-    "bonne": 0,
-    "choix": [
-     "Prime Video",
-     "Netflix",
-     "Disney+",
-     "Apple TV+"
-    ],
-    "enonce": "Sur quelle plateforme est diffusée « Les Anneaux de Pouvoir » ?",
-    "explication": "BFMTV : la série poursuit sa route sur Prime Video, saison 4 confirmée."
-   }
-  ],
+  "questions": [],
   "resume": "La série préquel de Tolkien, diffusée sur Prime Video, est renouvelée pour une quatrième saison.",
   "retenir": [
    "Série : Le Seigneur des Anneaux : Les Anneaux de Pouvoir",
@@ -1922,7 +1853,7 @@
      "Mexique",
      "Canada"
     ],
-    "enonce": "Vers quel pays Kilmar Abrego Garcia a-t-il pris un vol le 24 novembre ?",
+    "enonce": "Vers quel pays Kilmar Abrego Garcia a-t-il pris un vol le 24 novembre 2026 en quittant les États-Unis ?",
     "explication": "Le Monde : il a pris un vol pour l'Espagne, mardi."
    }
   ],
@@ -1974,7 +1905,7 @@
      "4-2",
      "3-1"
     ],
-    "enonce": "Quel est le score du match RB Leipzig - RC Lens ?",
+    "enonce": "Quel est le score du match RB Leipzig - RC Lens de la 5e journée de Ligue des champions, le 24 novembre 2026 ?",
     "explication": "Lens s'est incliné 3-1 à Leipzig."
    }
   ],
@@ -2570,7 +2501,7 @@
      "Marine Le Pen",
      "Sylvie Josserand"
     ],
-    "enonce": "Quelle députée RN Bardella a-t-il maintenue dans son soutien malgré « une faute » ?",
+    "enonce": "Quelle députée RN Jordan Bardella a-t-il défendue le 24 novembre 2026, parlant d'« une erreur », après la révélation de ses écrits antisémites ?",
     "explication": "Bardella a reconnu une faute de Laure Lavalette sur BFMTV le 23 novembre."
    }
   ],
@@ -2769,9 +2700,9 @@
      "Hugues Moutouh",
      "Didier Lallement",
      "Michel Delpuech",
-     "Laurent Nuñez lui-même"
+     "Pierre Dartout"
     ],
-    "enonce": "Quel préfet a été convoqué le 20 novembre par Laurent Nuñez ?",
+    "enonce": "Quel préfet a été convoqué le 20 novembre 2026 par Laurent Nuñez, après des soupçons de fuites vers le RN ?",
     "explication": "Le préfet Hugues Moutouh est convoqué par le ministre de l'Intérieur Laurent Nuñez."
    }
   ],
@@ -3530,12 +3461,12 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 1,
+    "bonne": 0,
     "choix": [
-     "Trahison",
      "Impasse",
-     "Victoire",
-     "Pause"
+     "Renoncement",
+     "Rupture",
+     "Trahison"
     ],
     "enonce": "Quel mot François Ruffin emploie-t-il pour justifier le retrait de sa candidature ?",
     "explication": "Il prend acte de « l'impasse » de sa campagne, le 21 novembre."
@@ -3652,15 +3583,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 2,
+    "enonce": "Quel cours d'eau a rejoint la Canche en vigilance orange crues dans le Pas-de-Calais le 22 novembre 2026 ?",
     "choix": [
-     "Environ 80",
-     "Environ 300",
-     "Près de 800",
-     "Plus de 5 000"
+     "L'Authie",
+     "La Lys",
+     "L'Aa",
+     "La Liane"
     ],
-    "enonce": "Combien de personnes ont été évacuées dans le Pas-de-Calais selon la préfecture ?",
-    "explication": "Près de 800 personnes évacuées selon la préfecture (Europe 1, Sud Radio)."
+    "bonne": 1,
+    "explication": "La Lys a rejoint la Canche en vigilance orange crues."
    }
   ],
   "resume": "Mise à jour du 22/11 : près de 800 personnes évacuées depuis jeudi dans le Pas-de-Calais ; la Lys rejoint la Canche en vigilance orange crues (20 Minutes, Libération, Europe 1) ; le 22/11, le Pas-de-Calais reste en orange et le Jura et l'Ain passent en vigilance orange pluie-inondation (BFMTV). Après l'équivalent d'un mois de pluie en 48 heures, des cours d'eau ont débordé dans le Pas-de-Calais (Fruges, Bréxent-Énocq) ; un plan d'urgence a été déclenché, plus de 300 personnes évacuées et une centaine d'établissements scolaires fermés le 20 novembre.",
@@ -3729,17 +3660,6 @@
     ],
     "enonce": "Devant quelle juridiction s'est tenu le procès des policiers dans l'affaire Zecler ?",
     "explication": "Le procès s'est ouvert le 9 novembre 2026 devant la cour criminelle de Paris."
-   },
-   {
-    "bonne": 2,
-    "choix": [
-     "Relaxe",
-     "Amende",
-     "Prison ferme",
-     "Sursis simple"
-    ],
-    "enonce": "Quelles peines ont été prononcées contre les trois policiers le 20 novembre ?",
-    "explication": "Les trois policiers sont condamnés à de la prison ferme."
    }
   ],
   "resume": "Mise à jour du 22/11 : verdict le 20/11 devant la cour criminelle de Paris : les trois policiers sont condamnés à de la prison ferme et la cour retient le caractère raciste de l'agression de 2020 (TF1 Info, RMC) ; les peines sont inférieures aux réquisitions (Libération) et les avocats de Michel Zecler y voient une « jurisprudence » (France 24, Libération).",
@@ -3814,17 +3734,6 @@
     ],
     "enonce": "Quel âge avait Pengo Bossio Wangi, tué lors de l'attaque de Trappes ?",
     "explication": "Il s'agit d'un combattant amateur de MMA de 26 ans."
-   },
-   {
-    "bonne": 0,
-    "choix": [
-     "Ali Rabeh",
-     "Philippe Rio",
-     "Jean-Marie Lenoir",
-     "Karim Bouamrane"
-    ],
-    "enonce": "Qui est le maire de Trappes cité après l'attaque ?",
-    "explication": "Le maire de Trappes Ali Rabeh a évoqué l'état d'une fillette de 12 ans en réanimation."
    }
   ],
   "resume": "Le 23 octobre, Kévin T., 39 ans, tire à Trappes et La Verrière (Yvelines) : un mort, cinq blessés. Le PNAT est saisi d'un attentat terroriste raciste.",
@@ -4987,15 +4896,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 0,
+    "enonce": "À quelle distance dans l'espace aérien finlandais un hélicoptère russe est-il entré, signalée par la Finlande le 21 novembre 2026 ?",
     "choix": [
-     "Golfe de Finlande",
-     "Golfe de Botnie",
-     "Golfe de Gascogne",
-     "Golfe du Lion"
+     "400 mètres",
+     "1,1 km",
+     "4,1 km",
+     "14 km"
     ],
-    "enonce": "Dans quel golfe un cargo russe a-t-il été visé par un drone ?",
-    "explication": "Attaque de drone contre un cargo russe dans le golfe de Finlande."
+    "bonne": 2,
+    "explication": "La Finlande signale un hélicoptère russe entré jusqu'à 4,1 km."
    }
   ],
   "resume": "Le 21 novembre, l'armée finlandaise détecte une « attaque de drone » contre un cargo russe dans le golfe de Finlande ; le navire a été endommagé et a pris feu (TF1 Info). Libération et Ouest-France attribuent l'attaque à l'Ukraine ; la Finlande signale aussi un hélicoptère russe entré jusqu'à 4,1 km dans son espace aérien (franceinfo, RFI).",
@@ -5082,15 +4991,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 0,
+    "bonne": 2,
     "choix": [
-     "204 milliards d'euros",
      "20 milliards d'euros",
-     "100 milliards d'euros",
-     "500 milliards d'euros"
+     "104 milliards d'euros",
+     "204 milliards d'euros",
+     "504 milliards d'euros"
     ],
-    "enonce": "Quel montant d'économies Costa propose-t-il sur le budget de l'UE ?",
-    "explication": "Baisse proposée de 204 milliards, la France dit non."
+    "enonce": "Quelle baisse du budget européen Antonio Costa a-t-il proposée le 21 novembre 2026 par rapport à l'enveloppe de la Commission ?",
+    "explication": "Costa propose un budget en baisse de 204 milliards d'euros par rapport à l'enveloppe de 2 000 milliards de la Commission."
    }
   ],
   "resume": "Le président du Conseil européen Antonio Costa propose le 21 novembre un budget de l'UE en baisse de 204 milliards d'euros par rapport à l'enveloppe de 2 000 milliards proposée par la Commission en 2025, avec une nouvelle taxe sur les grandes entreprises du numérique ; la France s'y oppose aussitôt, Berlin fait aussi la moue (Libération, RFI, franceinfo).",
@@ -7488,15 +7397,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 0,
+    "enonce": "À quelle distance de la Terre Voyager 1 se trouvait-elle le 18 novembre 2026, soit une journée-lumière ?",
     "choix": [
-     "1977",
-     "1969",
-     "1986",
-     "1990"
+     "Environ 2,6 milliards de km",
+     "Environ 9,5 milliards de km",
+     "Environ 25,9 milliards de km",
+     "Environ 259 milliards de km"
     ],
-    "enonce": "En quelle année Voyager 1 a-t-elle été lancée ?",
-    "explication": "Lancée en 1977, la sonde atteint un jour-lumière (25,9 milliards de km)."
+    "bonne": 2,
+    "explication": "Voyager 1 était à environ 25,9 milliards de km, soit une journée-lumière."
    }
   ],
   "resume": "Lancée en 1977, Voyager 1 est le 18 novembre à environ 25,9 milliards de km de la Terre, soit une journée-lumière.",
@@ -9438,15 +9347,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 1,
+    "enonce": "Quelle mesure du projet de loi logement, examiné à l'Assemblée à partir du 16 novembre 2026, a été décriée ?",
     "choix": [
-     "Gérald Darmanin",
-     "Vincent Jeanbrun",
-     "Sébastien Lecornu",
-     "David Amiel"
+     "La remise en location de logements mal isolés",
+     "La suppression de la taxe foncière",
+     "Le gel des loyers pendant deux ans",
+     "L'interdiction des meublés touristiques"
     ],
-    "enonce": "Quel ministre porte le projet de loi de relance du logement ?",
-    "explication": "Le texte est porté par Vincent Jeanbrun."
+    "bonne": 0,
+    "explication": "Le texte prévoit la remise en location de logements mal isolés, mesure décriée."
    }
   ],
   "resume": "L'Assemblée nationale a ouvert lundi 16 novembre l'examen du projet de loi « relance et décentralisation du logement », porté par le ministre Vincent Jeanbrun : simplification, remise en location de logements mal isolés (mesure décriée) et nouveau programme de rénovation (Sud Radio, LCP, 20 Minutes).",
@@ -10036,15 +9945,15 @@
   "echeances": [],
   "questions": [
    {
-    "bonne": 3,
+    "enonce": "Contre quel projet du gouvernement d'Andrej Babis des centaines de milliers de Tchèques ont-ils manifesté à Prague le 15 novembre 2026 ?",
     "choix": [
-     "Petr Fiala",
-     "Karel Janecek",
-     "Petr Pavel",
-     "Andrej Babis"
+     "Une réforme des retraites",
+     "Une réforme du financement de l'audiovisuel public",
+     "Une loi sur l'immigration",
+     "Une réforme de la justice"
     ],
-    "enonce": "Quel milliardaire dirige le gouvernement tchèque visé par la manifestation sur les médias publics ?",
-    "explication": "La manifestation de Prague vise la réforme des médias publics du gouvernement d'Andrej Babis."
+    "bonne": 1,
+    "explication": "Ils protestent contre la réforme du financement de l'audiovisuel public (suppression de la redevance)."
    }
   ],
   "resume": "Des centaines de milliers de personnes ont manifesté dimanche 15 novembre à Prague contre le projet du gouvernement d'Andrej Babis de réformer le financement de l'audiovisuel public (suppression de la redevance, selon RFI), que les opposants jugent être une menace pour la liberté de la presse.",
