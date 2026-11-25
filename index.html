@@ -332,11 +332,11 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   .deckbar .cn { font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
   .deckbar .bar { height: 6px; }
   .deckbar small { font-size: 12px; font-weight: 600; color: var(--muted); }
-  .deckwrap { position: relative; height: calc(100vh - 340px); height: calc(100dvh - 340px); min-height: 380px; touch-action: pan-y; }
+  .deckwrap { position: relative; height: calc(100vh - 290px); height: calc(100dvh - 290px); min-height: 440px; touch-action: pan-y; }
   .deckwrap.drag { user-select: none; -webkit-user-select: none; cursor: grabbing; }
   .sc {
-    --g: #5b3a1f; position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y;
-    border-radius: 24px; padding: 22px 20px 28px; color: #fff; will-change: transform; transform-origin: 50% 100%;
+    --g: #5b3a1f; position: absolute; inset: 0; overflow: hidden; display: flex; flex-direction: column; touch-action: pan-y;
+    border-radius: 24px; padding: 18px 18px 16px; color: #fff; will-change: transform; transform-origin: 50% 100%;
     background: linear-gradient(165deg, var(--g) 0%, #1b1411 80%); box-shadow: 0 12px 32px rgba(20,17,15,.28);
   }
   .sc[data-r="politique"] { --g: #B42318; } .sc[data-r="international"] { --g: #1D4ED8; } .sc[data-r="economie"] { --g: #047857; }
@@ -346,14 +346,20 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   .sc .st { color: #fff; border-color: rgba(255,255,255,.4); }
   .sc .st.ok { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); color: #fff; }
   .sc.done .donebadge { display: inline-flex; }
-  .sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(26px, 7.4vw, 32px); line-height: 1.15; letter-spacing: -.01em; margin: 20px 0 14px; }
+  .sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(22px, 6.3vw, 27px); line-height: 1.15; letter-spacing: -.01em; margin: 14px 0 10px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex: none; }
+  .sc .tag, .sc .stat { flex: none; }
   .sc .stat { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); }
   .sc .stat b { font-size: 30px; font-weight: 900; line-height: 1; color: #FFC46B; font-variant-numeric: tabular-nums; }
   .sc .stat .meter { margin-left: auto; }
   .sc .meter span { color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.3); }
   .sc .meter span.on { background: #fff; color: #1b1411; border-color: transparent; }
-  .sc .resume { color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.55; max-width: none; margin: 16px 0 0; }
-  .sc .body { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 24px 0 0; }
+  .sc .tabs { flex: none; display: flex; gap: 6px; margin: 14px 0 12px; }
+  .sc .tab { flex: 1 1 0; min-width: 0; height: 36px; padding: 0 4px; border-radius: 50px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: rgba(255,255,255,.82); font: 700 12.5px var(--font); cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sc .tab[aria-selected="true"] { background: #fff; color: #1b1411; border-color: transparent; }
+  .sc .zone { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
+  .sc .panel { display: grid; gap: 18px; align-content: start; }
+  .sc .resume { color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.55; max-width: none; margin: 0; }
+  .sc .block.key { padding: 14px 16px; }
   .sc .block h4 { color: rgba(255,255,255,.7); }
   .sc .block.key { background: rgba(255,255,255,.13); padding: 16px 18px; }
   .sc .block.key h4 { color: #FFC46B; }
@@ -662,7 +668,8 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     return m;
   }
 
-  function block(title) { var b = el("div", "block"); b.appendChild(el("h4", null, title)); return b; }
+  var BLOCK_KEYS = { "À retenir": "retenir", "Contexte": "contexte", "Acteurs et noms": "acteurs", "Prochaines dates": "dates", "Sources": "sources" };
+  function block(title) { var b = el("div", "block"); if (BLOCK_KEYS[title]) b.setAttribute("data-k", BLOCK_KEYS[title]); b.appendChild(el("h4", null, title)); return b; }
 
   /* Blocs de la fiche (à retenir, contexte, acteurs, dates, sources) : partagés par la liste et les cartes mobiles */
   function buildBlocks(f, body) {
@@ -766,7 +773,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   function isMobile() { return !!mq.matches; }
   if (mq.addEventListener) mq.addEventListener("change", function () { renderMain(); });
   else if (mq.addListener) mq.addListener(function () { renderMain(); });
-  var deckIdx = 0, deckSig = "";
+  var deckIdx = 0, deckSig = "", deckTab = "resume";
 
   /* Carte plein écran d'une fiche (mobile) */
   function swipeCard(f) {
@@ -786,9 +793,37 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     var m = el("div", "meter"); [["presse", "P"], ["tv", "T"], ["radio", "R"]].forEach(function (x) { m.appendChild(el("span", cov[x[0]] ? "on" : "", x[1])); });
     stat.appendChild(m); c.appendChild(stat);
 
-    var teaser = short(f.resume, 200) || short(arr(f.retenir)[0], 200);
-    if (teaser) c.appendChild(el("p", "resume", teaser));
-    var body = el("div", "body"); buildBlocks(f, body); c.appendChild(body);
+    /* Contenu rangé en onglets : la carte garde une taille fixe */
+    var tmp = el("div"); buildBlocks(f, tmp);
+    var K = {}; Array.prototype.forEach.call(tmp.children, function (x) { K[x.getAttribute("data-k")] = x; });
+    var panels = {};
+    var pr = el("div", "panel");
+    var resume = short(f.resume, 400) || short(arr(f.retenir)[0], 400);
+    if (resume) pr.appendChild(el("p", "resume", resume));
+    if (K.acteurs) pr.appendChild(K.acteurs);
+    if (pr.children.length) panels.resume = pr;
+    if (K.retenir) { var p2 = el("div", "panel"); p2.appendChild(K.retenir); panels.retenir = p2; }
+    var p3 = el("div", "panel"); if (K.contexte) p3.appendChild(K.contexte); if (K.dates) p3.appendChild(K.dates);
+    if (p3.children.length) panels.contexte = p3;
+    if (K.sources) { var p4 = el("div", "panel"); p4.appendChild(K.sources); panels.sources = p4; }
+
+    var LABELS = [["resume", "Résumé"], ["retenir", "À retenir"], ["contexte", "Contexte"], ["sources", "Sources"]];
+    var tabs = el("div", "tabs"); tabs.setAttribute("role", "tablist");
+    var zone = el("div", "zone");
+    var avail = LABELS.filter(function (x) { return panels[x[0]]; });
+    function show(k) {
+      deckTab = k;
+      Array.prototype.forEach.call(tabs.children, function (t) { t.setAttribute("aria-selected", String(t.getAttribute("data-k") === k)); });
+      zone.textContent = ""; if (panels[k]) zone.appendChild(panels[k]);
+      zone.scrollTop = 0;
+    }
+    avail.forEach(function (x) {
+      var t = el("button", "tab", x[1]); t.type = "button"; t.setAttribute("role", "tab"); t.setAttribute("data-k", x[0]);
+      t.addEventListener("click", function () { show(x[0]); });
+      tabs.appendChild(t);
+    });
+    c.appendChild(tabs); c.appendChild(zone);
+    show(panels[deckTab] ? deckTab : (avail[0] ? avail[0][0] : "resume"));
     return c;
   }
 
