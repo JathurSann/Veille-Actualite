@@ -348,7 +348,16 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 .rank li:nth-child(-n+3) .n { color: var(--accent-text); }
 
 /* Cartes de fiches : à tirer avec le doigt (mobile) ou à la souris / au clavier (mode révision sur ordinateur) */
-.deckbar { display: grid; gap: 6px; margin: 0 0 12px; }
+.deckbar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 6px 12px; margin: 0 0 12px; }
+.deckbar small { grid-column: 1 / -1; }
+.fsbtn { white-space: nowrap; min-height: 36px; padding: 0 4px; }
+body.full { overflow: hidden; }
+.deckcol.full { position: fixed; inset: 0; z-index: 50; max-width: none; margin: 0; background: var(--bg); display: flex; flex-direction: column; align-items: center;
+  padding: calc(env(safe-area-inset-top, 0px) + 8px) max(14px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 10px) max(14px, env(safe-area-inset-left, 0px)); }
+.deckcol.full > * { width: 100%; max-width: 560px; }
+.deckcol.full .deckbar { margin-bottom: 8px; }
+.deckcol.full .deckwrap { flex: 1 1 auto; height: auto; min-height: 0; }
+.deckcol.full .deckctl { flex: none; margin: 10px 0 0; }
 .deckbar .cn { font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
 .deckbar .bar { height: 6px; }
 .deckbar small { font-size: 12px; font-weight: 600; color: var(--muted); }
@@ -915,7 +924,10 @@ html, body { overflow-x: clip; max-width: 100%; }
     var bar = el("div", "deckbar");
     var cn = el("span", "cn"); var prog = el("div", "bar"); var fill = document.createElement("i"); prog.appendChild(fill);
     var hint = el("small", null, isMobile() ? "Tire la carte vers la gauche pour la suivante" : "Tire la carte ou utilise ← → pour changer de fiche · R : marquer comme révisée");
-    bar.appendChild(cn); bar.appendChild(prog); bar.appendChild(hint);
+    var fs = el("button", "linkbtn fsbtn", state.full ? "✕ Fermer" : "Plein écran"); fs.type = "button";
+    fs.setAttribute("aria-label", state.full ? "Quitter le plein écran" : "Passer en plein écran");
+    fs.addEventListener("click", function () { state.full = !state.full; renderMain(); });
+    bar.appendChild(cn); bar.appendChild(prog); bar.appendChild(fs); bar.appendChild(hint);
 
     var wrap = el("div", "deckwrap"); wrap.tabIndex = 0; wrap.setAttribute("role", "region"); wrap.setAttribute("aria-label", "Fiches : tire la carte à gauche ou à droite pour changer de fiche");
 
@@ -923,7 +935,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     function rb(label, cls, txt) { var b = el("button", "deckbtn " + cls, txt); b.type = "button"; b.setAttribute("aria-label", label); return b; }
     var bp = rb("Fiche précédente", "", "‹"), bk = rb("Marquer la fiche comme révisée", "ok", "✓"), bn = rb("Fiche suivante", "", "›");
     ctl.appendChild(bp); ctl.appendChild(bk); ctl.appendChild(bn);
-    var col = el("div", "deckcol"); col.appendChild(bar); col.appendChild(wrap); col.appendChild(ctl); main.appendChild(col);
+    var col = el("div", "deckcol" + (state.full ? " full" : "")); document.body.classList.toggle("full", !!state.full); col.appendChild(bar); col.appendChild(wrap); col.appendChild(ctl); main.appendChild(col);
 
     var cards = { prev: null, cur: null, next: null }, busy = false, suppress = false;
     function mk(i) { var c = swipeCard(ord[i]); if (done[ord[i].id]) c.classList.add("done"); return c; }
@@ -969,7 +981,8 @@ html, body { overflow-x: clip; max-width: 100%; }
     deckKey = function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey || document.querySelector("dialog[open]")) return;
       var t = e.target; if (t && t.closest && t.closest("input, textarea, select")) return;
-      if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
+      if (e.key === "Escape" && state.full) { e.preventDefault(); state.full = false; renderMain(); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
       else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
       else if (e.key === "r" || e.key === "R") { e.preventDefault(); bk.click(); }
     };
@@ -1033,7 +1046,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   var deckKey = null;
   function renderMain() {
-    var main = $("main"); main.textContent = "";
+    var main = $("main"); main.textContent = ""; document.body.classList.remove("full");
     if (deckKey) { document.removeEventListener("keydown", deckKey); deckKey = null; }
     if (state.error) { main.appendChild(emptyState("Les fiches ne sont pas disponibles", state.error, false)); renderCount([]); return; }
     if (!state.ready) { main.appendChild(emptyState("Chargement des fiches", "Les sujets de la semaine arrivent.", false)); renderCount([]); return; }
@@ -1080,7 +1093,7 @@ html, body { overflow-x: clip; max-width: 100%; }
   $("q").addEventListener("input", function (e) { state.q = e.target.value; renderMain(); });
   /* « Réviser les fiches restantes » : on garde toutes les fiches visibles et on se place sur la première non révisée */
   $("cta").addEventListener("click", function () {
-    state.jumpTodo = true; render(); state.jumpTodo = false;
+    state.jumpTodo = true; if (isMobile()) state.full = true; render(); state.jumpTodo = false;
     try {
       var first = document.querySelector("details.fiche:not(.done)");
       if (first) { first.open = true; openIds[first.getAttribute("data-id")] = 1; first.scrollIntoView({ block: "start" }); }
@@ -1183,7 +1196,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function leave() {
     closeMenu();
-    docs = []; done = {}; state.ready = false;
+    docs = []; done = {}; state.ready = false; state.full = false; document.body.classList.remove("full");
     try { if ($("quiz").open) $("quiz").close(); if ($("rankdlg").open) $("rankdlg").close(); } catch (e) {}
     renderAuth("login");
   }
