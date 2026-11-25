@@ -786,7 +786,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     var d = document.createElement("details"); d.className = "fiche" + (done[f.id] ? " done" : "");
     if (openIds[f.id]) d.open = true;
     d.addEventListener("toggle", function () { if (d.open) openIds[f.id] = 1; else delete openIds[f.id]; });
-    d.setAttribute("data-r", f.rubrique);
+    d.setAttribute("data-r", f.rubrique); d.setAttribute("data-id", f.id);
 
     var s = document.createElement("summary");
     var tag = el("div", "tag");
@@ -909,6 +909,7 @@ html, body { overflow-x: clip; max-width: 100%; }
   function renderDeck(main, ord) {
     var n = ord.length, sig = ord.map(function (f) { return f.id; }).join("|");
     if (sig !== deckSig) { deckSig = sig; deckIdx = 0; }
+    if (state.jumpTodo) { state.jumpTodo = false; var k0 = 0; while (k0 < n && done[ord[k0].id]) k0++; deckIdx = k0 < n ? k0 : 0; }
     if (deckIdx >= n) deckIdx = n - 1;
 
     var bar = el("div", "deckbar");
@@ -1077,9 +1078,14 @@ html, body { overflow-x: clip; max-width: 100%; }
   function render() { renderChips(); renderHero(); renderAgenda(); renderMain(); renderStamp(); }
 
   $("q").addEventListener("input", function (e) { state.q = e.target.value; renderMain(); });
+  /* « Réviser les fiches restantes » : on garde toutes les fiches visibles et on se place sur la première non révisée */
   $("cta").addEventListener("click", function () {
-    state.hideDone = true; render();
-    try { $("liste").scrollIntoView({ block: "start" }); } catch (e) {}
+    state.jumpTodo = true; render(); state.jumpTodo = false;
+    try {
+      var first = document.querySelector("details.fiche:not(.done)");
+      if (first) { first.open = true; openIds[first.getAttribute("data-id")] = 1; first.scrollIntoView({ block: "start" }); }
+      else $("liste").scrollIntoView({ block: "start" });
+    } catch (e) {}
   });
 
   render();
