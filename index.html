@@ -404,6 +404,7 @@ body.full { overflow: hidden; }
 .deckbtn.ok { width: 68px; height: 68px; font-size: 30px; padding: 0; border: 0; background: var(--grad); color: var(--btn-ink); }
 .deckbtn.ok[aria-pressed="true"] { background: var(--ok-fg); color: #fff; }
 .deckbtn[disabled] { opacity: .3; cursor: default; }
+.syncnote { margin: 8px 0 0; font-size: 12.5px; font-weight: 600; color: var(--muted); }
 .deckcol { max-width: 560px; margin-inline: auto; }
 .sc { cursor: grab; }
 .deckwrap.drag .sc { cursor: grabbing; }
@@ -513,6 +514,7 @@ html, body { overflow-x: clip; max-width: 100%; }
       <span class="lab">Progression</span>
       <div class="big"><span id="p-num">–</span><small id="p-tot"></small></div>
       <div class="bar" role="progressbar" aria-label="Fiches révisées" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="p-bar"><i id="p-fill"></i></div>
+      <p class="hint syncnote" id="sync-note" role="status" hidden></p>
       <div class="stats">
         <div><b id="s-total">–</b><span>fiches sur 2 semaines</span></div>
         <div><b id="s-cr">–</b><span>recoupées P, T, R</span></div>
@@ -784,12 +786,70 @@ html, body { overflow-x: clip; max-width: 100%; }
     }
   }
 
-  /* Marque une fiche révisée ou non, enregistre dans Supabase, annule si l'écriture échoue */
+  /* Marque une fiche révisée ou non. Le changement s'affiche tout de suite, puis il est enregistré dans Supabase
+     par lots, avec nouvel essai automatique. Rien n'est jamais annulé en silence : tant qu'un changement n'est pas
+     enregistré, il reste en attente (gardé aussi dans le navigateur) et un message le dit. */
+  var PKEY = "veille-attente", pending = {}, flushing = false, retryT = null, syncErr = "";
+  function loadPending() {
+    try { pending = (JSON.parse(localStorage.getItem(PKEY) || "{}") || {})[user.id] || {}; } catch (e) { pending = {}; }
+  }
+  function savePending() {
+    try {
+      var all = JSON.parse(localStorage.getItem(PKEY) || "{}") || {};
+      if (Object.keys(pending).length) all[user.id] = pending; else delete all[user.id];
+      localStorage.setItem(PKEY, JSON.stringify(all));
+    } catch (e) {}
+  }
+  function syncNote() {
+    var n = Object.keys(pending).length, e = $("sync-note"); if (!e) return;
+    e.hidden = !n;
+    e.textContent = !n ? "" : syncErr
+      ? "⚠ " + n + (n > 1 ? " fiches pas encore enregistrées" : " fiche pas encore enregistrée") + ", nouvel essai en cours (" + syncErr + ")"
+      : "Enregistrement…";
+  }
+  function oneByOne(ids) {  /* si un lot échoue à cause d'une fiche disparue, on enregistre les autres une par une */
+    return ids.reduce(function (chain, id) {
+      return chain.then(function () {
+        return sb.from("revisions").upsert({ fiche_id: id }, { onConflict: "user_id,fiche_id", ignoreDuplicates: true }).then(function (r) {
+          if (r.error && r.error.code === "23503") { delete pending[id]; delete done[id]; return; }  /* fiche supprimée entre-temps */
+          if (r.error) throw r.error;
+          delete pending[id];
+        });
+      });
+    }, Promise.resolve());
+  }
+  function flush() {
+    if (flushing || !user) return;
+    var ids = Object.keys(pending);
+    if (!ids.length) { syncNote(); return; }
+    flushing = true;
+    var snap = {}; ids.forEach(function (i) { snap[i] = pending[i]; });
+    var adds = ids.filter(function (i) { return snap[i]; }), rems = ids.filter(function (i) { return !snap[i]; });
+    var jobs = [];
+    if (adds.length) jobs.push(sb.from("revisions").upsert(adds.map(function (id) { return { fiche_id: id }; }), { onConflict: "user_id,fiche_id", ignoreDuplicates: true }));
+    if (rems.length) jobs.push(sb.from("revisions").delete().in("fiche_id", rems));
+    Promise.all(jobs).then(function (rs) {
+      var err = rs.filter(function (r) { return r && r.error; })[0];
+      if (err) {
+        if (err.error.code === "23503" && adds.length) return oneByOne(adds);  /* un lot refusé : on isole la fiche fautive */
+        throw err.error;
+      }
+      ids.forEach(function (i) { if (pending[i] === snap[i]) delete pending[i]; });
+    }).then(function () { syncErr = ""; savePending(); renderHero(); }, function (e) {
+      syncErr = String((e && (e.code || e.message)) || "réseau").slice(0, 40);
+    }).then(function () {
+      flushing = false; syncNote();
+      if (Object.keys(pending).length) { clearTimeout(retryT); retryT = setTimeout(flush, syncErr ? 4000 : 50); }
+    });
+  }
+  window.addEventListener("online", flush);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) flush(); });
+
   function setRevise(f, on, after) {
-    function apply(v) { if (v) done[f.id] = 1; else delete done[f.id]; if (after) after(v); renderHero(); renderCount(visible()); }
-    apply(on);
-    var q = on ? sb.from("revisions").upsert({ fiche_id: f.id }, { onConflict: "user_id,fiche_id", ignoreDuplicates: true }) : sb.from("revisions").delete().eq("fiche_id", f.id);
-    q.then(function (r) { if (r && r.error) apply(!on); }, function () { apply(!on); });
+    if (on) done[f.id] = 1; else delete done[f.id];
+    if (after) after(on);
+    renderHero(); renderCount(visible());
+    pending[f.id] = on; savePending(); syncNote(); flush();
   }
 
   function fiche(f, showDate) {
@@ -1197,7 +1257,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function leave() {
     closeMenu();
-    docs = []; done = {}; state.ready = false; state.full = false; document.body.classList.remove("full");
+    docs = []; done = {}; pending = {}; clearTimeout(retryT); state.ready = false; state.full = false; document.body.classList.remove("full");
     try { if ($("quiz").open) $("quiz").close(); if ($("rankdlg").open) $("rankdlg").close(); } catch (e) {}
     renderAuth("login");
   }
@@ -1216,7 +1276,8 @@ html, body { overflow-x: clip; max-width: 100%; }
       if (f.error) throw f.error;
       docs = (f.data || []).filter(function (x) { return x && x.titre && x.date && daysAgo(x.date) <= lim(); });
       done = {}; ((r && r.data) || []).forEach(function (x) { done[x.fiche_id] = 1; });
-      state.ready = true; state.error = null; render(); migrate();
+      loadPending(); Object.keys(pending).forEach(function (id) { if (pending[id]) done[id] = 1; else delete done[id]; });  /* changements pas encore enregistrés */
+      state.ready = true; state.error = null; render(); migrate(); syncNote(); flush();
     }).catch(function () {
       state.ready = true; state.error = "Lecture impossible pour le moment. Recharge la page dans un instant."; render();
     });
