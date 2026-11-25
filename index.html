@@ -327,21 +327,47 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 }
 @media (max-width: 700px) {
   .body { grid-template-columns: minmax(0, 1fr); }
-  /* Carrousel de fiches : on glisse de droite à gauche */
-  .deckbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; }
-  .deckbar .ct { flex: 1; min-width: 0; text-align: center; font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; display: grid; gap: 2px; }
-  .deckbar .ct small { font-weight: 600; font-size: 12px; color: var(--muted); }
-  .deckbtn { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 700 24px/1 var(--font); cursor: pointer; display: grid; place-items: center; padding: 0 0 3px; }
+  /* Cartes de fiches à tirer avec le doigt */
+  .deckbar { display: grid; gap: 6px; margin: 0 0 12px; }
+  .deckbar .cn { font-weight: 800; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .deckbar .bar { height: 6px; }
+  .deckbar small { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .deckwrap { position: relative; height: calc(100vh - 340px); height: calc(100dvh - 340px); min-height: 380px; touch-action: pan-y; }
+  .deckwrap.drag { user-select: none; -webkit-user-select: none; cursor: grabbing; }
+  .sc {
+    --g: #5b3a1f; position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y;
+    border-radius: 24px; padding: 22px 20px 28px; color: #fff; will-change: transform; transform-origin: 50% 100%;
+    background: linear-gradient(165deg, var(--g) 0%, #1b1411 80%); box-shadow: 0 12px 32px rgba(20,17,15,.28);
+  }
+  .sc[data-r="politique"] { --g: #B42318; } .sc[data-r="international"] { --g: #1D4ED8; } .sc[data-r="economie"] { --g: #047857; }
+  .sc[data-r="societe"] { --g: #7E22CE; } .sc[data-r="sciences"] { --g: #0E7490; } .sc[data-r="culture"] { --g: #BE185D; }
+  .sc[data-r="sport"] { --g: #57534E; } .sc[data-r="medias"] { --g: #92400E; } .sc[data-r="environnement"] { --g: #4D7C0F; }
+  .sc .tag .date { color: rgba(255,255,255,.78); }
+  .sc .st { color: #fff; border-color: rgba(255,255,255,.4); }
+  .sc .st.ok { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35); color: #fff; }
+  .sc.done .donebadge { display: inline-flex; }
+  .sc h3.titre { color: #fff; font-weight: 900; font-size: clamp(26px, 7.4vw, 32px); line-height: 1.15; letter-spacing: -.01em; margin: 20px 0 14px; }
+  .sc .stat { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); }
+  .sc .stat b { font-size: 30px; font-weight: 900; line-height: 1; color: #FFC46B; font-variant-numeric: tabular-nums; }
+  .sc .stat .meter { margin-left: auto; }
+  .sc .meter span { color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.3); }
+  .sc .meter span.on { background: #fff; color: #1b1411; border-color: transparent; }
+  .sc .resume { color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.55; max-width: none; margin: 16px 0 0; }
+  .sc .body { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 24px 0 0; }
+  .sc .block h4 { color: rgba(255,255,255,.7); }
+  .sc .block.key { background: rgba(255,255,255,.13); padding: 16px 18px; }
+  .sc .block.key h4 { color: #FFC46B; }
+  .sc .retenir, .sc .block p, .sc .ech li, .sc .src li { color: #fff; }
+  .sc .people span { background: rgba(255,255,255,.15); color: #fff; }
+  .sc .ech .d { background: rgba(255,255,255,.16); color: #FFD7B0; }
+  .sc .src .t { background: rgba(255,255,255,.16); color: #fff; }
+  .sc a, .sc .srcmore summary { color: #FFD7B0; }
+  .deckctl { display: flex; align-items: center; justify-content: center; gap: 22px; margin: 16px 0 4px; }
+  .deckbtn { width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); font: 700 28px/1 var(--font); cursor: pointer; display: grid; place-items: center; padding: 0 0 4px; box-shadow: var(--shadow); }
+  .deckbtn.ok { width: 68px; height: 68px; font-size: 30px; padding: 0; border: 0; background: var(--grad); color: var(--btn-ink); }
+  .deckbtn.ok[aria-pressed="true"] { background: var(--ok-fg); color: #fff; }
   .deckbtn[disabled] { opacity: .3; cursor: default; }
-  .deck { display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none;
-    height: calc(100vh - 210px); height: calc(100dvh - 210px); min-height: 420px; }
-  .deck::-webkit-scrollbar { display: none; }
-  .slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: center; scroll-snap-stop: always; overflow-y: auto; overscroll-behavior-y: contain; border-radius: 16px; }
-  .deck details.fiche { min-height: 100%; }
-  .deck details.fiche > summary { pointer-events: none; cursor: default; }
-  .deck .more { display: none; }
 }
-@media (min-width: 701px) { .deckbar { display: none; } }
 @media (max-width: 520px) {
   details.fiche > summary { padding: 16px; }
   .body { padding: 4px 16px 18px; }
@@ -638,6 +664,38 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
 
   function block(title) { var b = el("div", "block"); b.appendChild(el("h4", null, title)); return b; }
 
+  /* Blocs de la fiche (à retenir, contexte, acteurs, dates, sources) : partagés par la liste et les cartes mobiles */
+  function buildBlocks(f, body) {
+    var ret = arr(f.retenir).slice(0, 5);
+    if (ret.length) { var b1 = block("À retenir"); b1.className += " key"; var ul = el("ul", "retenir"); ret.forEach(function (x) { ul.appendChild(el("li", null, x)); }); b1.appendChild(ul); body.appendChild(b1); }
+    var ctx = short(f.contexte, 280);
+    if (ctx) { var b2 = block("Contexte"); b2.appendChild(el("p", null, ctx)); body.appendChild(b2); }
+    var ac = arr(f.acteurs).slice(0, 8);
+    if (ac.length) { var b3 = block("Acteurs et noms"); var pp = el("div", "people"); ac.forEach(function (x) { pp.appendChild(el("span", null, x)); }); b3.appendChild(pp); body.appendChild(b3); }
+    var ecSeen = {}, ec = arr(f.echeances).filter(function (e) { if (!e) return false; var k = (e.date || "") + "|" + (e.label || ""); if (ecSeen[k]) return false; ecSeen[k] = 1; return true; }).slice(0, 4);
+    if (ec.length) { var b4 = block("Prochaines dates"); var eu = el("ul", "ech"); ec.forEach(function (e) { var li = el("li"); li.appendChild(el("span", "d", e.date ? dShort.format(parse(e.date)) : "")); li.appendChild(document.createTextNode(e.label || "")); eu.appendChild(li); }); b4.appendChild(eu); body.appendChild(b4); }
+    var pk = pickSources(f, 5), so = pk.list;
+    if (so.length) {
+      var b5 = block("Sources"); b5.className += " wide"; var su = el("ul", "src");
+      so.forEach(function (x) { su.appendChild(srcLi(x)); });
+      b5.appendChild(su);
+      if (pk.rest.length) {
+        var dt = document.createElement("details"); dt.className = "srcmore";
+        dt.appendChild(el("summary", null, "Voir " + (pk.rest.length > 1 ? "les " + pk.rest.length + " autres sources" : "1 autre source")));
+        var ru = el("ul", "src"); pk.rest.forEach(function (x) { ru.appendChild(srcLi(x)); }); dt.appendChild(ru); b5.appendChild(dt);
+      }
+      body.appendChild(b5);
+    }
+  }
+
+  /* Marque une fiche révisée ou non, enregistre dans Supabase, annule si l'écriture échoue */
+  function setRevise(f, on, after) {
+    function apply(v) { if (v) done[f.id] = 1; else delete done[f.id]; if (after) after(v); renderHero(); renderCount(visible()); }
+    apply(on);
+    var q = on ? sb.from("revisions").upsert({ fiche_id: f.id }, { onConflict: "user_id,fiche_id", ignoreDuplicates: true }) : sb.from("revisions").delete().eq("fiche_id", f.id);
+    q.then(function (r) { if (r && r.error) apply(!on); }, function () { apply(!on); });
+  }
+
   function fiche(f, showDate) {
     var d = document.createElement("details"); d.className = "fiche" + (done[f.id] ? " done" : "");
     if (openIds[f.id]) d.open = true;
@@ -672,26 +730,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     d.appendChild(s);
 
     var body = el("div", "body");
-    var ret = arr(f.retenir).slice(0, 5);
-    if (ret.length) { var b1 = block("À retenir"); b1.className += " key"; var ul = el("ul", "retenir"); ret.forEach(function (x) { ul.appendChild(el("li", null, x)); }); b1.appendChild(ul); body.appendChild(b1); }
-    var ctx = short(f.contexte, 280);
-    if (ctx) { var b2 = block("Contexte"); b2.appendChild(el("p", null, ctx)); body.appendChild(b2); }
-    var ac = arr(f.acteurs).slice(0, 8);
-    if (ac.length) { var b3 = block("Acteurs et noms"); var pp = el("div", "people"); ac.forEach(function (x) { pp.appendChild(el("span", null, x)); }); b3.appendChild(pp); body.appendChild(b3); }
-    var ecSeen = {}, ec = arr(f.echeances).filter(function (e) { if (!e) return false; var k = (e.date || "") + "|" + (e.label || ""); if (ecSeen[k]) return false; ecSeen[k] = 1; return true; }).slice(0, 4);
-    if (ec.length) { var b4 = block("Prochaines dates"); var eu = el("ul", "ech"); ec.forEach(function (e) { var li = el("li"); li.appendChild(el("span", "d", e.date ? dShort.format(parse(e.date)) : "")); li.appendChild(document.createTextNode(e.label || "")); eu.appendChild(li); }); b4.appendChild(eu); body.appendChild(b4); }
-    var pk = pickSources(f, 5), so = pk.list;
-    if (so.length) {
-      var b5 = block("Sources"); b5.className += " wide"; var su = el("ul", "src");
-      so.forEach(function (x) { su.appendChild(srcLi(x)); });
-      b5.appendChild(su);
-      if (pk.rest.length) {
-        var dt = document.createElement("details"); dt.className = "srcmore";
-        dt.appendChild(el("summary", null, "Voir " + (pk.rest.length > 1 ? "les " + pk.rest.length + " autres sources" : "1 autre source")));
-        var ru = el("ul", "src"); pk.rest.forEach(function (x) { ru.appendChild(srcLi(x)); }); dt.appendChild(ru); b5.appendChild(dt);
-      }
-      body.appendChild(b5);
-    }
+    buildBlocks(f, body);
 
     var foot = el("div", "block wide foot");
     var c = el("div", "cov");
@@ -701,11 +740,7 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
     foot.appendChild(c);
     var lab = el("label", "rev"); var cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = !!done[f.id];
     cb.addEventListener("change", function () {
-      var on = cb.checked;
-      function apply(v) { if (v) done[f.id] = 1; else delete done[f.id]; d.classList.toggle("done", v); cb.checked = v; renderHero(); renderCount(visible()); }
-      apply(on);
-      var q = on ? sb.from("revisions").upsert({ fiche_id: f.id }, { onConflict: "user_id,fiche_id", ignoreDuplicates: true }) : sb.from("revisions").delete().eq("fiche_id", f.id);
-      q.then(function (r) { if (r && r.error) apply(!on); }, function () { apply(!on); });
+      setRevise(f, cb.checked, function (v) { d.classList.toggle("done", v); cb.checked = v; });
     });
     lab.appendChild(cb); lab.appendChild(el("span", null, "Fiche révisée")); foot.appendChild(lab);
     body.appendChild(foot);
@@ -733,42 +768,145 @@ dialog .rank li { padding: 10px 14px; font-size: 14.5px; }
   else if (mq.addListener) mq.addListener(function () { renderMain(); });
   var deckIdx = 0, deckSig = "";
 
+  /* Carte plein écran d'une fiche (mobile) */
+  function swipeCard(f) {
+    var c = el("article", "sc"); c.setAttribute("data-r", f.rubrique);
+    var tag = el("div", "tag");
+    var rub = el("span", "rub"); rub.appendChild(el("span", "dot")); rub.appendChild(el("span", null, rubLabel(f.rubrique))); tag.appendChild(rub);
+    var st = el("span", f.croise === true ? "st ok" : "st");
+    if (f.croise === true) { st.insertAdjacentHTML("beforeend", ICON_OK); st.appendChild(el("span", null, "Recoupé")); } else { st.appendChild(el("span", null, "À recouper")); }
+    tag.appendChild(st);
+    var db = el("span", "st ok donebadge"); db.insertAdjacentHTML("beforeend", ICON_OK); db.appendChild(el("span", null, "Révisée")); tag.appendChild(db);
+    if (f.date) tag.appendChild(el("span", "date", dShort.format(parse(f.date))));
+    c.appendChild(tag);
+    c.appendChild(el("h3", "titre", f.titre || "Sans titre"));
+
+    var cov = coverage(f), mc = mediaCount(f);
+    var stat = el("div", "stat"); stat.appendChild(el("b", null, String(mc))); stat.appendChild(el("span", null, mc > 1 ? "médias en parlent" : "média en parle"));
+    var m = el("div", "meter"); [["presse", "P"], ["tv", "T"], ["radio", "R"]].forEach(function (x) { m.appendChild(el("span", cov[x[0]] ? "on" : "", x[1])); });
+    stat.appendChild(m); c.appendChild(stat);
+
+    var teaser = short(f.resume, 200) || short(arr(f.retenir)[0], 200);
+    if (teaser) c.appendChild(el("p", "resume", teaser));
+    var body = el("div", "body"); buildBlocks(f, body); c.appendChild(body);
+    return c;
+  }
+
   function renderDeck(main, ord) {
-    var sig = ord.map(function (f) { return f.id; }).join("|");
+    var n = ord.length, sig = ord.map(function (f) { return f.id; }).join("|");
     if (sig !== deckSig) { deckSig = sig; deckIdx = 0; }
-    if (deckIdx >= ord.length) deckIdx = ord.length - 1;
-    var GAP = 12;
+    if (deckIdx >= n) deckIdx = n - 1;
 
     var bar = el("div", "deckbar");
-    var prev = el("button", "deckbtn", "‹"); prev.type = "button"; prev.setAttribute("aria-label", "Fiche précédente");
-    var next = el("button", "deckbtn", "›"); next.type = "button"; next.setAttribute("aria-label", "Fiche suivante");
-    var ct = el("div", "ct"); var cn = el("span"); var hint = el("small", null, "Glisse vers la gauche pour la suite");
-    ct.appendChild(cn); ct.appendChild(hint);
-    bar.appendChild(prev); bar.appendChild(ct); bar.appendChild(next);
+    var cn = el("span", "cn"); var prog = el("div", "bar"); var fill = document.createElement("i"); prog.appendChild(fill);
+    var hint = el("small", null, "Tire la carte vers la gauche pour la suivante");
+    bar.appendChild(cn); bar.appendChild(prog); bar.appendChild(hint);
 
-    var deck = el("div", "deck"); deck.tabIndex = 0; deck.setAttribute("role", "region"); deck.setAttribute("aria-label", "Fiches : glisse horizontalement pour changer de fiche");
-    ord.forEach(function (f) {
-      var sl = el("div", "slide"); var d = fiche(f, true); d.open = true;
-      d.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("summary")) e.preventDefault(); });
-      sl.appendChild(d); deck.appendChild(sl);
-    });
-    main.appendChild(bar); main.appendChild(deck);
+    var wrap = el("div", "deckwrap"); wrap.tabIndex = 0; wrap.setAttribute("role", "region"); wrap.setAttribute("aria-label", "Fiches : tire la carte à gauche ou à droite pour changer de fiche");
 
-    function upd() {
-      cn.textContent = (deckIdx + 1) + " / " + ord.length;
-      prev.disabled = deckIdx <= 0; next.disabled = deckIdx >= ord.length - 1;
-      hint.hidden = deckIdx > 0 || ord.length < 2;
+    var ctl = el("div", "deckctl");
+    function rb(label, cls, txt) { var b = el("button", "deckbtn " + cls, txt); b.type = "button"; b.setAttribute("aria-label", label); return b; }
+    var bp = rb("Fiche précédente", "", "‹"), bk = rb("Marquer la fiche comme révisée", "ok", "✓"), bn = rb("Fiche suivante", "", "›");
+    ctl.appendChild(bp); ctl.appendChild(bk); ctl.appendChild(bn);
+    main.appendChild(bar); main.appendChild(wrap); main.appendChild(ctl);
+
+    var cards = { prev: null, cur: null, next: null }, busy = false, suppress = false;
+    function mk(i) { var c = swipeCard(ord[i]); if (done[ord[i].id]) c.classList.add("done"); return c; }
+    function setTrans(on) { [cards.prev, cards.cur, cards.next].forEach(function (c) { if (c) c.style.transition = on ? "transform .3s cubic-bezier(.2,.8,.2,1)" : "none"; }); }
+    function place() {
+      if (cards.prev) cards.prev.style.transform = "translateX(-115%)";
+      if (cards.cur) cards.cur.style.transform = "";
+      if (cards.next) cards.next.style.transform = "scale(.94) translateY(12px)";
     }
-    function go(i) { i = Math.max(0, Math.min(ord.length - 1, i)); deck.scrollTo({ left: i * (deck.clientWidth + GAP), behavior: "smooth" }); }
-    prev.addEventListener("click", function () { go(deckIdx - 1); });
-    next.addEventListener("click", function () { go(deckIdx + 1); });
-    var t;
-    deck.addEventListener("scroll", function () {
-      clearTimeout(t);
-      t = setTimeout(function () { var i = Math.round(deck.scrollLeft / (deck.clientWidth + GAP)); if (i !== deckIdx) { deckIdx = Math.max(0, Math.min(ord.length - 1, i)); upd(); } }, 60);
+    function upd() {
+      cn.textContent = (deckIdx + 1) + " / " + n;
+      fill.style.width = Math.round((deckIdx + 1) / n * 100) + "%";
+      hint.hidden = deckIdx > 0 || n < 2;
+      bp.disabled = deckIdx <= 0; bn.disabled = deckIdx >= n - 1;
+      var on = !!done[ord[deckIdx].id]; bk.setAttribute("aria-pressed", String(on)); bk.title = on ? "Révisée : toucher pour annuler" : "Marquer comme révisée";
+    }
+    function layout() {
+      wrap.textContent = "";
+      cards.prev = deckIdx > 0 ? mk(deckIdx - 1) : null; cards.cur = mk(deckIdx); cards.next = deckIdx < n - 1 ? mk(deckIdx + 1) : null;
+      [cards.next, cards.cur, cards.prev].forEach(function (c) { if (c) wrap.appendChild(c); });  /* le dernier ajouté est au-dessus */
+      place(); upd();
+    }
+    function goNext() {
+      if (busy || !cards.next) return;
+      busy = true; setTrans(true);
+      cards.cur.style.transform = "translateX(" + (-wrap.clientWidth * 1.3) + "px) rotate(-14deg)";
+      cards.next.style.transform = "scale(1) translateY(0)";
+      setTimeout(function () { deckIdx++; busy = false; layout(); }, 300);
+    }
+    function goPrev() {
+      if (busy || !cards.prev) return;
+      busy = true; setTrans(true);
+      cards.prev.style.transform = "translateX(0) rotate(0deg)";
+      cards.cur.style.transform = "scale(.94) translateY(12px)";
+      setTimeout(function () { deckIdx--; busy = false; layout(); }, 300);
+    }
+    bp.addEventListener("click", goPrev); bn.addEventListener("click", goNext);
+    bk.addEventListener("click", function () {
+      var f = ord[deckIdx], turnOn = !done[f.id];
+      setRevise(f, turnOn, function (v) { if (cards.cur) cards.cur.classList.toggle("done", v); upd(); });
+      if (turnOn && cards.next) setTimeout(goNext, 260);  /* révisée : on passe à la suivante */
     });
-    upd();
-    deck.scrollLeft = deckIdx * (deck.clientWidth + GAP);
+    wrap.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") { e.preventDefault(); goNext(); } else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); } });
+
+    /* Glisser à la main : la carte suit le doigt, s'incline, puis part ou revient */
+    var g = null;
+    function drag(dx) {
+      var w = wrap.clientWidth;
+      if (dx < 0) {
+        if (!cards.next) dx *= 0.25;
+        cards.cur.style.transform = "translateX(" + dx + "px) rotate(" + (dx / w * 12) + "deg)";
+        if (cards.next) { var pr = Math.min(1, -dx / (w * 0.6)); cards.next.style.transform = "scale(" + (0.94 + 0.06 * pr) + ") translateY(" + (12 - 12 * pr) + "px)"; }
+        if (cards.prev) cards.prev.style.transform = "translateX(-115%)";
+      } else {
+        if (cards.prev) {
+          var px = Math.min(0, -w * 1.1 + dx * 1.3);
+          cards.prev.style.transform = "translateX(" + px + "px) rotate(" + (px / w * 8) + "deg)";
+          cards.cur.style.transform = "scale(" + (1 - 0.06 * Math.min(1, dx / (w * 0.7))) + ")";
+        } else cards.cur.style.transform = "translateX(" + (dx * 0.25) + "px)";
+      }
+    }
+    function release(dx, vx) {
+      var w = wrap.clientWidth, fast = Math.abs(vx) > 0.5 && Math.abs(dx) > 30, far = Math.abs(dx) > w * 0.28;
+      setTrans(true);
+      if ((far || fast) && dx < 0 && cards.next) goNext();
+      else if ((far || fast) && dx > 0 && cards.prev) goPrev();
+      else place();
+    }
+    wrap.addEventListener("pointerdown", function (e) {
+      if (busy || (e.pointerType === "mouse" && e.button !== 0)) return;
+      g = { id: e.pointerId, x: e.clientX, y: e.clientY, t: e.timeStamp, lock: null, dx: 0, vx: 0, lt: e.timeStamp, lx: e.clientX };
+    });
+    wrap.addEventListener("pointermove", function (e) {
+      if (!g || e.pointerId !== g.id) return;
+      var dx = e.clientX - g.x, dy = e.clientY - g.y;
+      if (g.lock === null) {
+        if (Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          g.lock = "x"; setTrans(false); wrap.classList.add("drag");
+          try { wrap.setPointerCapture(e.pointerId); } catch (x) {}
+        } else if (Math.abs(dy) > 10) { g.lock = "y"; return; } else return;
+      }
+      if (g.lock !== "x") return;
+      var dt = e.timeStamp - g.lt; if (dt > 0) g.vx = (e.clientX - g.lx) / dt; g.lt = e.timeStamp; g.lx = e.clientX;
+      g.dx = dx; drag(dx);
+    });
+    function end(e, cancelled) {
+      if (!g || e.pointerId !== g.id) return;
+      var was = g; g = null; wrap.classList.remove("drag");
+      if (was.lock === "x") {
+        suppress = true; setTimeout(function () { suppress = false; }, 60);
+        if (cancelled) { setTrans(true); place(); } else release(was.dx, was.vx);
+      }
+    }
+    wrap.addEventListener("pointerup", function (e) { end(e, false); });
+    wrap.addEventListener("pointercancel", function (e) { end(e, true); });
+    wrap.addEventListener("click", function (e) { if (suppress) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    layout();
   }
 
   function renderMain() {
