@@ -803,8 +803,6 @@ html, body { overflow-x: clip; max-width: 100%; }
   function buildBlocks(f, body) {
     var ret = arr(f.retenir).slice(0, 5);
     if (ret.length) { var b1 = block("À retenir"); b1.className += " key"; var ul = el("ul", "retenir"); ret.forEach(function (x) { ul.appendChild(el("li", null, x)); }); b1.appendChild(ul); body.appendChild(b1); }
-    var ctx = short(f.contexte, 280);
-    if (ctx) { var b2 = block("Contexte"); b2.appendChild(el("p", null, ctx)); body.appendChild(b2); }
     var ac = arr(f.acteurs).slice(0, 8);
     if (ac.length) { var b3 = block("Acteurs et noms"); var pp = el("div", "people"); ac.forEach(function (x) { pp.appendChild(el("span", null, x)); }); b3.appendChild(pp); body.appendChild(b3); }
     var ecSeen = {}, ec = arr(f.echeances).filter(function (e) { if (!e) return false; var k = (e.date || "") + "|" + (e.label || ""); if (ecSeen[k]) return false; ecSeen[k] = 1; return true; }).slice(0, 4);
@@ -1538,6 +1536,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function quizResult(d) {
     var b = qbody(), sc = d.score || 0, tot = d.total || 0, ratio = tot ? sc / tot : 0;
+    if (quiz.legacy) b.appendChild(el("p", "hint", "La correction question par question n'est pas encore activée sur la base : le SQL du 26/11 reste à lancer dans Supabase."));
     var big = el("p", "big-score", String(sc)); big.appendChild(el("small", null, "/ " + tot + (sc > 1 ? " points" : " point"))); b.appendChild(big);
     b.appendChild(el("p", null, ratio >= 0.8 ? "Très bien, tu maîtrises l'actualité de la quinzaine." : ratio >= 0.5 ? "Pas mal. Relis les fiches des questions ratées ci-dessous." : "Reprends les fiches, puis refais un test."));
     var list = el("div", "corr");
