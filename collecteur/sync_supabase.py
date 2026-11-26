@@ -47,6 +47,23 @@ def api(method, path, body=None, prefer=None):
         sys.exit(f"Erreur Supabase {e.code} sur {method} {path} : {detail}")
 
 
+_DIFF = None
+
+
+def has_difficulte():
+    """Vrai si la colonne questions.difficulte existe (SQL du 26/11 lancé). Sinon on n'envoie pas le champ."""
+    global _DIFF
+    if _DIFF is None:
+        req = urllib.request.Request(f"{URL}/rest/v1/questions?select=difficulte&limit=1", headers={"apikey": KEY})
+        try:
+            urllib.request.urlopen(req, timeout=30).read()
+            _DIFF = True
+        except urllib.error.HTTPError:
+            _DIFF = False
+            print("Colonne questions.difficulte absente : niveau ignoré (lancer le SQL du 26/11).", file=sys.stderr)
+    return _DIFF
+
+
 def media_key(nom):
     return re.split(r"\s[:(]|\s–\s", str(nom or ""))[0].strip().lower()
 
@@ -71,8 +88,12 @@ def clean_questions(f):
         if (isinstance(q.get("enonce"), str) and isinstance(choix, list) and 2 <= len(choix) <= 5
                 and all(isinstance(c, str) and c for c in choix)
                 and isinstance(bonne, int) and 0 <= bonne < len(choix)):
-            out.append({"fiche_id": fiche_id(f), "enonce": q["enonce"].strip(), "choix": choix,
-                        "bonne": bonne, "explication": (q.get("explication") or "").strip() or None})
+            row = {"fiche_id": fiche_id(f), "enonce": q["enonce"].strip(), "choix": choix,
+                   "bonne": bonne, "explication": (q.get("explication") or "").strip() or None}
+            if has_difficulte():
+                d = q.get("difficulte")
+                row["difficulte"] = d if d in (1, 2, 3) else 2
+            out.append(row)
         else:
             print(f"Question ignorée (format invalide) sur la fiche {fiche_id(f)}", file=sys.stderr)
     return out

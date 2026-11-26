@@ -337,6 +337,13 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 .feedback > b { font-weight: 800; font-size: 15px; color: var(--ink); }
 .feedback p { margin: 0; }
 .feedback .fbx { color: var(--muted); }
+.lvl { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px; border: 1px solid var(--ring); color: var(--muted); }
+.lvl.l1 { color: var(--ok-fg); border-color: var(--ok-ring); background: var(--ok-bg); }
+.lvl.l2 { color: var(--ink); background: var(--panel); }
+.lvl.l3 { color: #b4351f; border-color: #e8b4b4; background: rgba(224,90,90,.1); }
+.lvls { display: flex; flex-wrap: wrap; gap: 8px; }
+.palier { margin: 0; font-size: 15px; color: var(--ink); }
+.palier b { font-weight: 800; }
 .qnav { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .big-score { font-weight: 900; font-size: 56px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
 .big-score small { font-size: 22px; color: var(--muted); font-weight: 700; margin-left: 6px; }
@@ -1421,21 +1428,23 @@ html, body { overflow-x: clip; max-width: 100%; }
   }
 
   /* ---------- Test ---------- */
-  var quiz = { n: 10, test: null, qs: [], i: 0, ans: {}, fb: {}, legacy: false };
+  var quiz = { n: 10, niv: 0, test: null, qs: [], i: 0, ans: {}, fb: {}, legacy: false };
   function qbody() { var b = $("quiz-body"); b.textContent = ""; return b; }
   function openQuiz() { quiz.test = null; quizIntro(); var d = $("quiz"); if (!d.open) d.showModal(); }
+
+  var LVL = { 1: "Facile", 2: "Moyen", 3: "Difficile" };
 
   function quizIntro(err) {
     var b = qbody();
     if (err) { var m = el("p", "msg err", err); m.setAttribute("role", "alert"); b.appendChild(m); }
     b.appendChild(el("h3", null, "Test du jour"));
-    b.appendChild(el("p", null, "20 questions, les mêmes pour tout le monde, une par sujet parmi les plus couverts de la quinzaine. C'est le seul test classé."));
+    b.appendChild(el("p", null, "20 questions, les mêmes pour tout le monde, une par sujet parmi les plus couverts de la quinzaine : environ 7 faciles, 7 moyennes et 6 difficiles. C'est le seul test classé."));
     b.appendChild(el("p", "hint", "1 bonne réponse = 1 point. Ton premier essai du jour compte pour le classement. Si tu le refais, tu connais déjà les questions : tu auras le tag « Refait »."));
     var go = el("button", "btn", "Lancer le test du jour"); go.type = "button";
     go.addEventListener("click", function () { go.disabled = true; startQuiz(20); });
     b.appendChild(go);
     b.appendChild(el("h3", null, "Entraînement"));
-    b.appendChild(el("p", "hint", "Des questions tirées au hasard, autant de fois que tu veux. Pas de classement."));
+    b.appendChild(el("p", "hint", "Des questions tirées au hasard, autant de fois que tu veux. Pas de classement. Le test du jour mêle les trois niveaux."));
     var c = el("div", "ctl"); c.appendChild(el("span", "lbl", "Questions"));
     var seg = el("div", "seg");
     [5, 10].forEach(function (n) {
@@ -1444,6 +1453,14 @@ html, body { overflow-x: clip; max-width: 100%; }
       seg.appendChild(x);
     });
     c.appendChild(seg); b.appendChild(c);
+    var cn = el("div", "ctl"); cn.appendChild(el("span", "lbl", "Niveau"));
+    var sn = el("div", "seg");
+    [[0, "Mixte"], [1, "Facile"], [2, "Moyen"], [3, "Difficile"]].forEach(function (p) {
+      var x = el("button", null, p[1]); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.niv === p[0]));
+      x.addEventListener("click", function () { quiz.niv = p[0]; quizIntro(); });
+      sn.appendChild(x);
+    });
+    cn.appendChild(sn); b.appendChild(cn);
     var tr = el("button", "btn ghost", "Commencer l'entraînement"); tr.type = "button";
     tr.addEventListener("click", function () { tr.disabled = true; startQuiz(quiz.n); });
     b.appendChild(tr);
@@ -1451,7 +1468,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
   function startQuiz(n) {
     quiz.mode = n;
-    sb.rpc("demarrer_test", { p_nombre: n }).then(function (r) {
+    sb.rpc("demarrer_test", n === 20 || !quiz.niv ? { p_nombre: n } : { p_nombre: n, p_niveau: quiz.niv }).then(function (r) {
       if (r.error) {
         var m = String(r.error.message || "");
         quizIntro(m.indexOf("Aucune question") >= 0 ? "Pas encore de questions disponibles. Elles arrivent avec la mise à jour du matin."
@@ -1471,6 +1488,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     var pr = el("div", "qprog"); pr.appendChild(el("span", null, "Question " + (quiz.i + 1) + " / " + n));
     var bar = el("div", "bar"); var fill = document.createElement("i"); fill.style.width = Math.round((quiz.i + (fb ? 1 : 0)) / n * 100) + "%"; bar.appendChild(fill); pr.appendChild(bar);
     b.appendChild(pr);
+    if (q.difficulte >= 1 && q.difficulte <= 3) b.appendChild(el("span", "lvl l" + q.difficulte, LVL[q.difficulte]));
     b.appendChild(el("p", "qenonce", q.enonce));
     var cs = el("div", "choices"), btns = [], sel = fb ? fb.reponse : null;
     arr(q.choix).forEach(function (t, k) {
@@ -1538,7 +1556,14 @@ html, body { overflow-x: clip; max-width: 100%; }
     var b = qbody(), sc = d.score || 0, tot = d.total || 0, ratio = tot ? sc / tot : 0;
     if (quiz.legacy) b.appendChild(el("p", "hint", "La correction question par question n'est pas encore activée sur la base : le SQL du 26/11 reste à lancer dans Supabase."));
     var big = el("p", "big-score", String(sc)); big.appendChild(el("small", null, "/ " + tot + (sc > 1 ? " points" : " point"))); b.appendChild(big);
-    b.appendChild(el("p", null, ratio >= 0.8 ? "Très bien, tu maîtrises l'actualité de la quinzaine." : ratio >= 0.5 ? "Pas mal. Relis les fiches des questions ratées ci-dessous." : "Reprends les fiches, puis refais un test."));
+    var pal = ratio >= 0.85 ? ["Excellent", "Tu maîtrises l'actualité de la quinzaine."] : ratio >= 0.7 ? ["Bien", "Il reste quelques détails à consolider."] : ratio >= 0.5 ? ["Correct", "Relis les fiches des questions ratées ci-dessous."] : ["À revoir", "Reprends les fiches, puis refais un test."];
+    var pe = el("p", "palier"); pe.appendChild(el("b", null, pal[0])); pe.appendChild(document.createTextNode(" · " + pal[1])); b.appendChild(pe);
+    var byl = {}; arr(d.detail).forEach(function (x) { if (x.difficulte >= 1 && x.difficulte <= 3) { var o = byl[x.difficulte] || (byl[x.difficulte] = [0, 0]); o[1]++; if (x.reponse === x.bonne) o[0]++; } });
+    if (Object.keys(byl).length > 1) {
+      var lv = el("div", "lvls");
+      [1, 2, 3].forEach(function (k) { if (byl[k]) { var c = el("span", "lvl l" + k, LVL[k] + " " + byl[k][0] + "/" + byl[k][1]); lv.appendChild(c); } });
+      b.appendChild(lv);
+    }
     var list = el("div", "corr");
     arr(d.detail).forEach(function (x) {
       var ok = x.reponse === x.bonne, ch = arr(x.choix);
