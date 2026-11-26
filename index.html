@@ -403,7 +403,7 @@ body.full { overflow: hidden; }
 .sc .tab[aria-selected="true"] { background: #fff; color: #1b1411; border-color: transparent; }
 .sc .zone { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 .sc .panel { display: grid; gap: 18px; align-content: start; }
-.sc .resume { color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.55; max-width: none; margin: 0; }
+.sc .resume { color: rgba(255,255,255,.92); font-size: 15px; line-height: 1.45; max-width: none; margin: 0; }
 .sc .block.key { padding: 14px 16px; }
 .sc .block h4 { color: rgba(255,255,255,.7); }
 .sc .block.key { background: rgba(255,255,255,.13); padding: 16px 18px; }
@@ -416,6 +416,12 @@ body.full { overflow: hidden; }
 .sc .panel { gap: 10px; }
 .sc .block.key { padding: 12px 14px; }
 .sc .block.key h4 { display: none; }
+.sc details.acc { background: rgba(255,255,255,.12); border-radius: 14px; }
+.sc details.acc > summary { list-style: none; cursor: pointer; padding: 10px 14px; font-weight: 800; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; color: #fff; }
+.sc details.acc > summary::-webkit-details-marker { display: none; }
+.sc details.acc > summary::after { content: "▾"; font-size: 14px; transition: transform .2s; }
+.sc details.acc:not([open]) > summary::after { transform: rotate(-90deg); }
+.sc details.acc .block.key { background: transparent; padding: 0 14px 12px; }
 .sc .retenir { gap: 8px; font-size: 15px; line-height: 1.4; }
 .sc .retenir li { padding-left: 24px; }
 .sc .block.compact { margin: 0; }
@@ -423,6 +429,7 @@ body.full { overflow: hidden; }
 .sc .block.compact .people { gap: 5px; }
 .sc .block.compact .people span { font-size: 12px; padding: 3px 9px; }
 .sc .people .more { background: transparent; border: 1px solid rgba(255,255,255,.35); }
+.sc.tight .resume { font-size: 14px; line-height: 1.38; }
 .sc.tight .retenir { font-size: 14px; line-height: 1.32; gap: 6px; }
 .sc.tight .block.key { padding: 10px 12px; }
 .sc.tight .panel { gap: 8px; }
@@ -963,8 +970,11 @@ html, body { overflow-x: clip; max-width: 100%; }
     chips.forEach(function (x) { x.style.display = ""; });
     var old = z.querySelector(".people .more"); if (old) old.remove();
     function over() { return z.scrollHeight - z.clientHeight > 1; }
+    var acc = z.querySelector("details.acc");
+    if (acc && !c._manual) acc.open = true;
     if (!over()) return;
     c.classList.add("tight");
+    if (acc && !c._manual && over()) acc.open = false;
     if (!over() || !chips.length) return;
     var host = chips[0].parentNode, hid = 0, i = chips.length - 1, mo = null;
     while (over() && i >= 2) {
@@ -996,17 +1006,20 @@ html, body { overflow-x: clip; max-width: 100%; }
     var tmp = el("div"); buildBlocks(f, tmp);
     var K = {}; Array.prototype.forEach.call(tmp.children, function (x) { K[x.getAttribute("data-k")] = x; });
     var panels = {};
-    /* « À retenir » : les points clés puis les acteurs et noms (l'onglet Résumé a été supprimé) */
+    /* « À retenir » : résumé, puis points clés (dans un accordéon, replié si la place manque), acteurs et dates */
     var p2 = el("div", "panel");
-    if (K.retenir) p2.appendChild(K.retenir);
-    else { var rs = short(f.resume, 400); if (rs) p2.appendChild(el("p", "resume", rs)); }
+    var rs = short(f.resume, 400); if (rs) p2.appendChild(el("p", "resume", rs));
+    if (K.retenir) {
+      var acc = document.createElement("details"); acc.className = "acc"; acc.open = true;
+      var sm = el("summary", null, "À retenir"); sm.addEventListener("click", function () { c._manual = true; });
+      acc.appendChild(sm); acc.appendChild(K.retenir); p2.appendChild(acc);
+    }
     if (K.acteurs) { K.acteurs.className += " compact"; p2.appendChild(K.acteurs); }
+    if (K.dates) { K.dates.className += " compact"; p2.appendChild(K.dates); }
     if (p2.children.length) panels.retenir = p2;
-    var p3 = el("div", "panel"); if (K.contexte) p3.appendChild(K.contexte); if (K.dates) p3.appendChild(K.dates);
-    if (p3.children.length) panels.contexte = p3;
     if (K.sources) { var p4 = el("div", "panel"); p4.appendChild(K.sources); panels.sources = p4; }
 
-    var LABELS = [["retenir", "À retenir"], ["contexte", "Contexte"], ["sources", "Sources"]];
+    var LABELS = [["retenir", "À retenir"], ["sources", "Sources"]];
     var tabs = el("div", "tabs"); tabs.setAttribute("role", "tablist");
     var zone = el("div", "zone");
     var avail = LABELS.filter(function (x) { return panels[x[0]]; });
