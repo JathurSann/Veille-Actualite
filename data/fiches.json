@@ -1,5 +1,461 @@
 [
  {
+  "id": "2026-11-26-rsf-cnews-arcom-suspension",
+  "titre": "RSF demande à l'Arcom de suspendre CNews un mois",
+  "rubrique": "medias",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Reporters sans frontières saisit l'Arcom le 26 novembre pour demander la suspension de CNews pendant un mois, pour défaut de pluralisme.",
+  "retenir": [
+   "Saisine de l'Arcom le jeudi 26 novembre 2026 par Reporters sans frontières",
+   "Suspension demandée : un mois",
+   "Étude de 61 heures de programmes diffusés en septembre (Le Monde)",
+   "Chaîne contrôlée par Vincent Bolloré ; RSF dénonce un « péril démocratique » (Ouest-France)"
+  ],
+  "contexte": "Pas encore de réponse de l'Arcom. Aucune radio rattachée pour l'instant.",
+  "acteurs": [
+   "Reporters sans frontières",
+   "CNews",
+   "Arcom",
+   "Vincent Bolloré"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Reporters sans frontières demande la suspension de CNews pour une durée d’un mois",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/economie/article/2026/11/26/reporters-sans-frontieres-demande-la-suspension-de-cnews-pour-une-duree-d-un-mois_6815475_3234.html"
+   },
+   {
+    "nom": "Libération : CNews : Reporters sans frontières saisit l’Arcom pour demander la suspension de la chaîne pendant un mois",
+    "type": "presse",
+    "url": "https://www.liberation.fr/economie/medias/cnews-reporters-sans-frontieres-saisit-larcom-pour-demander-la-suspension-de-la-chaine-pendant-un-mois-20261126_36XEM44TVZBONCNFTMKZ6L6RXE/"
+   },
+   {
+    "nom": "Ouest-France : RSF demande la suspension de CNews, dénonçant un « péril démocratique »",
+    "type": "presse",
+    "url": "https://programmetv.ouest-france.fr/chaines/programme-tv-cnews-226/rsf-demande-la-suspension-de-cnews-denoncant-un-peril-democratique-3165c1f4-e958-11f1-86c1-70195b4d2e52"
+   },
+   {
+    "nom": "franceinfo : L'ONG Reporters sans frontières saisit l'Arcom pour demander de \"suspendre CNews pendant un mois\"",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/economie/medias/l-ong-reporters-sans-frontieres-saisit-l-arcom-pour-demander-de-suspendre-cnews-pendant-un-mois_8300685.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien d'heures de programmes de CNews RSF a-t-elle examinées avant de saisir l'Arcom le 26 novembre 2026 ?",
+    "choix": [
+     "41 heures",
+     "51 heures",
+     "61 heures",
+     "81 heures"
+    ],
+    "bonne": 2,
+    "explication": "Le Monde cite soixante et une heures de programmes de septembre."
+   },
+   {
+    "enonce": "Quelle durée de suspension de CNews RSF réclame-t-elle à l'Arcom le 26 novembre 2026 ?",
+    "choix": [
+     "Une semaine",
+     "Un mois",
+     "Trois mois",
+     "Six mois"
+    ],
+    "bonne": 1,
+    "explication": "RSF demande une suspension d'un mois."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-pub-noel-maybelline-lea-elui",
+  "titre": "Pub de Noël Maybelline avec Léa Elui",
+  "rubrique": "medias",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Maybelline lance sa campagne de Noël autour d'un calendrier de l'Avent, incarnée par l'influenceuse Léa Elui.",
+  "retenir": [
+   "Marque : Maybelline ; calendrier de l'Avent de 24 produits à 80 euros",
+   "Slogan : « un maquillage parfait jusqu'au dessert »",
+   "Visage de la campagne : Léa Elui, influenceuse",
+   "Lancement le 21 octobre ; diffusion en ads sur Instagram"
+  ],
+  "contexte": "Article du 17 novembre 2026 (Gens d'Internet) ; l'année du lancement n'est pas écrite dans l'article.",
+  "acteurs": [
+   "Maybelline",
+   "Léa Elui"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Gens d'Internet : Pour Noël, Léa Elui devient le visage de la campagne de Maybelline",
+    "type": "web",
+    "url": "https://gensdinternet.fr/2026/11/17/pour-noel-lea-elui-devient-le-visage-de-la-campagne-de-maybelline/amp/"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle influenceuse incarne la campagne de Noël 2026 de Maybelline ?",
+    "choix": [
+     "Léa Elui",
+     "Lena Situations",
+     "Juju Fitcats",
+     "Caroline Receveur"
+    ],
+    "bonne": 0,
+    "explication": "Léa Elui est le visage de la campagne."
+   },
+   {
+    "enonce": "Combien de produits contient le calendrier de l'Avent Maybelline mis en avant dans la campagne de Noël 2026 ?",
+    "choix": [
+     "12",
+     "24",
+     "31",
+     "48"
+    ],
+    "bonne": 1,
+    "explication": "Calendrier de 24 produits à 80 euros."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-pub-noel-gucci-mariah-carey",
+  "titre": "Gucci recrute Mariah Carey pour sa campagne de fin d'année",
+  "rubrique": "medias",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Gucci met Mariah Carey en vedette de sa campagne « Gucci Gift » 2026, réalisée par Harmony Korine.",
+  "retenir": [
+   "Marque : Gucci ; campagne « Gucci Gift » 2026",
+   "Personnalité : Mariah Carey",
+   "Film réalisé par Harmony Korine",
+   "Capsule associée : « Butterfly »"
+  ],
+  "contexte": "Article du 2 novembre 2026 (Journal du Luxe) ; date de lancement non précisée.",
+  "acteurs": [
+   "Gucci",
+   "Mariah Carey",
+   "Harmony Korine"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Journal du Luxe : Gucci recrute Mariah Carey pour sa campagne de fin d'année",
+    "type": "web",
+    "url": "https://www.journalduluxe.fr/fr/mode/gucci-mariah-carey-all-i-want-for-christmas"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle chanteuse est au centre de la campagne de fin d'année 2026 de Gucci ?",
+    "choix": [
+     "Mariah Carey",
+     "Céline Dion",
+     "Dua Lipa",
+     "Madonna"
+    ],
+    "bonne": 0,
+    "explication": "Mariah Carey."
+   },
+   {
+    "enonce": "Quel réalisateur signe le film de la campagne « Gucci Gift » 2026 ?",
+    "choix": [
+     "Sofia Coppola",
+     "Harmony Korine",
+     "Wes Anderson",
+     "Spike Jonze"
+    ],
+    "bonne": 1,
+    "explication": "Harmony Korine."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-lvmh-arnault-controle-95-ans",
+  "titre": "Bernard Arnault pourra contrôler LVMH jusqu'à 95 ans",
+  "rubrique": "economie",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Âgé de 77 ans, Bernard Arnault peut rester à la tête de la holding familiale de LVMH pendant dix-huit ans de plus.",
+  "retenir": [
+   "Info du 26 novembre 2026 (20 Minutes)",
+   "Bernard Arnault, 77 ans",
+   "Limite portée à 95 ans à la tête de la holding familiale",
+   "LVMH : numéro un mondial du luxe"
+  ],
+  "contexte": "Source unique, à recouper.",
+  "acteurs": [
+   "Bernard Arnault",
+   "LVMH"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Présidentielle 2027 : « Je suis fan et je vais le parrainer »… Comment les candidats tentent de séduire les ma",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/politique/4265748-20261125-presidentielle-2027-fan-vais-parrainer-comment-candidats-tentent-seduire-maires?at_medium=display&at_campaign=149"
+   }
+  ],
+  "questions": []
+ },
+ {
+  "id": "2026-11-26-emilie-konig-proces-assises",
+  "titre": "Procès d'Émilie König, « égérie du jihad », aux assises de Paris",
+  "rubrique": "societe",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Émilie König, ancienne figure française de l'État islamique, est jugée à partir du 26 novembre à Paris pour association de malfaiteurs terroriste criminelle.",
+  "retenir": [
+   "Procès ouvert le jeudi 26 novembre 2026 devant la cour d'assises spéciale de Paris, jusqu'à lundi 30 novembre",
+   "Poursuite : association de malfaiteurs terroriste criminelle ; peine encourue : 30 ans de réclusion (Libération)",
+   "Bretonne partie en Syrie dès 2012, dix ans sur place, mère de cinq enfants (Le Monde)",
+   "Accusée d'avoir relayé la propagande de Daesh et recruté pour l'organisation"
+  ],
+  "contexte": "Surnommée l'« égérie de Daesh », seule femme de la liste noire américaine. Son âge est donné à 41 ou 42 ans selon les médias.",
+  "acteurs": [
+   "Émilie König",
+   "État islamique",
+   "Cour d'assises spéciale de Paris"
+  ],
+  "echeances": [
+   {
+    "date": "2026-11-30",
+    "label": "Fin prévue du procès"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "Le Monde : Emilie König, la plus médiatique des djihadistes françaises, devant la justice",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/26/emilie-konig-la-plus-mediatique-des-djihadistes-francaises-devant-la-justice_6815463_3224.html"
+   },
+   {
+    "nom": "Libération : «L’égérie du jihad» Emilie König jugée dès ce jeudi à Paris pour ses liens étroits avec l’Etat islamique",
+    "type": "presse",
+    "url": "https://www.liberation.fr/societe/police-justice/legerie-du-jihad-emilie-konig-jugee-des-ce-jeudi-a-paris-pour-ses-liens-etroits-avec-letat-islamique-20261126_LERKEOM3UFDXFBGSEIE4UKS6MA/"
+   },
+   {
+    "nom": "BFMTV : De la Bretagne aux rangs de Daesh, l’itinéraire terroriste d'Émilie König \"l'égérie de l'État islamique\" jugée",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/police-justice/proces/de-la-bretagne-aux-rangs-de-daesh-l-itineraire-terroriste-d-emilie-konig-l-egerie-de-l-etat-islamique-jugee-a-paris_AN-202611260112.html"
+   },
+   {
+    "nom": "franceinfo : \"Bien sûr que je regrette\" : de la Bretagne à l'Etat islamique en Syrie, comment Emilie König, jugée à Paris, ",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/faits-divers/terrorisme/bien-sur-que-je-regrette-de-la-bretagne-a-l-etat-islamique-en-syrie-comment-emilie-konig-jugee-a-paris-a-bascule-dans-le-jihadisme_8298870.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "RFI : France: le procès d'Émilie König, «égérie du jihad», commence aux assises à Paris",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/france/20261126-france-le-proc%C3%A8s-d-%C3%A9milie-k%C3%B6nig-%C3%A9g%C3%A9rie-du-jihad-commence-aux-assises-%C3%A0-paris"
+   },
+   {
+    "nom": "RMC : Témoignage RMC. La mère de la djihadiste Emilie König se confie sur RMC",
+    "type": "radio",
+    "url": "https://rmc.bfmtv.com/actualites/societe/video-temoignage-rmc-la-mere-de-la-djihadiste-emilie-konig-se-confie-sur-rmc_VN-202611260167.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Pour quelle infraction Émilie König est-elle jugée à Paris à partir du 26 novembre 2026 ?",
+    "choix": [
+     "Association de malfaiteurs terroriste criminelle",
+     "Financement du terrorisme",
+     "Apologie du terrorisme en ligne",
+     "Provocation à la haine raciale"
+    ],
+    "bonne": 0,
+    "explication": "Elle est jugée pour association de malfaiteurs terroriste criminelle."
+   },
+   {
+    "enonce": "Quelle peine Émilie König encourt-elle au procès ouvert le 26 novembre 2026 ?",
+    "choix": [
+     "20 ans de réclusion",
+     "25 ans de réclusion",
+     "30 ans de réclusion",
+     "Perpétuité"
+    ],
+    "bonne": 2,
+    "explication": "Libération indique qu'elle encourt trente ans de réclusion."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-depardieu-renvoi-cour-appel",
+  "titre": "Depardieu : décision sur son renvoi aux assises (viols)",
+  "rubrique": "culture",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "La cour d'appel de Paris se prononce le 26 novembre sur le renvoi de Gérard Depardieu devant la justice criminelle pour viols.",
+  "retenir": [
+   "Décision le jeudi 26 novembre 2026",
+   "Plaignante : la comédienne Charlotte Arnould",
+   "Faits de viols dénoncés par la plaignante"
+  ],
+  "contexte": "Décision non connue à la collecte : à compléter.",
+  "acteurs": [
+   "Gérard Depardieu",
+   "Charlotte Arnould"
+  ],
+  "echeances": [
+   {
+    "date": "2026-11-26",
+    "label": "Décision de la cour d'appel de Paris"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "BFMTV : Gérard Depardieu fixé ce jeudi sur son renvoi devant la justice criminelle pour viols sur la comédienne Charlo",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/police-justice/gerard-depardieu-fixe-ce-jeudi-sur-son-renvoi-devant-la-justice-criminelle-pour-viols-sur-la-comedienne-charlotte-arnould_AN-202611260068.html"
+   }
+  ],
+  "questions": []
+ },
+ {
+  "id": "2026-11-26-birmanie-refuse-decision-cij-rohingya",
+  "titre": "Birmanie : refus des exigences de la CIJ sur les Rohingya",
+  "rubrique": "international",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Min Aung Hlaing affirme que la Birmanie ne se conformera pas aux parties « inappropriées » de la décision de la CIJ sur le génocide des Rohingya.",
+  "retenir": [
+   "Déclaration du dirigeant Min Aung Hlaing le mercredi 25 novembre 2026",
+   "La CIJ a établi la responsabilité de l'État birman dans le génocide des Rohingya",
+   "Birmanie : refus des exigences jugées « inappropriées »"
+  ],
+  "contexte": "Suite de la décision de la CIJ du 19 novembre 2026.",
+  "acteurs": [
+   "Min Aung Hlaing",
+   "Cour internationale de justice",
+   "Rohingya"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "France 24 : Génocide des Rohingya : la Birmanie refusera les exigences de la CIJ qu'elle juge \"inappropriées\"",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/asie-pacifique/20261126-genocide-rohingya-birmanie-ne-se-conformera-pas-exigences-cij-inappropriees"
+   },
+   {
+    "nom": "Ouest-France : La Birmanie affirme qu’elle ne se conformera pas aux parties « inappropriées » de la décision de la CIJ pour g",
+    "type": "presse",
+    "url": "https://www.ouest-france.fr/monde/birmanie/la-birmanie-affirme-quelle-ne-se-conformera-pas-aux-parties-inappropriees-de-la-decision-de-la-cij-pour-genocide-b01d58c8-e948-11f1-9b33-2f81462d3339"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Qui a déclaré le 25 novembre 2026 que la Birmanie ne se conformerait pas à certaines exigences de la CIJ ?",
+    "choix": [
+     "Aung San Suu Kyi",
+     "Min Aung Hlaing",
+     "Than Shwe",
+     "Thein Sein"
+    ],
+    "bonne": 1,
+    "explication": "Le dirigeant birman Min Aung Hlaing."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-25-pologne-zone-exclusion-aerienne-ukraine",
+  "titre": "La Pologne annonce une zone d'exclusion aérienne à la frontière ukrainienne",
+  "rubrique": "international",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "La Pologne va créer une zone d'exclusion aérienne le long de sa frontière avec l'Ukraine après plusieurs incursions attribuées à la Russie.",
+  "retenir": [
+   "Annonce relayée le 25 novembre 2026 (RFI) et le 26 novembre (BFMTV)",
+   "Zone de quelques dizaines de kilomètres le long de la frontière ukrainienne",
+   "But : identifier et, si besoin, abattre des aéronefs militaires russes"
+  ],
+  "contexte": "Fait suivi du côté de la presse écrite : à recouper. Trump et le chef de l'Otan appellent la Russie à ne pas « étendre la guerre » (20 Minutes, 26/11).",
+  "acteurs": [
+   "Pologne",
+   "Russie",
+   "Ukraine",
+   "Otan"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "RFI : La Pologne va instaurer une zone d'exclusion aérienne à la frontière ukrainienne",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/europe/20261125-la-pologne-va-instaurer-une-zone-d-exclusion-a%C3%A9rienne-%C3%A0-la-fronti%C3%A8re-ukrainienne"
+   },
+   {
+    "nom": "BFMTV : L'ÉDITO INTERNATIONAL - La Pologne va instaurer une \"no-fly\" zone à sa frontière avec l'Ukraine",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/international/asie/russie/video-l-edito-international-la-pologne-va-instaurer-une-no-fly-zone-a-sa-frontiere-avec-l-ukraine_VN-202611260178.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle mesure la Pologne a-t-elle annoncée le 25 novembre 2026 à sa frontière avec l'Ukraine ?",
+    "choix": [
+     "Une zone d'exclusion aérienne",
+     "La fermeture totale de la frontière",
+     "Le déploiement de troupes françaises",
+     "Un mur anti-drones de 500 km"
+    ],
+    "bonne": 0,
+    "explication": "Une zone d'exclusion aérienne de quelques dizaines de kilomètres."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-25-ansm-ia-conseils-medicaux-risques",
+  "titre": "L'ANSM alerte sur les conseils médicaux de l'IA",
+  "rubrique": "sciences",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "L'Agence du médicament rapporte huit cas d'effets indésirables liés à des conseils médicaux d'IA entre 2024 et 2026.",
+  "retenir": [
+   "Bilan publié le 25 novembre 2026 par l'ANSM",
+   "Huit cas d'effets indésirables, dont une hospitalisation (Libération)",
+   "Surtout des erreurs de dosage (antibiotiques, paracétamol)"
+  ],
+  "contexte": "Seule la presse écrite est rattachée.",
+  "acteurs": [
+   "ANSM"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : L’agence du médicament pointe les risques de consulter l’IA pour des conseils médicaux",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/26/l-agence-du-medicament-pointe-les-risques-de-consulter-l-ia-pour-des-conseils-medicaux_6815395_3224.html"
+   },
+   {
+    "nom": "Libération : Conseils médicaux de l’IA : l’Agence du médicament rapporte huit cas d’effets indésirables, dont une hospitali",
+    "type": "presse",
+    "url": "https://www.liberation.fr/societe/sante/conseils-medicaux-de-lia-lagence-du-medicament-rapporte-huit-cas-deffets-indesirables-dont-une-hospitalisation-20261125_7OC3UPH5PBBG3ECEKECUKTTMN4/"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien de cas d'effets indésirables liés à l'IA l'ANSM a-t-elle rapportés le 25 novembre 2026 ?",
+    "choix": [
+     "Trois",
+     "Huit",
+     "Vingt",
+     "Quarante"
+    ],
+    "bonne": 1,
+    "explication": "Huit cas entre 2024 et 2026."
+   }
+  ]
+ },
+ {
   "id": "2026-11-25-yemen-arabie-saoudite-hodeida",
   "acteurs": [
    "Arabie saoudite",
@@ -74,6 +530,57 @@
   "titre": "Voitures électriques : ventes en hausse de 50 % en Europe depuis janvier"
  },
  {
+  "id": "2026-11-25-violences-elus-3100-faits-nunez",
+  "titre": "Violences contre les élus : plus de 3 100 faits en 2026",
+  "rubrique": "politique",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Le ministre de l'Intérieur Laurent Nuñez recense plus de 3 100 atteintes aux élus depuis janvier, en hausse d'environ 25 %.",
+  "retenir": [
+   "Bilan annoncé le 25 novembre 2026 par Laurent Nuñez, ministre de l'Intérieur",
+   "Plus de 3 100 atteintes depuis le début de 2026",
+   "Hausse de 25 % (Europe 1) ou 24 % (Libération) par rapport à 2025",
+   "Chiffre jugé « extrêmement inquiétant » (Libération)"
+  ],
+  "contexte": "Les médias divergent d'un point sur la hausse (24 % ou 25 %). Bilan donné pendant le Congrès des maires.",
+  "acteurs": [
+   "Laurent Nuñez",
+   "Maires de France"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Libération : Plus de 3 100 faits de violences sur des élus recensés depuis le début de l’année, selon l’Intérieur",
+    "type": "presse",
+    "url": "https://www.liberation.fr/politique/plus-de-3-100-faits-de-violences-sur-des-elus-recenses-depuis-le-debut-de-lannee-selon-linterieur-20261125_VONGG5N3WBD4ZPXHZQIDQ4NFV4/"
+   },
+   {
+    "nom": "Europe 1 : Violences sur les élus : plus de 3.100 faits depuis le début de l'année, en hausse de 25 % selon Laurent Nuñez",
+    "type": "radio",
+    "url": "https://www.europe1.fr/societe/violences-sur-les-elus-plus-de-3100-faits-depuis-le-debut-de-lannee-en-hausse-de-25-selon-laurent-nunez-1244887?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "Le Monde : Hugues Moutouh, préfet du Loiret, démis de ses fonctions après la révélation de soupçons de fuites émanant du ",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/25/le-prefet-du-loiret-hugues-moutouh-demis-de-ses-fonctions-apres-la-revelation-de-soupcons-de-fuites-emanant-du-ministere-de-l-interieur-vers-le-rn_6815167_3224.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien d'atteintes aux élus Laurent Nuñez a-t-il recensées depuis le début de 2026, selon son bilan du 25 novembre 2026 ?",
+    "choix": [
+     "Plus de 1 100",
+     "Plus de 2 100",
+     "Plus de 3 100",
+     "Plus de 5 100"
+    ],
+    "bonne": 2,
+    "explication": "Plus de 3 100 faits depuis janvier 2026."
+   }
+  ]
+ },
+ {
   "id": "2026-11-25-var-alpes-maritimes-vigilance-orange-pluie",
   "acteurs": [
    "Météo-France"
@@ -90,14 +597,14 @@
   ],
   "questions": [
    {
-    "enonce": "Quels départements ont été placés en vigilance orange pluie-inondation le 25 novembre 2026 ?",
+    "bonne": 0,
     "choix": [
      "Var et Alpes-Maritimes",
      "Gard et Hérault",
      "Bouches-du-Rhône et Vaucluse",
      "Aude et Pyrénées-Orientales"
     ],
-    "bonne": 0,
+    "enonce": "Quels départements ont été placés en vigilance orange pluie-inondation le 25 novembre 2026 ?",
     "explication": "Le Var et les Alpes-Maritimes sont en vigilance orange après un nouvel épisode méditerranéen."
    }
   ],
@@ -197,6 +704,84 @@
    }
   ],
   "titre": "Ukraine : attaques contre des navires russes à Benghazi, Loukachenko propose de mener Zelensky à Moscou"
+ },
+ {
+  "id": "2026-11-25-trump-droits-de-douane-14-partenaires",
+  "titre": "Trump annonce de nouveaux droits de douane contre 14 partenaires",
+  "rubrique": "economie",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Washington annonce le 25 novembre de nouvelles taxes sur les importations de 14 partenaires, dont l'UE et la Chine, au nom de la lutte contre la surproduction industrielle.",
+  "retenir": [
+   "Annonce de la Maison-Blanche le mercredi 25 novembre 2026",
+   "14 partenaires commerciaux visés, dont l'Union européenne et la Chine (Le Monde)",
+   "Justification : lutte contre la surproduction industrielle des partenaires (Libération)",
+   "L'UE conteste « fermement » cette surtaxe (franceinfo)"
+  ],
+  "contexte": "Les taux précis ne sont pas repris ici : à recouper dans les sources.",
+  "acteurs": [
+   "Donald Trump",
+   "Union européenne",
+   "Chine"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Donald Trump persiste avec une nouvelle salve de droits de douane, notamment contre l’UE et la Chine, malgré l",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/economie/article/2026/11/25/donald-trump-persiste-avec-une-nouvelle-salve-de-droits-de-douane-malgre-la-claque-electorale_6815108_3234.html"
+   },
+   {
+    "nom": "Libération : Washington annonce de nouveaux droits de douane contre ses principaux partenaires",
+    "type": "presse",
+    "url": "https://www.liberation.fr/international/amerique/washington-annonce-de-nouveaux-droits-de-douane-contre-ses-principaux-partenaires-20261125_S35XTHEIRVGSHLPG4X2CH4CLMI/"
+   },
+   {
+    "nom": "TF1 Info : Chine, Union européenne... Washington annonce de nouveaux droits de douane contre ses partenaires commerciaux",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/international/chine-union-europeenne-washington-annonce-de-nouveaux-droits-de-douane-contre-ses-partenaires-commerciaux-2478121.html"
+   },
+   {
+    "nom": "franceinfo : Les Etats-Unis annoncent de nouveaux droits de douane contre leurs principaux partenaires commerciaux",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/monde/usa/droits-de-douane/les-etats-unis-annoncent-de-nouveaux-droits-de-douane-contre-leurs-principaux-partenaires-commerciaux_8299734.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "Europe 1 : Droits de douane : Donald Trump durcit à nouveau le ton face à l’Europe et à la Chine",
+    "type": "radio",
+    "url": "https://www.europe1.fr/international/droits-de-douane-donald-trump-durcit-a-nouveau-le-ton-face-a-leurope-et-a-la-chine-1244938?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "RFI : L'administration Trump veut instaurer de nouveaux droits de douane contre ses principaux partenaires commercia",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261125-l-administration-trump-veut-instaurer-de-nouveaux-droits-de-douane-contre-ses-principaux-partenaires-commerciaux"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien de partenaires commerciaux sont visés par les nouveaux droits de douane américains annoncés le 25 novembre 2026 ?",
+    "choix": [
+     "8",
+     "11",
+     "14",
+     "20"
+    ],
+    "bonne": 2,
+    "explication": "Le Monde parle de 14 partenaires, dont l'UE et la Chine."
+   },
+   {
+    "enonce": "Quelle justification Washington avance-t-il pour les droits de douane annoncés le 25 novembre 2026 ?",
+    "choix": [
+     "La surproduction industrielle des partenaires",
+     "Le déficit agricole américain",
+     "Le dumping fiscal numérique",
+     "Le contrôle des terres rares"
+    ],
+    "bonne": 0,
+    "explication": "La taxe est justifiée par la lutte contre la surproduction industrielle."
+   }
+  ]
  },
  {
   "id": "2026-11-25-tiangong-astronaute-pakistanais",
@@ -405,6 +990,84 @@
   "titre": "Sylvie Vartan relancée par GTA VI avec « Danse ta vie »"
  },
  {
+  "id": "2026-11-25-spacex-million-satellites-fcc",
+  "titre": "SpaceX autorisé à lancer un million de satellites",
+  "rubrique": "sciences",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "La FCC autorise SpaceX à lancer jusqu'à un million de satellites pour des centres de données dans l'espace.",
+  "retenir": [
+   "Autorisation du régulateur américain FCC le mercredi 25 novembre 2026",
+   "Jusqu'à un million de satellites",
+   "Projet : centres de données dans l'espace"
+  ],
+  "contexte": "Seulement radio et télé dans la collecte.",
+  "acteurs": [
+   "SpaceX",
+   "FCC"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Europe 1 : SpaceX autorisé à lancer un million de satellites pour ses centres de données dans l'espace",
+    "type": "radio",
+    "url": "https://www.europe1.fr/international/spacex-autorise-a-lancer-un-million-de-satellites-pour-ses-centres-de-donnees-dans-lespace-1245025?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "France 24 : SpaceX pourra lancer un million de satellites pour ses centres de données dans l'espace",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/%C3%A9co-tech/20261125-spacex-pourra-lancer-un-million-satellites-centres-de-donnees-espace"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien de satellites la FCC autorise-t-elle SpaceX à lancer pour ses centres de données spatiaux (25 novembre 2026) ?",
+    "choix": [
+     "10 000",
+     "100 000",
+     "Un million",
+     "Dix millions"
+    ],
+    "bonne": 2,
+    "explication": "Jusqu'à un million de satellites."
+   }
+  ]
+ },
+ {
+  "id": "2026-11-25-s-p-notation-france-vendredi",
+  "titre": "Notation de la France : S&P rend son verdict vendredi 27 novembre",
+  "rubrique": "economie",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "L'agence S&P publie vendredi 27 novembre son appréciation semestrielle sur la dette de la France.",
+  "retenir": [
+   "Verdict attendu le vendredi 27 novembre 2026",
+   "Agence : S&P",
+   "Contexte économique, budgétaire et politique incertain (Europe 1)"
+  ],
+  "contexte": "Résultat à ajouter à la prochaine passe.",
+  "acteurs": [
+   "S&P",
+   "France"
+  ],
+  "echeances": [
+   {
+    "date": "2026-11-27",
+    "label": "Décision S&P sur la note de la France"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "Europe 1 : Notation de la France : S&P rend son verdict vendredi, à quoi faut-il s'attendre ?",
+    "type": "radio",
+    "url": "https://www.europe1.fr/economie/notation-de-la-france-sp-rend-son-verdict-vendredi-a-quoi-faut-il-sattendre-1244668?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
+   }
+  ],
+  "questions": []
+ },
+ {
   "id": "2026-11-25-russie-arme-nucleaire-espace",
   "acteurs": [
    "Russie",
@@ -434,11 +1097,40 @@
  },
  {
   "id": "2026-11-25-rinderknech-controle-antidopage-itia",
-  "titre": "Tennis : l'ITIA enquête sur Arthur Rinderknech, soupçonné d'avoir refusé un contrôle antidopage",
-  "rubrique": "sport",
-  "date": "2026-11-25",
+  "acteurs": [
+   "Arthur Rinderknech",
+   "ITIA",
+   "L'Équipe"
+  ],
   "ajoute": "2026-11-25",
+  "contexte": "Pas de radio vue sur ce sujet ; une possible incompréhension avec l'agent de prélèvement est évoquée par Ouest-France, à recouper.",
   "croise": false,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "De six mois à un an",
+     "D'un à deux ans",
+     "De deux à quatre ans",
+     "De cinq à huit ans"
+    ],
+    "enonce": "Quelle durée de suspension risque le tennisman Arthur Rinderknech si le refus de contrôle antidopage dont il est accusé (début juin 2026) est avéré ?",
+    "explication": "Libération indique qu'il risque une suspension de deux à quatre ans."
+   },
+   {
+    "bonne": 1,
+    "choix": [
+     "L'AFLD",
+     "L'ITIA",
+     "L'Agence mondiale antidopage",
+     "L'ATP"
+    ],
+    "enonce": "Quelle instance a confirmé, le 25 novembre 2026, enquêter sur Arthur Rinderknech pour un contrôle antidopage refusé ?",
+    "explication": "L'Agence internationale pour l'intégrité du tennis (ITIA) a confirmé l'enquête."
+   }
+  ],
   "resume": "L'Agence internationale pour l'intégrité du tennis enquête sur Arthur Rinderknech, accusé d'avoir refusé un contrôle antidopage début juin. Le joueur nie.",
   "retenir": [
    "Arthur Rinderknech, 31 ans, 57e mondial, est visé par une enquête de l'ITIA (Ouest-France, Libération)",
@@ -446,13 +1138,7 @@
    "Il risque une suspension de deux à quatre ans si les faits sont avérés (Libération)",
    "Il se dit « convaincu » d'être innocenté et affirme n'avoir jamais pris de substance interdite (franceinfo)"
   ],
-  "contexte": "Pas de radio vue sur ce sujet ; une possible incompréhension avec l'agent de prélèvement est évoquée par Ouest-France, à recouper.",
-  "acteurs": [
-   "Arthur Rinderknech",
-   "ITIA",
-   "L'Équipe"
-  ],
-  "echeances": [],
+  "rubrique": "sport",
   "sources": [
    {
     "nom": "Libération : Tennis : l'antidopage confirme enquêter sur Arthur Rinderknech",
@@ -470,56 +1156,56 @@
     "url": "https://www.franceinfo.fr/sports/tennis/je-suis-convaincu-que-je-serai-innocente-arthur-rinderknech-rejette-les-accusations-de-refus-de-se-soumettre-a-un-controle-antidopage_8298981.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quelle durée de suspension risque le tennisman Arthur Rinderknech si le refus de contrôle antidopage dont il est accusé (début juin 2026) est avéré ?",
-    "choix": [
-     "De six mois à un an",
-     "D'un à deux ans",
-     "De deux à quatre ans",
-     "De cinq à huit ans"
-    ],
-    "bonne": 2,
-    "explication": "Libération indique qu'il risque une suspension de deux à quatre ans."
-   },
-   {
-    "enonce": "Quelle instance a confirmé, le 25 novembre 2026, enquêter sur Arthur Rinderknech pour un contrôle antidopage refusé ?",
-    "choix": [
-     "L'AFLD",
-     "L'ITIA",
-     "L'Agence mondiale antidopage",
-     "L'ATP"
-    ],
-    "bonne": 1,
-    "explication": "L'Agence internationale pour l'intégrité du tennis (ITIA) a confirmé l'enquête."
-   }
-  ]
+  "titre": "Tennis : l'ITIA enquête sur Arthur Rinderknech, soupçonné d'avoir refusé un contrôle antidopage"
  },
  {
   "id": "2026-11-25-puigdemont-retour-espagne-12-decembre",
-  "titre": "Puigdemont annonce son retour en Espagne le 12 décembre après neuf ans d'exil",
-  "rubrique": "international",
-  "date": "2026-11-25",
-  "ajoute": "2026-11-25",
-  "croise": false,
-  "resume": "Carles Puigdemont rentrera en Espagne le 12 décembre, après avoir été définitivement blanchi par le Tribunal suprême espagnol.",
-  "retenir": [
-   "Annonce du retour de Carles Puigdemont le mercredi 25 novembre 2026, pour le 12 décembre",
-   "Neuf ans d'exil en Belgique, depuis la tentative de sécession de la Catalogne en 2017",
-   "Le Tribunal suprême espagnol l'a définitivement blanchi lundi 23 novembre (franceinfo)"
-  ],
-  "contexte": "Pas de presse ni de radio vue sur ce sujet dans le flux ; détails à recouper.",
   "acteurs": [
    "Carles Puigdemont",
    "Tribunal suprême espagnol",
    "Catalogne"
   ],
+  "ajoute": "2026-11-25",
+  "contexte": "Pas de presse ni de radio vue sur ce sujet dans le flux ; détails à recouper.",
+  "croise": false,
+  "date": "2026-11-25",
   "echeances": [
    {
     "date": "2026-12-12",
     "label": "Retour annoncé de Puigdemont en Espagne"
    }
   ],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Le 1er décembre",
+     "Le 6 décembre",
+     "Le 12 décembre",
+     "Le 20 décembre"
+    ],
+    "enonce": "À quelle date Carles Puigdemont a-t-il annoncé, le 25 novembre 2026, qu'il rentrerait en Espagne après neuf ans d'exil ?",
+    "explication": "Il rentrera le 12 décembre."
+   },
+   {
+    "bonne": 2,
+    "choix": [
+     "La Cour constitutionnelle",
+     "L'Audience nationale",
+     "Le Tribunal suprême",
+     "Le Tribunal de Barcelone"
+    ],
+    "enonce": "Quelle juridiction espagnole a définitivement blanchi Carles Puigdemont le 23 novembre 2026 ?",
+    "explication": "Le Tribunal suprême espagnol l'a définitivement blanchi lundi."
+   }
+  ],
+  "resume": "Carles Puigdemont rentrera en Espagne le 12 décembre, après avoir été définitivement blanchi par le Tribunal suprême espagnol.",
+  "retenir": [
+   "Annonce du retour de Carles Puigdemont le mercredi 25 novembre 2026, pour le 12 décembre",
+   "Neuf ans d'exil en Belgique, depuis la tentative de sécession de la Catalogne en 2017",
+   "Le Tribunal suprême espagnol l'a définitivement blanchi lundi 23 novembre (franceinfo)"
+  ],
+  "rubrique": "international",
   "sources": [
    {
     "nom": "France 24 : L'indépendantiste catalan Carles Puigdemont annonce son retour en Espagne",
@@ -532,30 +1218,7 @@
     "url": "https://www.franceinfo.fr/monde/espagne/l-independantiste-catalan-carles-puigdemont-rentrera-en-espagne-le-12decembre-apres-neuf-ans-d-exil_8299407.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "À quelle date Carles Puigdemont a-t-il annoncé, le 25 novembre 2026, qu'il rentrerait en Espagne après neuf ans d'exil ?",
-    "choix": [
-     "Le 1er décembre",
-     "Le 6 décembre",
-     "Le 12 décembre",
-     "Le 20 décembre"
-    ],
-    "bonne": 2,
-    "explication": "Il rentrera le 12 décembre."
-   },
-   {
-    "enonce": "Quelle juridiction espagnole a définitivement blanchi Carles Puigdemont le 23 novembre 2026 ?",
-    "choix": [
-     "La Cour constitutionnelle",
-     "L'Audience nationale",
-     "Le Tribunal suprême",
-     "Le Tribunal de Barcelone"
-    ],
-    "bonne": 2,
-    "explication": "Le Tribunal suprême espagnol l'a définitivement blanchi lundi."
-   }
-  ]
+  "titre": "Puigdemont annonce son retour en Espagne le 12 décembre après neuf ans d'exil"
  },
  {
   "id": "2026-11-25-presidentielle-congres-maires-lisnard-philippe",
@@ -715,11 +1378,29 @@
  },
  {
   "id": "2026-11-25-noustoutes-hommage-soldat-inconnu",
-  "titre": "Violences faites aux femmes : NousToutes rend hommage aux victimes de féminicides sous l'Arc de Triomphe",
-  "rubrique": "societe",
-  "date": "2026-11-25",
+  "acteurs": [
+   "NousToutes",
+   "Soldat inconnu",
+   "Place de la Bastille"
+  ],
   "ajoute": "2026-11-25",
+  "contexte": "Sujet traité par la télé ; la presse (20 Minutes sur les chiffres des violences) et la radio (Europe 1) abordent le thème plus largement.",
   "croise": false,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Osez le féminisme !",
+     "NousToutes",
+     "Fondation des femmes",
+     "Les Colleuses"
+    ],
+    "enonce": "Quel collectif féministe a déployé le 25 novembre 2026 une banderole « Aux combattantes inconnues assassinées par le patriarcat » sous l'Arc de Triomphe ?",
+    "explication": "C'est le collectif NousToutes."
+   }
+  ],
   "resume": "À l'occasion de la journée internationale contre les violences faites aux femmes, NousToutes a rendu hommage aux victimes de féminicides sur la tombe du Soldat inconnu.",
   "retenir": [
    "Action de NousToutes le mercredi 25 novembre 2026 à Paris",
@@ -727,13 +1408,7 @@
    "Fleurs déposées avec le message « ni oubli, ni pardon » (franceinfo)",
    "Autre action prévue place de la Bastille à 19 h (BFMTV)"
   ],
-  "contexte": "Sujet traité par la télé ; la presse (20 Minutes sur les chiffres des violences) et la radio (Europe 1) abordent le thème plus largement.",
-  "acteurs": [
-   "NousToutes",
-   "Soldat inconnu",
-   "Place de la Bastille"
-  ],
-  "echeances": [],
+  "rubrique": "societe",
   "sources": [
    {
     "nom": "BFMTV : Le collectif NousToutes rend hommage aux victimes de féminicide sur la tombe du Soldat inconnu",
@@ -751,19 +1426,7 @@
     "url": "https://www.franceinfo.fr/societe/feminicides/des-feministes-rendent-hommage-aux-victimes-de-feminicides-sur-la-tombe-du-soldat-inconnu_8299005.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel collectif féministe a déployé le 25 novembre 2026 une banderole « Aux combattantes inconnues assassinées par le patriarcat » sous l'Arc de Triomphe ?",
-    "choix": [
-     "Osez le féminisme !",
-     "NousToutes",
-     "Fondation des femmes",
-     "Les Colleuses"
-    ],
-    "bonne": 1,
-    "explication": "C'est le collectif NousToutes."
-   }
-  ]
+  "titre": "Violences faites aux femmes : NousToutes rend hommage aux victimes de féminicides sous l'Arc de Triomphe"
  },
  {
   "id": "2026-11-25-mon-beau-pere-ma-belle-fille-et-moi-cinema",
@@ -973,6 +1636,56 @@
    }
   ],
   "titre": "La Marine saisit plus de 3,3 tonnes de méthamphétamine près de Clipperton"
+ },
+ {
+  "id": "2026-11-25-lyceens-400-exclus-definitivement",
+  "titre": "Mobilisation lycéenne : plus de 400 exclusions définitives",
+  "rubrique": "societe",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Plus de 400 lycéens ont été définitivement exclus sur 3 000 procédures disciplinaires ouvertes depuis septembre, annonce le ministre de l'Éducation.",
+  "retenir": [
+   "Bilan donné le mercredi 25 novembre 2026 par Édouard Geffray, ministre de l'Éducation nationale",
+   "3 000 procédures disciplinaires entre septembre et le 1er novembre",
+   "Plus de 400 élèves exclus définitivement de leur établissement"
+  ],
+  "contexte": "Chiffres liés aux violences commises pendant la mobilisation lycéenne. Aucune radio rattachée dans la collecte.",
+  "acteurs": [
+   "Édouard Geffray",
+   "Lycéens"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Libération : Plus de 400 lycéens définitivement exclus de leur établissement depuis le début de la mobilisation",
+    "type": "presse",
+    "url": "https://www.liberation.fr/societe/education/plus-de-400-lyceens-definitivement-exclus-de-leur-etablissement-depuis-le-debut-de-la-mobilisation-20261125_AVZFGSRE7RAFBEAIX7Z3EJNGHA/"
+   },
+   {
+    "nom": "TF1 Info : Mobilisation lycéenne : plus de 400 élèves exclus définitivement de leur établissement après des violences",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/societe/mobilisation-lyceenne-plus-de-400-eleves-exclus-definitivement-de-leur-etablissement-apres-des-violences-2478161.html"
+   },
+   {
+    "nom": "BFMTV : Violences dans les mobilisations lycéennes: plus de 400 élèves exclus définitivement de leur établissement et ",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/police-justice/video-violences-dans-les-mobilisations-lyceennes-plus-de-400-eleves-exclus-definitivement-de-leur-etablissement-et-3-000-procedures-disciplinaires-engagees_VN-202611260170.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien de procédures disciplinaires ont été engagées dans la mobilisation lycéenne, selon le bilan du 25 novembre 2026 ?",
+    "choix": [
+     "1 500",
+     "2 000",
+     "3 000",
+     "5 000"
+    ],
+    "bonne": 2,
+    "explication": "Environ 3 000 procédures, dont plus de 400 exclusions définitives."
+   }
+  ]
  },
  {
   "id": "2026-11-25-loi-logement-assemblee-362-118",
@@ -1278,23 +1991,35 @@
  },
  {
   "id": "2026-11-25-gilbert-bauvin-mort-tour-de-france",
-  "titre": "Cyclisme : Gilbert Bauvin, ancien maillot jaune, est mort à 99 ans",
-  "rubrique": "sport",
-  "date": "2026-11-25",
+  "acteurs": [
+   "Gilbert Bauvin",
+   "Roger Walkowiak"
+  ],
   "ajoute": "2026-11-25",
+  "contexte": "Un seul média (Ouest-France) dans le flux ; pas de télé ni de radio vue.",
   "croise": false,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Louison Bobet",
+     "Jacques Anquetil",
+     "Roger Walkowiak",
+     "Charly Gaul"
+    ],
+    "enonce": "Derrière quel coureur Gilbert Bauvin, mort à 99 ans le 23 novembre 2026, avait-il terminé deuxième du Tour de France 1956 ?",
+    "explication": "Roger Walkowiak a remporté le Tour 1956."
+   }
+  ],
   "resume": "Gilbert Bauvin, deuxième du Tour de France 1956, est décédé le lundi 23 novembre à 99 ans.",
   "retenir": [
    "Mort de Gilbert Bauvin le lundi 23 novembre 2026, à 99 ans",
    "Deuxième du Tour de France 1956, derrière Roger Walkowiak",
    "Quatre victoires d'étape sur le Tour et plusieurs jours en jaune"
   ],
-  "contexte": "Un seul média (Ouest-France) dans le flux ; pas de télé ni de radio vue.",
-  "acteurs": [
-   "Gilbert Bauvin",
-   "Roger Walkowiak"
-  ],
-  "echeances": [],
+  "rubrique": "sport",
   "sources": [
    {
     "nom": "Ouest-France : Gilbert Bauvin est mort à 99 ans",
@@ -1302,19 +2027,7 @@
     "url": "https://www.ouest-france.fr/sport/cyclisme/cyclisme-ancien-deuxieme-du-tour-de-france-et-maillot-jaune-gilbert-bauvin-est-mort-a-99-ans-6f468956-e8bb-11f1-86c1-70195b4d2e52"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Derrière quel coureur Gilbert Bauvin, mort à 99 ans le 23 novembre 2026, avait-il terminé deuxième du Tour de France 1956 ?",
-    "choix": [
-     "Louison Bobet",
-     "Jacques Anquetil",
-     "Roger Walkowiak",
-     "Charly Gaul"
-    ],
-    "bonne": 2,
-    "explication": "Roger Walkowiak a remporté le Tour 1956."
-   }
-  ]
+  "titre": "Cyclisme : Gilbert Bauvin, ancien maillot jaune, est mort à 99 ans"
  },
  {
   "id": "2026-11-25-eurostar-greve-surprise",
@@ -1328,14 +2041,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Dans quel contexte la grève surprise d'Eurostar du 25 novembre 2026 intervient-elle, selon BFMTV ?",
+    "bonne": 0,
     "choix": [
      "Des négociations salariales en cours",
      "Un projet de privatisation de la compagnie",
      "La réforme des retraites",
      "La fermeture d'une ligne"
     ],
-    "bonne": 0,
+    "enonce": "Dans quel contexte la grève surprise d'Eurostar du 25 novembre 2026 intervient-elle, selon BFMTV ?",
     "explication": "La grève survient en pleines négociations salariales."
    }
   ],
@@ -1453,22 +2166,34 @@
  },
  {
   "id": "2026-11-25-cour-des-comptes-fraude-apprentissage",
-  "titre": "Apprentissage : la Cour des comptes chiffre la fraude entre 1,5 et 3 milliards d'euros par an",
-  "rubrique": "economie",
-  "date": "2026-11-25",
+  "acteurs": [
+   "Cour des comptes"
+  ],
   "ajoute": "2026-11-25",
+  "contexte": "Pas de télé ni de radio vue ; chiffres à recouper (1,5 milliard constaté, jusqu'à 3 milliards estimé).",
   "croise": false,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Entre 150 et 300 millions d'euros",
+     "Entre 500 millions et 1 milliard d'euros",
+     "Entre 1,5 et 3 milliards d'euros",
+     "Entre 6 et 8 milliards d'euros"
+    ],
+    "enonce": "Selon le rapport de la Cour des comptes publié le 25 novembre 2026, quel montant annuel d'argent public est détourné par la fraude à l'apprentissage ?",
+    "explication": "La Cour évoque entre 1,5 et 3 milliards d'euros par an."
+   }
+  ],
   "resume": "Dans un rapport publié le 25 novembre, la Cour des comptes dénonce une faille systémique de contrôle des aides à l'apprentissage.",
   "retenir": [
    "Fraudes et abus : entre 1,5 et 3 milliards d'euros par an (Libération, Ouest-France)",
    "Rapport de la Cour des comptes publié le mercredi 25 novembre 2026",
    "Exemples cités : entreprises sans salarié, tuteurs avec 20 apprentis (Ouest-France)"
   ],
-  "contexte": "Pas de télé ni de radio vue ; chiffres à recouper (1,5 milliard constaté, jusqu'à 3 milliards estimé).",
-  "acteurs": [
-   "Cour des comptes"
-  ],
-  "echeances": [],
+  "rubrique": "economie",
   "sources": [
    {
     "nom": "Libération : Fraude à l'apprentissage : entre 1,5 et 3 milliards d'euros d'argent public détournés",
@@ -1481,19 +2206,7 @@
     "url": "https://www.ouest-france.fr/economie/entreprises/des-entreprises-sans-salarie-des-tuteurs-avec-20-apprentis-les-fraudes-dans-lapprentissage-ont-atteint-1-5-milliard-7b5acb2a-e82b-11f1-86c1-70195b4d2e52"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Selon le rapport de la Cour des comptes publié le 25 novembre 2026, quel montant annuel d'argent public est détourné par la fraude à l'apprentissage ?",
-    "choix": [
-     "Entre 150 et 300 millions d'euros",
-     "Entre 500 millions et 1 milliard d'euros",
-     "Entre 1,5 et 3 milliards d'euros",
-     "Entre 6 et 8 milliards d'euros"
-    ],
-    "bonne": 2,
-    "explication": "La Cour évoque entre 1,5 et 3 milliards d'euros par an."
-   }
-  ]
+  "titre": "Apprentissage : la Cour des comptes chiffre la fraude entre 1,5 et 3 milliards d'euros par an"
  },
  {
   "id": "2026-11-25-colombie-carthagene-prise-otages",
@@ -1725,22 +2438,34 @@
  },
  {
   "id": "2026-11-25-billets-5-euros-banque-de-france",
-  "titre": "Billets de 5 euros : la Banque de France veut en remettre en circulation",
-  "rubrique": "economie",
-  "date": "2026-11-25",
+  "acteurs": [
+   "Banque de France"
+  ],
   "ajoute": "2026-11-25",
+  "contexte": "Pas de presse ni de radio vue ; chiffres à recouper.",
   "croise": false,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "0,5 %",
+     "2,3 %",
+     "9 %",
+     "18 %"
+    ],
+    "enonce": "Quelle part des 6 milliards de billets émis en 2025 était constituée de billets de 5 euros, selon la Banque de France ?",
+    "explication": "Seuls 2,3 % des billets émis en 2025 étaient des coupures de 5 euros."
+   }
+  ],
   "resume": "La Banque de France juge le billet de 5 euros « très utile mais trop peu disponible » et veut en remettre dans les distributeurs.",
   "retenir": [
    "Seulement 2,3 % des 6 milliards de billets émis en 2025 étaient des billets de 5 euros (BFMTV)",
    "Étude de la Banque de France publiée le 25 novembre 2026",
    "Toutes les banques françaises sauf une ne le proposent pas au retrait (TF1 Info)"
   ],
-  "contexte": "Pas de presse ni de radio vue ; chiffres à recouper.",
-  "acteurs": [
-   "Banque de France"
-  ],
-  "echeances": [],
+  "rubrique": "economie",
   "sources": [
    {
     "nom": "BFMTV : Cette annonce de la Banque de France concernant les billets de 5 euros",
@@ -1753,19 +2478,7 @@
     "url": "https://www.tf1info.fr/economie/videos/video-recherche-billets-de-cinq-euros-desesperement-81998-2477947.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quelle part des 6 milliards de billets émis en 2025 était constituée de billets de 5 euros, selon la Banque de France ?",
-    "choix": [
-     "0,5 %",
-     "2,3 %",
-     "9 %",
-     "18 %"
-    ],
-    "bonne": 1,
-    "explication": "Seuls 2,3 % des billets émis en 2025 étaient des coupures de 5 euros."
-   }
-  ]
+  "titre": "Billets de 5 euros : la Banque de France veut en remettre en circulation"
  },
  {
   "id": "2026-11-25-anneaux-de-pouvoir-saison-4",
@@ -1794,6 +2507,83 @@
    }
   ],
   "titre": "« Le Seigneur des Anneaux : Les Anneaux de Pouvoir » renouvelée pour une saison 4"
+ },
+ {
+  "id": "2026-11-25-andy-taylor-duran-duran-mort",
+  "titre": "Mort d'Andy Taylor, guitariste de Duran Duran",
+  "rubrique": "culture",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Andy Taylor, guitariste historique de Duran Duran, est mort à 65 ans d'un cancer de la prostate, annoncent sa famille et le groupe le 25 novembre.",
+  "retenir": [
+   "Décès annoncé mercredi 25 novembre 2026, à 65 ans",
+   "Cause : cancer de la prostate (« long et courageux combat »)",
+   "Duran Duran : groupe britannique de new wave des années 1980",
+   "Il avait quitté le groupe au milieu des années 1980 puis y était revenu ponctuellement (Le Monde)"
+  ],
+  "contexte": "France 24 le dit décédé lundi 23 novembre ; la date exacte du décès est à recouper.",
+  "acteurs": [
+   "Andy Taylor",
+   "Duran Duran"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Andy Taylor, guitariste historique du groupe Duran Duran, est mort à 65 ans",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/disparitions/article/2026/11/26/andy-taylor-guitariste-historique-du-groupe-duran-duran-est-mort-a-65-ans_6815296_3382.html"
+   },
+   {
+    "nom": "20 Minutes : Andy Taylor, guitariste emblématique de Duran Duran, est mort à 65 ans",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/arts-stars/culture/musique/4265813-20261126-andy-taylor-guitariste-emblematique-duran-duran-mort-65-ans?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "BFMTV : Andy Taylor, ex-guitariste du groupe britannique Duran Duran, est mort à l'âge de 65 ans",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/culture/musique/andy-taylor-ex-guitariste-du-groupe-britannique-duran-duran-est-mort-a-l-age-de-65-ans_AD-202611260177.html"
+   },
+   {
+    "nom": "France 24 : Andy Taylor, ex-guitariste de Duran Duran, est décédé à l'âge de 65 ans",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/culture/20261125-andy-taylor-ex-guitariste-de-duran-duran-est-d%C3%A9c%C3%A9d%C3%A9-%C3%A0-l-%C3%A2ge-de-65-ans"
+   },
+   {
+    "nom": "RFI : Décès à 65 ans d'Andy Taylor, ex-guitariste du groupe britannique Duran Duran",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/musique/20261125-d%C3%A9c%C3%A8s-%C3%A0-65-ans-d-andy-taylor-ex-guitariste-du-groupe-britannique-duran-duran"
+   },
+   {
+    "nom": "TF1 Info : Mort d'Andy Taylor, ex-guitariste du groupe britannique Duran Duran",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/culture/mort-a-65-ans-d-andy-taylor-ex-guitariste-du-groupe-britannique-duran-duran-2478215.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "De quelle maladie est mort Andy Taylor, ex-guitariste de Duran Duran, annoncé le 25 novembre 2026 ?",
+    "choix": [
+     "Cancer de la prostate",
+     "Cancer du pancréas",
+     "Insuffisance cardiaque",
+     "Cancer du poumon"
+    ],
+    "bonne": 0,
+    "explication": "Sa famille et le groupe évoquent un cancer de la prostate."
+   },
+   {
+    "enonce": "À quel âge est mort Andy Taylor, annoncé le 25 novembre 2026 ?",
+    "choix": [
+     "61 ans",
+     "63 ans",
+     "65 ans",
+     "68 ans"
+    ],
+    "bonne": 2,
+    "explication": "Il avait 65 ans."
+   }
+  ]
  },
  {
   "id": "2026-11-25-agriculteurs-leclerc-castelnaudary",
@@ -1882,65 +2672,157 @@
  {
   "id": "2026-11-24-ligue-des-champions-5e-journee-lens-leipzig",
   "acteurs": [
+   "PSG",
+   "Luis Enrique",
+   "LOSC",
+   "Bayern Munich",
+   "AS Roma",
    "RC Lens",
    "RB Leipzig",
    "Didier Digard"
   ],
   "ajoute": "2026-11-24",
-  "contexte": "Le PSG (face à l'AS Roma) et Lille (face au Bayern) jouent mercredi 25 novembre ; scores non connus à la collecte.",
+  "contexte": "20 Minutes titre 1-1 pour PSG-Roma, tous les autres médias 2-2. Lens avait été battu 9-1 par Côme le 4 novembre.",
   "croise": true,
   "date": "2026-11-25",
-  "echeances": [
-   {
-    "date": "2026-11-25",
-    "label": "PSG - AS Roma (21h) ; Lille - Bayern Munich"
-   }
-  ],
+  "echeances": [],
   "questions": [
    {
-    "bonne": 3,
+    "enonce": "Quel est le score du match PSG - AS Roma de la 5e journée de Ligue des champions, le 25 novembre 2026 ?",
     "choix": [
-     "2-0",
      "1-1",
-     "4-2",
-     "3-1"
+     "2-2",
+     "3-2",
+     "0-0"
     ],
-    "enonce": "Quel est le score du match RB Leipzig - RC Lens de la 5e journée de Ligue des champions, le 24 novembre 2026 ?",
-    "explication": "Lens s'est incliné 3-1 à Leipzig."
+    "bonne": 1,
+    "explication": "Le PSG a été tenu en échec 2-2 au Parc des Princes."
+   },
+   {
+    "enonce": "Quel grand club Lille a-t-il battu 2-1 en Ligue des champions le 25 novembre 2026 ?",
+    "choix": [
+     "Real Madrid",
+     "Bayern Munich",
+     "FC Barcelone",
+     "Manchester City"
+    ],
+    "bonne": 1,
+    "explication": "Lille a renversé le Bayern Munich (2-1), sa première victoire de la phase de ligue."
    }
   ],
-  "resume": "Lens s'incline 3-1 à Leipzig mardi 24 novembre. La qualification pour les barrages devient quasi impossible.",
+  "resume": "5e journée : Lens battu 3-1 à Leipzig, PSG tenu en échec 2-2 par la Roma, Lille bat le Bayern Munich 2-1.",
   "retenir": [
    "RB Leipzig 3-1 RC Lens, mardi 24 novembre 2026",
-   "Quatrième défaite de Lens en phase de ligue (RFI)",
-   "Précédent : Lens battu 9-1 par Côme le 4 novembre",
-   "Entraîneur : Didier Digard, 3e de la saison",
-   "Real Madrid 5-1 PSV Eindhoven, 5 victoires en 5 journées (RFI)"
+   "PSG 2-2 AS Roma au Parc des Princes, mercredi 25 novembre : premiers points perdus ; PSG 2e avec 13 points (France 24)",
+   "Lille 2-1 Bayern Munich : première victoire des Dogues en C1, 4 points",
+   "PSG sans Désiré Doué ni Khvicha Kvaratskhelia (blessés)",
+   "Real Madrid 5-1 PSV Eindhoven"
   ],
   "rubrique": "sport",
   "sources": [
    {
-    "nom": "20 Minutes : Football : Après l'humiliation à domicile, Lens perd encore en Ligue des champions",
-    "type": "presse",
-    "url": "https://www.20minutes.fr/sport/football/4265521-20261125-football-apres-humiliation-domicile-lens-perd-encore-ligue-champions"
-   },
-   {
-    "nom": "Europe 1 : Ligue des champions : face au RB Leipzig, le RC Lens enchaîne une nouvelle défaite",
-    "type": "radio",
-    "url": "https://www.europe1.fr/sport/ligue-des-champions-face-au-rb-leipzig-le-rc-lens-enchaine-une-nouvelle-defaite-1244176"
-   },
-   {
-    "nom": "France 24 : Ligue des champions : le Real Madrid impérial, Lens perd mais sauve l'honneur",
+    "nom": "France 24 : Ligue des champions : première difficulté pour le PSG, Lille signe un exploit face au Bayern",
     "type": "tv",
-    "url": "https://www.france24.com/fr/sports/20261124-football-ligue-des-champions-real-madrid-fait-le-show-rc-lens-sauve-l-honneur"
+    "url": "https://www.france24.com/fr/sports/20261125-ligue-des-champions-premi%C3%A8re-difficult%C3%A9-pour-le-psg-lille-signe-un-exploit-face-au-bayern"
    },
    {
-    "nom": "RFI : Ligue des champions : le Real renversant, Lens encore à terre",
+    "nom": "Europe 1 : Ligue des champions : le PSG tenu en échec face à la Roma, Lille réalise l'exploit contre le Bayern Munich",
     "type": "radio",
-    "url": "https://www.rfi.fr/fr/sports/20261124-ligue-des-champions-le-real-renversant-lens-encore-%C3%A0-terre"
+    "url": "https://www.europe1.fr/sport/ligue-des-champions-le-psg-tenu-en-echec-face-a-la-roma-lille-realise-lexploit-contre-le-bayern-munich-1245031?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "20 Minutes : Lille - Bayern Munich : Mené, le Losc renverse les Bavarois et tient son exploit en Ligue des champions… Reviv",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4265294-20261125-direct-lille-bayern-munich-entends-rieeeeen-capo-enerve-losc-montre-rien-belle-soiree-lille-suivez-match?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "RFI : Ligue des champions: le PSG accroché par la Roma, Lille s’offre le Bayern",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/sports/20261125-ligue-des-champions-le-psg-accroch%C3%A9-par-la-roma-lille-s-offre-le-bayern"
+   },
+   {
+    "nom": "TF1 Info : Ligue des champions : premier obstacle pour le PSG, accroché à domicile par la Roma",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/sport/ligue-des-champions-premier-obstacle-pour-le-psg-accroche-a-domicile-par-la-roma-2478214.html"
    }
   ],
-  "titre": "Ligue des champions, 5e journée : RB Leipzig 3-1 RC Lens"
+  "titre": "Ligue des champions, 5e journée : Leipzig-Lens, PSG-Roma, Lille-Bayern"
+ },
+ {
+  "id": "2026-11-19-rn-perquisition-fuites-prefet",
+  "acteurs": [
+   "Rassemblement national",
+   "Hugues Moutouh",
+   "Pierre Ory",
+   "Laurent Nuñez",
+   "Gérald Darmanin"
+  ],
+  "ajoute": "2026-11-20",
+  "contexte": "BFMTV date la perquisition du 9 novembre, les autres médias parlent d'une annonce le 19 : à recouper.",
+  "croise": true,
+  "date": "2026-11-25",
+  "echeances": [],
+  "questions": [
+   {
+    "enonce": "Quel haut fonctionnaire a été remplacé par Pierre Ory en Conseil des ministres le 25 novembre 2026 ?",
+    "choix": [
+     "Hugues Moutouh",
+     "Didier Lallement",
+     "Pierre Dartout",
+     "Michel Delpuech"
+    ],
+    "bonne": 0,
+    "explication": "Hugues Moutouh, préfet du Loiret, démis après les soupçons de fuites vers le RN."
+   },
+   {
+    "enonce": "Quel préfet a été convoqué le 20 novembre 2026 par Laurent Nuñez après des soupçons de fuites vers le RN ?",
+    "choix": [
+     "Hugues Moutouh",
+     "Didier Lallement",
+     "Michel Delpuech",
+     "Pierre Dartout"
+    ],
+    "bonne": 0,
+    "explication": "Hugues Moutouh est convoqué par Nuñez."
+   }
+  ],
+  "resume": "Soupçons de fuites du ministère de l'Intérieur vers le RN : le préfet Hugues Moutouh a été officiellement démis le 25 novembre.",
+  "retenir": [
+   "Information judiciaire ouverte fin juillet ; perquisition au siège du RN (franceinfo)",
+   "Hugues Moutouh, préfet du Loiret, démis en Conseil des ministres le mercredi 25 novembre 2026",
+   "Remplaçant : Pierre Ory, préfet de Seine-et-Marne (Le Monde)",
+   "Moutouh dénonce « une opération » contre lui (Le Monde)",
+   "Darmanin saisit l'inspection générale de la justice sur la présence d'un procureur lors de la perquisition"
+  ],
+  "rubrique": "politique",
+  "sources": [
+   {
+    "nom": "Le Monde : Hugues Moutouh, préfet du Loiret, démis de ses fonctions après la révélation de soupçons de fuites émanant du ",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/25/le-prefet-du-loiret-hugues-moutouh-demis-de-ses-fonctions-apres-la-revelation-de-soupcons-de-fuites-emanant-du-ministere-de-l-interieur-vers-le-rn_6815167_3224.html"
+   },
+   {
+    "nom": "20 Minutes : RN : Le siège du parti perquisitionné pour des soupçons de violation du secret professionnel, un préfet aussi suspecté",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/justice/4264233-20261119-rn-siege-parti-perquisitionne-soupcons-violation-secret-professionnel?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "franceinfo : Enquête sur des soupçons de fuites vers le RN : le préfet Hugues Moutouh a été officiellement démis de ses fon",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/politique/front-national/enquete-sur-des-soupcons-de-fuites-vers-le-rn-hugues-moutouh-a-ete-officiellement-demis-de-ses-fonctions-remplace-par-le-prefet-pierre-ory_8299428.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "RFI : Soupçons de fuites du ministère de l'Intérieur au profit du RN: le préfet Hugues Moutouh démis de ses fonction",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/france/20261125-soup%C3%A7ons-de-fuites-au-profit-du-rn-en-france-un-pr%C3%A9fet-d%C3%A9mis-de-ses-fonctions"
+   },
+   {
+    "nom": "France Inter : Le RN au coeur d'une nouvelle enquête autour de fuites impliquant un préfet",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/des-fuites-ne-provenance-du-ministere-de-l-interieur-vers-le-rassemblemetn-national-1892317"
+   }
+  ],
+  "titre": "Perquisition au siège du RN et à Beauvau après des soupçons de fuites impliquant un préfet"
  },
  {
   "id": "2026-11-24-ukraine-navires-russes-benghazi-libye",
@@ -2679,70 +3561,6 @@
    }
   ],
   "titre": "Gisèle Pelicot : des images volées diffusées pour promouvoir un livre"
- },
- {
-  "id": "2026-11-19-rn-perquisition-fuites-prefet",
-  "acteurs": [
-   "Rassemblement national",
-   "Un préfet",
-   "Ministère de l'Intérieur",
-   "Juges d'instruction"
-  ],
-  "ajoute": "2026-11-20",
-  "contexte": "Divergence de date possible sur le jour de la perquisition entre médias. Faits tirés des titres et résumés des flux RSS (articles complets non ouverts) ; à recouper avant le QCM.",
-  "croise": true,
-  "date": "2026-11-24",
-  "echeances": [],
-  "questions": [
-   {
-    "bonne": 0,
-    "choix": [
-     "Hugues Moutouh",
-     "Didier Lallement",
-     "Michel Delpuech",
-     "Pierre Dartout"
-    ],
-    "enonce": "Quel préfet a été convoqué le 20 novembre 2026 par Laurent Nuñez, après des soupçons de fuites vers le RN ?",
-    "explication": "Le préfet Hugues Moutouh est convoqué par le ministre de l'Intérieur Laurent Nuñez."
-   }
-  ],
-  "resume": "Mise à jour du 24/11 : Jordan Bardella trouve le « timing » de la perquisition « étrange »",
-  "retenir": [
-   "Information judiciaire ouverte fin juillet (franceinfo)",
-   "Perquisitions au siège du RN et au ministère de l'Intérieur",
-   "Un préfet est visé par les soupçons de fuites",
-   "BFMTV indique une perquisition datée du 9 novembre, les autres médias parlent d'une annonce le 19 : à recouper",
-   "Le préfet Hugues Moutouh est convoqué le 20 novembre par Laurent Nuñez (LCP, RMC)"
-  ],
-  "rubrique": "politique",
-  "sources": [
-   {
-    "nom": "20 Minutes : RN : Le siège du parti perquisitionné pour des soupçons de violation du secret professionnel, un préfet aussi suspecté",
-    "type": "presse",
-    "url": "https://www.20minutes.fr/justice/4264233-20261119-rn-siege-parti-perquisitionne-soupcons-violation-secret-professionnel?at_medium=display&at_campaign=149"
-   },
-   {
-    "nom": "BFMTV : Siège du RN perquisitionné: ce que l'on sait de la nouvelle enquête judiciaire qui mêle Rassemblement national et ministère de l'Intérieur",
-    "type": "tv",
-    "url": "https://www.bfmtv.com/police-justice/video-siege-du-rn-perquisitionne-ce-que-l-on-sait-de-la-nouvelle-enquete-judiciaire-qui-mele-rassemblement-national-et-ministere-de-l-interieur_VN-202611200155.html"
-   },
-   {
-    "nom": "France Inter : Le RN au coeur d'une nouvelle enquête autour de fuites impliquant un préfet",
-    "type": "radio",
-    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/des-fuites-ne-provenance-du-ministere-de-l-interieur-vers-le-rassemblemetn-national-1892317"
-   },
-   {
-    "nom": "Libération : Des perquisitions au RN et au ministère de l’Intérieur après des fuites de documents sensibles vers des proches de Marine Le Pen",
-    "type": "presse",
-    "url": "https://www.liberation.fr/societe/police-justice/des-perquisitions-au-siege-du-rn-et-au-ministere-de-linterieur-pour-des-soupcons-de-violation-du-secret-de-linstruction-20261119_6GA46AAFMNBSTNRTK2JUTI7BKQ/"
-   },
-   {
-    "nom": "France 24 : Le RN visé par une nouvelle enquête autour de fuites impliquant un préfet",
-    "type": "tv",
-    "url": "https://www.france24.com/fr/france/20261119-le-rn-vis%C3%A9-par-une-nouvelle-enqu%C3%AAte-autour-de-fuites-impliquant-un-pr%C3%A9fet"
-   }
-  ],
-  "titre": "Perquisition au siège du RN et à Beauvau après des soupçons de fuites impliquant un préfet"
  },
  {
   "id": "2026-11-17-jensen-huang-retour-nvidia",
@@ -3583,14 +4401,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Quel cours d'eau a rejoint la Canche en vigilance orange crues dans le Pas-de-Calais le 22 novembre 2026 ?",
+    "bonne": 1,
     "choix": [
      "L'Authie",
      "La Lys",
      "L'Aa",
      "La Liane"
     ],
-    "bonne": 1,
+    "enonce": "Quel cours d'eau a rejoint la Canche en vigilance orange crues dans le Pas-de-Calais le 22 novembre 2026 ?",
     "explication": "La Lys a rejoint la Canche en vigilance orange crues."
    }
   ],
@@ -4896,14 +5714,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "À quelle distance dans l'espace aérien finlandais un hélicoptère russe est-il entré, signalée par la Finlande le 21 novembre 2026 ?",
+    "bonne": 2,
     "choix": [
      "400 mètres",
      "1,1 km",
      "4,1 km",
      "14 km"
     ],
-    "bonne": 2,
+    "enonce": "À quelle distance dans l'espace aérien finlandais un hélicoptère russe est-il entré, signalée par la Finlande le 21 novembre 2026 ?",
     "explication": "La Finlande signale un hélicoptère russe entré jusqu'à 4,1 km."
    }
   ],
@@ -7397,14 +8215,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "À quelle distance de la Terre Voyager 1 se trouvait-elle le 18 novembre 2026, soit une journée-lumière ?",
+    "bonne": 2,
     "choix": [
      "Environ 2,6 milliards de km",
      "Environ 9,5 milliards de km",
      "Environ 25,9 milliards de km",
      "Environ 259 milliards de km"
     ],
-    "bonne": 2,
+    "enonce": "À quelle distance de la Terre Voyager 1 se trouvait-elle le 18 novembre 2026, soit une journée-lumière ?",
     "explication": "Voyager 1 était à environ 25,9 milliards de km, soit une journée-lumière."
    }
   ],
@@ -9347,14 +10165,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Quelle mesure du projet de loi logement, examiné à l'Assemblée à partir du 16 novembre 2026, a été décriée ?",
+    "bonne": 0,
     "choix": [
      "La remise en location de logements mal isolés",
      "La suppression de la taxe foncière",
      "Le gel des loyers pendant deux ans",
      "L'interdiction des meublés touristiques"
     ],
-    "bonne": 0,
+    "enonce": "Quelle mesure du projet de loi logement, examiné à l'Assemblée à partir du 16 novembre 2026, a été décriée ?",
     "explication": "Le texte prévoit la remise en location de logements mal isolés, mesure décriée."
    }
   ],
@@ -9945,14 +10763,14 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Contre quel projet du gouvernement d'Andrej Babis des centaines de milliers de Tchèques ont-ils manifesté à Prague le 15 novembre 2026 ?",
+    "bonne": 1,
     "choix": [
      "Une réforme des retraites",
      "Une réforme du financement de l'audiovisuel public",
      "Une loi sur l'immigration",
      "Une réforme de la justice"
     ],
-    "bonne": 1,
+    "enonce": "Contre quel projet du gouvernement d'Andrej Babis des centaines de milliers de Tchèques ont-ils manifesté à Prague le 15 novembre 2026 ?",
     "explication": "Ils protestent contre la réforme du financement de l'audiovisuel public (suppression de la redevance)."
    }
   ],
