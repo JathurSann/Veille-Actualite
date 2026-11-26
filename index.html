@@ -323,6 +323,20 @@ dialog.quiz::backdrop { background: rgba(20,17,15,.55); }
 .choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
 .choice .l { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 800; background: var(--panel); color: var(--ink); }
 .choice[aria-pressed="true"] .l { background: var(--accent); color: var(--btn-ink); }
+.choice.right { border-color: var(--ok-ring); background: var(--ok-bg); color: var(--ink); }
+.choice.right .l { background: var(--ok-fg); color: #fff; }
+.choice.wrong { border-color: #e08a8a; background: rgba(224,90,90,.13); color: var(--ink); }
+.choice.wrong .l { background: #c0392b; color: #fff; }
+.choice:disabled { cursor: default; opacity: 1; }
+.choice:disabled:hover { border-color: var(--ring); }
+.choice.right:disabled:hover { border-color: var(--ok-ring); }
+.choice.wrong:disabled:hover { border-color: #e08a8a; }
+.feedback { border-radius: 14px; padding: 12px 14px; display: grid; gap: 4px; font-size: 14px; line-height: 1.45; margin-top: 12px; }
+.feedback.ok { background: var(--ok-bg); border: 1px solid var(--ok-ring); }
+.feedback.ko { background: rgba(224,90,90,.13); border: 1px solid #e8b4b4; }
+.feedback > b { font-weight: 800; font-size: 15px; color: var(--ink); }
+.feedback p { margin: 0; }
+.feedback .fbx { color: var(--muted); }
 .qnav { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .big-score { font-weight: 900; font-size: 56px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
 .big-score small { font-size: 22px; color: var(--muted); font-weight: 700; margin-left: 6px; }
@@ -1396,7 +1410,7 @@ html, body { overflow-x: clip; max-width: 100%; }
   }
 
   /* ---------- Test ---------- */
-  var quiz = { n: 10, test: null, qs: [], i: 0, ans: {} };
+  var quiz = { n: 10, test: null, qs: [], i: 0, ans: {}, fb: {}, legacy: false };
   function qbody() { var b = $("quiz-body"); b.textContent = ""; return b; }
   function openQuiz() { quiz.test = null; quizIntro(); var d = $("quiz"); if (!d.open) d.showModal(); }
 
@@ -1434,35 +1448,71 @@ html, body { overflow-x: clip; max-width: 100%; }
           : "Impossible de lancer le test. Réessaie.");
         return;
       }
-      quiz.test = r.data.test_id; quiz.qs = arr(r.data.questions); quiz.i = 0; quiz.ans = {};
+      quiz.test = r.data.test_id; quiz.qs = arr(r.data.questions); quiz.i = 0; quiz.ans = {}; quiz.fb = {}; quiz.legacy = false;
+      arr(r.data.deja).forEach(function (d) { quiz.fb[d.id] = { reponse: d.reponse, bonne: d.bonne, juste: !!d.juste, explication: d.explication || "" }; quiz.ans[d.id] = d.reponse; });
+      while (quiz.i < quiz.qs.length - 1 && quiz.fb[quiz.qs[quiz.i].id]) quiz.i++;
       quizQuestion();
     }, function () { quizIntro("Connexion impossible. Réessaie."); });
   }
 
   function quizQuestion() {
-    var q = quiz.qs[quiz.i], n = quiz.qs.length, b = qbody();
+    var q = quiz.qs[quiz.i], n = quiz.qs.length, b = qbody(), fb = quiz.fb[q.id], last = quiz.i >= n - 1;
     var pr = el("div", "qprog"); pr.appendChild(el("span", null, "Question " + (quiz.i + 1) + " / " + n));
-    var bar = el("div", "bar"); var fill = document.createElement("i"); fill.style.width = Math.round(quiz.i / n * 100) + "%"; bar.appendChild(fill); pr.appendChild(bar);
+    var bar = el("div", "bar"); var fill = document.createElement("i"); fill.style.width = Math.round((quiz.i + (fb ? 1 : 0)) / n * 100) + "%"; bar.appendChild(fill); pr.appendChild(bar);
     b.appendChild(pr);
     b.appendChild(el("p", "qenonce", q.enonce));
-    var cs = el("div", "choices"), btns = [], go = null, tip = null;
-    function sync() { var ok = quiz.ans[q.id] != null; if (go) go.disabled = !ok; if (tip) tip.hidden = ok; }
+    var cs = el("div", "choices"), btns = [], sel = fb ? fb.reponse : null;
     arr(q.choix).forEach(function (t, k) {
-      var x = el("button", "choice"); x.type = "button"; x.setAttribute("aria-pressed", String(quiz.ans[q.id] === k));
+      var x = el("button", "choice"); x.type = "button";
       x.appendChild(el("span", "l", "ABCDE".charAt(k))); x.appendChild(el("span", null, t));
-      x.addEventListener("click", function () { quiz.ans[q.id] = k; btns.forEach(function (y, j) { y.setAttribute("aria-pressed", String(j === k)); }); sync(); });
+      if (fb) {
+        x.disabled = true;
+        if (k === fb.bonne) x.className += " right"; else if (k === fb.reponse) x.className += " wrong";
+      } else {
+        x.setAttribute("aria-pressed", "false");
+        x.addEventListener("click", function () { sel = k; btns.forEach(function (y, j) { y.setAttribute("aria-pressed", String(j === k)); }); go.disabled = false; tip.hidden = true; });
+      }
       btns.push(x); cs.appendChild(x);
     });
     b.appendChild(cs);
-    var nav = el("div", "qnav");
-    if (quiz.i > 0) { var pv = el("button", "btn ghost", "Précédent"); pv.type = "button"; pv.addEventListener("click", function () { quiz.i--; quizQuestion(); }); nav.appendChild(pv); } else nav.appendChild(el("span"));
-    if (quiz.i < n - 1) { var nx = el("button", "btn", "Suivant"); nx.type = "button"; nx.addEventListener("click", function () { if (quiz.ans[q.id] == null) return; quiz.i++; quizQuestion(); }); nav.appendChild(nx); go = nx; }
-    else {
-      var fn = el("button", "btn", "Terminer le test"); fn.type = "button"; fn.addEventListener("click", function () { if (quiz.ans[q.id] == null) return; finishQuiz(fn); }); nav.appendChild(fn); go = fn;
+    var nav = el("div", "qnav"), go, tip = null;
+    nav.appendChild(el("span"));
+    function next(btn) { if (last) finishQuiz(btn); else { quiz.i++; quizQuestion(); } }
+    if (fb) {
+      var box = el("div", "feedback " + (fb.juste ? "ok" : "ko")); box.setAttribute("role", "status");
+      box.appendChild(el("b", null, fb.juste ? "Juste !" : "Faux"));
+      if (!fb.juste) { var g = el("p", "fbr"); g.appendChild(document.createTextNode("Bonne réponse : ")); g.appendChild(el("b", null, arr(q.choix)[fb.bonne] || "")); box.appendChild(g); }
+      if (fb.explication) box.appendChild(el("p", "fbx", fb.explication));
+      b.appendChild(box);
+      go = el("button", "btn", last ? "Terminer le test" : "Suivant"); go.type = "button";
+      go.addEventListener("click", function () { next(go); });
+      nav.appendChild(go); b.appendChild(nav);
+      var bb = $("quiz-body"); if (bb && bb.scrollTo) bb.scrollTo(0, bb.scrollHeight);
+      return;
     }
-    b.appendChild(nav);
-    tip = el("p", "hint", "Choisis une réponse pour continuer."); b.appendChild(tip);
-    sync();
+    go = el("button", "btn", "Valider"); go.type = "button"; go.disabled = true;
+    go.addEventListener("click", function () {
+      if (sel == null) return;
+      go.disabled = true; btns.forEach(function (y) { y.disabled = true; });
+      var k = sel;
+      function fail(legacy) {
+        if (legacy) { quiz.legacy = true; quiz.ans[q.id] = k; next(go); return; }
+        go.disabled = false; btns.forEach(function (y) { y.disabled = false; });
+        tip.hidden = false; tip.textContent = "Connexion impossible, réessaie.";
+      }
+      sb.rpc("repondre_question", { p_test: quiz.test, p_question: q.id, p_choix: k }).then(function (r) {
+        if (r.error) {
+          var m = String(r.error.message || "") + " " + String(r.error.code || "");
+          fail(m.indexOf("PGRST202") >= 0 || /could not find|not find the function/i.test(m)); return;
+        }
+        var d = r.data || {};
+        quiz.fb[q.id] = { reponse: d.reponse == null ? k : d.reponse, bonne: d.bonne, juste: !!d.juste, explication: d.explication || "" };
+        quiz.ans[q.id] = quiz.fb[q.id].reponse;
+        quizQuestion();
+      }, function () { fail(false); });
+    });
+    nav.appendChild(go); b.appendChild(nav);
+    tip = el("p", "hint", "Choisis une réponse puis valide. Pas de retour en arrière."); b.appendChild(tip);
   }
 
   function finishQuiz(btn) {

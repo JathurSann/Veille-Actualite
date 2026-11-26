@@ -21,7 +21,7 @@ python3 collecteur/collecteur.py 12 60 > sujets.json
 ## Base Supabase
 
 Tables : `profiles` (pseudo), `fiches`, `questions` (fermée : bonnes réponses jamais envoyées au navigateur), `revisions` (suivi par personne), `tests`, `test_questions` (fermée), `config` (code d'accès, fermée).
-Fonctions : `demarrer_test`, `soumettre_test` (le score est calculé en base), `classement`, `pseudo_disponible`, `verifier_inscription`.
+Fonctions : `demarrer_test`, `repondre_question` (correction immédiate), `soumettre_test` (le score est calculé en base), `classement`, `pseudo_disponible`, `verifier_inscription`.
 
 - Inscription : email + mot de passe (10 caractères minimum) + pseudo + code d'accès. Pas de confirmation par email (pas de domaine pour un SMTP propre). Pour changer le code : `update public.config set valeur = '...' where cle = 'code_acces';`
 - Secret GitHub requis : `SUPABASE_SERVICE_KEY` (clé secrète `sb_secret_...` du projet). Ne jamais la mettre dans le code ni dans le chat.
@@ -45,3 +45,5 @@ Classement du jour : 1 bonne réponse = 1 point. Le premier test terminé de cha
 ## Apparence
 
 Mode clair ou sombre : automatique par défaut (réglage de l'appareil), modifiable avec le bouton soleil/lune ou dans le menu du compte. Le choix est gardé dans le navigateur.
+
+**Correction immédiate** : on choisit une réponse, on valide, la page dit Juste/Faux avec la bonne réponse et une courte explication. La réponse est définitive (pas de retour en arrière) et enregistrée en base. Un test du jour commencé mais pas fini est repris à la première question sans réponse. SQL à coller une fois : `supabase/2026-11-26-correction-immediate.sql`. Sans ce SQL, la page retombe sur l'ancien fonctionnement (correction à la fin).
