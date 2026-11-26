@@ -396,6 +396,22 @@ body.full { overflow: hidden; }
 .sc .block.key h4 { color: #FFC46B; }
 .sc .retenir, .sc .block p, .sc .ech li, .sc .src li { color: #fff; }
 .sc .people span { background: rgba(255,255,255,.15); color: #fff; }
+/* Carte de révision : À retenir + acteurs sur un seul écran, sans défilement dans la carte */
+.sc h3.titre { font-size: clamp(19px, 5.3vw, 24px); margin: 10px 0 8px; }
+.sc .tabs { margin: 10px 0 10px; }
+.sc .panel { gap: 10px; }
+.sc .block.key { padding: 12px 14px; }
+.sc .block.key h4 { display: none; }
+.sc .retenir { gap: 8px; font-size: 15px; line-height: 1.4; }
+.sc .retenir li { padding-left: 24px; }
+.sc .block.compact { margin: 0; }
+.sc .block.compact h4 { margin: 0 0 5px; font-size: 10.5px; }
+.sc .block.compact .people { gap: 5px; }
+.sc .block.compact .people span { font-size: 12px; padding: 3px 9px; }
+.sc .people .more { background: transparent; border: 1px solid rgba(255,255,255,.35); }
+.sc.tight .retenir { font-size: 14px; line-height: 1.32; gap: 6px; }
+.sc.tight .block.key { padding: 10px 12px; }
+.sc.tight .panel { gap: 8px; }
 .sc .ech .d { background: rgba(255,255,255,.16); color: #FFD7B0; }
 .sc .src .t { background: rgba(255,255,255,.16); color: #fff; }
 .sc a, .sc .srcmore summary { color: #FFD7B0; }
@@ -922,7 +938,27 @@ html, body { overflow-x: clip; max-width: 100%; }
   function isMobile() { return !!mq.matches; }
   if (mq.addEventListener) mq.addEventListener("change", function () { renderMain(); });
   else if (mq.addListener) mq.addListener(function () { renderMain(); });
-  var deckIdx = 0, deckSig = "", deckTab = "resume";
+  var deckIdx = 0, deckSig = "", deckTab = "retenir";
+
+  /* Ajuste une carte pour qu'elle tienne sans défilement : texte un peu plus serré, puis noms en bout de liste repliés (+N) */
+  function fitCard(c) {
+    if (!c || !c.isConnected) return;
+    var z = c.querySelector(".zone"); if (!z) return;
+    c.classList.remove("tight");
+    var chips = Array.prototype.slice.call(z.querySelectorAll(".block.compact .people span:not(.more)"));
+    chips.forEach(function (x) { x.style.display = ""; });
+    var old = z.querySelector(".people .more"); if (old) old.remove();
+    function over() { return z.scrollHeight - z.clientHeight > 1; }
+    if (!over()) return;
+    c.classList.add("tight");
+    if (!over() || !chips.length) return;
+    var host = chips[0].parentNode, hid = 0, i = chips.length - 1, mo = null;
+    while (over() && i >= 2) {
+      chips[i].style.display = "none"; hid++; i--;
+      if (!mo) { mo = el("span", "more"); host.appendChild(mo); }
+      mo.textContent = "+" + hid;
+    }
+  }
 
   /* Carte plein écran d'une fiche (mobile) */
   function swipeCard(f) {
@@ -946,17 +982,17 @@ html, body { overflow-x: clip; max-width: 100%; }
     var tmp = el("div"); buildBlocks(f, tmp);
     var K = {}; Array.prototype.forEach.call(tmp.children, function (x) { K[x.getAttribute("data-k")] = x; });
     var panels = {};
-    var pr = el("div", "panel");
-    var resume = short(f.resume, 400) || short(arr(f.retenir)[0], 400);
-    if (resume) pr.appendChild(el("p", "resume", resume));
-    if (K.acteurs) pr.appendChild(K.acteurs);
-    if (pr.children.length) panels.resume = pr;
-    if (K.retenir) { var p2 = el("div", "panel"); p2.appendChild(K.retenir); panels.retenir = p2; }
+    /* « À retenir » : les points clés puis les acteurs et noms (l'onglet Résumé a été supprimé) */
+    var p2 = el("div", "panel");
+    if (K.retenir) p2.appendChild(K.retenir);
+    else { var rs = short(f.resume, 400); if (rs) p2.appendChild(el("p", "resume", rs)); }
+    if (K.acteurs) { K.acteurs.className += " compact"; p2.appendChild(K.acteurs); }
+    if (p2.children.length) panels.retenir = p2;
     var p3 = el("div", "panel"); if (K.contexte) p3.appendChild(K.contexte); if (K.dates) p3.appendChild(K.dates);
     if (p3.children.length) panels.contexte = p3;
     if (K.sources) { var p4 = el("div", "panel"); p4.appendChild(K.sources); panels.sources = p4; }
 
-    var LABELS = [["resume", "Résumé"], ["retenir", "À retenir"], ["contexte", "Contexte"], ["sources", "Sources"]];
+    var LABELS = [["retenir", "À retenir"], ["contexte", "Contexte"], ["sources", "Sources"]];
     var tabs = el("div", "tabs"); tabs.setAttribute("role", "tablist");
     var zone = el("div", "zone");
     var avail = LABELS.filter(function (x) { return panels[x[0]]; });
@@ -964,7 +1000,7 @@ html, body { overflow-x: clip; max-width: 100%; }
       deckTab = k;
       Array.prototype.forEach.call(tabs.children, function (t) { t.setAttribute("aria-selected", String(t.getAttribute("data-k") === k)); });
       zone.textContent = ""; if (panels[k]) zone.appendChild(panels[k]);
-      zone.scrollTop = 0;
+      zone.scrollTop = 0; fitCard(c);
     }
     avail.forEach(function (x) {
       var t = el("button", "tab", x[1]); t.type = "button"; t.setAttribute("role", "tab"); t.setAttribute("data-k", x[0]);
@@ -972,7 +1008,7 @@ html, body { overflow-x: clip; max-width: 100%; }
       tabs.appendChild(t);
     });
     c.appendChild(tabs); c.appendChild(zone);
-    show(panels[deckTab] ? deckTab : (avail[0] ? avail[0][0] : "resume"));
+    show(panels[deckTab] ? deckTab : (avail[0] ? avail[0][0] : "retenir"));
     return c;
   }
 
@@ -1019,6 +1055,8 @@ html, body { overflow-x: clip; max-width: 100%; }
       cards.prev = deckIdx > 0 ? mk(deckIdx - 1) : null; cards.cur = mk(deckIdx); cards.next = deckIdx < n - 1 ? mk(deckIdx + 1) : null;
       [cards.next, cards.cur, cards.prev].forEach(function (c) { if (c) wrap.appendChild(c); });  /* le dernier ajouté est au-dessus */
       place(); upd();
+      [cards.prev, cards.cur, cards.next].forEach(fitCard);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitCard(cards.cur); });
     }
     function goNext() {
       if (busy || !cards.next) return;
