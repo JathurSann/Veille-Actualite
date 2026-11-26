@@ -1,5 +1,827 @@
 [
  {
+  "id": "2026-11-26-bardella-nouvelles-revelations-mediapart-monde",
+  "titre": "Bardella : nouveaux éléments sur les écrits antisémites de 2013",
+  "rubrique": "politique",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Le Monde et Mediapart publient le 26 novembre 2026 des extraits de conversation indiquant que Jordan Bardella est l'auteur de propos antisémites écrits en 2013. Il dénonce « une entreprise de persécution ».",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : nouvelles révélations du Monde et de Mediapart",
+   "Conversation Messenger de 2013, Bardella avait 17 ans (lycéen, jeune militant du Front national)",
+   "Première révélation de Mediapart le 28 septembre 2026",
+   "Propos cités : « les sionistes sont à la tête des banques, tout est lié »",
+   "Bardella « réfute catégoriquement » en être l'auteur ; Laurent Jacobelli (RN) le défend"
+  ],
+  "contexte": "Faits tirés des titres, résumés et extraits d'articles ; Bardella conteste formellement. À recouper avant le QCM.",
+  "acteurs": [
+   "Jordan Bardella",
+   "Rassemblement national",
+   "Mediapart",
+   "Le Monde",
+   "Laurent Jacobelli"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : « Les sionistes sont à la tête des banques, tout est lié » : nouvelles révélations sur les propos antisémites ",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/politique/article/2026/11/26/les-sionistes-sont-a-la-tete-des-banques-tout-est-lie-nouvelles-revelations-sur-les-propos-antisemites-de-jordan-bardella_6815484_823448.html"
+   },
+   {
+    "nom": "Libération : Ecrits antisémites : Jordan Bardella visé par de nouvelles révélations du «Monde» et de «Mediapart»",
+    "type": "presse",
+    "url": "https://www.liberation.fr/politique/ecrits-antisemites-le-monde-et-mediapart-revelent-de-nouveaux-elements-attribuant-les-propos-a-jordan-bardella-20261126_BNWRSU22LNFUFJT2CZYNGRILZI/"
+   },
+   {
+    "nom": "franceinfo : \"Le Monde\" et Mediapart publient de nouveaux éléments de preuve sur les écrits antisémites attribués à Jordan ",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/politique/jordan-bardella/le-monde-et-mediapart-publient-de-nouveaux-elements-de-preuve-sur-les-ecrits-antisemites-attribues-a-jordan-bardella_8300856.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "RMC : Antisémitisme : Mediapart et Le Monde accablent Jordan Bardella",
+    "type": "radio",
+    "url": "https://rmc.bfmtv.com/actualites/politique/video-antisemitisme-mediapart-et-le-monde-accablent-jordan-bardella_VN-202611260301.html"
+   },
+   {
+    "nom": "RFI : Écrits antisémites: «Le Monde» et Mediapart révèlent de nouveaux éléments compromettants pour Jordan Bardella",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/france/20261126-%C3%A9crits-antis%C3%A9mites-le-monde-et-mediapart-r%C3%A9v%C3%A8lent-de-nouveaux-%C3%A9l%C3%A9ments-compromettants-pour-jordan-bardella"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quels deux médias ont publié le 26 novembre 2026 de nouveaux éléments attribuant des écrits antisémites à Jordan Bardella ?",
+    "choix": [
+     "Le Monde et Mediapart",
+     "Libération et Mediapart",
+     "Le Monde et Le Canard enchaîné",
+     "Le Parisien et Mediapart"
+    ],
+    "bonne": 0,
+    "explication": "Le Monde et Mediapart ont publié de nouveaux extraits d'une conversation Messenger attribuée à Jordan Bardella. Mediapart avait lancé l'affaire le 28 septembre 2026.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "En quelle année les messages antisémites attribués à Jordan Bardella auraient-ils été écrits, selon les révélations du 26 novembre 2026 ?",
+    "choix": [
+     "2011",
+     "2013",
+     "2015",
+     "2017"
+    ],
+    "bonne": 1,
+    "explication": "Les échanges datent de 2013, quand Jordan Bardella avait 17 ans et militait au Front national. Il conteste formellement en être l'auteur et dénonce une « entreprise de persécution ».",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-budget-secu-2027-cmp-echec",
+  "titre": "Budget de la Sécu 2027 : échec de la commission mixte paritaire",
+  "rubrique": "politique",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Députés et sénateurs échouent le 26 novembre 2026 à s'accorder sur le budget de la Sécurité sociale 2027. Le texte repart en nouvelle lecture à l'Assemblée.",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : CMP de 7 députés et 7 sénateurs, échec rapide",
+   "Texte rejeté à l'Assemblée, puis modifié et adopté au Sénat",
+   "Renvoyé en nouvelle lecture à l'Assemblée nationale",
+   "Les élus voulaient éviter « un texte non adoptable par les deux chambres » (Libération)"
+  ],
+  "contexte": "Faits tirés des titres et résumés (Europe 1, LCP, Libération, Ouest-France, franceinfo).",
+  "acteurs": [
+   "Assemblée nationale",
+   "Sénat",
+   "Sébastien Lecornu"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Europe 1 : Budget de la Sécu : députés et sénateurs échouent à trouver un accord",
+    "type": "radio",
+    "url": "https://www.europe1.fr/politique/budget-de-la-secu-deputes-et-senateurs-echouent-a-trouver-un-accord-1245253?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "LCP : INFO LCP - Budget de la Sécu: échec de la réunion de conciliation entre députés et sénateurs, le texte bientôt",
+    "type": "tv",
+    "url": "https://lcp.fr/actualites/info-lcp-budget-de-la-secu-echec-de-la-reunion-de-conciliation-entre-deputes-et"
+   },
+   {
+    "nom": "Libération : Projet de budget de la Sécu : députés et sénateurs échouent à s’accorder, le texte va repartir à l’Assemblée",
+    "type": "presse",
+    "url": "https://www.liberation.fr/politique/projet-de-budget-de-la-secu-deputes-et-senateurs-echouent-a-saccorder-le-texte-va-repartir-a-lassemblee-20261126_FZQE3QSPMZAMFM5CXFHZWB5LBM/"
+   },
+   {
+    "nom": "Ouest-France : Budget de la Sécu 2027 : députés et sénateurs échouent à trouver un accord, le texte renvoyé en nouvelle lectu",
+    "type": "presse",
+    "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/budget-de-la-secu-2027-deputes-et-senateurs-echouent-a-trouver-un-accord-le-texte-renvoye-en-nouvelle-lecture-a-lassemblee-2a4e3726-e975-11f1-86c1-70195b4d2e52"
+   },
+   {
+    "nom": "franceinfo : Budget de la Sécurité sociale 2027 : les députés et sénateurs échouent à trouver un accord, le texte retourne ",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/economie/budget/budget-de-la-securite-sociale-les-deputes-et-senateurs-echouent-a-trouver-un-accord-le-texte-retourne-a-l-assemblee_8301108.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel a été le résultat de la commission mixte paritaire sur le budget de la Sécurité sociale 2027, le 26 novembre 2026 ?",
+    "choix": [
+     "Députés et sénateurs n'ont pas trouvé d'accord",
+     "Un compromis a été adopté à l'unanimité",
+     "Le texte a été adopté définitivement",
+     "La réunion a été reportée au 3 décembre"
+    ],
+    "bonne": 0,
+    "explication": "Les sept députés et sept sénateurs ont constaté leur désaccord et le texte repart en nouvelle lecture à l'Assemblée. Le Sénat l'avait modifié, notamment sur les retraites.",
+    "difficulte": 1
+   },
+   {
+    "enonce": "Combien de députés et de sénateurs siègent à la commission mixte paritaire réunie le 26 novembre 2026 sur le budget de la Sécu ?",
+    "choix": [
+     "7 députés et 7 sénateurs",
+     "5 députés et 5 sénateurs",
+     "10 députés et 10 sénateurs",
+     "15 députés et 8 sénateurs"
+    ],
+    "bonne": 0,
+    "explication": "La CMP réunit sept députés et sept sénateurs, chargés de trouver un texte de compromis. Ici la réunion a échoué rapidement, ce qui renvoie le texte à l'Assemblée.",
+    "difficulte": 2
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-mouvement-lyceen-mobilisation-jeudi",
+  "titre": "Mouvement lycéen : la mobilisation reprend le 26 novembre",
+  "rubrique": "societe",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Les syndicats étudiants jugent « insuffisantes » les réponses du gouvernement et manifestent de nouveau le 26 novembre 2026. Les fonctionnaires sont appelés le 1er décembre.",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : grève et manifestations d'organisations étudiantes et de l'enseignement supérieur (franceinfo)",
+   "Les fonctionnaires se mobilisent le 1er décembre",
+   "Plus de 400 élèves exclus définitivement sur 3 000 procédures disciplinaires (bilan du 25 novembre)",
+   "LFI demande une commission d'enquête sur les propos du gouvernement (Libération)"
+  ],
+  "contexte": "Faits tirés des titres et résumés (20 Minutes, BFMTV, RMC, Libération, franceinfo).",
+  "acteurs": [
+   "Syndicats étudiants",
+   "Édouard Geffray",
+   "La France insoumise"
+  ],
+  "echeances": [
+   {
+    "date": "2026-12-01",
+    "label": "Mobilisation des fonctionnaires"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "20 Minutes : Mouvement lycéen : « La stratégie du pourrissement ne marche pas »… La mobilisation reprend ce jeudi",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/societe/4265882-20261126-mouvement-lyceen-strategie-pourrissement-marche-mobilisation-reprend-jeudi?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Libération : Mouvement lycéen : retour sur deux mois de mensonges du gouvernement",
+    "type": "presse",
+    "url": "https://www.liberation.fr/checknews/les-ministres-vont-devoir-rendre-des-comptes-retour-sur-les-nombreux-mensonges-du-gouvernement-sur-le-mouvement-lyceen-20261126_KN3SZW6UJ5FRJIW2VL7L4D2BGI/"
+   },
+   {
+    "nom": "BFMTV : Colère lycéenne: plus de 400 élèves exclus définitivement de leurs établissements",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/societe/education/video-colere-lyceenne-plus-de-400-eleves-exclus-definitivement-de-leurs-etablissements_VN-202611260495.html"
+   },
+   {
+    "nom": "RMC : Mouvement lycéen : plus de 400 élèves exclus définitivement",
+    "type": "radio",
+    "url": "https://rmc.bfmtv.com/actualites/societe/video-mouvement-lyceen-plus-de-400-eleves-exclus-definitivement_VN-202611260260.html"
+   },
+   {
+    "nom": "franceinfo : Etudiants, enseignants du supérieur, policiers... A quoi faut-il s'attendre pour la mobilisation de jeudi ?",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/etudiants-enseignants-du-superieur-policiers-a-quoi-faut-il-s-attendre-pour-la-mobilisation-de-jeudi_8299044.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "À quelle date les fonctionnaires sont-ils appelés à se mobiliser, après la journée étudiante du 26 novembre 2026 ?",
+    "choix": [
+     "1er décembre",
+     "30 novembre",
+     "3 décembre",
+     "5 décembre"
+    ],
+    "bonne": 0,
+    "explication": "Seules les organisations étudiantes et de l'enseignement supérieur appellent à la grève le 26 novembre ; les fonctionnaires suivent le 1er décembre. Le gouvernement fait état de 3 000 procédures disciplinaires.",
+    "difficulte": 2
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-pfas-laits-infantiles-generations-futures",
+  "titre": "PFAS : laits infantiles et aliments contaminés, selon Générations futures",
+  "rubrique": "sciences",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Des laits infantiles vendus en France contiennent des PFAS, selon des analyses révélées par Le Monde le 26 novembre 2026. Générations futures publie le même jour un rapport sur 652 échantillons alimentaires.",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : Le Monde révèle des PFAS dans des laits infantiles vendus en France",
+   "Niveaux qui exposent les nourrissons à des dépassements de la dose hebdomadaire tolérable",
+   "Rapport de Générations futures : 652 échantillons analysés, 21 % contiennent au moins un PFAS",
+   "Près de 40 % des poissons, crustacés et œufs contaminés (RMC)"
+  ],
+  "contexte": "Faits tirés des titres et résumés ; les chiffres viennent de deux enquêtes distinctes (Le Monde, Générations futures). À recouper.",
+  "acteurs": [
+   "Générations futures",
+   "Anses",
+   "Le Monde"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Des laits infantiles vendus en France sont contaminés par des PFAS interdits et cancérogènes",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/planete/article/2026/11/26/des-laits-infantiles-vendus-en-france-sont-contamines-par-des-pfas-interdits-et-cancerogenes_6815474_3244.html"
+   },
+   {
+    "nom": "franceinfo : L'ONG Générations futures alerte sur la présence de PFAS dans les poissons, les œufs ou les laits infantiles e",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/environnement/pollution/pfas/l-ong-generations-futures-denonce-des-failles-reglementaires-pour-limiter-la-presence-de-pfas-dans-les-aliments_8300646.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "RMC : Près de 40% des poissons, crustacés et œufs seraient contaminés aux PFAS, alerte Générations Futures",
+    "type": "radio",
+    "url": "https://rmc.bfmtv.com/actualites/societe/sante/pres-de-40-des-poissons-crustaces-et-ufs-seraient-contamines-aux-pfas-alerte-generations-futures_AV-202611260358.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel type de produits Le Monde a-t-il révélés contaminés par des PFAS le 26 novembre 2026 ?",
+    "choix": [
+     "Des laits infantiles",
+     "Des eaux minérales",
+     "Des céréales du petit-déjeuner",
+     "Des compotes pour enfants"
+    ],
+    "bonne": 0,
+    "explication": "Pour la première fois, des analyses montrent des PFAS dans des laits infantiles vendus en France. Les niveaux exposent les nourrissons à un dépassement de la dose hebdomadaire tolérable.",
+    "difficulte": 1
+   },
+   {
+    "enonce": "Combien d'échantillons alimentaires l'association Générations futures a-t-elle analysés pour son rapport sur les PFAS du 26 novembre 2026 ?",
+    "choix": [
+     "452",
+     "552",
+     "652",
+     "852"
+    ],
+    "bonne": 2,
+    "explication": "Générations futures a analysé 652 échantillons alimentaires en France. 21 % contiennent au moins un PFAS, réglementé ou non, et l'ONG dénonce des failles réglementaires.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-irak-huit-djihadistes-francais-perpetuite",
+  "titre": "Irak : huit djihadistes français condamnés à la perpétuité",
+  "rubrique": "international",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "La justice irakienne condamne le 26 novembre 2026 huit Français, dont Romain Garnier, à la réclusion à perpétuité pour appartenance à l'État islamique. 47 Français ont été jugés depuis septembre.",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : huit Français condamnés à la perpétuité en Irak",
+   "47 ressortissants français jugés depuis septembre, transférés de Syrie l'an dernier",
+   "Parmi eux : Romain Garnier (Libération)",
+   "Paris refuse de rapatrier la plupart des hommes accusés d'avoir joué un rôle actif"
+  ],
+  "contexte": "Faits tirés des titres et résumés (Europe 1, France 24, Libération).",
+  "acteurs": [
+   "Romain Garnier",
+   "État islamique",
+   "Irak"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Europe 1 : Irak : huit djihadistes français condamnés à la perpétuité",
+    "type": "radio",
+    "url": "https://www.europe1.fr/international/irak-huit-djihadistes-francais-condamnes-a-la-perpetuite-1245196?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "France 24 : En Irak, huit nouveaux jihadistes français condamnés à la perpétuité",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/moyen-orient/20261126-en-irak-huit-nouveaux-jihadistes-fran%C3%A7ais-condamn%C3%A9s-%C3%A0-la-perp%C3%A9tuit%C3%A9"
+   },
+   {
+    "nom": "Libération : Irak : Romain Garnier et sept autres Français condamnés à perpétuité pour leur affiliation à l’Etat islamique",
+    "type": "presse",
+    "url": "https://www.liberation.fr/international/moyen-orient/irak-romain-garnier-et-sept-autres-francais-condamnes-a-perpetuite-pour-leur-affiliation-a-letat-islamique-20261126_D7RVUD7OSJDRJIYYERDEROG4S4/"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "À quelle peine la justice irakienne a-t-elle condamné huit djihadistes français le 26 novembre 2026 ?",
+    "choix": [
+     "Réclusion à perpétuité",
+     "Peine de mort",
+     "30 ans de prison",
+     "20 ans de prison"
+    ],
+    "bonne": 0,
+    "explication": "Huit Français ont été condamnés à la réclusion à perpétuité pour appartenance à l'État islamique. Ils font partie de 47 Français jugés en Irak depuis septembre.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Combien de ressortissants français la justice irakienne a-t-elle jugés depuis septembre 2026, après leur transfert de Syrie ?",
+    "choix": [
+     "27",
+     "37",
+     "47",
+     "57"
+    ],
+    "bonne": 2,
+    "explication": "47 Français transférés de Syrie ont été jugés en Irak depuis septembre. Paris a rapatrié des familles mais refuse de reprendre la plupart des hommes accusés.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-payan-17-octobre-marseille-commission",
+  "titre": "17 octobre à Marseille : Payan accuse la police d'avoir fait « relâcher » des casseurs",
+  "rubrique": "politique",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Auditionné le 25 novembre 2026 par la commission d'enquête de l'Assemblée, le maire de Marseille Benoît Payan dit que des casseurs interpellés ont été relâchés sur ordre. Il dénonce une « impréparation chronique et systémique ».",
+  "retenir": [
+   "Audition le mercredi 25 novembre 2026 devant la commission d'enquête de l'Assemblée sur le 17 octobre",
+   "Benoît Payan (maire divers gauche) : des ordres donnés pour relâcher des casseurs",
+   "7 000 heures d'enregistrements de caméras remises au procureur de Marseille (Le Monde)",
+   "« Impréparation chronique et systémique » (franceinfo)"
+  ],
+  "contexte": "Accusations du maire ; faits tirés des titres et résumés, à recouper.",
+  "acteurs": [
+   "Benoît Payan",
+   "Police municipale de Marseille"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Violences du 17 octobre à Marseille : Des ordres donnés pour « relâcher » les casseurs, accuse le maire Benoît",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/societe/4265809-20261126-violences-17-octobre-marseille-ordres-donnes-relacher-casseurs-accuse-maire-benoit-payan?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Le Monde : Violences du 17 octobre à Marseille : des ordres ont été donnés pour relâcher des casseurs, selon Benoît Payan",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/25/violences-du-17-octobre-a-marseille-des-ordres-ont-ete-donnes-pour-relacher-des-casseurs-selon-benoit-payan_6815175_3224.html"
+   },
+   {
+    "nom": "France 24 : Violences du 17 octobre à Marseille : des ordres donnés pour \"relâcher\" des casseurs, selon le maire",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/france/20261125-france-violences-17-octobre-marseille-ordres-donnes-relacher-casseurs-maire-benoit-payan"
+   },
+   {
+    "nom": "LCP : Violences du 17 octobre: à Marseille, des casseurs interpellés et aussitôt relâchés, selon le maire Benoît Pay",
+    "type": "tv",
+    "url": "https://lcp.fr/actualites/violences-du-17-octobre-a-marseille-des-casseurs-interpelles-et-aussitot-relaches-selon"
+   },
+   {
+    "nom": "franceinfo : Violences du 17 octobre à Marseille : Benoît Payan dénonce une \"impréparation chronique et systémique\"",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/violences-du-17-octobre-a-marseille-benoit-payan-denonce-une-impreparation-chronique-et-systemique_8301000.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien d'heures d'enregistrements de caméras Benoît Payan dit-il avoir remises au procureur de Marseille, lors des violences du 17 octobre ?",
+    "choix": [
+     "700 heures",
+     "2 000 heures",
+     "7 000 heures",
+     "12 000 heures"
+    ],
+    "bonne": 2,
+    "explication": "Benoît Payan affirme avoir remis 7 000 heures d'images au procureur de Marseille, où il a vu des ordres de relâcher des casseurs. Il a été entendu le 25 novembre 2026 par la commission d'enquête de l'Assemblée.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-aix-lycee-emile-zola-incendie-mineurs",
+  "titre": "Aix-en-Provence : deux mineurs déférés après l'incendie du lycée Émile-Zola",
+  "rubrique": "societe",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Deux jeunes de 17 ans, arrêtés le mardi 24 novembre 2026, sont déférés le 26 après l'incendie du lycée Émile-Zola à Aix-en-Provence. Le parquet requiert un contrôle judiciaire.",
+  "retenir": [
+   "Lycée Émile-Zola, Aix-en-Provence, incendié",
+   "Deux suspects de 17 ans interpellés mardi 24 novembre, déférés jeudi 26 novembre 2026",
+   "L'un est connu de la justice des mineurs, l'autre non",
+   "Parquet : placement sous contrôle judiciaire requis"
+  ],
+  "contexte": "Faits tirés des titres et résumés (BFMTV, franceinfo).",
+  "acteurs": [
+   "Lycée Émile-Zola",
+   "Parquet d'Aix-en-Provence"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : Les deux mineurs suspectés d'avoir incendié le lycée Émile-Zola à Aix-en-Provence déférés",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/marseille/les-deux-mineurs-suspectes-d-avoir-incendie-le-lycee-emile-zola-a-aix-en-provence-deferes_AN-202611260473.html"
+   },
+   {
+    "nom": "franceinfo : Incendie d'un lycée à Aix-en-Provence : les deux suspects de 17 ans déférés jeudi",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/incendie-d-un-lycee-a-aix-en-provence-les-deux-suspects-de-17-ans-deferes-jeudi_8301045.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel lycée d'Aix-en-Provence a été incendié, deux mineurs de 17 ans étant déférés le 26 novembre 2026 ?",
+    "choix": [
+     "Lycée Émile-Zola",
+     "Lycée Paul-Cézanne",
+     "Lycée Vauvenargues",
+     "Lycée Gaston-Berger"
+    ],
+    "bonne": 0,
+    "explication": "Les deux suspects de 17 ans visés par l'incendie du lycée Émile-Zola ont été déférés le 26 novembre. Le parquet a requis un contrôle judiciaire avant leur jugement.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-abkarian-theatre-du-soleil",
+  "titre": "Simon Abkarian prendra la tête du Théâtre du Soleil en 2027",
+  "rubrique": "culture",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Le comédien Simon Abkarian succédera en 2027 à Ariane Mnouchkine à la tête du Théâtre du Soleil, annonce-t-on le 26 novembre 2026.",
+  "retenir": [
+   "Annonce du jeudi 26 novembre 2026",
+   "Succède à Ariane Mnouchkine, qui prend sa retraite, en 2027",
+   "Abkarian a joué De Gaulle en 2026 dans « La Bataille de Gaulle » d'Antonin Baudry",
+   "Il a passé des années de jeunesse à la Cartoucherie"
+  ],
+  "contexte": "Faits tirés des titres et résumés (BFMTV, Le Monde).",
+  "acteurs": [
+   "Simon Abkarian",
+   "Ariane Mnouchkine",
+   "Antonin Baudry"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : Simon Abkarian prendra la tête du Théâtre du Soleil en 2027",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/culture/theatre/simon-abkarian-prendra-la-tete-du-theatre-du-soleil-en-2027_AD-202611260463.html"
+   },
+   {
+    "nom": "Le Monde : Simon Abkarian va succéder à Ariane Mnouchkine au Théâtre du Soleil",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/culture/article/2026/11/26/simon-abkarian-va-succeder-a-ariane-mnouchkine-au-theatre-du-soleil_6815485_3246.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Qui Simon Abkarian doit-il remplacer à la tête du Théâtre du Soleil en 2027 ?",
+    "choix": [
+     "Ariane Mnouchkine",
+     "Joël Pommerat",
+     "Wajdi Mouawad",
+     "Julie Deliquet"
+    ],
+    "bonne": 0,
+    "explication": "Ariane Mnouchkine, fondatrice du Théâtre du Soleil, prend sa retraite et confie les rênes à Simon Abkarian en 2027. Il a connu la Cartoucherie dans sa jeunesse.",
+    "difficulte": 1
+   },
+   {
+    "enonce": "Quel personnage historique Simon Abkarian a-t-il joué au cinéma en 2026 dans « La Bataille de Gaulle » ?",
+    "choix": [
+     "Charles de Gaulle",
+     "Georges Pompidou",
+     "Jean Moulin",
+     "François Mitterrand"
+    ],
+    "bonne": 0,
+    "explication": "Simon Abkarian incarne De Gaulle dans le film d'Antonin Baudry sorti en 2026. Ce rôle l'a fait remarquer avant sa nomination au Théâtre du Soleil.",
+    "difficulte": 2
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-idfm-travaux-2027-4-milliards",
+  "titre": "Transports franciliens : 4 milliards d'euros de travaux en 2027",
+  "rubrique": "societe",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Île-de-France Mobilités détaille les chantiers de 2027 : 4 milliards d'euros, RER A, B et C et plusieurs lignes de métro fermés par périodes. La station Havre-Caumartin ferme dès mars.",
+  "retenir": [
+   "Annonce des 25 et 26 novembre 2026 par Île-de-France Mobilités",
+   "Investissement de 4 milliards d'euros de travaux en 2027",
+   "RER A, B et C : périodes de fermeture ; plusieurs lignes de métro touchées",
+   "Station Havre-Caumartin fermée à partir de mars"
+  ],
+  "contexte": "Faits tirés des titres et résumés (BFMTV, TF1 Info).",
+  "acteurs": [
+   "Île-de-France Mobilités"
+  ],
+  "echeances": [
+   {
+    "date": "2027-03-01",
+    "label": "Fermeture de la station Havre-Caumartin (mars)"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "BFMTV : 4 milliards d'euros de travaux, des stations fermées pendant des mois et des lignes coupées plusieurs semaines",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/economie/entreprises/transports/4-milliards-d-euros-de-travaux-des-stations-fermees-pendant-des-mois-et-des-lignes-coupees-plusieurs-semaines-les-transports-franciliens-vont-etre-mis-a-rude-epreuve-en-2027_AV-202611260466.html"
+   },
+   {
+    "nom": "TF1 Info : RER, métro, station Havre-Caumartin... D'importants travaux prévus sur le réseau de transports franciliens en ",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/transports/rer-metro-station-havre-caumartin-d-importants-travaux-prevus-sur-le-reseau-de-transports-franciliens-en-2027-2478208.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle station de métro parisienne fermera à partir de mars 2027 pour d'importants travaux, selon Île-de-France Mobilités ?",
+    "choix": [
+     "Havre-Caumartin",
+     "Saint-Lazare",
+     "Opéra",
+     "Madeleine"
+    ],
+    "bonne": 0,
+    "explication": "La station Havre-Caumartin ferme dès mars dans le cadre de 4 milliards d'euros de travaux prévus en 2027. Les RER A, B et C connaîtront aussi des fermetures.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-uber-billets-de-train",
+  "titre": "Uber vend désormais des billets de train",
+  "rubrique": "economie",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Uber permet depuis le 26 novembre 2026 de réserver des billets de train en France et en Europe depuis son application, face à SNCF Connect.",
+  "retenir": [
+   "Nouveauté annoncée le 26 novembre 2026",
+   "Billets de train vers des destinations françaises et européennes",
+   "Concurrence directe pour SNCF Connect (France Inter)"
+  ],
+  "contexte": "Faits tirés des titres et résumés (France Inter, TF1 Info).",
+  "acteurs": [
+   "Uber",
+   "SNCF Connect"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "France Inter : Uber monte dans le train !",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/la-chronique-de-raphaelle-baillot/made-in-franche-raphaelle-baillot-du-jeudi-26-novembre-2026-4032130"
+   },
+   {
+    "nom": "TF1 Info : L'application Uber vous permet désormais de réserver des billets de train vers des destinations françaises et ",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/voyages/l-application-uber-vous-permet-desormais-de-reserver-des-billets-de-train-vers-des-destinations-francaises-et-europeennes-2478113.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel nouveau service Uber propose-t-il dans son application à partir du 26 novembre 2026 ?",
+    "choix": [
+     "La réservation de billets de train",
+     "La livraison de médicaments",
+     "La réservation de vols",
+     "La location de voitures sans chauffeur"
+    ],
+    "bonne": 0,
+    "explication": "Uber vend des billets de train vers des destinations françaises et européennes. Il vient concurrencer SNCF Connect sur le marché ferroviaire.",
+    "difficulte": 2
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-the-pitt-saison-3-date",
+  "titre": "« The Pitt » : la saison 3 diffusée à partir du 7 janvier 2027",
+  "rubrique": "culture",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "La série hospitalière « The Pitt » reviendra pour sa saison 3 à partir du 7 janvier 2027 sur HBO Max, annonce BFMTV le 26 novembre 2026.",
+  "retenir": [
+   "Date de diffusion : 7 janvier 2027",
+   "Plateforme : HBO Max",
+   "Saison 3 de la série hospitalière « The Pitt »"
+  ],
+  "contexte": "Une seule source (BFMTV) ; à recouper.",
+  "acteurs": [
+   "The Pitt",
+   "HBO Max"
+  ],
+  "echeances": [
+   {
+    "date": "2027-01-07",
+    "label": "Début de la saison 3 sur HBO Max"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "BFMTV : \"The Pitt\": on connaît enfin la date de diffusion de la saison 3",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/culture/cinema-series/the-pitt-on-connait-enfin-la-date-de-diffusion-de-la-saison-3_AN-202611260506.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "À partir de quelle date la saison 3 de « The Pitt » sera-t-elle diffusée sur HBO Max ?",
+    "choix": [
+     "7 janvier 2027",
+     "14 janvier 2027",
+     "21 janvier 2027",
+     "4 février 2027"
+    ],
+    "bonne": 0,
+    "explication": "La saison 3 de la série hospitalière arrive le 7 janvier 2027 sur HBO Max. L'annonce date du 26 novembre 2026.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-albums-dominique-a-louane",
+  "titre": "Albums : « Spirales » de Dominique A, « Watch Out » de Louane",
+  "rubrique": "culture",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Dominique A sort l'album « Spirales » et Louane « Watch Out » pour ses 30 ans, avec des sonorités plus rock, selon France Inter et TF1 Info le 26 novembre 2026.",
+  "retenir": [
+   "Dominique A : album « Spirales »",
+   "Louane : album « Watch Out », à l'occasion de ses 30 ans",
+   "Louane, révélée à 16 ans dans « The Voice »"
+  ],
+  "contexte": "Faits tirés des titres et résumés (France Inter, TF1 Info).",
+  "acteurs": [
+   "Dominique A",
+   "Louane"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "France Inter : Dominique A et son nouvel album \"Spirales\"",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/franche-culture/franche-culture-du-jeudi-26-novembre-2026-5833454"
+   },
+   {
+    "nom": "TF1 Info : Au pays de Candice : Louane, le nouvel album de la maturité",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/culture/videos/video-au-pays-de-candice-louane-le-nouvel-album-de-la-maturite-30606-2478277.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel est le titre du nouvel album de Dominique A, invité de France Inter le 26 novembre 2026 ?",
+    "choix": [
+     "Spirales",
+     "Vertiges",
+     "Orbites",
+     "Horizons"
+    ],
+    "bonne": 0,
+    "explication": "L'album de Dominique A s'intitule « Spirales ». Le chanteur était l'invité de « Franche Culture » sur France Inter.",
+    "difficulte": 3
+   },
+   {
+    "enonce": "À l'occasion de quel anniversaire Louane dévoile-t-elle son album « Watch Out » ?",
+    "choix": [
+     "Ses 30 ans",
+     "Ses 20 ans",
+     "Ses 25 ans",
+     "Ses 35 ans"
+    ],
+    "bonne": 0,
+    "explication": "Louane fête ses 30 ans avec l'album « Watch Out » aux sonorités plus rock. Elle avait été révélée à seize ans dans « The Voice ».",
+    "difficulte": 2
+   }
+  ]
+ },
+ {
+  "id": "2026-11-26-plan-grand-froid-nord",
+  "titre": "Plan grand froid activé dans le Nord",
+  "rubrique": "environnement",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Le premier niveau du plan Grand Froid est activé dans le Nord le 26 novembre 2026, avec des températures négatives sur la moitié nord du pays.",
+  "retenir": [
+   "Jeudi 26 novembre 2026 : premier niveau du plan Grand Froid dans le Nord",
+   "Températures négatives dans la moitié nord de la France",
+   "Associations vigilantes pour les personnes sans domicile"
+  ],
+  "contexte": "Faits tirés des titres et résumés (BFMTV, RMC).",
+  "acteurs": [
+   "Préfecture du Nord"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : Le plan grand froid activé dans le Nord",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/grand-littoral/replay-emissions/bonjour-littoral/video-le-plan-grand-froid-active-dans-le-nord_VN-202611260484.html"
+   },
+   {
+    "nom": "RMC : Le premier niveau du plan Grand Froid activé dans le Nord",
+    "type": "radio",
+    "url": "https://rmc.bfmtv.com/actualites/sciences-nature/meteo/le-premier-niveau-du-plan-grand-froid-active-dans-le-nord_AV-202611260219.html"
+   }
+  ],
+  "questions": []
+ },
+ {
+  "id": "2026-11-26-petrolier-med-emre-ibiza",
+  "titre": "Pétrolier chargé de diesel coulé au large d'Ibiza",
+  "rubrique": "environnement",
+  "date": "2026-11-26",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Le pétrolier « Med Emre », avec jusqu'à 7 000 tonnes de diesel, coule le 26 novembre 2026 au large d'Ibiza : un mort parmi les 17 membres d'équipage.",
+  "retenir": [
+   "Jeudi 26 novembre 2026, au large d'Ibiza (Baléares)",
+   "Navire « Med Emre », trajet Barcelone - Algésiras (Libération)",
+   "Jusqu'à 7 000 tonnes de diesel ; équipage de 17 membres secourus, un mort",
+   "L'Espagne active son plan d'urgence contre la pollution marine"
+  ],
+  "contexte": "Faits tirés des titres et résumés ; dégâts environnementaux en cours d'évaluation.",
+  "acteurs": [
+   "Med Emre",
+   "Espagne"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Espagne : un pétrolier chargé de diesel coule au large d’Ibiza, faisant un mort",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/international/article/2026/11/26/espagne-un-petrolier-charge-de-diesel-coule-au-large-d-ibiza-faisant-un-mort_6815505_3210.html"
+   },
+   {
+    "nom": "Libération : Un pétrolier fait naufrage au large d’Ibiza, l’Espagne active son plan d’urgence contre la pollution marine",
+    "type": "presse",
+    "url": "https://www.liberation.fr/international/europe/un-petrolier-fait-naufrage-au-large-dibiza-lespagne-active-son-plan-durgence-contre-la-pollution-marine-20261126_MYWTLSFZ3JCPTIOQV74DQQJCVA/"
+   },
+   {
+    "nom": "20 Minutes : Espagne : Un pétrolier chargé de 7.000 tonnes de diesel coule au large d’Ibiza, un mort parmi l’équipage",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/monde/espagne/4265863-20261126-espagne-navire-charge-7-000-tonnes-diesel-coule-large-ibiza-mort-parmi-equipage?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Europe 1 : Espagne : un navire chargé de diesel coule au large d'Ibiza, un mort parmi l'équipage",
+    "type": "radio",
+    "url": "https://www.europe1.fr/international/espagne-un-navire-charge-de-diesel-coule-au-large-dibiza-un-mort-parmi-lequipage-1245238?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Au large de quelle île des Baléares un pétrolier chargé de diesel a-t-il coulé le 26 novembre 2026 ?",
+    "choix": [
+     "Ibiza",
+     "Majorque",
+     "Minorque",
+     "Formentera"
+    ],
+    "bonne": 0,
+    "explication": "Le « Med Emre » a coulé au large d'Ibiza et un marin est mort. L'Espagne a activé son plan d'urgence contre la pollution marine.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quelle quantité maximale de diesel transportait le pétrolier coulé au large d'Ibiza le 26 novembre 2026 ?",
+    "choix": [
+     "3 000 tonnes",
+     "5 000 tonnes",
+     "7 000 tonnes",
+     "10 000 tonnes"
+    ],
+    "bonne": 2,
+    "explication": "Le navire transportait jusqu'à 7 000 tonnes de diesel. Les dommages environnementaux sont en cours d'évaluation par les autorités espagnoles.",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
   "id": "2026-11-26-rsf-cnews-arcom-suspension",
   "titre": "RSF demande à l'Arcom de suspendre CNews un mois",
   "rubrique": "medias",
@@ -462,6 +1284,53 @@
     ],
     "bonne": 1,
     "explication": "L'ANSM a recensé huit cas d'effets indésirables entre 2024 et 2026, dont une hospitalisation. Il s'agit surtout d'erreurs de dosage (antibiotiques, paracétamol).",
+    "difficulte": 3
+   }
+  ]
+ },
+ {
+  "id": "2026-11-25-grece-greve-vie-chere",
+  "titre": "Grèce : grève générale contre la vie chère",
+  "rubrique": "international",
+  "date": "2026-11-25",
+  "ajoute": "2026-11-26",
+  "croise": false,
+  "resume": "Environ 14 000 travailleurs manifestent en Grèce le 25 novembre 2026, lors d'une grève générale de 24 heures, pour de meilleurs salaires. C'est la troisième mobilisation en un mois.",
+  "retenir": [
+   "Mercredi 25 novembre 2026 : grève générale de 24 heures",
+   "Environ 14 000 manifestants (RFI)",
+   "Troisième mobilisation contre la vie chère en un mois (Libération)",
+   "Le gouvernement met en avant la maîtrise de l'endettement"
+  ],
+  "contexte": "Faits tirés des titres et résumés (Libération, RFI).",
+  "acteurs": [
+   "Syndicats grecs",
+   "Gouvernement grec"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Libération : En Grèce, une troisième mobilisation contre la vie chère en un mois : «Nous ne pouvons plus vivre avec nos sal",
+    "type": "presse",
+    "url": "https://www.liberation.fr/international/europe/en-grece-une-troisieme-mobilisation-contre-la-vie-chere-en-un-mois-nous-ne-pouvons-plus-vivre-avec-nos-salaires-de-misere-20261126_7LVEVQ5GKVDRJFVRVPC2U2WOXU/"
+   },
+   {
+    "nom": "RFI : Grèce: 14 000 manifestants dans la rue contre la vie chère et les faibles salaires",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/europe/20261125-gr%C3%A8ce-14-000-manifestants-dans-la-rue-contre-la-vie-ch%C3%A8re-et-les-faibles-salaires"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien de manifestants la grève générale grecque du 25 novembre 2026 a-t-elle mobilisés, selon RFI ?",
+    "choix": [
+     "4 000",
+     "14 000",
+     "40 000",
+     "140 000"
+    ],
+    "bonne": 1,
+    "explication": "Environ 14 000 travailleurs du privé et du public ont manifesté contre la vie chère. C'est la troisième mobilisation du mois en Grèce.",
     "difficulte": 3
    }
   ]
@@ -2830,15 +3699,15 @@
     "difficulte": 3
    },
    {
-    "enonce": "Quel préfet a été convoqué le 20 novembre 2026 par Laurent Nuñez après des soupçons de fuites vers le RN ?",
+    "enonce": "Dans quel département Pierre Ory était-il préfet avant de remplacer Hugues Moutouh, nommé en Conseil des ministres le 25 novembre 2026 ?",
     "choix": [
-     "Hugues Moutouh",
-     "Didier Lallement",
-     "Michel Delpuech",
-     "Pierre Dartout"
+     "Yvelines",
+     "Seine-et-Marne",
+     "Essonne",
+     "Val-d'Oise"
     ],
-    "bonne": 0,
-    "explication": "Hugues Moutouh, préfet du Loiret, est au cœur des soupçons de fuites vers le RN. Il a ensuite été démis en Conseil des ministres le 25 novembre et dénonce « une opération » contre lui.",
+    "bonne": 1,
+    "explication": "Pierre Ory, préfet de Seine-et-Marne, remplace Hugues Moutouh, démis le 25 novembre 2026. Ce dernier, préfet du Loiret, était soupçonné de fuites vers le RN.",
     "difficulte": 3
    }
   ],
