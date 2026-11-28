@@ -1,10 +1,585 @@
 [
  {
-  "titre": "Thanksgiving : tempête sur la côte est, parade de Macy's décalée",
-  "rubrique": "environnement",
-  "date": "2026-11-27",
-  "ajoute": "2026-11-27",
+  "titre": "Ukraine : Zelensky compare l'amitié Trump-Poutine à une amitié avec Hitler",
+  "rubrique": "international",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-28",
   "croise": false,
+  "resume": "Sur la BBC, Zelensky critique Trump qui qualifie Poutine d'« ami ». Kiev étend ses frappes aux navires russes jusqu'à Benghazi, en Libye.",
+  "retenir": [
+   "27 novembre 2026 : Zelensky, sur la BBC, juge qu'être l'ami de Poutine revient à l'être d'Hitler",
+   "Poutine exhibe un nouveau sous-marin nucléaire",
+   "Frappes ukrainiennes sur des navires russes en Baltique, en Méditerranée et à Benghazi (Libye)",
+   "Kiev admet ne pas avoir prévenu ses partenaires européens avant la frappe en Libye"
+  ],
+  "contexte": "Pas de source radio vue sur ce sujet : croisement incomplet.",
+  "acteurs": [
+   "Volodymyr Zelensky",
+   "Donald Trump",
+   "Vladimir Poutine"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Guerre en Ukraine : Poutine exhibe un nouveau sous-marin nucléaire, Zelensky le compare à Hitler",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/monde/ukraine/4266413-20261127-guerre-ukraine-poutine-exhibe-nouveau-sous-marin-nucleaire-zelensky-compare-hitler?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "France 24 : Trump se considère l'\"ami\" de Poutine ? Pour Zelensky, cela revient à se dire ami d'Hitler",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/europe/20261127-trump-se-consid%C3%A8re-ami-poutine-pour-zelensky-cela-revient-se-dire-ami-hitler"
+   },
+   {
+    "nom": "Le Monde : Guerre en Ukraine : Kiev assume l’extension du conflit sur de nouveaux fronts",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/international/article/2026/11/28/guerre-en-ukraine-kiev-assume-l-extension-du-conflit-sur-de-nouveaux-fronts_6816064_3210.html"
+   },
+   {
+    "nom": "Ouest-France : Guerre en Ukraine : Volodymyr Zelensky critique Donald Trump, l’Ukraine envoie des drones sur Moscou… Le po…",
+    "type": "presse",
+    "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-volodymyr-zelensky-critique-donald-trump-un-laser-ukrainien-abat-un-drone-a-reaction-russe-le-point-sur-la-nuit-e540849e-eabf-11f1-bb2d-c71dc7920c2a"
+   },
+   {
+    "nom": "franceinfo : Volodymyr Zelensky compare la relation de Donald Trump avec Vladimir Poutine à une amitié avec Hitler penda…",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-compare-la-relation-de-donald-trump-avec-vladimir-poutine-a-une-amitie-avec-hitler-pendant-la-seconde-guerre-mondiale_8303130.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Sur quel média Volodymyr Zelensky a-t-il comparé l'amitié Trump-Poutine à celle d'Hitler, le 27 novembre 2026 ?",
+    "choix": [
+     "CNN",
+     "Fox News",
+     "La BBC",
+     "Al Jazeera"
+    ],
+    "bonne": 2,
+    "explication": "Dans un entretien à la BBC, Zelensky a jugé que Poutine, « agresseur et tueur », ne pouvait être un ami. Trump l'avait qualifié d'« ami ».",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Dans quel port libyen l'Ukraine a-t-elle frappé des navires russes fin novembre 2026 ?",
+    "choix": [
+     "Tripoli",
+     "Syrte",
+     "Benghazi",
+     "Tobrouk"
+    ],
+    "bonne": 2,
+    "explication": "Kiev a frappé des navires russes dans le port de Benghazi, en Libye. L'Ukraine a reconnu ne pas avoir averti ses partenaires européens avant cette frappe.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-28-zelensky-trump-ami-poutine-hitler-bbc"
+ },
+ {
+  "titre": "Présidentielle : Lisnard 3e dans les sondages, Le Pen lance sa campagne jeunes",
+  "rubrique": "politique",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Au lendemain du salon des maires, David Lisnard s'installe 3e dans les sondages ; Marine Le Pen lance le 28 novembre sa campagne auprès des moins de 35 ans.",
+  "retenir": [
+   "David Lisnard : 3e place des intentions de vote cette semaine (France 24)",
+   "Marine Le Pen lance samedi 28 novembre la campagne des jeunes du RN, ciblant les moins de 35 ans",
+   "François-Xavier Bellamy : « pas de divergence de ligne » entre Bruno Retailleau et David Lisnard",
+   "Teddy Riner à Béziers ; Ségolène Royal n'exclut pas un ralliement à Mélenchon"
+  ],
+  "contexte": "Les sondages varient selon les instituts : la 3e place de Lisnard est donnée par certains seulement.",
+  "acteurs": [
+   "David Lisnard",
+   "Marine Le Pen",
+   "Bruno Retailleau",
+   "François-Xavier Bellamy",
+   "Jean-Luc Mélenchon"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : Présidentielle: François-Xavier Bellamy assure qu'\"il n'y a pas de divergence de ligne\" entre Bruno Retaill…",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html"
+   },
+   {
+    "nom": "Europe 1 : Présidentielle 2027 : convaincre les moins de 35 ans, un des enjeux de la campagne de Marine Le Pen",
+    "type": "radio",
+    "url": "https://www.europe1.fr/politique/presidentielle-2027-convaincre-les-moins-de-35-ans-un-des-enjeux-de-la-campagne-de-marine-le-pen-1246324?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "France 24 : Présidentielle 2027: la dynamique David Lisnard à la loupe",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/vid%C3%A9o/20261127-pr%C3%A9sidentielle-2027-la-dynamique-david-lisnard-%C3%A0-la-loupe"
+   },
+   {
+    "nom": "LCP : \"Poursuivre l’esprit des purges\": Danielle Simonnet dénonce le refus de LFI de rencontrer ses anciens députés",
+    "type": "tv",
+    "url": "https://lcp.fr/actualites/poursuivre-l-esprit-des-purges-danielle-simonnet-denonce-le-refus-de-lfi-de-rencontrer"
+   },
+   {
+    "nom": "Le Figaro : Mathieu Bock-Côté : « Le troisième homme, de Jean-Pierre Chevènement à David Lisnard »",
+    "type": "presse",
+    "url": "https://www.lefigaro.fr/vox/politique/mathieu-bock-cote-le-troisieme-homme-de-jean-pierre-chevenement-a-david-lisnard-20261127"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle tranche d'âge Marine Le Pen cible-t-elle avec la campagne des jeunes qu'elle lance le 28 novembre 2026 ?",
+    "choix": [
+     "Les moins de 25 ans",
+     "Les moins de 30 ans",
+     "Les moins de 35 ans",
+     "Les moins de 40 ans"
+    ],
+    "bonne": 2,
+    "explication": "Marine Le Pen veut convaincre les moins de 35 ans, dont une partie vote aussi Mélenchon. Elle lance cette campagne samedi 28 novembre 2026 pour le RN.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quel candidat s'est hissé à la 3e place des intentions de vote dans la semaine du 23 novembre 2026 ?",
+    "choix": [
+     "Édouard Philippe",
+     "Bruno Retailleau",
+     "Éric Zemmour",
+     "David Lisnard"
+    ],
+    "bonne": 3,
+    "explication": "David Lisnard, candidat de Nouvelle Énergie, s'est hissé directement à la 3e place des intentions de vote. Un politologue y voit surtout un « effet de nouveauté » (France 24).",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-28-presidentielle-lisnard-retailleau-le-pen-jeunes"
+ },
+ {
+  "titre": "OpenAI et Apple s'accusent mutuellement de vol de secrets industriels",
+  "rubrique": "economie",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-28",
+  "croise": false,
+  "resume": "Apple accuse OpenAI de vol de secrets industriels ; OpenAI contre-attaque en justice et reproche à Apple des pressions sur ses fournisseurs.",
+  "retenir": [
+   "Procédure devant la justice américaine, fin novembre 2026",
+   "Accusation d'Apple : vol de secrets industriels par OpenAI",
+   "Riposte d'OpenAI : pressions d'Apple sur ses fournisseurs",
+   "Rivalité sur le marché des objets connectés"
+  ],
+  "contexte": "Deux médias de presse seulement ; pas de source tv ni radio vue.",
+  "acteurs": [
+   "OpenAI",
+   "Apple"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Accusée par Apple de vol de secrets industriels, OpenAI contre-attaque en justice",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/high-tech/4266439-20261128-accusee-apple-vol-secrets-industriels-openai-contre-attaque-justice?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Le Monde : OpenAI accuse Apple de vol de secrets et de pressions sur ses fournisseurs",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/economie/article/2026/11/27/openai-accuse-apple-de-vol-de-secrets-et-de-pressions-sur-ses-fournisseurs_6815936_3234.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle entreprise accuse OpenAI de vol de secrets industriels devant la justice américaine, fin novembre 2026 ?",
+    "choix": [
+     "Apple",
+     "Google",
+     "Microsoft",
+     "Meta"
+    ],
+    "bonne": 0,
+    "explication": "Apple accuse OpenAI de vol de secrets industriels, et OpenAI contre-attaque en justice. Les deux anciens partenaires deviennent rivaux, notamment sur les objets connectés.",
+    "difficulte": 1
+   }
+  ],
+  "id": "2026-11-28-openai-apple-secrets-industriels"
+ },
+ {
+  "titre": "Mobilisation du 28 novembre : les grenades assourdissantes suspendues partout",
+  "rubrique": "societe",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "À la veille de la mobilisation du 28 novembre, le ministère de l'Intérieur étend à toutes les interventions la suspension des grenades assourdissantes.",
+  "retenir": [
+   "Suspension étendue à toutes les interventions dès le 27 novembre 2026",
+   "Décidée d'abord après qu'un lycéen a eu la main arrachée",
+   "Syndicat Alliance : « un mauvais message pour les policiers » (Stanislas Gaudon)",
+   "Laurent Nuñez : les marchés de Noël sont « une vulnérabilité supplémentaire »",
+   "Nouvelle mobilisation samedi 28 novembre 2026"
+  ],
+  "contexte": "Un syndicat évoque des « problèmes techniques », un autre un danger : motifs à recouper.",
+  "acteurs": [
+   "Laurent Nuñez",
+   "Stanislas Gaudon",
+   "Alliance",
+   "Un1té"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : « L’administration marche sur la tête »… Comment les policiers encaissent la suspension des grenades assour…",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/faits_divers/4266369-20261127-administration-marche-tete-comment-policiers-encaissent-suspension-grenades-assourdissantes?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "BFMTV : Suspension des cartouches assourdissantes: un photojournaliste blessé témoigne: \"J’ai immédiatement eu deux…",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/police-justice/video-suspension-des-cartouches-assourdissantes-un-photojournaliste-blesse-temoigne-j-ai-immediatement-eu-deux-douleurs-dans-la-jambe-gauche_VN-202611280136.html"
+   },
+   {
+    "nom": "Europe 1 : Suspension des grenades assourdissantes : «Un mauvais message pour les policiers», dénonce Stanislas Gaudon",
+    "type": "radio",
+    "url": "https://www.europe1.fr/societe/suspension-des-grenades-assourdissantes-un-mauvais-message-pour-les-policiers-denonce-stanislas-gaudon-1246144?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "TF1 Info : \"Elles peuvent aussi entraîner la mort\" : l'utilisation des grenades assourdissantes suspendue",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/justice-faits-divers/reportage-video-peuvent-aussi-entrainer-la-mort-l-utilisation-des-grenades-assourdissantes-suspendue-2478625.html"
+   },
+   {
+    "nom": "Sud Radio : Strasbourg : ouverture du marché de Noël, les commerçants optimistes",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/societe/strasbourg-ouverture-du-marche-de-noel-les-commercants-optimistes"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle mesure le ministère de l'Intérieur a-t-il étendue à toutes les interventions avant la mobilisation du 28 novembre 2026 ?",
+    "choix": [
+     "L'interdiction des LBD",
+     "La suspension des grenades assourdissantes",
+     "Le retrait des gaz lacrymogènes",
+     "L'interdiction des drones de surveillance"
+    ],
+    "bonne": 1,
+    "explication": "Le ministère a étendu à toutes les interventions la suspension des grenades assourdissantes, d'abord décidée après un lycéen blessé à la main. Les syndicats de police sont divisés.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quel syndicat policier a dénoncé « un mauvais message » après la suspension des grenades, le 27 novembre 2026 ?",
+    "choix": [
+     "Unsa-Police",
+     "Alliance",
+     "Un1té SGP Police",
+     "Synergie-Officiers"
+    ],
+    "bonne": 1,
+    "explication": "Stanislas Gaudon, responsable d'Alliance, juge la suspension « un mauvais message pour les policiers ». Un1té évoque de son côté des problèmes techniques.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-28-grenades-assourdissantes-suspension-mobilisation"
+ },
+ {
+  "titre": "Gaza : deux employés de MSF tués par une frappe israélienne",
+  "rubrique": "international",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-28",
+  "croise": false,
+  "resume": "Une frappe israélienne tue le 27 novembre deux gardiens de Médecins sans frontières à Gaza ; l'armée les accuse d'être des membres du Hamas.",
+  "retenir": [
+   "Frappe israélienne le vendredi 27 novembre 2026 sur une clinique de MSF",
+   "Deux employés (gardiens) de Médecins sans frontières tués",
+   "L'armée israélienne les qualifie de « terroristes » du Hamas",
+   "MSF se dit « bouleversée et révoltée »"
+  ],
+  "contexte": "L'accusation d'appartenance au Hamas vient de l'armée israélienne seule.",
+  "acteurs": [
+   "Médecins sans frontières",
+   "Armée israélienne",
+   "Hamas"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Gaza : l’armée israélienne tue deux employés de Médecins sans frontières, qu’elle qualifie de « terroristes »",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/international/article/2026/11/28/gaza-l-armee-israelienne-tue-deux-employes-de-medecins-sans-frontieres-qu-elle-qualifie-de-terroristes_6816022_3210.html"
+   },
+   {
+    "nom": "RFI : Deux employés de Médecins sans frontières tués par une frappe israélienne à Gaza",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/moyen-orient/20261128-deux-employ%C3%A9s-de-m%C3%A9decins-sans-fronti%C3%A8res-tu%C3%A9s-par-une-frappe-isra%C3%A9lienne-%C3%A0-gaza"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle ONG a perdu deux employés dans une frappe israélienne à Gaza le 27 novembre 2026 ?",
+    "choix": [
+     "Médecins du Monde",
+     "Médecins sans frontières",
+     "Action contre la Faim",
+     "Handicap International"
+    ],
+    "bonne": 1,
+    "explication": "Deux gardiens de Médecins sans frontières ont été tués dans une clinique de l'ONG à Gaza. L'armée israélienne affirme qu'ils appartenaient au Hamas, ce que MSF conteste.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-28-gaza-msf-deux-employes-tues"
+ },
+ {
+  "titre": "XV de France : victoire 45-17 contre l'Argentine, finale contre l'Afrique du Sud dimanche",
+  "rubrique": "sport",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-22",
+  "croise": true,
+  "resume": "Après le 45-17 face à l'Argentine le 21 novembre, le XV de France affronte l'Afrique du Sud en finale du Championnat des nations, dimanche 29 novembre à Twickenham.",
+  "retenir": [
+   "France - Argentine : 45-17, le 21 novembre au Stade de France, avec bonus offensif",
+   "Finale : France - Afrique du Sud, dimanche 29 novembre 2026 à Twickenham, sur TF1",
+   "Compo : Thomas Ramos à l'arrière, première ligne 100 % bordelaise, charnière Dupont-Jalibert",
+   "Le sélectionneur sud-africain Rassie Erasmus sera absent de la finale (Europe 1)"
+  ],
+  "contexte": "Le Championnat des nations est une compétition de rugby lancée à l'été 2026.",
+  "acteurs": [
+   "XV de France",
+   "Fabien Galthié",
+   "Antoine Dupont",
+   "Thomas Ramos",
+   "Rassie Erasmus",
+   "Afrique du Sud"
+  ],
+  "echeances": [
+   {
+    "date": "2026-11-29",
+    "label": "Finale du Championnat des nations à Twickenham"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "20 Minutes : France - Argentine : Les Bleus qualifiés pour la finale où ils retrouveront l'Afrique du Sud, miam miam... Revivez le match avec nous",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/sport/rugby/4264159-20261121-direct-france-argentine-bleus-galerent-devant-encore-deux-essais-avoir-bonus-suivez-match"
+   },
+   {
+    "nom": "Europe 1 : Championnat des nations : pourquoi le sélectionneur de l'Afrique du Sud manquera à l'appel pour la finale ?",
+    "type": "radio",
+    "url": "https://www.europe1.fr/sport/championnat-des-nations-pourquoi-le-selectionneur-de-lafrique-du-sud-manquera-a-lappel-pour-la-finale-1246162?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "TF1 Info : France-Afrique du Sud dimanche sur TF1 : découvrez la composition des Bleus pour la finale du Championnat d…",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/sport/france-afrique-du-sud-dimanche-sur-tf1-decouvrez-la-composition-des-bleus-pour-la-finale-du-championnat-des-nations-2478547.html"
+   }
+  ],
+  "questions": [
+   {
+    "bonne": 0,
+    "choix": [
+     "45-17",
+     "30-20",
+     "24-21",
+     "52-10"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel est le score de France - Argentine le 21 novembre ?",
+    "explication": "Le XV de France s'impose 45-17 au Stade de France, avec le bonus offensif. Il se qualifie pour la finale contre l'Afrique du Sud, à Twickenham."
+   },
+   {
+    "enonce": "Dans quel stade se jouera la finale du Championnat des nations France - Afrique du Sud, le 29 novembre 2026 ?",
+    "choix": [
+     "Murrayfield",
+     "Twickenham",
+     "Aviva Stadium",
+     "Millennium Stadium"
+    ],
+    "bonne": 1,
+    "explication": "La finale se joue à Twickenham, près de Londres, dimanche 29 novembre 2026. Elle est diffusée sur TF1, avec Thomas Ramos de retour à l'arrière.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-21-xv-de-france-argentine-finale"
+ },
+ {
+  "titre": "Fuites vers le RN : Ambroise de Rancourt perquisitionné, le préfet Moutouh démis",
+  "rubrique": "politique",
+  "date": "2026-11-28",
+  "ajoute": "2026-11-20",
+  "croise": true,
+  "resume": "Dans l'enquête sur des fuites du ministère de l'Intérieur vers le RN, le préfet Hugues Moutouh est démis le 25 novembre ; Ambroise de Rancourt, cadre du RN, aurait été perquisitionné.",
+  "retenir": [
+   "Hugues Moutouh, préfet du Loiret, démis en Conseil des ministres le mercredi 25 novembre 2026",
+   "Remplaçant : Pierre Ory, préfet de Seine-et-Marne",
+   "Ambroise de Rancourt, 39 ans, responsable du programme présidentiel de Marine Le Pen, aurait reçu les fuites (Le Monde, 27 novembre)",
+   "Perquisition de l'IGPN au siège du RN le 9 novembre",
+   "Darmanin saisit l'inspection générale de la justice sur la présence d'un procureur"
+  ],
+  "contexte": "BFMTV date la perquisition du 9 novembre, d'autres médias parlent d'une annonce le 19 : à recouper.",
+  "acteurs": [
+   "Ambroise de Rancourt",
+   "Hugues Moutouh",
+   "Pierre Ory",
+   "Marine Le Pen",
+   "Gérald Darmanin"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : Fuite d’informations confidentielles vers le RN : Ambroise de Rancourt, le responsable du programme préside…",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/societe/article/2026/11/27/ambroise-de-rancourt-le-responsable-du-programme-presidentiel-de-marine-le-pen-soupconne-d-etre-le-principal-destinataire-de-la-fuite-de-documents-de-beauvau-vers-le-rn_6815924_3224.html"
+   },
+   {
+    "nom": "20 Minutes : Fuites présumées vers le RN : Le bureau et le domicile de l’ex-directeur de cabinet de Marine Le Pen perqui…",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/politique/4266426-20261128-fuites-presumees-vers-rn-bureau-domicile-ex-directeur-cabinet-marine-pen-perquisitionnes?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Libération : Fuite d’infos du ministère de l’Intérieur vers le RN : Ambroise de Rancourt, responsable du programme du pa…",
+    "type": "presse",
+    "url": "https://www.liberation.fr/politique/fuite-dinfos-du-ministere-de-linterieur-vers-le-rn-ambroise-de-rancourt-responsable-du-programme-du-parti-soupconne-detre-le-principal-destinataire-20261127_EUCHKEJEYNGQFF4CHZADDU7HCQ/"
+   },
+   {
+    "nom": "BFMTV : Soupçons de fuite vers le RN: le bureau et le domicile de l'ex-directeur de Marine Le Pen ont été perquisit…",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-soupcons-de-fuite-vers-le-rn-le-bureau-et-le-domicile-de-l-ex-directeur-de-marine-le-pen-ont-ete-perquisitionnes_VN-202611270949.html"
+   },
+   {
+    "nom": "RFI : Soupçons de fuites du ministère de l'Intérieur au profit du RN: le préfet Hugues Moutouh démis de ses fonction",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/france/20261125-soup%C3%A7ons-de-fuites-au-profit-du-rn-en-france-un-pr%C3%A9fet-d%C3%A9mis-de-ses-fonctions"
+   }
+  ],
+  "questions": [
+   {
+    "bonne": 0,
+    "choix": [
+     "Hugues Moutouh",
+     "Didier Lallement",
+     "Pierre Dartout",
+     "Michel Delpuech"
+    ],
+    "difficulte": 3,
+    "enonce": "Quel haut fonctionnaire a été remplacé par Pierre Ory en Conseil des ministres le 25 novembre 2026 ?",
+    "explication": "Hugues Moutouh, préfet du Loiret, a été démis en Conseil des ministres et remplacé par Pierre Ory, préfet de Seine-et-Marne. Il est au cœur de soupçons de fuites du ministère de l'Intérieur vers le RN."
+   },
+   {
+    "enonce": "Quel cadre du RN, responsable du programme de Marine Le Pen, est soupçonné d'être le principal destinataire des fuites, selon Le Monde du 27 novembre 2026 ?",
+    "choix": [
+     "Sébastien Chenu",
+     "Ambroise de Rancourt",
+     "Jean-Philippe Tanguy",
+     "Philippe Olivier"
+    ],
+    "bonne": 1,
+    "explication": "Selon Le Monde, Ambroise de Rancourt, 39 ans, serait le principal destinataire de la fuite de documents de Beauvau. L'IGPN a perquisitionné son bureau au siège du RN.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-19-rn-perquisition-fuites-prefet"
+ },
+ {
+  "titre": "Attentat de Trappes : l'hommage national aura lieu le 4 décembre aux Invalides",
+  "rubrique": "societe",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "L'hommage national aux victimes de l'attentat raciste de Trappes et La Verrière aura lieu le 4 décembre aux Invalides, présidé par Sébastien Lecornu.",
+  "retenir": [
+   "Hommage national le vendredi 4 décembre 2026, aux Invalides à Paris",
+   "Cérémonie présidée par le Premier ministre Sébastien Lecornu",
+   "Attentat raciste du 23 octobre 2026 à Trappes et La Verrière (Yvelines)",
+   "Victime : Pengo Bossio Wangi ; auteur : Kévin Tessier",
+   "27/11 : Mathilde Panot (LFI) saisit la justice après des menaces de mort reçues par quatre élus"
+  ],
+  "contexte": "L'hommage a lieu plus d'un mois après l'attentat.",
+  "acteurs": [
+   "Sébastien Lecornu",
+   "Pengo Bossio Wangi",
+   "Kévin Tessier",
+   "Mathilde Panot"
+  ],
+  "echeances": [
+   {
+    "date": "2026-12-04",
+    "label": "Hommage national aux Invalides"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "20 Minutes : Attentat raciste de Trappes : L’hommage national aux victimes aura lieu le 4 décembre",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/societe/4266391-20261127-attentat-raciste-trappes-hommage-national-victimes-lieu-4-decembre?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "France Inter : Trappes : Un hommage national aux victimes de l'attentat aura lieu le 4 décembre à Paris",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/attentat-de-trappes-un-hommage-national-aura-lieu-le-4-decembre-4867619"
+   },
+   {
+    "nom": "franceinfo : L'hommage national aux victimes de l'attentat raciste de Trappes et de La Verrière aura lieu le 4 décembre …",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/l-hommage-national-aux-victimes-de-l-attentat-raciste-de-trappes-et-de-la-verriere-aura-lieu-le-4-decembre-aux-invalides_8303391.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "Libération : LFI : Mathilde Panot saisit la justice après des menaces de mort envoyées à des députés avec une adresse au…",
+    "type": "presse",
+    "url": "https://www.liberation.fr/politique/lfi-mathilde-panot-saisit-la-justice-apres-des-menaces-de-mort-envoyees-a-des-deputes-avec-une-adresse-au-nom-de-lassaillant-de-trappes-20261127_OUKDM3ITY5BRDHIYR77OUH4KXI/"
+   },
+   {
+    "nom": "LCP : Attentat de Trappes: son nom découvert sur une liste, Sandrine Rousseau accuse le gouvernement de \"sous est…",
+    "type": "tv",
+    "url": "https://lcp.fr/actualites/attentat-de-trappes-son-nom-decouvert-sur-une-liste-sandrine-rousseau-accuse-le"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Dans quel lieu parisien se tiendra l'hommage national aux victimes de l'attentat de Trappes, le 4 décembre 2026 ?",
+    "choix": [
+     "Au Panthéon",
+     "À l'Hôtel de Ville de Paris",
+     "Aux Invalides",
+     "Au Palais de l'Élysée"
+    ],
+    "bonne": 2,
+    "explication": "L'hommage national aura lieu aux Invalides le 4 décembre 2026, plus d'un mois après l'attentat raciste du 23 octobre. Il concerne les victimes de Trappes et de La Verrière.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Qui présidera l'hommage national aux victimes de l'attentat de Trappes, le 4 décembre 2026 ?",
+    "choix": [
+     "Emmanuel Macron",
+     "Laurent Nuñez",
+     "Gérard Larcher",
+     "Sébastien Lecornu"
+    ],
+    "bonne": 3,
+    "explication": "Le Premier ministre Sébastien Lecornu présidera la cérémonie du 4 décembre aux Invalides, a indiqué son entourage. L'attentat du 23 octobre a coûté la vie à Pengo Bossio Wangi.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-27-trappes-hommage-national-4-decembre"
+ },
+ {
+  "acteurs": [
+   "Macy's",
+   "New York"
+  ],
+  "ajoute": "2026-11-27",
+  "contexte": "Bilan provisoire : le nombre de foyers privés d'électricité évolue.",
+  "croise": false,
+  "date": "2026-11-27",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Le marathon de New York",
+     "Le défilé de Macy's",
+     "L'illumination du sapin du Rockefeller Center",
+     "La parade de la Cinquième Avenue"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel événement new-yorkais n'a pas eu lieu le jour de Thanksgiving 2026 pour la première fois en 100 ans, à cause des intempéries ?",
+    "explication": "Le défilé de Macy's a été décalé à samedi pour des raisons de sécurité, une première en 100 ans d'histoire. L'état d'urgence a été déclaré à New York."
+   }
+  ],
   "resume": "Pluie, neige et vents frappent la côte est des États-Unis le jour de Thanksgiving, jeudi 26 novembre 2026. Pour la première fois en 100 ans, la parade de Macy's est décalée à samedi.",
   "retenir": [
    "Plus de 900 000 foyers sans électricité (20 Minutes, chiffre provisoire)",
@@ -12,12 +587,7 @@
    "Parade de Macy's à New York décalée à samedi, une première en 100 ans",
    "État d'urgence déclaré à New York"
   ],
-  "contexte": "Bilan provisoire : le nombre de foyers privés d'électricité évolue.",
-  "acteurs": [
-   "Macy's",
-   "New York"
-  ],
-  "echeances": [],
+  "rubrique": "environnement",
   "sources": [
    {
     "nom": "20 Minutes : Etats-Unis : Tempête, déluge, neige… L’enfer de Thanksgiving pour des millions d’Américains",
@@ -30,28 +600,159 @@
     "url": "https://www.france24.com/fr/vid%C3%A9o/20261127-des-intemp%C3%A9ries-frappent-les-%C3%A9tats-unis-pas-de-parade-pour-thanksgiving-%C3%A0-new-york"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel événement new-yorkais n'a pas eu lieu le jour de Thanksgiving 2026 pour la première fois en 100 ans, à cause des intempéries ?",
-    "choix": [
-     "Le marathon de New York",
-     "Le défilé de Macy's",
-     "L'illumination du sapin du Rockefeller Center",
-     "La parade de la Cinquième Avenue"
-    ],
-    "bonne": 1,
-    "explication": "Le défilé de Macy's a été décalé à samedi pour des raisons de sécurité, une première en 100 ans d'histoire. L'état d'urgence a été déclaré à New York.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Thanksgiving : tempête sur la côte est, parade de Macy's décalée",
   "id": "2026-11-27-thanksgiving-tempete-parade-macys-reportee"
  },
  {
-  "titre": "« Quasimodo, l'âme de Paris » sur Netflix avec Vincent Cassel",
-  "rubrique": "culture",
+  "titre": "Kenya : le gourou Paul Mackenzie reconnu coupable de 123 homicides",
+  "rubrique": "international",
   "date": "2026-11-27",
-  "ajoute": "2026-11-27",
+  "ajoute": "2026-11-28",
   "croise": false,
+  "resume": "Au Kenya, le pasteur Paul Mackenzie, dont la secte affamait ses fidèles, est reconnu coupable de 123 homicides volontaires le 27 novembre.",
+  "retenir": [
+   "Verdict le vendredi 27 novembre 2026 : 123 homicides volontaires",
+   "Massacre de la forêt de Shakahola, découvert en 2023",
+   "Au moins 430 morts de faim, victimes de la secte",
+   "Dernier jugement attendu dans l'affaire"
+  ],
+  "contexte": "Chiffres : 123 homicides jugés, au moins 430 dépouilles découvertes.",
+  "acteurs": [
+   "Paul Mackenzie",
+   "Shakahola"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : \"Les enfants devaient mourir en premier\": le gourou d'une secte qui affamait ses fidèles condamné au Kenya …",
+    "type": "tv",
+    "url": "https://www.bfmtv.com/international/afrique/les-enfants-devaient-mourir-en-premier-le-gourou-d-une-secte-qui-affamait-ses-fideles-condamne-au-kenya-pour-123-nouveaux-homicides_AD-202611270919.html"
+   },
+   {
+    "nom": "RFI : Massacre de Shakahola au Kenya: le gourou Mackenzie, qui affamait ses fidèles, coupable de 123 homicides",
+    "type": "radio",
+    "url": "https://www.rfi.fr/fr/afrique/20261127-massacre-de-shakahola-au-kenya-le-gourou-mackenzie-qui-affamait-ses-fid%C3%A8les-coupable-de-123-homicides"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "De combien d'homicides volontaires Paul Mackenzie a-t-il été reconnu coupable au Kenya le 27 novembre 2026 ?",
+    "choix": [
+     "98",
+     "123",
+     "150",
+     "430"
+    ],
+    "bonne": 1,
+    "explication": "Le gourou kényan a été reconnu coupable de 123 homicides volontaires, dernier jugement de l'affaire de Shakahola. Au moins 430 corps avaient été découverts en 2023.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-shakahola-mackenzie-123-homicides"
+ },
+ {
+  "titre": "Rennes met à pied son entraîneur Franck Haise",
+  "rubrique": "sport",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Le Stade Rennais met à pied Franck Haise le 27 novembre, au lendemain de la défaite 1-3 à Nimègue en Ligue Europa.",
+  "retenir": [
+   "Franck Haise mis à pied le vendredi 27 novembre 2026",
+   "La veille : défaite 1-3 à Nimègue en Ligue Europa",
+   "Arrivé en février en remplacement d'Habib Beye",
+   "Aucune victoire depuis plus d'un mois (cinq matchs)",
+   "Intérim annoncé : Sébastien Tambouret (20 Minutes, « devrait »)"
+  ],
+  "contexte": "L'intérim de Sébastien Tambouret reste à confirmer.",
+  "acteurs": [
+   "Franck Haise",
+   "Habib Beye",
+   "Sébastien Tambouret",
+   "Stade Rennais"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Ligue 1 : L’entraîneur de Rennes, Franck Haise, mis à pied",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/sport/football/4266417-20261127-foot-entraineur-rennes-franck-haise-mis-pied?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Europe 1 : Football : l'entraîneur de Rennes Franck Haise mis à pied",
+    "type": "radio",
+    "url": "https://www.europe1.fr/sport/football-lentraineur-de-rennes-franck-haise-mis-a-pied-1246471?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "Sud Radio : Foot: l'entraîneur de Rennes Franck Haise mis à pied",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/sport-rugby/sport/foot-lentraineur-de-rennes-franck-haise-mis-a-pied-source-proche-du-club"
+   },
+   {
+    "nom": "franceinfo : Franck Haise, l'entraîneur de l'équipe de football du Stade rennais, est mis à pied",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/sports/foot/l-entraineur-de-l-equipe-de-football-du-stade-rennais-franck-haise-est-mis-a-pied_8303727.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel entraîneur le Stade Rennais a-t-il mis à pied le 27 novembre 2026 ?",
+    "choix": [
+     "Bruno Genesio",
+     "Franck Haise",
+     "Habib Beye",
+     "Julien Stéphan"
+    ],
+    "bonne": 1,
+    "explication": "Franck Haise a été mis à pied au lendemain de la défaite 1-3 à Nimègue en Ligue Europa. Le club n'avait plus gagné depuis plus d'un mois.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quel entraîneur Franck Haise avait-il remplacé à Rennes en février 2026 ?",
+    "choix": [
+     "Julien Stéphan",
+     "Bruno Genesio",
+     "Christophe Pélissier",
+     "Habib Beye"
+    ],
+    "bonne": 3,
+    "explication": "Franck Haise avait pris la suite d'Habib Beye en février. Il avait mené le club breton à une qualification européenne avant la série de cinq matchs sans victoire.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-rennes-franck-haise-mis-a-pied"
+ },
+ {
+  "acteurs": [
+   "Jean-François Richet",
+   "Vincent Cassel",
+   "Netflix",
+   "Victor Hugo"
+  ],
+  "ajoute": "2026-11-27",
+  "contexte": "Seule la source Ouest-France a été vue (critique).",
+  "croise": false,
+  "date": "2026-11-27",
+  "echeances": [
+   {
+    "date": "2026-11-27",
+    "label": "Mise en ligne sur Netflix"
+   }
+  ],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Omar Sy",
+     "Tahar Rahim",
+     "Vincent Cassel",
+     "Romain Duris"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel acteur incarne Quasimodo dans « Quasimodo, l'âme de Paris », diffusé sur Netflix à partir du 27 novembre 2026 ?",
+    "explication": "Vincent Cassel, méconnaissable, joue Quasimodo dans la série de Jean-François Richet, diffusée sur Netflix dès le 27 novembre 2026. Elle revisite le personnage de Victor Hugo."
+   }
+  ],
   "resume": "« Quasimodo, l'âme de Paris », de Jean-François Richet, est diffusé sur Netflix à partir du 27 novembre 2026. Vincent Cassel y joue le bossu de Victor Hugo.",
   "retenir": [
    "Diffusion sur Netflix dès le 27 novembre 2026",
@@ -60,19 +761,7 @@
    "D'après le personnage de Victor Hugo",
    "Critique d'Ouest-France : impression mitigée"
   ],
-  "contexte": "Seule la source Ouest-France a été vue (critique).",
-  "acteurs": [
-   "Jean-François Richet",
-   "Vincent Cassel",
-   "Netflix",
-   "Victor Hugo"
-  ],
-  "echeances": [
-   {
-    "date": "2026-11-27",
-    "label": "Mise en ligne sur Netflix"
-   }
-  ],
+  "rubrique": "culture",
   "sources": [
    {
     "nom": "Ouest-France : « Quasimodo » réinventé, revu et corrigé à la sauce Netflix par Richet et Cassel",
@@ -80,28 +769,224 @@
     "url": "https://programmetv.ouest-france.fr/plateformes/netflix/quasimodo-reinvente-revu-et-corrige-a-la-sauce-netflix-par-richet-et-cassel-laisse-une-impression-mitigee-ced62674-e8a2-11f1-86c1-70195b4d2e52"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel acteur incarne Quasimodo dans « Quasimodo, l'âme de Paris », diffusé sur Netflix à partir du 27 novembre 2026 ?",
-    "choix": [
-     "Omar Sy",
-     "Tahar Rahim",
-     "Vincent Cassel",
-     "Romain Duris"
-    ],
-    "bonne": 2,
-    "explication": "Vincent Cassel, méconnaissable, joue Quasimodo dans la série de Jean-François Richet, diffusée sur Netflix dès le 27 novembre 2026. Elle revisite le personnage de Victor Hugo.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "« Quasimodo, l'âme de Paris » sur Netflix avec Vincent Cassel",
   "id": "2026-11-27-quasimodo-l-ame-de-paris-netflix-richet-cassel"
  },
  {
-  "titre": "Macron et la viande brésilienne « dopée » : Brasilia déplore",
-  "rubrique": "international",
+  "titre": "Le PIB français recule de 0,2 % au 3e trimestre : la France en récession technique",
+  "rubrique": "economie",
   "date": "2026-11-27",
-  "ajoute": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "L'Insee annonce le 27 novembre un PIB en recul de 0,2 % au 3e trimestre, après révision à la baisse du 2e. La France entre en récession technique.",
+  "retenir": [
+   "PIB : -0,2 % au 3e trimestre 2026 (Insee, France Inter)",
+   "« Récession technique » : le PIB avait déjà reculé au 2e trimestre après révision (franceinfo)",
+   "Inflation : 2,9 % sur un an en novembre, contre 3,4 % en octobre (Insee, chiffres provisoires, Europe 1)",
+   "Le même jour, S&P maintient la note A+ mais passe la perspective en négative"
+  ],
+  "contexte": "Les médias parlent de « légère récession » ; le chiffre d'inflation de novembre est provisoire.",
+  "acteurs": [
+   "Insee",
+   "Sébastien Lecornu",
+   "S&P Global Ratings"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : L’agence S&P menace de dégrader encore la note de la France, entrée en récession",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/politique/article/2026/11/27/l-agence-s-p-menace-de-degrader-encore-la-note-de-la-france-entree-en-recession_6815934_823448.html"
+   },
+   {
+    "nom": "20 Minutes : Le PIB recule au troisième trimestre, la France entre en (légère) récession",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/economie/4266250-20261127-pib-recule-troisieme-trimestre-france-entre-legere-recession?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "TF1 Info : Dette : Standard and Poor's maintient la note de la France à A+ mais abaisse sa perspective de stable à nég…",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/economie/dette-standard-and-poor-s-maintient-la-note-de-la-france-a-a-mais-abaisse-sa-perspective-de-stable-a-negative-2478658.html"
+   },
+   {
+    "nom": "France Inter : Le PIB recule de 0,2 % au troisième trimestre, après révision à la baisse, annonce l'Insee",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/la-recession-en-france-8366488"
+   },
+   {
+    "nom": "Europe 1 : L'inflation ralentit à 2,9 % sur un an en novembre, selon l'Insee",
+    "type": "radio",
+    "url": "https://www.europe1.fr/economie/linflation-ralentit-a-29-sur-un-an-en-novembre-selon-linsee-1245904?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "De combien le PIB français a-t-il reculé au troisième trimestre 2026, selon l'Insee le 27 novembre ?",
+    "choix": [
+     "0,1 %",
+     "0,2 %",
+     "0,4 %",
+     "0,6 %"
+    ],
+    "bonne": 1,
+    "explication": "Le PIB a reculé de 0,2 % au 3e trimestre 2026, après une révision à la baisse du 2e trimestre. Les économistes parlent de « récession technique » pour la France.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quel taux d'inflation sur un an l'Insee a-t-il annoncé pour novembre 2026, le 27 novembre ?",
+    "choix": [
+     "2,2 %",
+     "2,6 %",
+     "3,4 %",
+     "2,9 %"
+    ],
+    "bonne": 3,
+    "explication": "L'inflation a ralenti à 2,9 % sur un an en novembre, après 3,4 % en octobre (chiffres provisoires). La baisse est annoncée le même jour que l'entrée en récession.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-pib-recession-france-t3"
+ },
+ {
+  "titre": "Papillomavirus : la vaccination progresse mais reste loin de l'objectif de 80 %",
+  "rubrique": "sciences",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
   "croise": false,
+  "resume": "Santé publique France publie le 27 novembre le bilan de la campagne 2025-2026 : 53 % des filles et 45 % des garçons nés en 2013 ont reçu au moins une dose.",
+  "retenir": [
+   "Bilan publié le vendredi 27 novembre 2026 par Santé publique France",
+   "Génération née en 2013 : 53 % des filles, 45 % des garçons, au moins une dose",
+   "Objectif : 80 % de couverture à l'horizon 2030",
+   "Troisième campagne dans les collèges en 2025-2026"
+  ],
+  "contexte": "Seules deux sources tv vues.",
+  "acteurs": [
+   "Santé publique France"
+  ],
+  "echeances": [
+   {
+    "date": "2030-12-31",
+    "label": "Objectif de 80 % de couverture vaccinale"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "TF1 Info : Papillomavirus : la vaccination des adolescents progresse, mais les objectifs restent lointains",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/sante/papillomavirus-la-vaccination-des-adolescents-progresse-mais-les-objectifs-restent-lointains-2478614.html"
+   },
+   {
+    "nom": "franceinfo : La couverture vaccinale des adolescents contre le papillomavirus reste loin de l'objectif, après une campag…",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/sante/vaccins/la-couverture-vaccinale-des-adolescents-contre-le-papillomavirus-reste-loin-de-l-objectif-apres-une-campagne-2025-2026-au-bilan-stable-selon-sante-publique-france_8303136.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle part des filles nées en 2013 a reçu au moins une dose de vaccin contre le papillomavirus, selon le bilan du 27 novembre 2026 ?",
+    "choix": [
+     "33 %",
+     "43 %",
+     "53 %",
+     "63 %"
+    ],
+    "bonne": 2,
+    "explication": "Selon Santé publique France, 53 % des filles et 45 % des garçons de la génération 2013 ont reçu au moins une dose. L'objectif national est de 80 % en 2030.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-papillomavirus-couverture-vaccinale-sante-publique-france"
+ },
+ {
+  "titre": "OM-Levski : le parquet de Marseille ouvre deux enquêtes après les violences",
+  "rubrique": "sport",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Le parquet de Marseille ouvre deux enquêtes après les violences d'OM-Levski Sofia : l'une vise des supporters marseillais, l'autre des saluts nazis de supporters bulgares.",
+  "retenir": [
+   "Deux enquêtes ouvertes le vendredi 27 novembre 2026 par le parquet de Marseille",
+   "L'une vise des supporters marseillais (violences volontaires aggravées)",
+   "L'autre vise des saluts nazis de supporters bulgares (incitation à la haine)",
+   "L'UEFA mène ses propres investigations ; l'OM risque de lourdes sanctions"
+  ],
+  "contexte": "Le nombre de blessés varie selon les médias : à recouper.",
+  "acteurs": [
+   "OM",
+   "Levski Sofia",
+   "UEFA",
+   "Parquet de Marseille"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Violences lors d’OM-Sofia : Le parquet de Marseille ouvre deux enquêtes, dont une visant les Bulgares",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/sport/football/4266292-20261127-violences-lors-om-sofia-parquet-marseille-ouvre-deux-enquetes-dont-visant-bulgares?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "BFMTV : OM-Levski Sofia: \"Ils frappaient tout ce qu’ils voyaient\", les témoignages de deux supporters marseillais p…",
+    "type": "tv",
+    "url": "https://rmcsport.bfmtv.com/football/clubs/olympique-marseille/om-levski-sofia-ils-frappaient-tout-ce-qu-ils-voyaient-les-temoignages-de-deux-supporters-marseillais-presents-au-velodrome-pendant-les-incidents_AV-202611270906.html"
+   },
+   {
+    "nom": "Europe 1 : Marseille : deux enquêtes ouvertes après les incidents au Vélodrome, l'OM sous pression",
+    "type": "radio",
+    "url": "https://www.europe1.fr/police-justice/marseille-deux-enquetes-ouvertes-apres-les-incidents-au-velodrome-lom-sous-pression-1246132?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "Libération : OM-Levski Sofia : ce qu’il faut savoir sur les incidents entre supporteurs",
+    "type": "presse",
+    "url": "https://www.liberation.fr/sports/football/om-levski-sofia-ce-quil-faut-savoir-sur-les-incidents-entre-supporteurs-20261127_ZNX7Q3LGOJDZLDEII7LQM5QBR4/"
+   },
+   {
+    "nom": "TF1 Info : Scènes de violences à Marseille : les images des affrontements entre supporters lors du match OM-Levski Sofia",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/justice-faits-divers/reportage-scenes-de-violences-a-marseille-les-images-des-affrontements-entre-supporters-lors-du-match-om-levski-sofia-2478543.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Combien d'enquêtes le parquet de Marseille a-t-il ouvertes le 27 novembre 2026 après les incidents d'OM-Levski Sofia ?",
+    "choix": [
+     "Une",
+     "Deux",
+     "Trois",
+     "Quatre"
+    ],
+    "bonne": 1,
+    "explication": "Le parquet a ouvert deux enquêtes : l'une sur des supporters marseillais, l'autre sur des saluts nazis de supporters bulgares. L'UEFA enquête aussi et l'OM s'expose à de lourdes sanctions.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-27-om-levski-deux-enquetes-parquet-marseille"
+ },
+ {
+  "acteurs": [
+   "Emmanuel Macron",
+   "Brésil",
+   "Mercosur"
+  ],
+  "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (20 Minutes, franceinfo) ; articles non ouverts.",
+  "croise": false,
+  "date": "2026-11-27",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Hormonée",
+     "Dopée",
+     "Contaminée",
+     "Bradée"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel adjectif Emmanuel Macron a-t-il employé pour qualifier la viande brésilienne, déclenchant une réaction de Brasilia le 27 novembre 2026 ?",
+    "explication": "Emmanuel Macron juge « dopée » la viande brésilienne, ce que Brasilia déplore. Le différend s'inscrit dans le bras de fer sanitaire né de l'accord entre le Mercosur et l'UE."
+   }
+  ],
   "resume": "Brasilia déplore les propos d'Emmanuel Macron, qui juge « dopée » la viande brésilienne depuis la signature de l'accord Mercosur-UE. Un bras de fer sanitaire s'est engagé.",
   "retenir": [
    "Vendredi 27 novembre 2026 : le Brésil critique Emmanuel Macron",
@@ -109,13 +994,7 @@
    "Contexte : accord entre le Mercosur et l'UE",
    "Bras de fer sanitaire entre Paris et Brasilia"
   ],
-  "contexte": "Faits tirés des titres et résumés (20 Minutes, franceinfo) ; articles non ouverts.",
-  "acteurs": [
-   "Emmanuel Macron",
-   "Brésil",
-   "Mercosur"
-  ],
-  "echeances": [],
+  "rubrique": "international",
   "sources": [
    {
     "nom": "20 Minutes : Le Brésil clashe Macron pour ses critiques contre la viande brésilienne",
@@ -128,28 +1007,469 @@
     "url": "https://www.franceinfo.fr/monde/bresil/brasilia-deplore-les-propos-d-emmanuel-macron-sur-la-viande-bresilienne-dopee_8302356.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel adjectif Emmanuel Macron a-t-il employé pour qualifier la viande brésilienne, déclenchant une réaction de Brasilia le 27 novembre 2026 ?",
-    "choix": [
-     "Hormonée",
-     "Dopée",
-     "Contaminée",
-     "Bradée"
-    ],
-    "bonne": 1,
-    "explication": "Emmanuel Macron juge « dopée » la viande brésilienne, ce que Brasilia déplore. Le différend s'inscrit dans le bras de fer sanitaire né de l'accord entre le Mercosur et l'UE.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Macron et la viande brésilienne « dopée » : Brasilia déplore",
   "id": "2026-11-27-macron-viande-bresilienne-dopee-mercosur"
  },
  {
-  "titre": "Perpignan : la crèche XXL du maire RN Louis Aliot fait polémique",
+  "titre": "Ligue Europa, 5e journée : OM 1-0 Levski, Rennes battu à Nimègue, Lyon tenu en échec",
+  "rubrique": "sport",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Le 26 novembre, l'OM bat le Levski Sofia 1-0 au Vélodrome, Rennes perd 3-1 à Nimègue et Lyon fait 0-0 contre Lillestrøm.",
+  "retenir": [
+   "Marseille 1-0 Levski Sofia (Libération), Vélodrome, 26 novembre 2026",
+   "NEC Nimègue 3-1 Rennes (20 Minutes : défaite 1-3)",
+   "Lyon 0-0 Lillestrøm (Maxifoot, une seule source)",
+   "Match OM-Levski marqué par des violences de supporters"
+  ],
+  "contexte": "Le score de Lyon vient d'une seule source (Maxifoot) : à recouper.",
+  "acteurs": [
+   "OM",
+   "Levski Sofia",
+   "Stade Rennais",
+   "NEC Nimègue",
+   "Olympique lyonnais",
+   "Lillestrøm"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Libération : OM-Levski Sofia : ce qu’il faut savoir sur les incidents entre supporteurs",
+    "type": "presse",
+    "url": "https://www.liberation.fr/sports/football/om-levski-sofia-ce-quil-faut-savoir-sur-les-incidents-entre-supporteurs-20261127_ZNX7Q3LGOJDZLDEII7LQM5QBR4/"
+   },
+   {
+    "nom": "20 Minutes : Ligue 1 : L’entraîneur de Rennes, Franck Haise, mis à pied",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/sport/football/4266417-20261127-foot-entraineur-rennes-franck-haise-mis-pied?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Sud Radio : Foot: l'entraîneur de Rennes Franck Haise mis à pied",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/sport-rugby/sport/foot-lentraineur-de-rennes-franck-haise-mis-a-pied-source-proche-du-club"
+   },
+   {
+    "nom": "franceinfo : Franck Haise, l'entraîneur de l'équipe de football du Stade rennais, est mis à pied",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/sports/foot/l-entraineur-de-l-equipe-de-football-du-stade-rennais-franck-haise-est-mis-a-pied_8303727.html#xtor=RSS-3-[lestitres]"
+   },
+   {
+    "nom": "Maxifoot : Ligue Europa, phase de ligue, journée 5",
+    "type": "web",
+    "url": "https://m.maxifoot.fr/resultat-ligue-europa-phase-groupe-journee-5-2027.htm"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quel club néerlandais a battu Rennes 3-1 en Ligue Europa le 26 novembre 2026 ?",
+    "choix": [
+     "AZ Alkmaar",
+     "NEC Nimègue",
+     "FC Utrecht",
+     "Feyenoord"
+    ],
+    "bonne": 1,
+    "explication": "NEC Nimègue a battu Rennes 3-1 à domicile lors de la 5e journée de Ligue Europa. Cette défaite a précédé la mise à pied de l'entraîneur Franck Haise le lendemain.",
+    "difficulte": 3
+   },
+   {
+    "enonce": "Quel est le score d'OM-Levski Sofia en Ligue Europa, le 26 novembre 2026 ?",
+    "choix": [
+     "2-0",
+     "1-1",
+     "2-1",
+     "1-0"
+    ],
+    "bonne": 3,
+    "explication": "L'OM s'est imposé 1-0 face au Levski Sofia au Vélodrome. La victoire a été éclipsée par de violents incidents entre supporters avant le match.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-27-ligue-europa-5e-journee-om-rennes-lyon"
+ },
+ {
+  "titre": "Mort de Jean-Claude Vannier, arrangeur de Serge Gainsbourg",
+  "rubrique": "culture",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": false,
+  "resume": "Le compositeur et arrangeur Jean-Claude Vannier est mort jeudi 26 novembre à Paris, à 83 ans. Il avait façonné « Histoire de Melody Nelson » avec Gainsbourg.",
+  "retenir": [
+   "Décès le jeudi 26 novembre 2026 à Paris, à 83 ans",
+   "Arrangeur historique de Serge Gainsbourg",
+   "Album culte : L'Histoire de Melody Nelson",
+   "Annoncé par l'une de ses filles à l'AFP"
+  ],
+  "contexte": "Libération souligne que sa carrière ne se résume pas à Gainsbourg.",
+  "acteurs": [
+   "Jean-Claude Vannier",
+   "Serge Gainsbourg"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Europe 1 : Le compositeur Jean-Claude Vannier est mort à l'âge de 83 ans",
+    "type": "radio",
+    "url": "https://www.europe1.fr/culture/le-compositeur-jean-claude-vannier-est-mort-a-lage-de-83-ans-1246171?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "Libération : Mort de l’arrangeur Jean-Claude Vannier, artisan invisible du sublime comme de l’ordinaire",
+    "type": "presse",
+    "url": "https://www.liberation.fr/culture/musique/mort-de-jean-claude-vannier-arrangeur-historique-de-serge-gainsbourg-20261127_XCWLPFFNIRHQZINVDIFL23IP6I/"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "À quel âge le compositeur Jean-Claude Vannier est-il mort le 26 novembre 2026 ?",
+    "choix": [
+     "79 ans",
+     "83 ans",
+     "86 ans",
+     "90 ans"
+    ],
+    "bonne": 1,
+    "explication": "Jean-Claude Vannier est mort jeudi 26 novembre 2026 à Paris, à 83 ans. Il était l'arrangeur de Serge Gainsbourg, notamment sur Histoire de Melody Nelson.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Avec quel chanteur Jean-Claude Vannier a-t-il signé l'album « L'Histoire de Melody Nelson » ?",
+    "choix": [
+     "Serge Gainsbourg",
+     "Jacques Dutronc",
+     "Michel Polnareff",
+     "Claude François"
+    ],
+    "bonne": 0,
+    "explication": "Vannier a arrangé l'album culte L'Histoire de Melody Nelson avec Serge Gainsbourg. Son travail couvre aussi de nombreux autres artistes de la chanson française.",
+    "difficulte": 1
+   }
+  ],
+  "id": "2026-11-27-jean-claude-vannier-mort-gainsbourg"
+ },
+ {
+  "titre": "Ligue 1, 12e journée : Brest bat le Paris FC 1-0 et grimpe sur le podium",
+  "rubrique": "sport",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": false,
+  "resume": "En ouverture de la 12e journée, Brest bat le Paris FC 1-0 grâce à Luck Zogbé et prend provisoirement la 3e place devant Lille.",
+  "retenir": [
+   "Brest 1-0 Paris FC, vendredi 27 novembre 2026",
+   "But de Luck Zogbé en première période",
+   "Quatrième victoire d'affilée de Brest",
+   "Brest 3e provisoire devant Lille à la différence de buts",
+   "Le Paris FC a raté l'occasion de prendre la tête de la Ligue 1"
+  ],
+  "contexte": "Journée de Ligue 1 en cours : seul le match d'ouverture est joué.",
+  "acteurs": [
+   "Brest",
+   "Paris FC",
+   "Luck Zogbé",
+   "Ludovic Ajorque"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "BFMTV : Brest 1-0 Paris FC : \"Troisième ça veut rien dire\", Ajorque veut sécuriser le maintien avant tout !",
+    "type": "tv",
+    "url": "https://rmcsport.bfmtv.com/football/ligue-1/video-brest-1-0-paris-fc-troisieme-ca-veut-rien-dire-ajorque-veut-securiser-le-maintien-avant-tout_VN-202611270946.html"
+   },
+   {
+    "nom": "Sud Radio : L1: Brest repousse le Paris FC et s'invite sur le podium",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/sport-rugby/sport/l1-brest-repousse-le-paris-fc-et-sinvite-sur-le-podium"
+   },
+   {
+    "nom": "franceinfo : Brest bat le Paris FC (1-0) et grimpe provisoirement sur le podium de la Ligue 1",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/sports/foot/brest-bat-le-paris-fc-1-0-et-grimpe-provisoirement-sur-le-podium-de-la-ligue-1_8303847.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Qui a marqué l'unique but de Brest-Paris FC le 27 novembre 2026, en Ligue 1 ?",
+    "choix": [
+     "Ludovic Ajorque",
+     "Luck Zogbé",
+     "Pierre Lees-Melou",
+     "Romain Del Castillo"
+    ],
+    "bonne": 1,
+    "explication": "Luck Zogbé a marqué en première période pour Brest (1-0), quatrième victoire d'affilée du club. Brest devance Lille à la différence de buts sur le podium.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-brest-paris-fc-12e-journee-ligue-1"
+ },
+ {
+  "titre": "Black Friday 2026 : le 27 novembre, entre promos et critique de la surconsommation",
   "rubrique": "societe",
   "date": "2026-11-27",
-  "ajoute": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Le Black Friday tombe le vendredi 27 novembre 2026, à trois semaines de Noël. Jouets, jeux vidéo et électroménager sont en promotion.",
+  "retenir": [
+   "Black Friday : vendredi 27 novembre 2026",
+   "Chez Amazon, un entrepôt lyonnais mobilise 3 900 robots et 3 000 salariés (TF1 Info)",
+   "Promos étalées sur une longue période (RMC)",
+   "Débat : bonne affaire ou injonction à consommer (France Inter)"
+  ],
+  "contexte": "Les chiffres d'Amazon viennent d'un seul reportage.",
+  "acteurs": [
+   "Amazon",
+   "Samsung"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : « Une prise de conscience »… À l’heure du Black Friday, le tri permet-il de reprendre le contrôle sur sa co…",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/consommation/4265872-20261127-prise-conscience-heure-black-friday-tri-permet-reprendre-controle-conso?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Europe 1 : Le Black Friday, Noël avant l'heure pour les chasseurs de bonnes affaires",
+    "type": "radio",
+    "url": "https://www.europe1.fr/societe/le-black-friday-noel-avant-lheure-pour-les-chasseurs-de-bonnes-affaires-1246306?at_medium=RSS%20feeds&at_campaign=Flux%20Generique"
+   },
+   {
+    "nom": "France Inter : Black Friday : opportunité de prix bas ou injonction à la consommation ?",
+    "type": "radio",
+    "url": "https://www.radiofrance.fr/franceinter/podcasts/le-telephone-sonne/le-18-20-le-telephone-sonne-du-vendredi-27-novembre-2026-3369577"
+   },
+   {
+    "nom": "Le Figaro : Le Black Friday Samsung atteint des sommets : 5 nouvelles promotions records ce samedi 28 novembre",
+    "type": "presse",
+    "url": "https://www.lefigaro.fr/bons-plans/high-tech/le-black-friday-samsung-atteint-des-sommets-5-nouvelles-promotions-records-ce-samedi-28-novembre-20261128"
+   },
+   {
+    "nom": "TF1 Info : Coulisses : les objets stars du Black Friday",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/conso/videos/video-coulisses-les-objets-stars-du-black-friday-67464-2478648.html"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "À quelle date tombe le Black Friday en 2026 ?",
+    "choix": [
+     "Le 20 novembre",
+     "Le 27 novembre",
+     "Le 4 décembre",
+     "Le 11 décembre"
+    ],
+    "bonne": 1,
+    "explication": "Le Black Friday 2026 a lieu le vendredi 27 novembre, à trois semaines de Noël. Les promotions sur les jouets, jeux vidéo et électroménager se prolongent souvent bien après.",
+    "difficulte": 1
+   }
+  ],
+  "id": "2026-11-27-black-friday-2026"
+ },
+ {
+  "titre": "BHV Marais : trois offres de reprise, tribunal le 18 décembre",
+  "rubrique": "economie",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
   "croise": false,
+  "resume": "Fermé depuis le 9 novembre, le BHV Marais peut rouvrir. Plusieurs offres de reprise seront examinées le 18 décembre par le tribunal des activités économiques de Paris.",
+  "retenir": [
+   "BHV Marais en redressement judiciaire",
+   "Fermé depuis le 9 novembre 2026 (défaut d'assurance, non-conformité)",
+   "La commission de sécurité valide la réouverture, travaux incendie à prévoir",
+   "Trois offres de reprise déposées le 27 novembre (franceinfo)",
+   "Examen par le tribunal le 18 décembre 2026"
+  ],
+  "contexte": "Sud Radio parle de « plusieurs » offres, franceinfo de trois.",
+  "acteurs": [
+   "BHV Marais",
+   "Tribunal des activités économiques de Paris"
+  ],
+  "echeances": [
+   {
+    "date": "2026-12-18",
+    "label": "Examen des offres de reprise"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "Sud Radio : BHV: plusieurs offres de reprise déposées pour la grand magasin en redressement judiciaire",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/societe/bhv-plusieurs-offres-de-reprise-deposees-pour-la-grand-magasin-en-redressement-judiciaire"
+   },
+   {
+    "nom": "franceinfo : La commission de sécurité valide la réouverture du BHV Marais à Paris après trois semaines de fermeture",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/economie/la-commission-de-securite-valide-la-reouverture-du-bhv-marais-a-paris-apres-trois-semaines-de-fermeture_8303787.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quand le tribunal des activités économiques de Paris examinera-t-il les offres de reprise du BHV Marais ?",
+    "choix": [
+     "Le 4 décembre 2026",
+     "Le 11 décembre 2026",
+     "Le 18 décembre 2026",
+     "Le 5 janvier 2027"
+    ],
+    "bonne": 2,
+    "explication": "Le tribunal examinera les offres de reprise du BHV Marais le 18 décembre 2026. Le magasin est en redressement judiciaire et la direction travaille à un plan de continuation.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Depuis quelle date le BHV Marais était-il fermé avant la validation de sa réouverture ?",
+    "choix": [
+     "Le 2 novembre",
+     "Le 9 novembre",
+     "Le 16 novembre",
+     "Le 23 novembre"
+    ],
+    "bonne": 1,
+    "explication": "Le grand magasin était fermé depuis le 9 novembre 2026 pour défaut d'assurance et non-conformité. La commission de sécurité valide sa réouverture après trois semaines.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-bhv-marais-offres-reprise-reouverture"
+ },
+ {
+  "titre": "APA : le calcul change au 1er janvier 2027, 250 millions d'économies pour les départements",
+  "rubrique": "societe",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": false,
+  "resume": "Un décret modifie le calcul de l'allocation personnalisée d'autonomie : reste à charge en hausse de 12 euros en moyenne pour certains bénéficiaires.",
+  "retenir": [
+   "Nouveau mode de calcul de l'APA applicable à partir du 1er janvier 2027",
+   "Reste à charge à domicile : +12 euros en moyenne pour certains bénéficiaires",
+   "Économie attendue pour les départements : 250 millions d'euros"
+  ],
+  "contexte": "Public Sénat parle du 1er janvier, franceinfo de 2027 : même échéance.",
+  "acteurs": [
+   "Gouvernement",
+   "Départements"
+  ],
+  "echeances": [
+   {
+    "date": "2027-01-01",
+    "label": "Entrée en vigueur du nouveau calcul de l'APA"
+   }
+  ],
+  "sources": [
+   {
+    "nom": "Public Sénat : Seniors : le gouvernement modifie le mode de calcul de l’Allocation personnalisée d’autonomie",
+    "type": "tv",
+    "url": "https://www.publicsenat.fr/actualites/economie/seniors-le-gouvernement-modifie-le-mode-de-calcul-de-lallocation-personnalisee-dautonomie"
+   },
+   {
+    "nom": "franceinfo : Le mode de calcul d'une aide à l'autonomie des seniors modifié à partir de 2027, augmentant le reste à char…",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/sante/le-mode-de-calcul-d-une-aide-a-l-autonomie-des-seniors-modifie-a-partir-de-2027-augmentant-le-reste-a-charge-de-certains-beneficiaires_8303703.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle économie le gouvernement attend-il pour les départements avec le nouveau calcul de l'APA, annoncé le 27 novembre 2026 ?",
+    "choix": [
+     "50 millions d'euros",
+     "150 millions d'euros",
+     "250 millions d'euros",
+     "500 millions d'euros"
+    ],
+    "bonne": 2,
+    "explication": "Le nouveau calcul de l'APA doit faire économiser 250 millions d'euros aux départements. En contrepartie, le reste à charge augmente de 12 euros en moyenne pour certains bénéficiaires.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-27-apa-nouveau-calcul-economie-250-millions"
+ },
+ {
+  "titre": "Haute-Saône : l'activité de l'abattoir de Luxeuil suspendue après une plainte de L214",
+  "rubrique": "societe",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-28",
+  "croise": true,
+  "resume": "Le préfet de Haute-Saône suspend le 27 novembre l'abattage à Luxeuil-les-Bains, après une plainte de L214 et une enquête pour sévices graves.",
+  "retenir": [
+   "Suspension décidée par le préfet le vendredi 27 novembre 2026",
+   "Plainte de L214 déposée le 26 novembre contre l'exploitant",
+   "Exploitant : Société d'abattage des Vosges saônoises (SAVS)",
+   "Enquête pour « sévices graves » ou actes de cruauté"
+  ],
+  "contexte": "Faits à recouper avec l'issue de l'enquête.",
+  "acteurs": [
+   "L214",
+   "SAVS",
+   "Préfet de Haute-Saône"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "20 Minutes : Haute-Saône : Suspecté de « sévices graves », l’activité d’un abattoir suspendue",
+    "type": "presse",
+    "url": "https://www.20minutes.fr/societe/4266425-20261128-haute-saone-suspecte-sevices-graves-activite-abattoir-suspendue?at_medium=display&at_campaign=149"
+   },
+   {
+    "nom": "Sud Radio : L'activité de l'abattoir de Haute-Saône visé par une enquête suspendue",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/societe/lactivite-de-labattoir-de-haute-saone-vise-par-une-enquete-suspendue"
+   },
+   {
+    "nom": "franceinfo : L'activité de l'abattoir de Haute-Saône suspendue par le préfet après avoir été visé par une enquête",
+    "type": "tv",
+    "url": "https://www.franceinfo.fr/environnement/biodiversite/animaux/l-activite-de-l-abattoir-de-haute-saone-suspendue-par-le-prefet-apres-avoir-ete-vise-par-une-enquete_8303862.html#xtor=RSS-3-[lestitres]"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle association a porté plainte le 26 novembre 2026 contre l'exploitant de l'abattoir de Luxeuil-les-Bains ?",
+    "choix": [
+     "One Voice",
+     "30 Millions d'amis",
+     "La Fondation Brigitte Bardot",
+     "L214"
+    ],
+    "bonne": 3,
+    "explication": "L214 a porté plainte contre la Société d'abattage des Vosges saônoises. Le préfet de Haute-Saône a suspendu l'abattage le 27 novembre, une enquête étant ouverte.",
+    "difficulte": 2
+   }
+  ],
+  "id": "2026-11-27-abattoir-luxeuil-l214-activite-suspendue"
+ },
+ {
+  "acteurs": [
+   "Louis Aliot",
+   "Perpignan",
+   "Béziers"
+  ],
+  "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (BFMTV, RMC, Sud Radio, Europe 1) ; articles non ouverts.",
+  "croise": false,
+  "date": "2026-11-27",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "60 000 euros",
+     "120 000 euros",
+     "200 000 euros",
+     "350 000 euros"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel est le coût annoncé de la crèche de Noël XXL installée par la mairie RN de Perpignan, fin novembre 2026 ?",
+    "explication": "La crèche XXL de Perpignan coûte 120 000 euros selon RMC. Le maire RN Louis Aliot a défendu ce choix, jugé trop cher par ses opposants."
+   },
+   {
+    "bonne": 2,
+    "choix": [
+     "57 %",
+     "67 %",
+     "77 %",
+     "87 %"
+    ],
+    "difficulte": 3,
+    "enonce": "Quel pourcentage de Français se dit favorable aux crèches de Noël dans les mairies, selon le sondage Europe 1 du 27 novembre 2026 ?",
+    "explication": "Selon le sondage relayé par Europe 1, 77 % des Français sont favorables aux crèches de Noël dans les mairies. Le sujet revient avec la polémique de Béziers."
+   }
+  ],
   "resume": "La mairie RN de Perpignan installe trois statues géantes de la Nativité, une crèche XXL à 120 000 euros, qui divise. Selon un sondage Europe 1, 77 % des Français sont pour les crèches dans les mairies.",
   "retenir": [
    "Maire RN de Perpignan : Louis Aliot",
@@ -158,13 +1478,7 @@
    "Sondage Europe 1 : 77 % des Français favorables aux crèches de Noël dans les mairies",
    "Polémique aussi à Béziers sur une crèche en mairie"
   ],
-  "contexte": "Faits tirés des titres et résumés (BFMTV, RMC, Sud Radio, Europe 1) ; articles non ouverts.",
-  "acteurs": [
-   "Louis Aliot",
-   "Perpignan",
-   "Béziers"
-  ],
-  "echeances": [],
+  "rubrique": "societe",
   "sources": [
    {
     "nom": "BFMTV : \"C'est un investissement cher\": trois statues géantes de la Nativité voulues par la mairie RN de Perpignan font polémique",
@@ -187,40 +1501,46 @@
     "url": "https://www.europe1.fr/societe/sondage-77-des-francais-sont-pour-la-presence-de-creches-de-noel-dans-les-mairies-francaises-1245499"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel est le coût annoncé de la crèche de Noël XXL installée par la mairie RN de Perpignan, fin novembre 2026 ?",
-    "choix": [
-     "60 000 euros",
-     "120 000 euros",
-     "200 000 euros",
-     "350 000 euros"
-    ],
-    "bonne": 1,
-    "explication": "La crèche XXL de Perpignan coûte 120 000 euros selon RMC. Le maire RN Louis Aliot a défendu ce choix, jugé trop cher par ses opposants.",
-    "difficulte": 2
-   },
-   {
-    "enonce": "Quel pourcentage de Français se dit favorable aux crèches de Noël dans les mairies, selon le sondage Europe 1 du 27 novembre 2026 ?",
-    "choix": [
-     "57 %",
-     "67 %",
-     "77 %",
-     "87 %"
-    ],
-    "bonne": 2,
-    "explication": "Selon le sondage relayé par Europe 1, 77 % des Français sont favorables aux crèches de Noël dans les mairies. Le sujet revient avec la polémique de Béziers.",
-    "difficulte": 3
-   }
-  ],
+  "titre": "Perpignan : la crèche XXL du maire RN Louis Aliot fait polémique",
   "id": "2026-11-26-perpignan-creche-xxl-aliot-120000-euros"
  },
  {
-  "titre": "OM-Levski Sofia : violences entre supporters avant le match de Ligue Europa",
-  "rubrique": "sport",
-  "date": "2026-11-27",
+  "acteurs": [
+   "Olympique de Marseille",
+   "Levski Sofia",
+   "Emmanuel Macron"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "BFMTV écrit « (1-0) » pour le match sans préciser le buteur dans le résumé lu : score à recouper. Scores de Rennes (NEC Nimègue) et de Lyon (Lillestrom) non vérifiés.",
   "croise": true,
+  "date": "2026-11-27",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "CSKA Sofia",
+     "Ludogorets",
+     "Levski Sofia",
+     "Lokomotiv Plovdiv"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel club bulgare l'OM affrontait au Vélodrome en Ligue Europa le 26 novembre 2026, avant des violences entre supporters ?",
+    "explication": "L'OM recevait le Levski Sofia pour la 5e journée de Ligue Europa, le 26 novembre 2026. Les affrontements entre supporters ont éclaté peu avant le coup d'envoi et blessé des fans bulgares."
+   },
+   {
+    "bonne": 0,
+    "choix": [
+     "Emmanuel Macron",
+     "Sébastien Lecornu",
+     "Gérald Darmanin",
+     "Nicolas Sarkozy"
+    ],
+    "difficulte": 1,
+    "enonce": "Quel dirigeant a condamné « avec la plus grande fermeté » les violences de supporters avant OM-Levski Sofia, le 26 novembre 2026 ?",
+    "explication": "Emmanuel Macron a condamné « avec la plus grande fermeté » ces violences contre des supporters bulgares à Marseille. Sofia a de son côté réclamé l'ouverture d'une enquête."
+   }
+  ],
   "resume": "De violents affrontements entre supporters ont précédé OM-Levski Sofia le 26 novembre 2026 au Vélodrome ; onze supporters bulgares ont été blessés. Macron condamne ; Sofia réclame une enquête.",
   "retenir": [
    "Jeudi 26 novembre 2026, 5e journée de Ligue Europa, Stade Vélodrome",
@@ -229,13 +1549,7 @@
    "Sofia réclame une enquête ; la présidente bulgare juge les faits « inadmissibles »",
    "Un supporter bulgare filmé faisant un salut nazi (BFMTV)"
   ],
-  "contexte": "BFMTV écrit « (1-0) » pour le match sans préciser le buteur dans le résumé lu : score à recouper. Scores de Rennes (NEC Nimègue) et de Lyon (Lillestrom) non vérifiés.",
-  "acteurs": [
-   "Olympique de Marseille",
-   "Levski Sofia",
-   "Emmanuel Macron"
-  ],
-  "echeances": [],
+  "rubrique": "sport",
   "sources": [
    {
     "nom": "20 Minutes : Ligue Europa : « Inadmissible »… Colère de la présidente bulgare après les violences lors du match à Marseille",
@@ -263,40 +1577,45 @@
     "url": "https://rmc.bfmtv.com/actualites/societe/video-marseille-foot-affrontements-entre-supporters-des-blesses_VN-202611270173.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel club bulgare l'OM affrontait au Vélodrome en Ligue Europa le 26 novembre 2026, avant des violences entre supporters ?",
-    "choix": [
-     "CSKA Sofia",
-     "Ludogorets",
-     "Levski Sofia",
-     "Lokomotiv Plovdiv"
-    ],
-    "bonne": 2,
-    "explication": "L'OM recevait le Levski Sofia pour la 5e journée de Ligue Europa, le 26 novembre 2026. Les affrontements entre supporters ont éclaté peu avant le coup d'envoi et blessé des fans bulgares.",
-    "difficulte": 2
-   },
-   {
-    "enonce": "Quel dirigeant a condamné « avec la plus grande fermeté » les violences de supporters avant OM-Levski Sofia, le 26 novembre 2026 ?",
-    "choix": [
-     "Emmanuel Macron",
-     "Sébastien Lecornu",
-     "Gérald Darmanin",
-     "Nicolas Sarkozy"
-    ],
-    "bonne": 0,
-    "explication": "Emmanuel Macron a condamné « avec la plus grande fermeté » ces violences contre des supporters bulgares à Marseille. Sofia a de son côté réclamé l'ouverture d'une enquête.",
-    "difficulte": 1
-   }
-  ],
+  "titre": "OM-Levski Sofia : violences entre supporters avant le match de Ligue Europa",
   "id": "2026-11-26-om-levski-sofia-violences-ligue-europa"
  },
  {
-  "titre": "Mayotte : un adolescent meurt après une rixe, troisième décès en une semaine",
-  "rubrique": "societe",
-  "date": "2026-11-27",
+  "acteurs": [
+   "Estelle Youssouffa",
+   "Mayotte"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (Europe 1, France Inter, Libération, RFI) ; articles non ouverts.",
   "croise": false,
+  "date": "2026-11-27",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 3,
+    "choix": [
+     "15 ans",
+     "16 ans",
+     "18 ans",
+     "17 ans"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel âge avait l'adolescent mort le 26 novembre 2026 après une rixe dans un lycée de Mayotte ?",
+    "explication": "L'adolescent de 17 ans, gravement blessé mercredi 25 novembre, est mort le lendemain. Il est le troisième jeune tué dans des violences en moins d'une semaine à Mayotte."
+   },
+   {
+    "bonne": 1,
+    "choix": [
+     "Deux",
+     "Trois",
+     "Quatre",
+     "Cinq"
+    ],
+    "difficulte": 1,
+    "enonce": "Combien de jeunes sont morts dans des violences à Mayotte en moins d'une semaine, fin novembre 2026 ?",
+    "explication": "Trois adolescents sont morts dans des rixes en moins d'une semaine à Mayotte, le dernier le 26 novembre 2026. Des habitants ont ensuite bloqué des routes."
+   }
+  ],
   "resume": "Un adolescent de 17 ans est mort le 26 novembre 2026 après une rixe dans un lycée de Mayotte. C'est le troisième jeune tué en moins d'une semaine ; des habitants bloquent les routes.",
   "retenir": [
    "Rixe dans un lycée mercredi 25 novembre 2026, adolescent de 17 ans mort jeudi 26",
@@ -304,12 +1623,7 @@
    "Vendredi 27 novembre : des habitants bloquent des routes (RFI)",
    "Estelle Youssouffa (LIOT) déplore le manque de mesures du gouvernement"
   ],
-  "contexte": "Faits tirés des titres et résumés (Europe 1, France Inter, Libération, RFI) ; articles non ouverts.",
-  "acteurs": [
-   "Estelle Youssouffa",
-   "Mayotte"
-  ],
-  "echeances": [],
+  "rubrique": "societe",
   "sources": [
    {
     "nom": "Libération : «Mayotte est devenue une fabrique de barbares» : un adolescent tué lors d’une rixe dans un lycée",
@@ -332,32 +1646,7 @@
     "url": "https://www.rfi.fr/fr/france/20261127-%C3%A0-mayotte-des-habitants-bloquent-les-routes-apr%C3%A8s-la-mort-de-trois-adolescents-dans-des-rixes"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel âge avait l'adolescent mort le 26 novembre 2026 après une rixe dans un lycée de Mayotte ?",
-    "choix": [
-     "15 ans",
-     "16 ans",
-     "18 ans",
-     "17 ans"
-    ],
-    "bonne": 3,
-    "explication": "L'adolescent de 17 ans, gravement blessé mercredi 25 novembre, est mort le lendemain. Il est le troisième jeune tué dans des violences en moins d'une semaine à Mayotte.",
-    "difficulte": 2
-   },
-   {
-    "enonce": "Combien de jeunes sont morts dans des violences à Mayotte en moins d'une semaine, fin novembre 2026 ?",
-    "choix": [
-     "Deux",
-     "Trois",
-     "Quatre",
-     "Cinq"
-    ],
-    "bonne": 1,
-    "explication": "Trois adolescents sont morts dans des rixes en moins d'une semaine à Mayotte, le dernier le 26 novembre 2026. Des habitants ont ensuite bloqué des routes.",
-    "difficulte": 1
-   }
-  ],
+  "titre": "Mayotte : un adolescent meurt après une rixe, troisième décès en une semaine",
   "id": "2026-11-26-mayotte-adolescent-mort-rixe-lycee"
  },
  {
@@ -372,27 +1661,27 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Quel acteur voit son renvoi en procès pour viols confirmé par la cour d'appel de Paris le 26 novembre 2026, à la demande de Charlotte Arnould ?",
+    "bonne": 0,
     "choix": [
      "Gérard Depardieu",
      "Vincent Cassel",
      "Roman Polanski",
      "Gérard Jugnot"
     ],
-    "bonne": 0,
     "difficulte": 1,
+    "enonce": "Quel acteur voit son renvoi en procès pour viols confirmé par la cour d'appel de Paris le 26 novembre 2026, à la demande de Charlotte Arnould ?",
     "explication": "La cour d'appel de Paris a confirmé le 26 novembre 2026 que Gérard Depardieu sera jugé pour une partie des viols dénoncés par la comédienne Charlotte Arnould. Il contestait son renvoi."
    },
    {
-    "enonce": "Quelle juridiction a confirmé le 26 novembre 2026 le renvoi de Gérard Depardieu en procès pour viols ?",
+    "bonne": 0,
     "choix": [
      "La cour d'appel de Paris",
      "La Cour de cassation",
      "La cour d'appel de Versailles",
      "Le Conseil d'État"
     ],
-    "bonne": 0,
     "difficulte": 2,
+    "enonce": "Quelle juridiction a confirmé le 26 novembre 2026 le renvoi de Gérard Depardieu en procès pour viols ?",
     "explication": "La cour d'appel de Paris a confirmé le renvoi de Gérard Depardieu devant la justice pour une partie des viols. La plaignante est la comédienne Charlotte Arnould."
    }
   ],
@@ -435,6 +1724,81 @@
   "id": "2026-11-26-depardieu-renvoi-cour-appel"
  },
  {
+  "titre": "S&P maintient la note A+ de la France mais passe la perspective en négative",
+  "rubrique": "economie",
+  "date": "2026-11-27",
+  "ajoute": "2026-11-26",
+  "croise": true,
+  "resume": "Le 27 novembre, l'agence S&P garde la note de la France à A+ mais abaisse la perspective de stable à négative. Une dégradation reste possible.",
+  "retenir": [
+   "Agence : S&P Global Ratings, décision du vendredi 27 novembre 2026",
+   "Note maintenue : A+ ; perspective : de stable à négative",
+   "Motifs : difficulté à réduire le déficit, incertitudes budgétaires et politiques",
+   "Décision tombée le jour de l'annonce de la récession technique (PIB -0,2 % au T3)"
+  ],
+  "contexte": "Une perspective négative ouvre la voie à une dégradation à moyen terme sans en être une.",
+  "acteurs": [
+   "S&P Global Ratings",
+   "France",
+   "Sébastien Lecornu"
+  ],
+  "echeances": [],
+  "sources": [
+   {
+    "nom": "Le Monde : L’agence S&P menace de dégrader encore la note de la France, entrée en récession",
+    "type": "presse",
+    "url": "https://www.lemonde.fr/politique/article/2026/11/27/l-agence-s-p-menace-de-degrader-encore-la-note-de-la-france-entree-en-recession_6815934_823448.html"
+   },
+   {
+    "nom": "Libération : Dette : S&P dégrade la perspective française de stable à négative, mais maintient sa note à A+",
+    "type": "presse",
+    "url": "https://www.liberation.fr/economie/dette-sp-degrade-la-perspective-francaise-de-stable-a-negative-mais-maintient-sa-note-a-a-20261127_Z5M25BQXERGLXLJDRM5MDHTN5Q/"
+   },
+   {
+    "nom": "TF1 Info : Dette : Standard and Poor's maintient la note de la France à A+ mais abaisse sa perspective de stable à nég…",
+    "type": "tv",
+    "url": "https://www.tf1info.fr/economie/dette-standard-and-poor-s-maintient-la-note-de-la-france-a-a-mais-abaisse-sa-perspective-de-stable-a-negative-2478658.html"
+   },
+   {
+    "nom": "France 24 : Après l'entrée de la France en récession, l'agence S&P menace de dégrader sa note souveraine",
+    "type": "tv",
+    "url": "https://www.france24.com/fr/%C3%A9co-tech/20261127-apr%C3%A8s-entr%C3%A9e-france-r%C3%A9cession-agence-standard-and-poor-s-menace-d%C3%A9grader-note-souveraine"
+   },
+   {
+    "nom": "Sud Radio : Dette : S&P maintient la note de la France mais menace de la dégrader",
+    "type": "radio",
+    "url": "https://www.sudradio.fr/societe/dette-sp-maintient-la-note-de-la-france-mais-menace-de-la-degrader"
+   }
+  ],
+  "questions": [
+   {
+    "enonce": "Quelle agence de notation a abaissé la perspective de la dette française à « négative » le 27 novembre 2026 ?",
+    "choix": [
+     "Moody's",
+     "Fitch Ratings",
+     "S&P Global Ratings",
+     "DBRS Morningstar"
+    ],
+    "bonne": 2,
+    "explication": "S&P Global Ratings a maintenu la note de la France à A+ mais abaissé la perspective à négative le 27 novembre 2026. Une dégradation reste possible dans les prochains mois.",
+    "difficulte": 2
+   },
+   {
+    "enonce": "Quelle note S&P a-t-elle maintenue pour la dette de la France le 27 novembre 2026 ?",
+    "choix": [
+     "AA-",
+     "A+",
+     "A",
+     "AA"
+    ],
+    "bonne": 1,
+    "explication": "S&P a maintenu la note de la France à A+, en abaissant la perspective de stable à négative. L'agence cite les difficultés à réduire le déficit et l'instabilité politique.",
+    "difficulte": 3
+   }
+  ],
+  "id": "2026-11-25-s-p-notation-france-vendredi"
+ },
+ {
   "acteurs": [
    "Gadi Eisenkot",
    "Benyamin Netanyahou",
@@ -447,16 +1811,16 @@
   "echeances": [],
   "questions": [
    {
-    "enonce": "Avec quel parti le parti Yashar de Gadi Eisenkot a-t-il conclu un accord de coalition le 26 novembre 2026 ?",
+    "bonne": 1,
     "choix": [
      "Parti Likoud",
      "Les Démocrates",
      "Parti Shass",
      "Yesh Atid"
     ],
-    "bonne": 1,
-    "explication": "Le parti Yashar de Gadi Eisenkot, chargé de former le gouvernement, s'est allié aux Démocrates, parti de gauche, le 26 novembre 2026. L'accord prévoit quatre ministères.",
-    "difficulte": 2
+    "difficulte": 2,
+    "enonce": "Avec quel parti le parti Yashar de Gadi Eisenkot a-t-il conclu un accord de coalition le 26 novembre 2026 ?",
+    "explication": "Le parti Yashar de Gadi Eisenkot, chargé de former le gouvernement, s'est allié aux Démocrates, parti de gauche, le 26 novembre 2026. L'accord prévoit quatre ministères."
    },
    {
     "bonne": 2,
@@ -501,11 +1865,30 @@
   "id": "2026-11-05-israel-eisenkot-gouvernement"
  },
  {
-  "titre": "Zemmour : « C'est ma dernière campagne »",
-  "rubrique": "politique",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Éric Zemmour",
+   "Sarah Knafo",
+   "Reconquête"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (BFMTV, Europe 1, franceinfo, TF1 Info).",
   "croise": true,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Marion Maréchal",
+     "Sarah Knafo",
+     "Éric Ciotti",
+     "Jordan Bardella"
+    ],
+    "difficulte": 2,
+    "enonce": "Qui Éric Zemmour a-t-il laissé entendre pouvoir se présenter à la présidentielle de 2032 ?",
+    "explication": "Éric Zemmour a dit le 26 novembre 2026 que 2027 serait sa dernière campagne et que Sarah Knafo pourrait « sans doute » se présenter en 2032. Sa compagne avait un temps été vue comme possible candidate de Reconquête."
+   }
+  ],
   "resume": "Éric Zemmour a annoncé le 26 novembre 2026 que 2027 serait sa dernière campagne présidentielle. Il laisse entendre que Sarah Knafo pourrait « sans doute » se présenter en 2032.",
   "retenir": [
    "Jeudi 26 novembre 2026 : Zemmour annonce que 2027 sera sa « dernière campagne »",
@@ -513,13 +1896,7 @@
    "Zemmour préside Reconquête",
    "Son entrée en lice avait mis fin à l'idée d'une candidature de Knafo à sa place"
   ],
-  "contexte": "Faits tirés des titres et résumés (BFMTV, Europe 1, franceinfo, TF1 Info).",
-  "acteurs": [
-   "Éric Zemmour",
-   "Sarah Knafo",
-   "Reconquête"
-  ],
-  "echeances": [],
+  "rubrique": "politique",
   "sources": [
    {
     "nom": "20 Minutes : EN DIRECT Présidentielle 2027 : Zemmour fait savoir que c’est sa « dernière campagne »",
@@ -547,20 +1924,7 @@
     "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-sondage-mobilisation-etudiants-lyceens-candidats-lisnard-le-pen-riner-melenchon-les-actualites-du-jeudi-26-novembre-2026-2478217.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Qui Éric Zemmour a-t-il laissé entendre pouvoir se présenter à la présidentielle de 2032 ?",
-    "choix": [
-     "Marion Maréchal",
-     "Sarah Knafo",
-     "Éric Ciotti",
-     "Jordan Bardella"
-    ],
-    "bonne": 1,
-    "explication": "Éric Zemmour a dit le 26 novembre 2026 que 2027 serait sa dernière campagne et que Sarah Knafo pourrait « sans doute » se présenter en 2032. Sa compagne avait un temps été vue comme possible candidate de Reconquête.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Zemmour : « C'est ma dernière campagne »",
   "id": "2026-11-26-zemmour-derniere-campagne-knafo-2032"
  },
  {
@@ -656,11 +2020,31 @@
   "id": "2026-11-26-the-pitt-saison-3-date"
  },
  {
-  "titre": "Présidentielle : Philippe tombe à 8 % chez OpinionWay, Lisnard troisième",
-  "rubrique": "politique",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Édouard Philippe",
+   "David Lisnard",
+   "Marine Le Pen",
+   "OpinionWay"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Seule la source 20 Minutes a été vue ; les autres intentions de vote ne sont pas détaillées dans le résumé lu.",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Dominique de Villepin",
+     "Édouard Philippe",
+     "Bruno Retailleau",
+     "Gabriel Attal"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel candidat tombe à 8 % dans le sondage OpinionWay publié le 26 novembre 2026 ?",
+    "explication": "Édouard Philippe tombe à 8 % dans le sondage OpinionWay du 26 novembre 2026 et se fait dépasser. David Lisnard devient le troisième homme, derrière Marine Le Pen qui domine la course."
+   }
+  ],
   "resume": "Un sondage OpinionWay publié le 26 novembre 2026 place David Lisnard en troisième position, devant Édouard Philippe, tombé à 8 %.",
   "retenir": [
    "Sondage OpinionWay du 26 novembre 2026, à cinq mois de la présidentielle",
@@ -668,14 +2052,7 @@
    "David Lisnard devient le « troisième homme »",
    "Marine Le Pen domine toujours largement la course"
   ],
-  "contexte": "Seule la source 20 Minutes a été vue ; les autres intentions de vote ne sont pas détaillées dans le résumé lu.",
-  "acteurs": [
-   "Édouard Philippe",
-   "David Lisnard",
-   "Marine Le Pen",
-   "OpinionWay"
-  ],
-  "echeances": [],
+  "rubrique": "politique",
   "sources": [
    {
     "nom": "20 Minutes : Présidentielle 2027 : Édouard Philippe dévisse dans un nouveau sondage et se fait passer par David Lisnard",
@@ -683,28 +2060,32 @@
     "url": "https://www.20minutes.fr/politique/4266128-20261126-presidentielle-2027-edouard-philippe-devisse-nouveau-sondage-fait-passer-david-lisnard"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel candidat tombe à 8 % dans le sondage OpinionWay publié le 26 novembre 2026 ?",
-    "choix": [
-     "Dominique de Villepin",
-     "Édouard Philippe",
-     "Bruno Retailleau",
-     "Gabriel Attal"
-    ],
-    "bonne": 1,
-    "explication": "Édouard Philippe tombe à 8 % dans le sondage OpinionWay du 26 novembre 2026 et se fait dépasser. David Lisnard devient le troisième homme, derrière Marine Le Pen qui domine la course.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Présidentielle : Philippe tombe à 8 % chez OpinionWay, Lisnard troisième",
   "id": "2026-11-26-sondage-opinionway-philippe-8-lisnard-troisieme"
  },
  {
-  "titre": "Hospitalisations de jeunes femmes pour tentatives de suicide : encore en hausse en 2025",
-  "rubrique": "sciences",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Santé publique France"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Chiffres précis non lus dans les résumés ; articles non ouverts. Sujet sensible : en cas de détresse, le 3114 est joignable.",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "La Haute Autorité de santé",
+     "L'Inserm",
+     "Santé publique France",
+     "L'ANSM"
+    ],
+    "difficulte": 2,
+    "enonce": "Quel organisme a publié le 26 novembre 2026 les chiffres sur la hausse des hospitalisations de jeunes femmes pour tentatives de suicide en 2025 ?",
+    "explication": "Santé publique France a publié ces chiffres le 26 novembre 2026. Ils montrent que les hospitalisations d'adolescentes et de jeunes femmes ont continué à augmenter en 2025, situation jugée préoccupante."
+   }
+  ],
   "resume": "Santé publique France indique le 26 novembre 2026 que les hospitalisations d'adolescentes et de jeunes femmes pour tentatives de suicide ou automutilations ont encore augmenté en 2025.",
   "retenir": [
    "Chiffres publiés jeudi 26 novembre 2026 par Santé publique France",
@@ -712,11 +2093,7 @@
    "Hausse continue en 2025, situation « préoccupante »",
    "Périmètre : France métropolitaine"
   ],
-  "contexte": "Chiffres précis non lus dans les résumés ; articles non ouverts. Sujet sensible : en cas de détresse, le 3114 est joignable.",
-  "acteurs": [
-   "Santé publique France"
-  ],
-  "echeances": [],
+  "rubrique": "sciences",
   "sources": [
    {
     "nom": "Sud Radio : Augmentation des hospitalisations des jeunes pour suicide en France",
@@ -734,20 +2111,7 @@
     "url": "https://www.franceinfo.fr/sante/les-hospitalisations-d-adolescentes-et-de-jeunes-femmes-pour-des-tentatives-de-suicide-ou-des-automutilations-encore-en-hausse-en-2025_8301957.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quel organisme a publié le 26 novembre 2026 les chiffres sur la hausse des hospitalisations de jeunes femmes pour tentatives de suicide en 2025 ?",
-    "choix": [
-     "La Haute Autorité de santé",
-     "L'Inserm",
-     "Santé publique France",
-     "L'ANSM"
-    ],
-    "bonne": 2,
-    "explication": "Santé publique France a publié ces chiffres le 26 novembre 2026. Ils montrent que les hospitalisations d'adolescentes et de jeunes femmes ont continué à augmenter en 2025, situation jugée préoccupante.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Hospitalisations de jeunes femmes pour tentatives de suicide : encore en hausse en 2025",
   "id": "2026-11-26-sante-publique-france-suicides-jeunes-femmes-2025"
  },
  {
@@ -1256,11 +2620,30 @@
   "id": "2026-11-26-lvmh-arnault-controle-95-ans"
  },
  {
-  "titre": "Koweït : deux Italiens tués dans une attaque de drones attribuée à l'Iran",
-  "rubrique": "international",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Ursula von der Leyen",
+   "Iran",
+   "Koweït"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (Libération, Ouest-France) ; l'attribution à l'Iran est démentie par Téhéran.",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 3,
+    "choix": [
+     "Française",
+     "Britannique",
+     "Allemande",
+     "Italienne"
+    ],
+    "difficulte": 1,
+    "enonce": "Quelle est la nationalité des deux personnes tuées au Koweït dans une attaque de drones attribuée à l'Iran, le 26 novembre 2026 ?",
+    "explication": "Deux Italiens ont été tués au Koweït dans une attaque de drones attribuée à l'Iran, ce que Téhéran dément. Ursula von der Leyen a réagi en appelant à renforcer la pression sur l'Iran."
+   }
+  ],
   "resume": "Deux Italiens ont été tués au Koweït dans une attaque de drones attribuée à l'Iran, que Téhéran dément. Ursula von der Leyen appelle à renforcer la pression sur Téhéran.",
   "retenir": [
    "Jeudi 26 novembre 2026 : deux Italiens tués au Koweït",
@@ -1268,13 +2651,7 @@
    "Ursula von der Leyen appelle à renforcer la pression sur l'Iran",
    "Une raffinerie saoudienne a aussi été visée (Ouest-France)"
   ],
-  "contexte": "Faits tirés des titres et résumés (Libération, Ouest-France) ; l'attribution à l'Iran est démentie par Téhéran.",
-  "acteurs": [
-   "Ursula von der Leyen",
-   "Iran",
-   "Koweït"
-  ],
-  "echeances": [],
+  "rubrique": "international",
   "sources": [
    {
     "nom": "Libération : Deux Italiens tués dans une attaque de drones iraniens contre le Koweït, démenti de Téhéran",
@@ -1287,20 +2664,7 @@
     "url": "https://www.ouest-france.fr/monde/iran/guerre-au-moyen-orient-raffinerie-saoudienne-visee-deux-italiens-tues-au-koweit-le-point-sur-la-nuit-0d9757fa-e9ea-11f1-86c1-70195b4d2e52"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quelle est la nationalité des deux personnes tuées au Koweït dans une attaque de drones attribuée à l'Iran, le 26 novembre 2026 ?",
-    "choix": [
-     "Française",
-     "Britannique",
-     "Allemande",
-     "Italienne"
-    ],
-    "bonne": 3,
-    "explication": "Deux Italiens ont été tués au Koweït dans une attaque de drones attribuée à l'Iran, ce que Téhéran dément. Ursula von der Leyen a réagi en appelant à renforcer la pression sur l'Iran.",
-    "difficulte": 1
-   }
-  ],
+  "titre": "Koweït : deux Italiens tués dans une attaque de drones attribuée à l'Iran",
   "id": "2026-11-26-koweit-drones-iraniens-deux-italiens-tues"
  },
  {
@@ -1420,11 +2784,41 @@
   "id": "2026-11-26-idfm-travaux-2027-4-milliards"
  },
  {
-  "titre": "Goncourt des lycéens 2026 : Lilia Hassaine pour « JE »",
-  "rubrique": "culture",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Lilia Hassaine",
+   "Gallimard"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (Europe 1, TF1 Info, Libération).",
   "croise": true,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Leïla Slimani",
+     "Lilia Hassaine",
+     "Mélissa Da Costa",
+     "Camille Laurens"
+    ],
+    "difficulte": 2,
+    "enonce": "Qui a remporté le prix Goncourt des lycéens le 26 novembre 2026 avec le roman « JE » ?",
+    "explication": "Lilia Hassaine, romancière et journaliste, a remporté le Goncourt des lycéens 2026 avec « JE », publié chez Gallimard. Le prix a été annoncé à Rennes puis remis à l'Assemblée nationale."
+   },
+   {
+    "bonne": 0,
+    "choix": [
+     "Gallimard",
+     "Grasset",
+     "Albin Michel",
+     "Flammarion"
+    ],
+    "difficulte": 3,
+    "enonce": "Chez quel éditeur est publié « JE », roman couronné par le Goncourt des lycéens le 26 novembre 2026 ?",
+    "explication": "« JE » de Lilia Hassaine est publié chez Gallimard. Le prix, décerné le 26 novembre 2026, a été annoncé à la mi-journée à Rennes."
+   }
+  ],
   "resume": "La romancière et journaliste Lilia Hassaine a remporté le 26 novembre 2026 le prix Goncourt des lycéens avec « JE », publié chez Gallimard. Le prix a été annoncé à Rennes.",
   "retenir": [
    "Jeudi 26 novembre 2026 : Lilia Hassaine, Goncourt des lycéens",
@@ -1432,12 +2826,7 @@
    "Annonce à la mi-journée à Rennes",
    "Remise du prix à l'Assemblée nationale le soir même"
   ],
-  "contexte": "Faits tirés des titres et résumés (Europe 1, TF1 Info, Libération).",
-  "acteurs": [
-   "Lilia Hassaine",
-   "Gallimard"
-  ],
-  "echeances": [],
+  "rubrique": "culture",
   "sources": [
    {
     "nom": "Libération : Procès pour Depardieu, négociations en Israël, Goncourt des lycéens… L’actu de ce jeudi 26 novembre",
@@ -1455,32 +2844,7 @@
     "url": "https://www.europe1.fr/culture/lilia-hassaine-remporte-le-prix-goncourt-des-lyceens-avec-je-1245418"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Qui a remporté le prix Goncourt des lycéens le 26 novembre 2026 avec le roman « JE » ?",
-    "choix": [
-     "Leïla Slimani",
-     "Lilia Hassaine",
-     "Mélissa Da Costa",
-     "Camille Laurens"
-    ],
-    "bonne": 1,
-    "explication": "Lilia Hassaine, romancière et journaliste, a remporté le Goncourt des lycéens 2026 avec « JE », publié chez Gallimard. Le prix a été annoncé à Rennes puis remis à l'Assemblée nationale.",
-    "difficulte": 2
-   },
-   {
-    "enonce": "Chez quel éditeur est publié « JE », roman couronné par le Goncourt des lycéens le 26 novembre 2026 ?",
-    "choix": [
-     "Gallimard",
-     "Grasset",
-     "Albin Michel",
-     "Flammarion"
-    ],
-    "bonne": 0,
-    "explication": "« JE » de Lilia Hassaine est publié chez Gallimard. Le prix, décerné le 26 novembre 2026, a été annoncé à la mi-journée à Rennes.",
-    "difficulte": 3
-   }
-  ],
+  "titre": "Goncourt des lycéens 2026 : Lilia Hassaine pour « JE »",
   "id": "2026-11-26-goncourt-des-lyceens-lilia-hassaine-je"
  },
  {
@@ -1540,11 +2904,6 @@
     "url": "https://www.lemonde.fr/societe/article/2026/11/26/emilie-konig-la-plus-mediatique-des-djihadistes-francaises-devant-la-justice_6815463_3224.html"
    },
    {
-    "nom": "Libération : «L’égérie du jihad» Emilie König jugée dès ce jeudi à Paris pour ses liens étroits avec l’Etat islamique",
-    "type": "presse",
-    "url": "https://www.liberation.fr/societe/police-justice/legerie-du-jihad-emilie-konig-jugee-des-ce-jeudi-a-paris-pour-ses-liens-etroits-avec-letat-islamique-20261126_LERKEOM3UFDXFBGSEIE4UKS6MA/"
-   },
-   {
     "nom": "BFMTV : De la Bretagne aux rangs de Daesh, l’itinéraire terroriste d'Émilie König \"l'égérie de l'État islamique\" jugée",
     "type": "tv",
     "url": "https://www.bfmtv.com/police-justice/proces/de-la-bretagne-aux-rangs-de-daesh-l-itineraire-terroriste-d-emilie-konig-l-egerie-de-l-etat-islamique-jugee-a-paris_AN-202611260112.html"
@@ -1569,11 +2928,29 @@
   "id": "2026-11-26-emilie-konig-proces-assises"
  },
  {
-  "titre": "Fin du « devoir conjugal » : accord entre députés et sénateurs",
-  "rubrique": "societe",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Assemblée nationale",
+   "Sénat"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (LCP, TF1 Info) ; articles non ouverts.",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Supprimer le divorce pour faute",
+     "Exclure toute obligation sexuelle du mariage",
+     "Rendre obligatoire le contrat de mariage",
+     "Relever l'âge minimal du mariage à 21 ans"
+    ],
+    "difficulte": 2,
+    "enonce": "Que prévoit la proposition de loi adoptée en commission mixte paritaire le 26 novembre 2026 ?",
+    "explication": "Députés et sénateurs ont convenu d'exclure toute obligation sexuelle du mariage, en mettant fin à la notion de « devoir conjugal ». Le code civil sera modifié et le texte peut être adopté définitivement."
+   }
+  ],
   "resume": "Députés et sénateurs se sont accordés le 26 novembre 2026 en commission mixte paritaire sur la proposition de loi mettant fin au « devoir conjugal ». L'adoption définitive est ouverte.",
   "retenir": [
    "Jeudi 26 novembre 2026 : accord en commission mixte paritaire",
@@ -1581,12 +2958,7 @@
    "Le code civil sera modifié",
    "Vers une adoption définitive"
   ],
-  "contexte": "Faits tirés des titres et résumés (LCP, TF1 Info) ; articles non ouverts.",
-  "acteurs": [
-   "Assemblée nationale",
-   "Sénat"
-  ],
-  "echeances": [],
+  "rubrique": "societe",
   "sources": [
    {
     "nom": "LCP : Vers la fin de la notion de \"devoir conjugal\" dans le mariage",
@@ -1599,28 +2971,46 @@
     "url": "https://www.tf1info.fr/societe/devoir-conjugal-les-parlementaires-trouvent-un-accord-pour-exclure-toute-obligation-sexuelle-du-mariage-2478407.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Que prévoit la proposition de loi adoptée en commission mixte paritaire le 26 novembre 2026 ?",
-    "choix": [
-     "Supprimer le divorce pour faute",
-     "Exclure toute obligation sexuelle du mariage",
-     "Rendre obligatoire le contrat de mariage",
-     "Relever l'âge minimal du mariage à 21 ans"
-    ],
-    "bonne": 1,
-    "explication": "Députés et sénateurs ont convenu d'exclure toute obligation sexuelle du mariage, en mettant fin à la notion de « devoir conjugal ». Le code civil sera modifié et le texte peut être adopté définitivement.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "Fin du « devoir conjugal » : accord entre députés et sénateurs",
   "id": "2026-11-26-devoir-conjugal-cmp-accord"
  },
  {
-  "titre": "Policière tuée à la machette : l'ex-époux condamné à la perpétuité",
-  "rubrique": "societe",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Georges Damiano",
+   "Karen B.",
+   "Cour d'assises de Chambéry"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (20 Minutes, Libération, TF1 Info).",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Annecy",
+     "Grenoble",
+     "Chambéry",
+     "Lyon"
+    ],
+    "difficulte": 2,
+    "enonce": "Quelle cour d'assises a condamné à la perpétuité, le 26 novembre 2026, l'ex-époux d'une policière tuée à la machette ?",
+    "explication": "La cour d'assises de Chambéry a condamné Georges Damiano à la réclusion criminelle à perpétuité. Il avait tué son ex-épouse Karen B., 42 ans et policière, à coups de machette en Savoie."
+   },
+   {
+    "bonne": 3,
+    "choix": [
+     "58 ans",
+     "61 ans",
+     "67 ans",
+     "64 ans"
+    ],
+    "difficulte": 3,
+    "enonce": "Quel âge avait Georges Damiano, condamné à la perpétuité à Chambéry le 26 novembre 2026 pour le meurtre de son ex-épouse policière ?",
+    "explication": "Georges Damiano a 64 ans et a été condamné à la perpétuité. Sa victime, Karen B., policière de 42 ans, était son ex-épouse."
+   }
+  ],
   "resume": "La cour d'assises de Chambéry a condamné le 26 novembre 2026 Georges Damiano, 64 ans, à la réclusion criminelle à perpétuité pour le meurtre de son ex-épouse policière.",
   "retenir": [
    "Jeudi 26 novembre 2026 : perpétuité pour Georges Damiano, 64 ans",
@@ -1628,13 +3018,7 @@
    "Faits commis à la machette, en Savoie",
    "Jugement rendu par la cour d'assises de Chambéry"
   ],
-  "contexte": "Faits tirés des titres et résumés (20 Minutes, Libération, TF1 Info).",
-  "acteurs": [
-   "Georges Damiano",
-   "Karen B.",
-   "Cour d'assises de Chambéry"
-  ],
-  "echeances": [],
+  "rubrique": "societe",
   "sources": [
    {
     "nom": "20 Minutes : Policière tuée à la machette : l’ex-époux condamné à la perpétuité",
@@ -1652,32 +3036,7 @@
     "url": "https://www.tf1info.fr/justice-faits-divers/feminicide-en-savoie-l-ex-epoux-de-la-policiere-assassinee-a-la-machette-condamne-a-la-perpetuite-2478428.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quelle cour d'assises a condamné à la perpétuité, le 26 novembre 2026, l'ex-époux d'une policière tuée à la machette ?",
-    "choix": [
-     "Annecy",
-     "Grenoble",
-     "Chambéry",
-     "Lyon"
-    ],
-    "bonne": 2,
-    "explication": "La cour d'assises de Chambéry a condamné Georges Damiano à la réclusion criminelle à perpétuité. Il avait tué son ex-épouse Karen B., 42 ans et policière, à coups de machette en Savoie.",
-    "difficulte": 2
-   },
-   {
-    "enonce": "Quel âge avait Georges Damiano, condamné à la perpétuité à Chambéry le 26 novembre 2026 pour le meurtre de son ex-épouse policière ?",
-    "choix": [
-     "58 ans",
-     "61 ans",
-     "67 ans",
-     "64 ans"
-    ],
-    "bonne": 3,
-    "explication": "Georges Damiano a 64 ans et a été condamné à la perpétuité. Sa victime, Karen B., policière de 42 ans, était son ex-épouse.",
-    "difficulte": 3
-   }
-  ],
+  "titre": "Policière tuée à la machette : l'ex-époux condamné à la perpétuité",
   "id": "2026-11-26-chambery-damiano-perpetuite-policiere-machette"
  },
  {
@@ -1803,11 +3162,35 @@
   "id": "2026-11-26-birmanie-refuse-decision-cij-rohingya"
  },
  {
-  "titre": "BCE : l'Espagnol Pablo Hernandez de Cos succédera à Christine Lagarde",
-  "rubrique": "economie",
-  "date": "2026-11-26",
+  "acteurs": [
+   "Pablo Hernandez de Cos",
+   "Christine Lagarde",
+   "BCE"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (Europe 1, Libération, RFI, TF1 Info) ; la nomination formelle est décrite comme à venir par RFI.",
   "croise": true,
+  "date": "2026-11-26",
+  "echeances": [
+   {
+    "date": "2027-02",
+    "label": "Prise de fonctions à la tête de la BCE"
+   }
+  ],
+  "questions": [
+   {
+    "bonne": 2,
+    "choix": [
+     "Klaas Knot",
+     "Isabel Schnabel",
+     "Pablo Hernandez de Cos",
+     "Joachim Nagel"
+    ],
+    "difficulte": 2,
+    "enonce": "Qui les pays de la zone euro ont-ils choisi le 26 novembre 2026 pour succéder à Christine Lagarde à la tête de la BCE ?",
+    "explication": "Les pays de la zone euro ont choisi l'Espagnol Pablo Hernandez de Cos le 26 novembre 2026. Il prendra les commandes de la BCE en février, dans un contexte de retour des tensions inflationnistes."
+   }
+  ],
   "resume": "Les pays de la zone euro ont choisi le 26 novembre 2026 l'Espagnol Pablo Hernandez de Cos pour succéder à Christine Lagarde à la tête de la BCE. Il prendra ses fonctions en février.",
   "retenir": [
    "Jeudi 26 novembre 2026 : choix des pays de la zone euro",
@@ -1815,18 +3198,7 @@
    "Prise de fonctions en février (Europe 1)",
    "Profil de « technicien pragmatique » (Libération)"
   ],
-  "contexte": "Faits tirés des titres et résumés (Europe 1, Libération, RFI, TF1 Info) ; la nomination formelle est décrite comme à venir par RFI.",
-  "acteurs": [
-   "Pablo Hernandez de Cos",
-   "Christine Lagarde",
-   "BCE"
-  ],
-  "echeances": [
-   {
-    "date": "2027-02",
-    "label": "Prise de fonctions à la tête de la BCE"
-   }
-  ],
+  "rubrique": "economie",
   "sources": [
    {
     "nom": "Libération : L’Espagnol Pablo Hernandez de Cos, un technicien «pragmatique» pour remplacer Christine Lagarde",
@@ -1849,20 +3221,7 @@
     "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261126-l-espagnol-pablo-hernandez-de-cos-va-%C3%AAtre-nomm%C3%A9-pr%C3%A9sident-de-la-banque-centrale-europ%C3%A9enne"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Qui les pays de la zone euro ont-ils choisi le 26 novembre 2026 pour succéder à Christine Lagarde à la tête de la BCE ?",
-    "choix": [
-     "Klaas Knot",
-     "Isabel Schnabel",
-     "Pablo Hernandez de Cos",
-     "Joachim Nagel"
-    ],
-    "bonne": 2,
-    "explication": "Les pays de la zone euro ont choisi l'Espagnol Pablo Hernandez de Cos le 26 novembre 2026. Il prendra les commandes de la BCE en février, dans un contexte de retour des tensions inflationnistes.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "BCE : l'Espagnol Pablo Hernandez de Cos succédera à Christine Lagarde",
   "id": "2026-11-26-bce-hernandez-de-cos-succede-lagarde"
  },
  {
@@ -2049,11 +3408,28 @@
   "id": "2026-11-26-aix-lycee-emile-zola-incendie-mineurs"
  },
  {
-  "titre": "L'AFP ciblée par une cyberattaque : sa plateforme Forum paralysée",
-  "rubrique": "medias",
-  "date": "2026-11-26",
+  "acteurs": [
+   "AFP"
+  ],
   "ajoute": "2026-11-27",
+  "contexte": "Faits tirés des titres et résumés (Libération, TF1 Info).",
   "croise": false,
+  "date": "2026-11-26",
+  "echeances": [],
+  "questions": [
+   {
+    "bonne": 1,
+    "choix": [
+     "Reuters",
+     "AFP",
+     "Associated Press",
+     "Bloomberg"
+    ],
+    "difficulte": 2,
+    "enonce": "Quelle agence de presse a vu sa plateforme Forum paralysée par une cyberattaque dans la nuit du 25 au 26 novembre 2026 ?",
+    "explication": "L'Agence France-Presse a été visée par une cyberattaque qui a paralysé AFP Forum, son outil de photos et dépêches. L'agence dit n'avoir aucun élément sur l'identité des auteurs."
+   }
+  ],
   "resume": "L'Agence France-Presse a subi une cyberattaque dans la nuit du 25 au 26 novembre 2026. Sa plateforme AFP Forum (photos et dépêches) est restée inaccessible, sans auteur identifié.",
   "retenir": [
    "Cyberattaque dans la nuit de mercredi 25 à jeudi 26 novembre 2026",
@@ -2061,11 +3437,7 @@
    "Toujours inaccessible jeudi soir",
    "L'AFP n'a « aucun élément sur l'identité des auteurs »"
   ],
-  "contexte": "Faits tirés des titres et résumés (Libération, TF1 Info).",
-  "acteurs": [
-   "AFP"
-  ],
-  "echeances": [],
+  "rubrique": "medias",
   "sources": [
    {
     "nom": "Libération : L’Agence France Presse ciblée par une cyberattaque, l’une de ses plateformes temporairement inaccessible",
@@ -2078,20 +3450,7 @@
     "url": "https://www.tf1info.fr/justice-faits-divers/l-agence-france-presse-victime-d-une-cyberattaque-l-une-de-ses-plateformes-temporairement-inaccessible-2478443.html"
    }
   ],
-  "questions": [
-   {
-    "enonce": "Quelle agence de presse a vu sa plateforme Forum paralysée par une cyberattaque dans la nuit du 25 au 26 novembre 2026 ?",
-    "choix": [
-     "Reuters",
-     "AFP",
-     "Associated Press",
-     "Bloomberg"
-    ],
-    "bonne": 1,
-    "explication": "L'Agence France-Presse a été visée par une cyberattaque qui a paralysé AFP Forum, son outil de photos et dépêches. L'agence dit n'avoir aucun élément sur l'identité des auteurs.",
-    "difficulte": 2
-   }
-  ],
+  "titre": "L'AFP ciblée par une cyberattaque : sa plateforme Forum paralysée",
   "id": "2026-11-26-afp-cyberattaque-plateforme-forum"
  },
  {
@@ -2553,11 +3912,6 @@
     "url": "https://www.lemonde.fr/economie/article/2026/11/25/donald-trump-persiste-avec-une-nouvelle-salve-de-droits-de-douane-malgre-la-claque-electorale_6815108_3234.html"
    },
    {
-    "nom": "Libération : Washington annonce de nouveaux droits de douane contre ses principaux partenaires",
-    "type": "presse",
-    "url": "https://www.liberation.fr/international/amerique/washington-annonce-de-nouveaux-droits-de-douane-contre-ses-principaux-partenaires-20261125_S35XTHEIRVGSHLPG4X2CH4CLMI/"
-   },
-   {
     "nom": "TF1 Info : Chine, Union européenne... Washington annonce de nouveaux droits de douane contre ses partenaires commerciaux",
     "type": "tv",
     "url": "https://www.tf1info.fr/international/chine-union-europeenne-washington-annonce-de-nouveaux-droits-de-douane-contre-ses-partenaires-commerciaux-2478121.html"
@@ -2836,39 +4190,6 @@
   ],
   "titre": "SpaceX autorisé à lancer un million de satellites",
   "id": "2026-11-25-spacex-million-satellites-fcc"
- },
- {
-  "acteurs": [
-   "S&P",
-   "France"
-  ],
-  "ajoute": "2026-11-26",
-  "contexte": "Résultat à ajouter à la prochaine passe.",
-  "croise": false,
-  "date": "2026-11-25",
-  "echeances": [
-   {
-    "date": "2026-11-27",
-    "label": "Décision S&P sur la note de la France"
-   }
-  ],
-  "questions": [],
-  "resume": "L'agence S&P publie vendredi 27 novembre son appréciation semestrielle sur la dette de la France.",
-  "retenir": [
-   "Verdict attendu le vendredi 27 novembre 2026",
-   "Agence : S&P",
-   "Contexte économique, budgétaire et politique incertain (Europe 1)"
-  ],
-  "rubrique": "economie",
-  "sources": [
-   {
-    "nom": "Europe 1 : Notation de la France : S&P rend son verdict vendredi, à quoi faut-il s'attendre ?",
-    "type": "radio",
-    "url": "https://www.europe1.fr/economie/notation-de-la-france-sp-rend-son-verdict-vendredi-a-quoi-faut-il-sattendre-1244668?at_medium=RSS%20feeds&amp;at_campaign=Flux%20Generique"
-   }
-  ],
-  "titre": "Notation de la France : S&P rend son verdict vendredi 27 novembre",
-  "id": "2026-11-25-s-p-notation-france-vendredi"
  },
  {
   "acteurs": [
@@ -4448,11 +5769,6 @@
     "url": "https://www.lemonde.fr/disparitions/article/2026/11/26/andy-taylor-guitariste-historique-du-groupe-duran-duran-est-mort-a-65-ans_6815296_3382.html"
    },
    {
-    "nom": "20 Minutes : Andy Taylor, guitariste emblématique de Duran Duran, est mort à 65 ans",
-    "type": "presse",
-    "url": "https://www.20minutes.fr/arts-stars/culture/musique/4265813-20261126-andy-taylor-guitariste-emblematique-duran-duran-mort-65-ans?at_medium=display&at_campaign=149"
-   },
-   {
     "nom": "BFMTV : Andy Taylor, ex-guitariste du groupe britannique Duran Duran, est mort à l'âge de 65 ans",
     "type": "tv",
     "url": "https://www.bfmtv.com/culture/musique/andy-taylor-ex-guitariste-du-groupe-britannique-duran-duran-est-mort-a-l-age-de-65-ans_AD-202611260177.html"
@@ -4641,84 +5957,6 @@
   ],
   "titre": "Ligue des champions, 5e journée : Leipzig-Lens, PSG-Roma, Lille-Bayern",
   "id": "2026-11-24-ligue-des-champions-5e-journee-lens-leipzig"
- },
- {
-  "acteurs": [
-   "Rassemblement national",
-   "Hugues Moutouh",
-   "Pierre Ory",
-   "Laurent Nuñez",
-   "Gérald Darmanin"
-  ],
-  "ajoute": "2026-11-20",
-  "contexte": "BFMTV date la perquisition du 9 novembre, les autres médias parlent d'une annonce le 19 : à recouper.",
-  "croise": true,
-  "date": "2026-11-25",
-  "echeances": [],
-  "questions": [
-   {
-    "bonne": 0,
-    "choix": [
-     "Hugues Moutouh",
-     "Didier Lallement",
-     "Pierre Dartout",
-     "Michel Delpuech"
-    ],
-    "difficulte": 3,
-    "enonce": "Quel haut fonctionnaire a été remplacé par Pierre Ory en Conseil des ministres le 25 novembre 2026 ?",
-    "explication": "Hugues Moutouh, préfet du Loiret, a été démis en Conseil des ministres et remplacé par Pierre Ory, préfet de Seine-et-Marne. Il est au cœur de soupçons de fuites du ministère de l'Intérieur vers le RN."
-   },
-   {
-    "bonne": 1,
-    "choix": [
-     "Yvelines",
-     "Seine-et-Marne",
-     "Essonne",
-     "Val-d'Oise"
-    ],
-    "difficulte": 3,
-    "enonce": "Dans quel département Pierre Ory était-il préfet avant de remplacer Hugues Moutouh, nommé en Conseil des ministres le 25 novembre 2026 ?",
-    "explication": "Pierre Ory, préfet de Seine-et-Marne, remplace Hugues Moutouh, démis le 25 novembre 2026. Ce dernier, préfet du Loiret, était soupçonné de fuites vers le RN."
-   }
-  ],
-  "resume": "Soupçons de fuites du ministère de l'Intérieur vers le RN : le préfet Hugues Moutouh a été officiellement démis le 25 novembre.",
-  "retenir": [
-   "Information judiciaire ouverte fin juillet ; perquisition au siège du RN (franceinfo)",
-   "Hugues Moutouh, préfet du Loiret, démis en Conseil des ministres le mercredi 25 novembre 2026",
-   "Remplaçant : Pierre Ory, préfet de Seine-et-Marne (Le Monde)",
-   "Moutouh dénonce « une opération » contre lui (Le Monde)",
-   "Darmanin saisit l'inspection générale de la justice sur la présence d'un procureur lors de la perquisition"
-  ],
-  "rubrique": "politique",
-  "sources": [
-   {
-    "nom": "Le Monde : Hugues Moutouh, préfet du Loiret, démis de ses fonctions après la révélation de soupçons de fuites émanant du ",
-    "type": "presse",
-    "url": "https://www.lemonde.fr/societe/article/2026/11/25/le-prefet-du-loiret-hugues-moutouh-demis-de-ses-fonctions-apres-la-revelation-de-soupcons-de-fuites-emanant-du-ministere-de-l-interieur-vers-le-rn_6815167_3224.html"
-   },
-   {
-    "nom": "20 Minutes : RN : Le siège du parti perquisitionné pour des soupçons de violation du secret professionnel, un préfet aussi suspecté",
-    "type": "presse",
-    "url": "https://www.20minutes.fr/justice/4264233-20261119-rn-siege-parti-perquisitionne-soupcons-violation-secret-professionnel?at_medium=display&at_campaign=149"
-   },
-   {
-    "nom": "franceinfo : Enquête sur des soupçons de fuites vers le RN : le préfet Hugues Moutouh a été officiellement démis de ses fon",
-    "type": "tv",
-    "url": "https://www.franceinfo.fr/politique/front-national/enquete-sur-des-soupcons-de-fuites-vers-le-rn-hugues-moutouh-a-ete-officiellement-demis-de-ses-fonctions-remplace-par-le-prefet-pierre-ory_8299428.html#xtor=RSS-3-[lestitres]"
-   },
-   {
-    "nom": "RFI : Soupçons de fuites du ministère de l'Intérieur au profit du RN: le préfet Hugues Moutouh démis de ses fonction",
-    "type": "radio",
-    "url": "https://www.rfi.fr/fr/france/20261125-soup%C3%A7ons-de-fuites-au-profit-du-rn-en-france-un-pr%C3%A9fet-d%C3%A9mis-de-ses-fonctions"
-   },
-   {
-    "nom": "France Inter : Le RN au coeur d'une nouvelle enquête autour de fuites impliquant un préfet",
-    "type": "radio",
-    "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/des-fuites-ne-provenance-du-ministere-de-l-interieur-vers-le-rassemblemetn-national-1892317"
-   }
-  ],
-  "titre": "Perquisition au siège du RN et à Beauvau après des soupçons de fuites impliquant un préfet",
-  "id": "2026-11-19-rn-perquisition-fuites-prefet"
  },
  {
   "acteurs": [
@@ -6837,74 +8075,6 @@
   ],
   "titre": "Indonésie : incendie d'une usine près de Jakarta, 36 disparus",
   "id": "2026-11-22-indonesie-usine-bonbons-incendie"
- },
- {
-  "acteurs": [
-   "XV de France",
-   "Fabien Galthié",
-   "Antoine Dupont",
-   "Afrique du Sud"
-  ],
-  "ajoute": "2026-11-22",
-  "contexte": "Le nom du Championnat des nations et le lieu de la finale viennent des seuls titres/résumés. Faits tirés des titres et résumés des flux RSS (articles complets non ouverts) ; à recouper avant le QCM.",
-  "croise": true,
-  "date": "2026-11-22",
-  "echeances": [
-   {
-    "date": "2026-11-29",
-    "label": "Finale du Championnat des nations (week-end suivant, Twickenham)"
-   }
-  ],
-  "questions": [
-   {
-    "bonne": 0,
-    "choix": [
-     "45-17",
-     "30-20",
-     "24-21",
-     "52-10"
-    ],
-    "difficulte": 2,
-    "enonce": "Quel est le score de France - Argentine le 21 novembre ?",
-    "explication": "Le XV de France s'impose 45-17 au Stade de France, avec le bonus offensif. Il se qualifie pour la finale contre l'Afrique du Sud, à Twickenham."
-   }
-  ],
-  "resume": "Le XV de France bat l'Argentine 45-17 au Stade de France le 21 novembre, avec bonus offensif, et se qualifie pour la finale du Championnat des nations face à l'Afrique du Sud, le week-end suivant à Twickenham (franceinfo).",
-  "retenir": [
-   "France - Argentine : 45-17 (Europe 1, Le Monde, RFI)",
-   "Finale contre l'Afrique du Sud (battue deux semaines plus tôt selon Le Monde)",
-   "Finale à Twickenham (franceinfo)"
-  ],
-  "rubrique": "sport",
-  "sources": [
-   {
-    "nom": "20 Minutes : France - Argentine : Les Bleus qualifiés pour la finale où ils retrouveront l'Afrique du Sud, miam miam... Revivez le match avec nous",
-    "type": "presse",
-    "url": "https://www.20minutes.fr/sport/rugby/4264159-20261121-direct-france-argentine-bleus-galerent-devant-encore-deux-essais-avoir-bonus-suivez-match"
-   },
-   {
-    "nom": "Europe 1 : Championnat des nations : la France écrase l'Argentine et retrouvera l'Afrique du Sud en finale",
-    "type": "radio",
-    "url": "https://www.europe1.fr/sport/championnat-des-nations-la-france-ecrase-largentine-et-retrouvera-lafrique-du-sud-en-finale-1241908"
-   },
-   {
-    "nom": "Le Monde : Championnat des nations : le XV de France écarte l’Argentine et donne rendez-vous aux Springboks pour des retrouvailles musclées en finale",
-    "type": "presse",
-    "url": "https://www.lemonde.fr/sport/article/2026/11/22/championnat-des-nations-le-xv-de-france-ecarte-l-argentine-et-donne-rendez-vous-aux-springboks-pour-des-retrouvailles-musclees-en-finale_6814075_3242.html"
-   },
-   {
-    "nom": "Ouest-France : France - Argentine. « Le job est fait », « que du plaisir » : les réactions des Bleus après leur qualification en finale",
-    "type": "presse",
-    "url": "https://www.ouest-france.fr/sport/rugby/equipe-de-france/france-argentine-le-job-est-fait-que-du-plaisir-les-reactions-des-bleus-apres-leur-qualification-en-finale-bca61e1a-e5f9-11f1-bd4e-6f30b8f49e21"
-   },
-   {
-    "nom": "TF1 Info : Championnat des nations : vainqueur de l'Argentine, le XV de France retrouvera l'Afrique du Sud en finale dimanche prochain",
-    "type": "tv",
-    "url": "https://www.tf1info.fr/sport/championnat-des-nations-vainqueur-de-l-argentine-le-xv-de-france-retrouvera-l-afrique-du-sud-en-finale-dimanche-prochain-2477329.html"
-   }
-  ],
-  "titre": "XV de France : large victoire sur l'Argentine, finale contre l'Afrique du Sud",
-  "id": "2026-11-21-xv-de-france-argentine-finale"
  },
  {
   "acteurs": [
